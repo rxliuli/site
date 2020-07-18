@@ -17,7 +17,6 @@
 - **学习 :** Full-Stack :zap: | Open-Source :fire:
 - **兴趣 :** Books :books: 预备 Kiger 😄
 - **帮助 :** 如果遇到任何 `TypeScript/Windows 工具` 的问题可以问吾辈！:v:
-- **Fun fact :** When most developer loves coffee:sweat_smile: But, I prefer tea :heart:
 - **代称 :** rxliuli/琉璃 :innocent:
 
 ---
