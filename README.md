@@ -1,6 +1,8 @@
-## rxliuli（琉璃） 👨‍💻
-
-吾辈是 rxliuli（中文名是 **琉璃**），喜欢现代前端的开发者（曾经的后端开发）。
+---
+title: about
+date: 2020-02-03 19:53:34
+layout: about
+---
 
 ---
 
@@ -13,15 +15,13 @@
 
 ### 关于
 
--  **工作 :** Web 开发 :iphone:
--  **学习 :** Full-Stack :zap: | Open-Source :fire:	
--  **兴趣 :** Books :books: 预备 Kiger :kig:
--  **帮助 :** 如果遇到任何 `TypeScript/Windows 工具` 的问题可以问吾辈！:v:
--  **Fun fact :** When most developer loves coffee:sweat_smile: But, I prefer tea :heart: 
--  **代称 :** rxliuli/琉璃 :innocent:
+- **工作 :** Web 开发 :iphone:
+- **学习 :** Full-Stack :zap: | Open-Source :fire:
+- **兴趣 :** Books :books: 预备 Kiger :kig:
+- **帮助 :** 如果遇到任何 `TypeScript/Windows 工具` 的问题可以问吾辈！:v:
+- **Fun fact :** When most developer loves coffee:sweat_smile: But, I prefer tea :heart:
+- **代称 :** rxliuli/琉璃 :innocent:
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-<!--![github stats](https://github-readme-stats.vercel.app/api?username=SulthanNK&show_icons=true)  -->
-
-<img src="https://github-readme-stats.vercel.app/api?username=rxliuli&&show_icons=true&title_color=ffffff&icon_color=bb2acf&text_color=daf7dc&bg_color=191919">
+![github stats](https://github-readme-stats.vercel.app/api?username=SulthanNK&show_icons=true)
