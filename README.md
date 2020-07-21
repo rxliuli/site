@@ -2,6 +2,8 @@
 
 吾辈是 rxliuli（中文名是 **琉璃**），喜欢现代前端的开发者（曾经的后端开发）。
 
+<img align="right" src="https://github-readme-stats.vercel.app/api?username=rxliuli&show_icons=true&icon_color=0366d6&text_color=24292e&bg_color=ffffff&hide_title=true" />
+
 ---
 
 ### 动态
@@ -20,5 +22,3 @@
 - **代称 :** rxliuli/琉璃 :innocent:
 
 ---
-
-![github stats](https://github-readme-stats.vercel.app/api?username=rxliuli&show_icons=true)
