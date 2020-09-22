@@ -15,7 +15,7 @@
 
 ### 关于
 
-- **工作 :** Web 开发 :iphone:
+- **工作 :** Web 前端开发
 - **学习 :** Full-Stack :zap: | Open-Source :fire:
 - **兴趣 :** Books :books: 预备 Kiger 😄
 - **帮助 :** 如果遇到任何 `TypeScript/Jetbrains IDE/Windows 工具` 的问题可以问吾辈！:v:
