@@ -24,32 +24,6 @@
 - [liuli-cli](https://github.com/rxliuli/liuli-cli): 前端 npm 包的脚手架生成 cli 工具 -- 不怎么维护了
 - [vue-url-persist](https://github.com/rxliuli/vue-url-persist): vue url 序列化参数的包 -- 自从主要技术栈更换为 react 之后就不怎么维护了
 
-读书
-
-- [ ] 家有女友(在读)
-- [ ] SICP 计算机程序的构造和解释
-- [x] 富兰克林自传
-- [x] 野草
-- [ ] 数学之美
-- [x] 格局
-- [x] 见识
-- [x] 态度
-- [x] 浪潮之巅 v4
-- [x] 美国众神
-- [x] 你不了解的真相
-- [x] 这就是软件工程师
-- [ ] 信息论
-- [ ] 集异壁之大成
-- [x] JavaScript 设计模式
-- [x] 人月神话
-- [ ] 算法导论
-- [x] 人类简史
-- [ ] 什么是数学
-- [ ] 算法 4(在读)
-- [x] 拉普拉斯妖的魔女
-- [x] 黑客与画家
-
-
 ---
 
 <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=rxliuli&theme=tokyonight&hide=python,shell" />
