@@ -15,7 +15,7 @@
 开源项目
 
 - [liuli-util](https://github.com/rxliuli/liuli-util): 前端通用工具库，最近重构为了 monorepo，分割为了一系列的子包，便于引入
-- [joplin-vscode-plugin](https://marketplace.visualstudio.com/items?itemName=rxliuli.joplin-vscode-plugin&ssr=false#overview): joplin 的 vscode 插件，使用 vscode 接管自己的笔记管理，支持大多数 joplin 的功能（通过 web clipper service）
+- [joplin-vscode-plugin](https://marketplace.visualstudio.com/items?itemName=rxliuli.joplin-vscode-plugin&ssr=false#overview): joplin 的 vscode 插件
 - [joplin-blog](https://github.com/rxliuli/joplin-blog): 将 joplin 作为数据源导出 blog
 - [joplin-charts](https://rxliuli.com/joplin-charts/#/): 展示 joplin 的一些统计图表数据
 - [joplin-api](https://www.npmjs.com/package/joplin-api): joplin 的 api 封装，适用于 web/nodejs，也是以上成果的基础
