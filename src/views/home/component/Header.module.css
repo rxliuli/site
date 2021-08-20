@@ -1,0 +1,39 @@
+.placeholder {
+  height: 36px;
+}
+.header {
+  background-color: #222;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+nav {
+  max-width: 1200px;
+  margin: auto;
+  height: 36px;
+  line-height: 36px;
+  display: grid;
+  grid-template-columns: repeat(2, auto) 1fr auto;
+  grid-column-gap: 16px;
+}
+nav a {
+  color: #9f9990;
+  text-decoration: none;
+}
+nav a:hover {
+  color: #ffffff;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+}
+
+.avatar {
+  display: inline-block;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
