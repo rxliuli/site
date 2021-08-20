@@ -2,14 +2,30 @@
   margin: auto;
   max-width: 1200px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 24px;
 }
 
 .content > * {
   margin: auto;
+  max-width: 350px;
 }
 
-@media screen {
-  /*TODO 待添加响应式布局*/
+@media (min-width: 0) and (max-width: 576px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .content > * {
+    max-width: 100%;
+  }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
