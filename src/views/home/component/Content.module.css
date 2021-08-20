@@ -1,6 +1,15 @@
 .content {
+  margin: auto;
   max-width: 1200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 24px;
+}
+
+.content > * {
+  margin: auto;
+}
+
+@media screen {
+  /*TODO 待添加响应式布局*/
 }
