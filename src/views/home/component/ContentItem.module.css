@@ -1,11 +1,16 @@
-.creatorCard {
+.contentItem {
+  height: 100%;
   padding: 16px;
   border-radius: 16px;
   background: #ffffff;
   box-shadow: rgba(110, 121, 140, 0.5) 0 0 2px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
 }
-
-.creatorCard > img {
+.contentItem h4 {
+  margin-bottom: 0;
+}
+.contentItem > img {
   width: 100%;
   height: 200px;
   object-fit: cover;

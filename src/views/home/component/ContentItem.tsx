@@ -2,22 +2,15 @@ import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
 import css from './ContentItem.module.css'
 import { Space } from '../../../components/Space'
-
-export interface CreatorCard {
-  img: string
-  title: string
-  content: string
-  github?: string
-  home?: string
-}
+import { CreatorConfig } from '../api/CreatorApi'
 
 type ContentItemProps = {
-  item: CreatorCard
+  item: CreatorConfig
 }
 
 export const ContentItem: React.FC<ContentItemProps> = (props) => {
   return (
-    <div className={css.creatorCard}>
+    <div className={css.contentItem}>
       <img src={props.item.img} alt={'img'} />
       <h4>{props.item.title}</h4>
       <ReactMarkdown linkTarget={'_blank'}>{props.item.content}</ReactMarkdown>

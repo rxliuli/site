@@ -1,9 +1,10 @@
 import * as React from 'react'
-import { ContentItem, CreatorCard } from './ContentItem'
+import { ContentItem } from './ContentItem'
 import css from './Content.module.css'
+import { CreatorConfig } from '../api/CreatorApi'
 
 type ContentProps = {
-  list: CreatorCard[]
+  list: CreatorConfig[]
 }
 
 export const Content: React.FC<ContentProps> = (props) => {

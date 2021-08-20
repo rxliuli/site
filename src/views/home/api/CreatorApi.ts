@@ -1,20 +1,27 @@
-import { CreatorCard } from '../component/ContentItem'
 import { Random } from 'mockjs'
 import { RandomUtil } from '../../../utils'
 
+export interface CreatorConfig {
+  img: string
+  title: string
+  content: string
+  github?: string
+  home?: string
+}
+
 class CreatorApi {
-  async list(): Promise<CreatorCard[]> {
+  async list(): Promise<CreatorConfig[]> {
     return Array(10)
       .fill(0)
       .map(
         () =>
           ({
             title: Random.ctitle(),
-            content: Random.cword(100),
+            content: Random.cword(Random.integer(50, 100)),
             github: Random.url(),
             home: Random.url(),
             img: RandomUtil.image(500, 800),
-          } as CreatorCard),
+          } as CreatorConfig),
       )
   }
 }
