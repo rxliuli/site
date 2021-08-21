@@ -14,10 +14,7 @@ function AboutBanner() {
   return (
     <Banner>
       <h1>关于吾辈</h1>
-      <h2>
-        吾辈是 rxliuli（中文名是
-        琉璃），喜欢现代前端的全沾开发者（曾经的后端开发）
-      </h2>
+      <h2>吾辈是琉璃，喜欢现代前端的全沾开发者</h2>
       <Space>
         <Icon href={'https://github.com/rxliuli'}>
           <i className="fab fa-github" />
