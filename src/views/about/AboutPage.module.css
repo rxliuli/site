@@ -2,7 +2,11 @@
   max-width: 800px;
   margin: auto;
 }
-
+@media (max-width: 576px) {
+  .content {
+    padding: 0 8px;
+  }
+}
 .content img {
   max-width: 100%;
 }

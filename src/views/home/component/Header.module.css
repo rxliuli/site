@@ -17,6 +17,11 @@ nav {
   grid-template-columns: auto 1fr auto;
   grid-column-gap: 16px;
 }
+@media (max-width: 576px) {
+  nav {
+    padding: 0 8px;
+  }
+}
 nav a {
   color: #9f9990;
   text-decoration: none;
