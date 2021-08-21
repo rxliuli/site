@@ -31,7 +31,7 @@ const configList: CreatorConfig[] = [
     img: '/images/liuli-utils.png',
     title: 'liuli-utils',
     content:
-      '吾辈使用的工具函数库，按照功能分割成不同的模块，都发布在 @liuli-util 组织下，可以单独引入指定模块。',
+      '吾辈使用的工具函数库，按照功能分割成不同的模块，都发布在 [@liuli-util](https://www.npmjs.com/org/liuli-util) 组织下，可以单独引入指定模块。',
     github: 'https://github.com/rxliuli/liuli-utils',
     home: 'https://liuli-utils.rxliuli.com/',
   },
