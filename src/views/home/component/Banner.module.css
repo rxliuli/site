@@ -1,0 +1,16 @@
+.banner {
+  background: url('https://blog.rxliuli.com/medias/banner/default.jpg') center
+    center / cover no-repeat;
+}
+.mask {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 240px;
+  display: grid;
+  align-items: center;
+}
+.content {
+  width: 100%;
+  color: #ffffff;
+  max-width: 1200px;
+  margin: auto;
+}

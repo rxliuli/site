@@ -13,11 +13,8 @@ export const Header: React.FC = () => {
               alt={'avatar'}
               className={css.avatar}
             />
-            琉璃的创造物
+            琉璃的个人主页
           </Link>
-          <a href={'https://github.com/rxliuli'} target={'_blank'}>
-            GitHub
-          </a>
           <span />
           <Link to={'/about'}>关于</Link>
         </nav>

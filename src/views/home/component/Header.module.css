@@ -14,7 +14,7 @@ nav {
   height: 36px;
   line-height: 36px;
   display: grid;
-  grid-template-columns: repeat(2, auto) 1fr auto;
+  grid-template-columns: auto 1fr auto;
   grid-column-gap: 16px;
 }
 nav a {

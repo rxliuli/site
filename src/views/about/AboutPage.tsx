@@ -10,46 +10,43 @@ const Icon: React.FC<{
   </a>
 )
 
-function Banner() {
+function AboutBanner() {
   return (
-    <div className={css.banner}>
-      <div className={css.mask}>
-        <section className={css.title}>
-          <h2>关于吾辈</h2>
-          <p>
-            吾辈是 rxliuli（中文名是
-            琉璃），喜欢现代前端的全沾开发者（曾经的后端开发）
-          </p>
-          <Space>
-            <Icon href={'https://github.com/rxliuli'}>
-              <i className="fab fa-github fa-2x" />
-            </Icon>
-            <Icon href={'https://blog.rxliuli.com/'}>
-              <i className="fas fa-blog fa-2x" />
-            </Icon>
-            <Icon href={'https://twitter.com/rxliuli'}>
-              <i className="fab fa-twitter fa-2x" />
-            </Icon>
-            <Icon href={'https://t.me/rxliuli'}>
-              <i className="fab fa-telegram fa-2x" />
-            </Icon>
-            <Icon href={'mailto:rxliuli@gmail.com'}>
-              <i className="fas fa-envelope-square fa-2x" />
-            </Icon>
-          </Space>
-        </section>
-      </div>
-    </div>
+    <Banner>
+      <h1>关于吾辈</h1>
+      <h2>
+        吾辈是 rxliuli（中文名是
+        琉璃），喜欢现代前端的全沾开发者（曾经的后端开发）
+      </h2>
+      <Space>
+        <Icon href={'https://github.com/rxliuli'}>
+          <i className="fab fa-github" />
+        </Icon>
+        <Icon href={'https://blog.rxliuli.com/'}>
+          <i className="fas fa-blog" />
+        </Icon>
+        <Icon href={'https://twitter.com/rxliuli'}>
+          <i className="fab fa-twitter" />
+        </Icon>
+        <Icon href={'https://t.me/rxliuli'}>
+          <i className="fab fa-telegram" />
+        </Icon>
+        <Icon href={'mailto:rxliuli@gmail.com'}>
+          <i className="fas fa-envelope-square" />
+        </Icon>
+      </Space>
+    </Banner>
   )
 }
 
 import aboutContent from './about.md?raw'
 import { Space } from '../../components/Space'
+import { Banner } from '../home/component/Banner'
 
 export const AboutPage: React.FC = () => {
   return (
     <div>
-      <Banner />
+      <AboutBanner />
       <ReactMarkdown className={css.content}>{aboutContent}</ReactMarkdown>
     </div>
   )
