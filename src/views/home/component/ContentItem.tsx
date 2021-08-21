@@ -8,6 +8,12 @@ type ContentItemProps = {
   item: CreatorConfig
 }
 
+const Icon: React.FC<{ href: string; title: string }> = (props) => (
+  <a target={'_blank'} {...props} className={css.icon}>
+    {props.children}
+  </a>
+)
+
 export const ContentItem: React.FC<ContentItemProps> = (props) => {
   return (
     <div className={css.contentItem}>
@@ -15,12 +21,16 @@ export const ContentItem: React.FC<ContentItemProps> = (props) => {
       <h4>{props.item.title}</h4>
       <ReactMarkdown linkTarget={'_blank'}>{props.item.content}</ReactMarkdown>
       <Space>
-        <a href={props.item.home} target={'_blank'} title={'官网'}>
-          <i className="fas fa-home fa-2x" />
-        </a>
-        <a href={props.item.github} target={'_blank'} title={'github 源码'}>
-          <i className="fab fa-github fa-2x" />
-        </a>
+        {props.item.home && (
+          <Icon href={props.item.home} title={'官网'}>
+            <i className="fas fa-home" />
+          </Icon>
+        )}{' '}
+        {props.item.github && (
+          <Icon href={props.item.github} title={'GitHub 源码'}>
+            <i className="fab fa-github" />
+          </Icon>
+        )}
       </Space>
     </div>
   )

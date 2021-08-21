@@ -15,3 +15,13 @@
   height: 200px;
   object-fit: contain;
 }
+
+.icon {
+  color: #222222;
+  font-size: 24px;
+  text-align: center;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+}
