@@ -6469,7 +6469,6 @@ __metadata:
     react-dom: ^17.0.0
     react-markdown: ^7.0.0
     react-router: ^5.2.0
-    react-router-config: ^5.1.1
     react-router-dom: ^5.2.0
     react-use: ^17.2.4
     simple-git-hooks: ^2.5.1
@@ -13688,18 +13687,6 @@ fsevents@^1.2.7:
   version: 0.10.0
   resolution: "react-refresh@npm:0.10.0"
   checksum: 616e82bed3787bf4e55dcc1c9836f251b93523dd4b0ffb1c24c2dcf5d09f686fbf3cffc7d489cd7f12429f76ddf66eb431748fc07df56b18a888a7705cbc079e
-  languageName: node
-  linkType: hard
-
-"react-router-config@npm:^5.1.1":
-  version: 5.1.1
-  resolution: "react-router-config@npm:5.1.1"
-  dependencies:
-    "@babel/runtime": ^7.1.2
-  peerDependencies:
-    react: ">=15"
-    react-router: ">=5"
-  checksum: 1f8f4e55ca68b7b012293e663eb0ee4d670a3df929b78928f713ef98cd9d62c7f5c30a098d6668e64bbb11c7d6bb24e9e6b9c985a8b82465a1858dc7ba663f2b
   languageName: node
   linkType: hard
 
