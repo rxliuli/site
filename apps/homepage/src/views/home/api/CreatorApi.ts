@@ -1,6 +1,3 @@
-import { Random } from 'mockjs'
-import { RandomUtil } from '../../../utils'
-
 export interface CreatorConfig {
   img: string
   title: string
