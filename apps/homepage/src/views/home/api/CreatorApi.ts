@@ -22,7 +22,7 @@ const configList: CreatorConfig[] = [
     content:
       '一些项目级别的工具集，主要尝试研发提效，欢迎来 [讨论区](https://github.com/rxliuli/liuli-tools/discussions) 交流想法。',
     github: 'https://github.com/rxliuli/liuli-tools',
-    home: 'https://liuli-tools.rxliuli.com/zh/',
+    home: 'https://liuli.dev/',
   },
   {
     img: '/images/liuli-utils.png',
@@ -30,7 +30,7 @@ const configList: CreatorConfig[] = [
     content:
       '吾辈使用的工具函数库，按照功能分割成不同的模块，都发布在 [@liuli-util](https://www.npmjs.com/org/liuli-util) 组织下，可以单独引入指定模块。',
     github: 'https://github.com/rxliuli/liuli-utils',
-    home: 'https://liuli-utils.rxliuli.com/',
+    home: 'https://utils.liuli.dev/',
   },
   {
     img: '/images/joplin-blog.svg',
