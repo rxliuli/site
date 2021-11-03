@@ -6,9 +6,9 @@
 
 - **工作 :** Web 前端开发
 - **学习 :** Full-Stack :zap: | Open-Source :fire:
-- **兴趣 :** Books :books: 预备 Kiger 😄
+- **兴趣 :** Books :books: Kiger 😄
 - **帮助 :** 如果遇到任何 `TypeScript/Jetbrains IDE/Windows 工具` 的问题可以问吾辈！:v:
-- **代称 :** rxliuli/琉璃 :innocent:
+- **昵称 :** rxliuli/琉璃 :innocent:
 
 ---
 
