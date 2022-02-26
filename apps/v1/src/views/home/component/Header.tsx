@@ -1,5 +1,5 @@
+import { Link } from '@liuli-util/react-router'
 import * as React from 'react'
-import { Link } from 'react-router-dom'
 import css from './Header.module.css'
 
 export const Header: React.FC = () => {
