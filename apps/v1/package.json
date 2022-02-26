@@ -1,5 +1,5 @@
 {
-  "name": "homepage",
+  "name": "@rxliuli/v1",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

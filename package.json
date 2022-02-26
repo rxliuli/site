@@ -1,5 +1,5 @@
 {
-  "name": "creators",
+  "name": "@rxliuli/website",
   "version": "0.0.0",
   "workspaces": [
     "apps/*",
