@@ -1,0 +1,31 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a192f;
+  color: var(--light-slate);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --green: rgb(100, 255, 218);
+  --light-slate: #8892b0;
+}
+
+/* 滚动槽 */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #0a192f;
+}
+/* 滚动条滑块 */
+body::-webkit-scrollbar-thumb {
+  background: #495670;
+  border: 3px solid #0a192f;
+  border-radius: 10px;
+  /*-webkit-box-shadow: inset 0 0 10px #495670;*/
+}

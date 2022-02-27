@@ -1,0 +1,54 @@
+.HomeView {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /*position: relative;*/
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.content > h1 {
+  font-size: 16px;
+  color: var(--green);
+}
+
+.content > h2 {
+  color: #ccd6f6;
+  font-size: 80px;
+  margin: 0;
+}
+
+.content > h2:nth-of-type(2) {
+  color: var(--light-slate);
+}
+
+.content a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.content > a:last-of-type {
+  display: inline-block;
+  margin-top: 50px;
+  padding: 20px 28px;
+  border: solid 1px var(--green);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.content > a:last-of-type:hover {
+  background-color: #133040;
+}

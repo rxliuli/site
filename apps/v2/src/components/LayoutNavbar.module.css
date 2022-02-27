@@ -1,0 +1,57 @@
+.LayoutNavbar {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  padding: 0 50px;
+  grid-gap: 16px;
+}
+
+.LayoutNavbar div {
+  display: flex;
+  align-items: center;
+}
+
+.LayoutNavbar a {
+  color: var(--light-slate);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.LayoutNavbar ol {
+  display: flex;
+  list-style: none;
+}
+
+.LayoutNavbar ol li {
+  counter-increment: item 1;
+}
+.LayoutNavbar ol li a {
+  padding: 10px;
+  color: var(--light-slate);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.LayoutNavbar ol li:hover a {
+  color: var(--green);
+}
+
+.LayoutNavbar ol li a:before {
+  content: '0' counter(item) '. ';
+  color: var(--green);
+}
+
+.LayoutNavbar > *:first-child {
+  margin-right: auto;
+}
+
+.source {
+  font-size: 13px;
+  padding: 12px 16px;
+  border: solid 1px var(--green);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.source:hover {
+  background-color: #133040;
+}
