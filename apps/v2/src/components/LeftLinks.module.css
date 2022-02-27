@@ -10,7 +10,7 @@
   display: block;
   width: 1px;
   height: 90px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   background-color: var(--light-slate);
 }
 
