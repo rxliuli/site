@@ -13,6 +13,8 @@ body {
 :root {
   --green: rgb(100, 255, 218);
   --light-slate: #8892b0;
+  --lightest-slate: #ccd6f6;
+  --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* 滚动槽 */

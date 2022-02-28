@@ -5,6 +5,7 @@ import { ConcatView } from './views/ConcatView'
 import { LeftLinks } from './components/LeftLinks'
 import { RightMail } from './components/RightMail'
 import { AboutView } from './views/AboutView'
+import { FooterView } from './views/FooterView'
 
 export const App = () => {
   return (
@@ -18,6 +19,7 @@ export const App = () => {
       <ExperienceView />
       <WorkView />
       <ConcatView />
+      <FooterView />
     </div>
   )
 }

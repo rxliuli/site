@@ -1,5 +1,6 @@
 import css from './LeftLinks.module.css'
 import blog from '../assets/blog.svg?raw'
+import telegram from '../assets/telegram.svg?raw'
 import github from '../assets/github.svg?raw'
 import twitter from '../assets/twitter.svg?raw'
 
@@ -12,6 +13,7 @@ interface Link {
 const links: Link[] = [
   { name: 'github', url: 'https://github.com/rxliuli', icon: github },
   { name: 'twitter', url: 'https://twitter.com/rxliuli', icon: twitter },
+  { name: 'telegram', url: 'https://t.me/rxliuli', icon: telegram },
   { name: 'blog', url: 'https://blog.rxliuli.com/', icon: blog },
 ]
 
