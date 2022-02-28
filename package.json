@@ -10,18 +10,24 @@
     "@commitlint/config-conventional": "^16.2.1",
     "@liuli-util/prettier-standard-config": "^0.2.0",
     "lint-staged": "^12.3.4",
-    "prettier": "^2.5.1",
-    "simple-git-hooks": "^2.7.0"
+    "prettier": "^2.3.2",
+    "simple-git-hooks": "^2.5.1",
+    "@liuli-util/commitlint-standard-config": "^0.1.6",
+    "@liuli-util/eslint-config-ts": "^0.2.0"
   },
   "prettier": "@liuli-util/prettier-standard-config",
-  "eslintConfig": {},
+  "eslintConfig": {
+    "extends": [
+      "@liuli-util/eslint-config-ts"
+    ]
+  },
   "simple-git-hooks": {
-    "commit-msg": "pnpm commitlint --edit $1",
-    "pre-commit": "pnpm lint-staged"
+    "commit-msg": "yarn commitlint --edit $1",
+    "pre-commit": "yarn lint-staged"
   },
   "commitlint": {
     "extends": [
-      "@commitlint/config-conventional"
+      "@liuli-util/commitlint-standard-config"
     ]
   },
   "lint-staged": {
@@ -32,6 +38,21 @@
     "src/**/*.{ts,tsx,js,jsx}": [
       "eslint --fix",
       "git add"
+    ],
+    "*.{ts,tsx,js,jsx,css,vue}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
     ]
+  },
+  "sync": [
+    "gitignore",
+    "prettier",
+    "commitlint",
+    "simplehooks",
+    "eslint-ts"
+  ],
+  "scripts": {
+    "postinstall": "npx simple-git-hooks"
   }
 }

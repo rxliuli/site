@@ -1,17 +1,33 @@
+# ----------------------------- Directories --------------------------
 node_modules
-.DS_Store
 dist
-storybook-static
-dist-ssr
-*.local
-
-.yarn/*
-!.yarn/patches
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
-
+tests/server/static
+tests/server/static/upload
 .idea
-dist/
+
+# ----------------------------- File Types --------------------------
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# ----------------------------- Files -------------------------------
+.DS_Store
+# local env files
+.env.local
+.env.*.local
+# log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+**/__tests__/temp/
+*.tgz
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+**/i18n/index.d.ts
