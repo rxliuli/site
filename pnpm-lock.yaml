@@ -89,10 +89,12 @@ importers:
     specifiers:
       '@liuli-util/cli': ^3.19.0
       '@preact/preset-vite': ^2.1.5
+      classnames: ^2.3.1
       preact: ^10.5.15
       typescript: ^4.5.4
       vite: ^2.8.0
     dependencies:
+      classnames: 2.3.1
       preact: 10.6.6
     devDependencies:
       '@liuli-util/cli': 3.19.0_6c713fc0377c1265b2d12821cafd8e3f
@@ -5908,6 +5910,10 @@ packages:
       isobject: 3.0.1
       static-extend: 0.1.2
     dev: true
+
+  /classnames/2.3.1:
+    resolution: {integrity: sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==}
+    dev: false
 
   /clean-css/4.2.4:
     resolution: {integrity: sha512-EJUDT7nDVFDvaQgAo2G/PJvxmp1o/c6iXLbswsBbUFXi1Nr+AjA2cKmfbKDMjMvzEe75g3P6JkaDDAKk96A85A==}
