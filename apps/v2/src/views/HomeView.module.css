@@ -15,32 +15,32 @@
   justify-content: center;
 }
 
-.tab {
+.content {
   max-width: 1000px;
   margin: auto;
 }
 
-.tab > h1 {
+.content > h1 {
   font-size: 16px;
   color: var(--green);
 }
 
-.tab > h2 {
+.content > h2 {
   color: #ccd6f6;
   font-size: 80px;
   margin: 0;
 }
 
-.tab > h2:nth-of-type(2) {
+.content > h2:nth-of-type(2) {
   color: var(--light-slate);
 }
 
-.tab a {
+.content a {
   color: var(--green);
   text-decoration: none;
 }
 
-.tab > a:last-of-type {
+.content > a:last-of-type {
   display: inline-block;
   margin-top: 50px;
   padding: 20px 28px;
@@ -49,6 +49,6 @@
   transition: all 0.3s;
 }
 
-.tab > a:last-of-type:hover {
+.content > a:last-of-type:hover {
   background-color: #133040;
 }
