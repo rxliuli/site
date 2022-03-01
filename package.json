@@ -13,7 +13,7 @@
     "prettier": "^2.3.2",
     "simple-git-hooks": "^2.5.1",
     "@liuli-util/commitlint-standard-config": "^0.1.6",
-    "@liuli-util/eslint-config-ts": "^0.2.0"
+    "@liuli-util/eslint-config-ts": "^0.4.0"
   },
   "prettier": "@liuli-util/prettier-standard-config",
   "eslintConfig": {
@@ -36,12 +36,7 @@
       "git add"
     ],
     "src/**/*.{ts,tsx,js,jsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{ts,tsx,js,jsx,css,vue}": [
-      "prettier --write",
-      "eslint --fix",
+      "eslint --fix --quiet",
       "git add"
     ]
   },
