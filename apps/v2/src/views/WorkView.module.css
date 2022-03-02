@@ -3,3 +3,101 @@
   margin: auto;
   padding: 100px 0;
 }
+
+.PrimaryWork {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.PrimaryWork > img {
+  grid-column: 1 / 7;
+  grid-row: 1;
+}
+.PrimaryWork > section:last-child {
+  grid-column: 6 / 12;
+  grid-row: 1;
+}
+
+.cover {
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+.cover:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 5px;
+  background-color: var(--green);
+  opacity: 0.5;
+  transition: var(--transition);
+}
+.cover:hover:after {
+  opacity: 0;
+}
+
+.content {
+  text-align: right;
+  position: relative;
+}
+
+.content > p {
+  padding: 25px;
+  border-radius: 4px;
+  background-color: #112240;
+  line-height: 1.5em;
+}
+
+.content > p a {
+  text-decoration: none;
+  color: var(--green);
+}
+
+.content > header {
+  color: var(--green);
+}
+
+.content > h3 > a {
+  color: var(--lightest-slate);
+  font-size: 28px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+.content > h3 > a:hover {
+  color: var(--green);
+}
+
+.content > footer > ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  column-gap: 20px;
+  justify-content: end;
+  flex-wrap: nowrap;
+}
+
+.content > footer > ul:last-child {
+  column-gap: 0;
+}
+
+.content ul a {
+  display: block;
+  padding: 10px;
+  transition: all 0.3s;
+  color: var(--light-slate);
+}
+
+.content ul a:hover {
+  color: var(--green);
+  transform: translateY(-4px);
+}
+
+.content svg {
+  width: 20px;
+  height: 20px;
+}
