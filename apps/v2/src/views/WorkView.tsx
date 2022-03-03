@@ -200,7 +200,11 @@ const otherWorks: Omit<Work, 'image'>[] = [
 const PrimaryWork: FunctionalComponent<{ item: Work }> = ({ item }) => {
   return (
     <div className={css.PrimaryWork}>
-      <img className={css.cover} src={item.image} alt={item.title} />
+      <div>
+        <a target={'_blank'} href={item.link}>
+          <img className={css.cover} src={item.image} alt={item.title} />
+        </a>
+      </div>
       <section className={css.content}>
         <header>特色项目</header>
         <h3>
