@@ -59,7 +59,7 @@ const experiences: Experience[] = [
 export const ExperienceView = () => {
   const [active, setActive] = useState(experiences[0].name)
   return (
-    <div className={css.ExperienceView}>
+    <div id={'experience'} className={css.ExperienceView}>
       <Header order={'02.'}>工作</Header>
       <div className={css.tab}>
         <nav>

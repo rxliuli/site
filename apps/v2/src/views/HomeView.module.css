@@ -39,16 +39,3 @@
   color: var(--green);
   text-decoration: none;
 }
-
-.content > a:last-of-type {
-  display: inline-block;
-  margin-top: 50px;
-  padding: 20px 28px;
-  border: solid 1px var(--green);
-  border-radius: 5px;
-  transition: all 0.3s;
-}
-
-.content > a:last-of-type:hover {
-  background-color: #133040;
-}

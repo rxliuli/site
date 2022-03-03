@@ -1,4 +1,5 @@
 import { LayoutNavbar } from '../components/LayoutNavbar'
+import { LinkButton } from '../components/LinkButton'
 import css from './HomeView.module.css'
 
 export const HomeView = () => {
@@ -18,9 +19,7 @@ export const HomeView = () => {
           </a>{' '}
           。
         </p>
-        <a target={'_blank'} href={'https://webos.rxliuli.com'}>
-          看看 webos
-        </a>
+        <LinkButton href={'https://webos.rxliuli.com'}>看看 webos</LinkButton>
       </section>
     </div>
   )
