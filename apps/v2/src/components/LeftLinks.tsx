@@ -3,18 +3,13 @@ import blog from '../assets/blog.svg?raw'
 import telegram from '../assets/telegram.svg?raw'
 import github from '../assets/github.svg?raw'
 import twitter from '../assets/twitter.svg?raw'
+import { LinkIcon, LinkIconItem } from './LinkIcon'
 
-interface Link {
-  name: string
-  url: string
-  icon: string
-}
-
-const links: Link[] = [
-  { name: 'github', url: 'https://github.com/rxliuli', icon: github },
-  { name: 'twitter', url: 'https://twitter.com/rxliuli', icon: twitter },
-  { name: 'telegram', url: 'https://t.me/rxliuli', icon: telegram },
-  { name: 'blog', url: 'https://blog.rxliuli.com/', icon: blog },
+const links: LinkIconItem[] = [
+  { title: 'github', link: 'https://github.com/rxliuli', icon: github },
+  { title: 'twitter', link: 'https://twitter.com/rxliuli', icon: twitter },
+  { title: 'telegram', link: 'https://t.me/rxliuli', icon: telegram },
+  { title: 'blog', link: 'https://blog.rxliuli.com/', icon: blog },
 ]
 
 export const LeftLinks = () => {
@@ -23,7 +18,7 @@ export const LeftLinks = () => {
       <ul>
         {links.map((item) => (
           <li>
-            <a target={'_blank'} href={item.url} dangerouslySetInnerHTML={{ __html: item.icon }} />
+            <LinkIcon item={item} />
           </li>
         ))}
       </ul>

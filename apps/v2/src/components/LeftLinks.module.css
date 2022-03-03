@@ -19,20 +19,3 @@
   margin: 0;
   padding: 0;
 }
-
-.LeftLinks ul a {
-  display: block;
-  padding: 10px;
-  transition: all 0.3s;
-  color: var(--light-slate);
-}
-
-.LeftLinks ul a:hover {
-  color: var(--green);
-  transform: translateY(-4px);
-}
-
-.LeftLinks svg {
-  width: 20px;
-  height: 20px;
-}
