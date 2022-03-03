@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-color: #0a192f;
   color: var(--light-slate);
+  scroll-behavior: smooth;
 }
 
 * {
