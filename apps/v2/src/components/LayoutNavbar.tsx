@@ -14,9 +14,9 @@ const links = [
 export const LayoutNavbar = () => {
   return (
     <nav className={css.LayoutNavbar}>
-      <div>
+      <a href={'/v2/'}>
         <img src={logo} alt={'logo'} width={42} height={42} />
-      </div>
+      </a>
       <ol className={css.links}>
         {links.map(({ label, href }) => (
           <li key={label}>
