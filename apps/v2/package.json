@@ -15,11 +15,14 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "preact": "^10.5.15",
+    "marked": "^4.0.12",
     "react-markdown": "^8.0.0"
   },
   "devDependencies": {
     "@liuli-util/cli": "^3.19.0",
     "@preact/preset-vite": "^2.1.5",
+    "@types/marked": "^4.0.2",
+    "rollup-plugin-visualizer": "^5.6.0",
     "typescript": "^4.5.4",
     "vite": "^2.8.0"
   }

@@ -6,8 +6,8 @@ import joplin from '../assets/joplin-vscode-plugin-cover.png'
 import liuliCli from '../assets/liuli-cli-cover.png'
 import folder from '../assets/folder.svg?raw'
 import { FunctionalComponent } from 'preact'
-import ReactMarkdown from 'react-markdown'
 import { LinkIcon, LinkIconItem } from '../components/LinkIcon'
+import { ReactMarkdown } from '../components/ReactMarkdown'
 
 interface Work {
   title: string
@@ -212,7 +212,9 @@ const PrimaryWork: FunctionalComponent<{ item: Work }> = ({ item }) => {
             {item.title}
           </a>
         </h3>
-        <ReactMarkdown linkTarget={'_blank'}>{item.description}</ReactMarkdown>
+        <p>
+          <ReactMarkdown linkTarget={'_blank'}>{item.description}</ReactMarkdown>
+        </p>
         <footer>
           <ul>
             {item.topic.map((item) => (
