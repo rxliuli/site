@@ -17,7 +17,7 @@ const experiences: Experience[] = [
     name: '北京奇岱松',
     link: 'https://www.zhipin.com/gongsi/2328926c2da3d0090XF52tS1GQ~~.html',
     jobTitle: '前端开发工程师',
-    start: '2021-09',
+    start: '2021-07',
     stop: '至今',
     list: [
       '前端工程化和基础建设，包括各种 cli、插件和 library 等',
