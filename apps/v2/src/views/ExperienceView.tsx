@@ -76,7 +76,7 @@ export const ExperienceView = () => {
             <section key={item.name} style={{ display: active === item.name ? 'block' : 'none' }}>
               <h3>
                 <span>{item.jobTitle}</span>
-                <a href={item.link}>
+                <a href={item.link} target={'_blank'}>
                   {'  '}@{item.name}
                 </a>
               </h3>

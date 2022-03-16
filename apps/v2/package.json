@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "preact": "^10.5.15",
     "marked": "^4.0.12",
+    "preact": "^10.5.15",
     "react-markdown": "^8.0.0"
   },
   "devDependencies": {

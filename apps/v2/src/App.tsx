@@ -6,6 +6,7 @@ import { LeftLinks } from './components/LeftLinks'
 import { RightMail } from './components/RightMail'
 import { AboutView } from './views/AboutView'
 import { FooterView } from './views/FooterView'
+import { LayoutNavbar } from './components/LayoutNavbar'
 
 export const App = () => {
   return (
@@ -13,6 +14,7 @@ export const App = () => {
       {/*<LayoutNavbar />*/}
       <LeftLinks />
       <RightMail />
+      <LayoutNavbar />
 
       <HomeView />
       <AboutView />

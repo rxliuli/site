@@ -5,9 +5,6 @@ import css from './HomeView.module.css'
 export const HomeView = () => {
   return (
     <div className={css.HomeView}>
-      <div className={css.navbar}>
-        <LayoutNavbar />
-      </div>
       <section className={css.content}>
         <h1>你好，吾辈名为</h1>
         <h2>琉璃</h2>
