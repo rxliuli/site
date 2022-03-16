@@ -18,7 +18,9 @@
   display: flex;
   align-items: center;
   color: var(--lightest-slate);
+  white-space: nowrap;
 }
+
 .header span {
   font-size: 20px;
   color: var(--green);
@@ -102,4 +104,16 @@
 
 .avatar:hover:before {
   transform: translate(-10px, -10px);
+}
+
+@media (max-width: 768px) {
+  .AboutView {
+    display: block;
+  }
+  .header:after {
+    width: 100%;
+  }
+  .avatar {
+    margin-top: 50px;
+  }
 }

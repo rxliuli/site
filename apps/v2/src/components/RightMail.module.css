@@ -25,3 +25,9 @@
   color: var(--green);
   transform: translateY(-4px);
 }
+
+@media (max-width: 768px) {
+  .RightMail {
+    display: none;
+  }
+}

@@ -5,10 +5,6 @@
   /*position: relative;*/
 }
 
-.navbar {
-
-}
-
 .content {
   max-width: 1000px;
   margin: auto;
@@ -21,7 +17,7 @@
 
 .content > h2 {
   color: #ccd6f6;
-  font-size: 80px;
+  font-size: clamp(40px, 8vw, 80px);
   margin: 0;
 }
 

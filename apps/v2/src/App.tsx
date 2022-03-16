@@ -7,20 +7,21 @@ import { RightMail } from './components/RightMail'
 import { AboutView } from './views/AboutView'
 import { FooterView } from './views/FooterView'
 import { LayoutNavbar } from './components/LayoutNavbar'
+import css from './App.module.css'
 
 export const App = () => {
   return (
     <div>
-      {/*<LayoutNavbar />*/}
+      <LayoutNavbar />
       <LeftLinks />
       <RightMail />
-      <LayoutNavbar />
-
-      <HomeView />
-      <AboutView />
-      <ExperienceView />
-      <WorkView />
-      <ConcatView />
+      <main className={css.main}>
+        <HomeView />
+        <AboutView />
+        <ExperienceView />
+        <WorkView />
+        <ConcatView />
+      </main>
       <FooterView />
     </div>
   )

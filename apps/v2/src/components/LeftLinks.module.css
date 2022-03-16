@@ -1,3 +1,9 @@
+@media (max-width: 768px) {
+  .LeftLinks {
+    display: none;
+  }
+}
+
 .LeftLinks {
   position: fixed;
   left: 0;

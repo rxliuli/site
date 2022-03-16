@@ -200,36 +200,38 @@ const otherWorks: Omit<Work, 'image'>[] = [
 const PrimaryWork: FunctionalComponent<{ item: Work }> = ({ item }) => {
   return (
     <div className={css.PrimaryWork}>
-      <div>
+      <div className={css.projectImage}>
         <a target={'_blank'} href={item.link}>
           <img className={css.cover} src={item.image} alt={item.title} />
         </a>
       </div>
-      <section className={css.content}>
-        <header>特色项目</header>
-        <h3>
-          <a target={'_blank'} href={item.link}>
-            {item.title}
-          </a>
-        </h3>
-        <p>
-          <ReactMarkdown linkTarget={'_blank'}>{item.description}</ReactMarkdown>
-        </p>
-        <footer>
-          <ul>
-            {item.topic.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <ul>
-            {item.links.map((item) => (
-              <li key={item.link}>
-                <LinkIcon item={item} />
-              </li>
-            ))}
-          </ul>
-        </footer>
-      </section>
+      <div className={css.projectContent}>
+        <section className={css.content}>
+          <header>特色项目</header>
+          <h3>
+            <a target={'_blank'} href={item.link}>
+              {item.title}
+            </a>
+          </h3>
+          <p>
+            <ReactMarkdown linkTarget={'_blank'}>{item.description}</ReactMarkdown>
+          </p>
+          <footer>
+            <ul>
+              {item.topic.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+            <ul>
+              {item.links.map((item) => (
+                <li key={item.link}>
+                  <LinkIcon item={item} />
+                </li>
+              ))}
+            </ul>
+          </footer>
+        </section>
+      </div>
     </div>
   )
 }
@@ -238,7 +240,7 @@ const OtherWork: FunctionalComponent<{
   item: Omit<Work, 'image'>
 }> = ({ item }) => {
   return (
-    <div className={css.OtherWork}>
+    <li className={css.OtherWork}>
       <header>
         <div>
           <div className={css.folder} dangerouslySetInnerHTML={{ __html: folder }}></div>
@@ -264,7 +266,7 @@ const OtherWork: FunctionalComponent<{
           ))}
         </ul>
       </footer>
-    </div>
+    </li>
   )
 }
 
@@ -280,15 +282,13 @@ export const WorkView = () => {
       <div className={css.otherWorks}>
         <header>
           <h2>其他值得注意的项目</h2>
-          <a target={'_blank'} href={''}>
-            查看列表
-          </a>
+          <a href={''}>查看列表</a>
         </header>
-        <div>
+        <ul className={css.projectsGrid}>
           {otherWorks.map((item) => (
             <OtherWork item={item} key={item.title} />
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   )
