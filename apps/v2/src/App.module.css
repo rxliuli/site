@@ -2,6 +2,11 @@
   padding: 0 100px;
 }
 
+.main.filter {
+  filter: blur(10px);
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
   .main {
     padding: 0 50px;
@@ -12,4 +17,16 @@
   .main {
     padding: 0 25px;
   }
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+.mask.show {
+  display: block;
 }

@@ -2,6 +2,7 @@ import css from './LayoutNavbar.module.css'
 import logo from '../assets/logo.svg'
 import classNames from 'classnames'
 import { useEffect, useState } from 'preact/hooks'
+import { FunctionalComponent } from 'preact'
 
 const links = [
   { label: '关于', href: '#about' },
@@ -28,8 +29,9 @@ function useWindowScroll() {
 /**
  * 顶部导航栏
  */
-export const LayoutNavbar = () => {
+export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): void }> = (props) => {
   const { dir, scrollY } = useWindowScroll()
+
   return (
     <header
       className={classNames(css.LayoutNavbar, {
@@ -42,17 +44,42 @@ export const LayoutNavbar = () => {
         <a href={'/v2/'}>
           <img src={logo} alt={'logo'} width={42} height={42} />
         </a>
-        <ol className={css.links}>
-          {links.map(({ label, href }) => (
-            <li key={label}>
-              <a href={href}>{label}</a>
-            </li>
-          ))}
-        </ol>
-        <div>
-          <a className={css.source} target={'_blank'} href={'https://github.com/rxliuli/rxliuli'}>
-            源代码
-          </a>
+        <div className={css.nav}>
+          <ol className={css.links}>
+            {links.map(({ label, href }) => (
+              <li key={label}>
+                <a href={href}>{label}</a>
+              </li>
+            ))}
+          </ol>
+          <div>
+            <a className={css.source} target={'_blank'} href={'https://github.com/rxliuli/rxliuli'}>
+              源代码
+            </a>
+          </div>
+        </div>
+        <div className={css.menu}>
+          <button onClick={props.onToggle}>
+            <div className={css.menuBox} />
+          </button>
+          <aside
+            className={classNames(css.menuNav, {
+              [css.sidebar]: props.sidebar,
+            })}
+          >
+            <ol>
+              {links.map(({ label, href }) => (
+                <li key={label}>
+                  <a href={href} onClick={props.onToggle}>
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ol>
+            <a target={'_blank'} href={'https://github.com/rxliuli/rxliuli'}>
+              源代码
+            </a>
+          </aside>
         </div>
       </nav>
     </header>

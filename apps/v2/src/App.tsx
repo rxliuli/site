@@ -8,20 +8,40 @@ import { AboutView } from './views/AboutView'
 import { FooterView } from './views/FooterView'
 import { LayoutNavbar } from './components/LayoutNavbar'
 import css from './App.module.css'
+import { useState } from 'preact/hooks'
+import classNames from 'classnames'
 
 export const App = () => {
+  const [sidebar, setSidebar] = useState(false)
+
+  function onToggle() {
+    document.body.style.overflowY = sidebar ? 'auto' : 'hidden'
+    setSidebar(!sidebar)
+  }
+
   return (
     <div>
-      <LayoutNavbar />
+      <LayoutNavbar sidebar={sidebar} onToggle={onToggle} />
       <LeftLinks />
       <RightMail />
-      <main className={css.main}>
+      <main
+        className={classNames(css.main, {
+          [css.filter]: sidebar,
+        })}
+      >
         <HomeView />
         <AboutView />
         <ExperienceView />
         <WorkView />
         <ConcatView />
       </main>
+      <div
+        className={classNames(css.mask, { [css.show]: sidebar })}
+        onClick={() => {
+          console.log('sidebar && onToggle(): ', sidebar)
+          sidebar && onToggle()
+        }}
+      />
       <FooterView />
     </div>
   )
