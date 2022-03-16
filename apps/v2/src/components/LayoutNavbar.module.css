@@ -113,6 +113,7 @@ a.source {
   height: 2px;
   width: 100%;
   background-color: var(--green);
+  transition: transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
 }
 
 .menuBox::before,
@@ -132,6 +133,21 @@ a.source {
 .menuBox::after {
   bottom: -10px;
   width: 80%;
+}
+
+.menuBox.close {
+  transform: rotate(225deg);
+}
+
+.menuBox.close::before {
+  top: 0;
+  opacity: 0;
+}
+
+.menuBox.close::after {
+  bottom: 0;
+  width: 100%;
+  transform: rotate(-90deg);
 }
 
 .menuNav {

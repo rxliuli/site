@@ -60,7 +60,11 @@ export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): v
         </div>
         <div className={css.menu}>
           <button onClick={props.onToggle}>
-            <div className={css.menuBox} />
+            <div
+              className={classNames(css.menuBox, {
+                [css.close]: props.sidebar,
+              })}
+            />
           </button>
           <aside
             className={classNames(css.menuNav, {
