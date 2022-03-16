@@ -26,6 +26,7 @@ importers:
     specifiers:
       '@babel/core': ^7.17.5
       '@fortawesome/fontawesome-free': ^6.0.0
+      '@liuli-util/cli': ^3.19.0
       '@liuli-util/eslint-config-react-ts': ^0.2.1
       '@liuli-util/react-router': ^0.3.1
       '@mdx-js/react': ^2.0.0
@@ -66,6 +67,7 @@ importers:
       react-use: 17.3.2_react-dom@17.0.2+react@17.0.2
     devDependencies:
       '@babel/core': 7.17.5
+      '@liuli-util/cli': 3.19.0_6c713fc0377c1265b2d12821cafd8e3f
       '@liuli-util/eslint-config-react-ts': 0.2.1_typescript@4.5.5
       '@mdx-js/react': 2.0.0_react@17.0.2
       '@storybook/addon-actions': 6.4.19_b8fdba992ce7d797017dc07106486496
