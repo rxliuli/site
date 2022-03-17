@@ -15,8 +15,7 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "marked": "^4.0.12",
-    "preact": "^10.5.15",
-    "react-markdown": "^8.0.0"
+    "preact": "^10.5.15"
   },
   "devDependencies": {
     "@liuli-util/cli": "^3.19.0",
