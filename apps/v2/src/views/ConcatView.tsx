@@ -1,5 +1,4 @@
 import { LinkButton } from '../components/LinkButton'
-import { Header } from './AboutView'
 import css from './ConcatView.module.css'
 
 export const ConcatView = () => {

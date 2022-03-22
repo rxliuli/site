@@ -1,11 +1,17 @@
-import { LayoutNavbar } from '../components/LayoutNavbar'
+import classNames from 'classnames'
 import { LinkButton } from '../components/LinkButton'
+import { useScrollView } from '../hooks/useScrollView'
 import css from './HomeView.module.css'
 
 export const HomeView = () => {
+  const { ref, scrollView } = useScrollView()
   return (
-    <div className={css.HomeView}>
-      <section className={css.content}>
+    <div className={css.HomeView} ref={ref}>
+      <section
+        className={classNames(css.content, {
+          [css.inView]: scrollView,
+        })}
+      >
         <h1>你好，吾辈名为</h1>
         <h2>琉璃</h2>
         <h2>吾辈基于 web 技术创造各种东西</h2>

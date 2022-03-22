@@ -29,3 +29,34 @@
   color: var(--green);
   text-decoration: none;
 }
+
+.content > * {
+  transition-duration: 0.15s;
+  --delay: 0.1s;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+.content > *:nth-child(1) {
+  transition-delay: calc(var(--delay) * 0);
+}
+.content > *:nth-child(2) {
+  transition-delay: calc(var(--delay) * 1);
+}
+.content > *:nth-child(3) {
+  transition-delay: calc(var(--delay) * 2);
+}
+.content > *:nth-child(4) {
+  transition-delay: calc(var(--delay) * 3);
+}
+.content > *:nth-child(5) {
+  transition-delay: calc(var(--delay) * 4);
+}
+.content > *:nth-child(6) {
+  transition-delay: calc(var(--delay) * 5);
+}
+
+.inView > * {
+  opacity: 1;
+  transform: translateY(0);
+}
