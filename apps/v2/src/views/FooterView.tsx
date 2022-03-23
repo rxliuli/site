@@ -1,17 +1,17 @@
 import classNames from 'classnames'
-import { useScrollView } from '../hooks/useScrollView'
+import { useInView } from '../hooks/useInView'
 import css from './FooterView.module.css'
 import transition from '../components/TransitionGroup.module.css'
 
 export const FooterView = () => {
-  const { ref, scrollView } = useScrollView()
+  const { ref, inView } = useInView()
   return (
     <footer
       ref={ref}
       className={classNames(
         transition.fadeupEnter,
         {
-          [transition.fadedownEnterActive]: scrollView,
+          [transition.fadedownEnterActive]: inView,
         },
         css.FooterView,
       )}

@@ -3,7 +3,7 @@ import { Header } from './AboutView'
 import { useState } from 'preact/compat'
 import classNames from 'classnames'
 import transition from '../components/TransitionGroup.module.css'
-import { useScrollView } from '../hooks/useScrollView'
+import { useInView } from '../hooks/useInView'
 import { TransitionGroup } from '../components/TransitionGroup'
 
 interface Experience {
@@ -61,12 +61,12 @@ const experiences: Experience[] = [
  */
 export const ExperienceView = () => {
   const [active, setActive] = useState(experiences[0].name)
-  const { ref, scrollView } = useScrollView()
+  const { ref, inView } = useInView()
   return (
     <div
       ref={ref}
       className={classNames(transition.fadeupEnter, {
-        [transition.fadedownEnterActive]: scrollView,
+        [transition.fadedownEnterActive]: inView,
       })}
     >
       <TransitionGroup>

@@ -5,7 +5,7 @@ import { useEffect, useState } from 'preact/hooks'
 import { FunctionalComponent } from 'preact'
 import { TransitionGroup } from './TransitionGroup'
 import transition from '../components/TransitionGroup.module.css'
-import { useScrollView } from '../hooks/useScrollView'
+import { useInView } from '../hooks/useInView'
 import { useWindowScroll } from '../hooks/useWindowScroll'
 
 const links = [
@@ -20,7 +20,7 @@ const links = [
  */
 export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): void }> = (props) => {
   const { dir, scrollY } = useWindowScroll()
-  const { ref, scrollView } = useScrollView()
+  const { ref, inView } = useInView()
   return (
     <header
       className={classNames(css.LayoutNavbar, {
@@ -37,7 +37,7 @@ export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): v
           className={classNames(
             transition.fadedownEnter,
             {
-              [transition.fadedownEnterActive]: scrollView,
+              [transition.fadedownEnterActive]: inView,
             },
             css.nav,
           )}
@@ -48,7 +48,7 @@ export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): v
               className={classNames(
                 transition.fadedownEnter,
                 {
-                  [transition.fadedownEnterActive]: scrollView,
+                  [transition.fadedownEnterActive]: inView,
                 },
                 css.links,
               )}

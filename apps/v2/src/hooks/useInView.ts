@@ -4,10 +4,10 @@ interface Options extends IntersectionObserverInit {
   timeout?: number
 }
 
-export function useScrollView(options?: Options) {
+export function useInView(options?: Options) {
   const { timeout, ...other }: Options = { threshold: 0.5, ...options }
   const html = useRef<any>(null)
-  const [scrollView, setScrollView] = useState(false)
+  const [inView, setInView] = useState(false)
   useEffect(() => {
     let n: any
     const observer = new IntersectionObserver((entries) => {
@@ -15,9 +15,9 @@ export function useScrollView(options?: Options) {
       // console.log('entries: ', entries, intersectionRatio, intersectionRatio > 0 && intersectionRatio <= 1)
       if (intersectionRatio > 0 && intersectionRatio <= 1) {
         if (timeout === undefined) {
-          setScrollView(true)
+          setInView(true)
         } else {
-          n = setTimeout(() => setScrollView(true), timeout)
+          n = setTimeout(() => setInView(true), timeout)
         }
         observer.unobserve(html.current!)
       }
@@ -30,6 +30,6 @@ export function useScrollView(options?: Options) {
   }, [timeout])
   return {
     ref: html,
-    scrollView,
+    inView,
   }
 }

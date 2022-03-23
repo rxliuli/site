@@ -8,7 +8,7 @@ import folder from '../assets/folder.svg?raw'
 import { FunctionalComponent, JSX } from 'preact'
 import { LinkIcon, LinkIconItem } from '../components/LinkIcon'
 import { ReactMarkdown } from '../components/ReactMarkdown'
-import { useScrollView } from '../hooks/useScrollView'
+import { useInView } from '../hooks/useInView'
 import { TransitionGroup } from '../components/TransitionGroup'
 import classNames from 'classnames'
 import transition from '../components/TransitionGroup.module.css'
@@ -202,14 +202,14 @@ const otherWorks: Omit<Work, 'image'>[] = [
 ]
 
 const PrimaryWork: FunctionalComponent<{ item: Work }> = ({ item }) => {
-  const { ref, scrollView } = useScrollView()
+  const { ref, inView } = useInView()
   return (
     <div
       ref={ref}
       className={classNames(
         transition.fadeupEnter,
         {
-          [transition.fadedownEnterActive]: scrollView,
+          [transition.fadedownEnterActive]: inView,
         },
         css.PrimaryWork,
       )}
@@ -253,14 +253,14 @@ const PrimaryWork: FunctionalComponent<{ item: Work }> = ({ item }) => {
 const OtherWork: FunctionalComponent<{
   item: Omit<Work, 'image'>
 }> = ({ item }) => {
-  const { ref, scrollView } = useScrollView()
+  const { ref, inView } = useInView()
   return (
     <li
       ref={ref}
       className={classNames(
         transition.fadeupEnter,
         {
-          [transition.fadedownEnterActive]: scrollView,
+          [transition.fadedownEnterActive]: inView,
         },
         css.OtherWork,
       )}
@@ -295,14 +295,14 @@ const OtherWork: FunctionalComponent<{
 }
 
 export const WorkView = () => {
-  const { ref, scrollView } = useScrollView({ threshold: 0.1 })
+  const { ref, inView } = useInView({ threshold: 0.1 })
   return (
     <div
       id={'work'}
       className={classNames(
         transition.fadeupEnter,
         {
-          [transition.fadedownEnterActive]: scrollView,
+          [transition.fadedownEnterActive]: inView,
         },
         css.WorkView,
       )}

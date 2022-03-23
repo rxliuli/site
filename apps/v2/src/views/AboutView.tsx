@@ -4,7 +4,7 @@ import { FunctionalComponent, JSX } from 'preact'
 import { TransitionGroup } from '../components/TransitionGroup'
 import classNames from 'classnames'
 import transition from '../components/TransitionGroup.module.css'
-import { useScrollView } from '../hooks/useScrollView'
+import { useInView } from '../hooks/useInView'
 
 export const Header: FunctionalComponent<{ order: string; style?: JSX.CSSProperties }> = (props) => {
   return (
@@ -18,14 +18,14 @@ export const Header: FunctionalComponent<{ order: string; style?: JSX.CSSPropert
 const skillList = ['TypeScript', 'React', 'Vue3', 'Golang', '工程化']
 
 export const AboutView = () => {
-  const { ref, scrollView } = useScrollView()
+  const { ref, inView } = useInView()
   return (
     <div
       id={'about'}
       className={classNames(
         transition.fadedownEnter,
         {
-          [transition.fadedownEnterActive]: scrollView,
+          [transition.fadedownEnterActive]: inView,
         },
         css.AboutView,
       )}

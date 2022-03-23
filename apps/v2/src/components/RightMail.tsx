@@ -1,17 +1,17 @@
 import css from './RightMail.module.css'
 import transition from '../components/TransitionGroup.module.css'
 import classNames from 'classnames'
-import { useScrollView } from '../hooks/useScrollView'
+import { useInView } from '../hooks/useInView'
 
 export const RightMail = () => {
-  const { ref, scrollView } = useScrollView({ timeout: 1000 })
+  const { ref, inView } = useInView({ timeout: 1000 })
   return (
     <div
       ref={ref}
       className={classNames(
         transition.fadeEnter,
         {
-          [transition.fadeEnterActive]: scrollView,
+          [transition.fadeEnterActive]: inView,
         },
         css.RightMail,
       )}

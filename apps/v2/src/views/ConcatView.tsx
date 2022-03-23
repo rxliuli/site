@@ -1,18 +1,18 @@
 import { LinkButton } from '../components/LinkButton'
-import { useScrollView } from '../hooks/useScrollView'
+import { useInView } from '../hooks/useInView'
 import css from './ConcatView.module.css'
 import transition from '../components/TransitionGroup.module.css'
 import classNames from 'classnames'
 
 export const ConcatView = () => {
-  const { ref, scrollView } = useScrollView()
+  const { ref, inView } = useInView()
   return (
     <div
       id={'concat'}
       className={classNames(
         transition.fadedownEnter,
         {
-          [transition.fadedownEnterActive]: scrollView,
+          [transition.fadedownEnterActive]: inView,
         },
         css.ConcatView,
       )}

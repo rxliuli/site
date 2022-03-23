@@ -1,13 +1,13 @@
 import classNames from 'classnames'
 import { LinkButton } from '../components/LinkButton'
 import { TransitionGroup } from '../components/TransitionGroup'
-import { useScrollView } from '../hooks/useScrollView'
+import { useInView } from '../hooks/useInView'
 import css from './HomeView.module.css'
 import transition from '../components/TransitionGroup.module.css'
 import { useWindowScroll } from '../hooks/useWindowScroll'
 
 export const HomeView = () => {
-  const { ref, scrollView } = useScrollView({ threshold: 0.1 })
+  const { ref, inView } = useInView({ threshold: 0.1 })
   const { dir } = useWindowScroll()
   return (
     <div className={css.HomeView} ref={ref}>
@@ -15,7 +15,7 @@ export const HomeView = () => {
         className={classNames(
           transition.fadeupEnter,
           {
-            [transition.fadeupEnterActive]: scrollView,
+            [transition.fadeupEnterActive]: inView,
           },
           css.content,
         )}
