@@ -2,6 +2,9 @@ import css from './ExperienceView.module.css'
 import { Header } from './AboutView'
 import { useState } from 'preact/compat'
 import classNames from 'classnames'
+import transition from '../components/TransitionGroup.module.css'
+import { useScrollView } from '../hooks/useScrollView'
+import { TransitionGroup } from '../components/TransitionGroup'
 
 interface Experience {
   name: string
@@ -58,40 +61,46 @@ const experiences: Experience[] = [
  */
 export const ExperienceView = () => {
   const [active, setActive] = useState(experiences[0].name)
+  const { ref, scrollView } = useScrollView()
+  console.log('scrollView: ', scrollView)
   return (
-    <div id={'experience'} className={css.ExperienceView}>
-      <Header order={'02.'}>工作</Header>
-      <div className={css.tab}>
-        <nav>
-          <ul>
-            {experiences.map((item) => (
-              <li key={item.name} onClick={() => setActive(item.name)}>
-                <button className={classNames({ [css.active]: item.name === active })}>{item.name}</button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-        <ul className={css.content}>
-          {experiences.map((item) => (
-            <section key={item.name} style={{ display: active === item.name ? 'block' : 'none' }}>
-              <h3>
-                <span>{item.jobTitle}</span>
-                <a href={item.link} target={'_blank'}>
-                  {'  '}@{item.name}
-                </a>
-              </h3>
-              <p>
-                {item.start} - {item.stop}
-              </p>
+    <div ref={ref}>
+      <TransitionGroup>
+        <div id={'experience'} className={css.ExperienceView}>
+          <Header order={'02.'}>工作</Header>
+          <div className={css.tab}>
+            <nav>
               <ul>
-                {item.list.map((item) => (
-                  <li key={item}>{item}</li>
+                {experiences.map((item) => (
+                  <li key={item.name} onClick={() => setActive(item.name)}>
+                    <button className={classNames({ [css.active]: item.name === active })}>{item.name}</button>
+                  </li>
                 ))}
               </ul>
-            </section>
-          ))}
-        </ul>
-      </div>
+            </nav>
+            <ul className={css.content}>
+              {experiences.map((item) => (
+                <section key={item.name} style={{ display: active === item.name ? 'block' : 'none' }}>
+                  <h3>
+                    <span>{item.jobTitle}</span>
+                    <a href={item.link} target={'_blank'}>
+                      {'  '}@{item.name}
+                    </a>
+                  </h3>
+                  <p>
+                    {item.start} - {item.stop}
+                  </p>
+                  <ul>
+                    {item.list.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </TransitionGroup>
     </div>
   )
 }

@@ -1,7 +1,10 @@
 import { cloneElement, CSSProperties, ReactElement, ReactNode } from 'react'
 
-export function TransitionGroup(props: { children: ReactNode[]; timeout?: number }) {
-  const children = props.children as unknown as ReactElement<{ style?: CSSProperties; children: ReactNode }>[]
+export function TransitionGroup(props: { children: ReactNode | ReactNode[]; timeout?: number }) {
+  const children = (Array.isArray(props.children) ? props.children : [props.children]) as unknown as ReactElement<{
+    style?: CSSProperties
+    children: ReactNode
+  }>[]
   return (
     <>
       {children.map((item, i) =>
