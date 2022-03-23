@@ -22,3 +22,11 @@
   transform: translateY(0px);
   transition: opacity 300ms var(--easing), transform 300ms var(--easing);
 }
+
+.fadeEnter {
+  opacity: 0;
+}
+.fadeEnterActive {
+  opacity: 1;
+  transition: opacity 300ms var(--easing);
+}

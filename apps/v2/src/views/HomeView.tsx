@@ -4,9 +4,11 @@ import { TransitionGroup } from '../components/TransitionGroup'
 import { useScrollView } from '../hooks/useScrollView'
 import css from './HomeView.module.css'
 import transition from '../components/TransitionGroup.module.css'
+import { useWindowScroll } from '../hooks/useWindowScroll'
 
 export const HomeView = () => {
-  const { ref, scrollView } = useScrollView()
+  const { ref, scrollView } = useScrollView({ threshold: 0.1 })
+  const { dir } = useWindowScroll()
   return (
     <div className={css.HomeView} ref={ref}>
       <section
@@ -18,7 +20,7 @@ export const HomeView = () => {
           css.content,
         )}
       >
-        <TransitionGroup timeout={500}>
+        <TransitionGroup timeout={dir ? 0 : 500}>
           <h1>你好，吾辈名为</h1>
           <h2>琉璃</h2>
           <h2>吾辈基于 web 技术创造各种东西</h2>

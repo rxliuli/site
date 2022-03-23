@@ -1,9 +1,23 @@
 import { LinkButton } from '../components/LinkButton'
+import { useScrollView } from '../hooks/useScrollView'
 import css from './ConcatView.module.css'
+import transition from '../components/TransitionGroup.module.css'
+import classNames from 'classnames'
 
 export const ConcatView = () => {
+  const { ref, scrollView } = useScrollView()
   return (
-    <div id={'concat'} className={css.ConcatView}>
+    <div
+      id={'concat'}
+      className={classNames(
+        transition.fadedownEnter,
+        {
+          [transition.fadedownEnterActive]: scrollView,
+        },
+        css.ConcatView,
+      )}
+      ref={ref}
+    >
       <header>
         <h2>
           <span>04.</span> 下一步是什么？

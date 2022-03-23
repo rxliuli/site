@@ -1,25 +1,33 @@
 import { useEffect, useRef, useState } from 'preact/hooks'
 
-export function useScrollView() {
+interface Options extends IntersectionObserverInit {
+  timeout?: number
+}
+
+export function useScrollView(options?: Options) {
+  const { timeout, ...other }: Options = { threshold: 0.5, ...options }
   const html = useRef<any>(null)
   const [scrollView, setScrollView] = useState(false)
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        console.log('entries: ', entries.length)
-        if (entries[0].intersectionRatio !== 0) {
+    let n: any
+    const observer = new IntersectionObserver((entries) => {
+      const intersectionRatio = entries[0].intersectionRatio
+      // console.log('entries: ', entries, intersectionRatio, intersectionRatio > 0 && intersectionRatio <= 1)
+      if (intersectionRatio > 0 && intersectionRatio <= 1) {
+        if (timeout === undefined) {
           setScrollView(true)
-          observer.unobserve(html.current!)
+        } else {
+          n = setTimeout(() => setScrollView(true), timeout)
         }
-      },
-      {
-        rootMargin: '0px',
-        threshold: 1,
-      },
-    )
+        observer.unobserve(html.current!)
+      }
+    }, other)
     observer.observe(html.current!)
-    return () => observer.unobserve(html.current!)
-  }, [])
+    return () => {
+      observer.unobserve(html.current!)
+      clearTimeout(n)
+    }
+  }, [timeout])
   return {
     ref: html,
     scrollView,

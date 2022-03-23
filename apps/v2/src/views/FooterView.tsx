@@ -1,8 +1,21 @@
+import classNames from 'classnames'
+import { useScrollView } from '../hooks/useScrollView'
 import css from './FooterView.module.css'
+import transition from '../components/TransitionGroup.module.css'
 
 export const FooterView = () => {
+  const { ref, scrollView } = useScrollView()
   return (
-    <footer className={css.FooterView}>
+    <footer
+      ref={ref}
+      className={classNames(
+        transition.fadeupEnter,
+        {
+          [transition.fadedownEnterActive]: scrollView,
+        },
+        css.FooterView,
+      )}
+    >
       由{' '}
       <a target={'_blank'} href={'https://github.com/bchiang7/v4'}>
         bchiang7

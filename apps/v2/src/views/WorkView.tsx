@@ -5,9 +5,13 @@ import open from '../assets/open.svg?raw'
 import joplin from '../assets/joplin-vscode-plugin-cover.png'
 import liuliCli from '../assets/liuli-cli-cover.png'
 import folder from '../assets/folder.svg?raw'
-import { FunctionalComponent } from 'preact'
+import { FunctionalComponent, JSX } from 'preact'
 import { LinkIcon, LinkIconItem } from '../components/LinkIcon'
 import { ReactMarkdown } from '../components/ReactMarkdown'
+import { useScrollView } from '../hooks/useScrollView'
+import { TransitionGroup } from '../components/TransitionGroup'
+import classNames from 'classnames'
+import transition from '../components/TransitionGroup.module.css'
 
 interface Work {
   title: string
@@ -198,8 +202,18 @@ const otherWorks: Omit<Work, 'image'>[] = [
 ]
 
 const PrimaryWork: FunctionalComponent<{ item: Work }> = ({ item }) => {
+  const { ref, scrollView } = useScrollView()
   return (
-    <div className={css.PrimaryWork}>
+    <div
+      ref={ref}
+      className={classNames(
+        transition.fadeupEnter,
+        {
+          [transition.fadedownEnterActive]: scrollView,
+        },
+        css.PrimaryWork,
+      )}
+    >
       <div className={css.projectImage}>
         <a target={'_blank'} href={item.link}>
           <img className={css.cover} src={item.image} alt={item.title} />
@@ -239,8 +253,18 @@ const PrimaryWork: FunctionalComponent<{ item: Work }> = ({ item }) => {
 const OtherWork: FunctionalComponent<{
   item: Omit<Work, 'image'>
 }> = ({ item }) => {
+  const { ref, scrollView } = useScrollView()
   return (
-    <li className={css.OtherWork}>
+    <li
+      ref={ref}
+      className={classNames(
+        transition.fadeupEnter,
+        {
+          [transition.fadedownEnterActive]: scrollView,
+        },
+        css.OtherWork,
+      )}
+    >
       <header>
         <div>
           <div className={css.folder} dangerouslySetInnerHTML={{ __html: folder }}></div>
@@ -271,25 +295,38 @@ const OtherWork: FunctionalComponent<{
 }
 
 export const WorkView = () => {
+  const { ref, scrollView } = useScrollView({ threshold: 0.1 })
   return (
-    <div id={'work'} className={css.WorkView}>
-      <Header order={'03.'}>作品</Header>
-      <div>
-        {primaryWorks.map((item) => (
-          <PrimaryWork item={item} key={item.title} />
-        ))}
-      </div>
-      <div className={css.otherWorks}>
-        <header>
-          <h2>其他值得注意的项目</h2>
-          <a href={''}>查看列表</a>
-        </header>
-        <ul className={css.projectsGrid}>
-          {otherWorks.map((item) => (
-            <OtherWork item={item} key={item.title} />
+    <div
+      id={'work'}
+      className={classNames(
+        transition.fadeupEnter,
+        {
+          [transition.fadedownEnterActive]: scrollView,
+        },
+        css.WorkView,
+      )}
+      ref={ref}
+    >
+      <TransitionGroup>
+        <Header order={'03.'}>作品</Header>
+        <div>
+          {primaryWorks.map((item) => (
+            <PrimaryWork item={item} key={item.title} />
           ))}
-        </ul>
-      </div>
+        </div>
+        <div className={css.otherWorks}>
+          <header>
+            <h2>其他值得注意的项目</h2>
+            <a href={''}>查看列表</a>
+          </header>
+          <ul className={css.projectsGrid}>
+            {otherWorks.map((item) => (
+              <OtherWork item={item} key={item.title} />
+            ))}
+          </ul>
+        </div>
+      </TransitionGroup>
     </div>
   )
 }

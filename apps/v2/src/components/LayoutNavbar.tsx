@@ -6,6 +6,7 @@ import { FunctionalComponent } from 'preact'
 import { TransitionGroup } from './TransitionGroup'
 import transition from '../components/TransitionGroup.module.css'
 import { useScrollView } from '../hooks/useScrollView'
+import { useWindowScroll } from '../hooks/useWindowScroll'
 
 const links = [
   { label: '关于', href: '#about' },
@@ -13,21 +14,6 @@ const links = [
   { label: '作品', href: '#work' },
   { label: '联系', href: '#concat' },
 ]
-
-function useWindowScroll() {
-  const [dir, setDir] = useState<'up' | 'down'>()
-  const [scrollY, setScrollY] = useState(0)
-  useEffect(() => {
-    const listener = () => {
-      const dir = scrollY > window.scrollY ? 'up' : 'down'
-      setDir(dir)
-      setScrollY(window.scrollY)
-    }
-    window.addEventListener('scroll', listener)
-    return () => window.removeEventListener('scroll', listener)
-  }, [scrollY])
-  return { dir, scrollY }
-}
 
 /**
  * 顶部导航栏

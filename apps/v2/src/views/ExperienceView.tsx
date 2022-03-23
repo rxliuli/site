@@ -62,9 +62,13 @@ const experiences: Experience[] = [
 export const ExperienceView = () => {
   const [active, setActive] = useState(experiences[0].name)
   const { ref, scrollView } = useScrollView()
-  console.log('scrollView: ', scrollView)
   return (
-    <div ref={ref}>
+    <div
+      ref={ref}
+      className={classNames(transition.fadeupEnter, {
+        [transition.fadedownEnterActive]: scrollView,
+      })}
+    >
       <TransitionGroup>
         <div id={'experience'} className={css.ExperienceView}>
           <Header order={'02.'}>工作</Header>
