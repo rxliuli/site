@@ -27,6 +27,7 @@
   padding: 0 50px;
   grid-gap: 16px;
   align-items: center;
+  transform: translateY(-20px);
 }
 
 .nav {

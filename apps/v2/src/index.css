@@ -17,6 +17,7 @@ body {
   --lightest-slate: #ccd6f6;
   --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   --background: #0a192f;
+  --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 /* 滚动槽 */
