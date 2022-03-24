@@ -7,11 +7,12 @@ import liuliCli from '../assets/liuli-cli-cover.webp'
 import folder from '../assets/folder.svg?raw'
 import { FunctionalComponent, JSX } from 'preact'
 import { LinkIcon, LinkIconItem } from '../components/LinkIcon'
-import { ReactMarkdown } from '../components/ReactMarkdown'
 import { useInView } from '../hooks/useInView'
 import { TransitionGroup } from '../components/TransitionGroup'
 import classNames from 'classnames'
 import transition from '../components/TransitionGroup.module.css'
+import { html as mdJoplinUtils } from './works/joplin-utils.md'
+import { html as mdLiuliCli } from './works/liuli-cli.md'
 
 interface Work {
   title: string
@@ -25,7 +26,7 @@ interface Work {
 const primaryWorks: Work[] = [
   {
     title: 'Joplin Utils',
-    description: `基于 Joplin 的周边社区工具。[joplin-vscode-plugin](https://marketplace.visualstudio.com/items?itemName=rxliuli.joplin-vscode-plugin) 提供在 vscode 中管理 joplin 笔记的功能，结合 vscode 现有的强大编辑器及其生态。[joplin-blog](https://www.npmjs.com/package/joplin-blog) 将指定标签的笔记发布为在线网站，可以选择 blog 或 wiki 的形式。还有开发者相关的一些工具集，包括 [joplin-api](https://www.npmjs.com/package/joplin-api)/[joplin-plugin-cli](https://www.npmjs.com/package/joplin-plugin-cli)。`,
+    description: mdJoplinUtils,
     image: joplin,
     link: 'https://joplin-utils.rxliuli.com/',
     topic: ['vscode', 'joplin', 'hexo', 'vuepress', 'chrome'],
@@ -44,7 +45,7 @@ const primaryWorks: Work[] = [
   },
   {
     title: '@liuli-util/cli',
-    description: `一个针对于库和 cli 应用程序打包的零配置 cli，基于 [esbuild](https://esbuild.github.io/)，它非常快，并且是自举的。同时也支持配置同步（prettier/eslint/git hooks/jest）、生成模板项目（cli/lib）以及部署相关（sftp/gh-pages）功能。`,
+    description: mdLiuliCli,
     image: liuliCli,
     link: 'https://www.npmjs.com/package/@liuli-util/cli',
     topic: ['cli', 'esbuild', 'deploy', 'generate', 'sync'],
@@ -227,9 +228,7 @@ const PrimaryWork: FunctionalComponent<{ item: Work }> = ({ item }) => {
               {item.title}
             </a>
           </h3>
-          <p>
-            <ReactMarkdown linkTarget={'_blank'}>{item.description}</ReactMarkdown>
-          </p>
+          <p dangerouslySetInnerHTML={{ __html: item.description }} />
           <footer>
             <ul>
               {item.topic.map((item) => (
@@ -281,7 +280,7 @@ const OtherWork: FunctionalComponent<{
             {item.title}
           </a>
         </h3>
-        <ReactMarkdown linkTarget={'_blank'}>{item.description}</ReactMarkdown>
+        <div>{item.description}</div>
       </header>
       <footer>
         <ul className={css.topic}>
