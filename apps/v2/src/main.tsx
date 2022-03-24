@@ -1,6 +1,8 @@
 if (import.meta.env.DEV) {
-  require('preact/debug')
+  // @ts-ignore
+  await import('preact/debug')
 }
+
 import { render } from 'preact'
 import { App } from './App'
 import './index.css'
