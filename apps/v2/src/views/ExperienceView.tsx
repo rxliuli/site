@@ -5,6 +5,7 @@ import classNames from 'classnames'
 import transition from '../components/TransitionGroup.module.css'
 import { useInView } from '../hooks/useInView'
 import { TransitionGroup } from '../components/TransitionGroup'
+import { Tabs } from '../components/Tabs'
 
 interface Experience {
   name: string
@@ -72,19 +73,10 @@ export const ExperienceView = () => {
       <TransitionGroup>
         <div id={'experience'} className={css.ExperienceView}>
           <Header order={'02.'}>工作</Header>
-          <div className={css.tab}>
-            <nav>
-              <ul>
-                {experiences.map((item) => (
-                  <li key={item.name} onClick={() => setActive(item.name)}>
-                    <button className={classNames({ [css.active]: item.name === active })}>{item.name}</button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            <ul className={css.content}>
-              {experiences.map((item) => (
-                <section key={item.name} style={{ display: active === item.name ? 'block' : 'none' }}>
+          <Tabs active={active} onChange={setActive}>
+            {experiences.map((item) => (
+              <Tabs.Item key={item.name} title={item.name}>
+                <section key={item.name} className={css.content}>
                   <h3>
                     <span>{item.jobTitle}</span>
                     <a href={item.link} target={'_blank'}>
@@ -100,9 +92,9 @@ export const ExperienceView = () => {
                     ))}
                   </ul>
                 </section>
-              ))}
-            </ul>
-          </div>
+              </Tabs.Item>
+            ))}
+          </Tabs>
         </div>
       </TransitionGroup>
     </div>
