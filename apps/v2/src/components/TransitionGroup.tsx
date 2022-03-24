@@ -1,9 +1,10 @@
-import { cloneElement, CSSProperties, ReactElement, ReactNode } from 'react'
+import { VNode } from 'preact';
+import { cloneElement } from 'preact/compat'
 
-export function TransitionGroup(props: { children: ReactNode | ReactNode[]; timeout?: number }) {
-  const children = (Array.isArray(props.children) ? props.children : [props.children]) as unknown as ReactElement<{
-    style?: CSSProperties
-    children: ReactNode
+export function TransitionGroup(props: { children: VNode | VNode[]; timeout?: number }) {
+  const children = (Array.isArray(props.children) ? props.children : [props.children]) as unknown as VNode<{
+    style?: JSX.CSSProperties
+    children: VNode
   }>[]
   return (
     <>

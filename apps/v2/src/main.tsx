@@ -1,4 +1,6 @@
-import 'preact/debug'
+if (import.meta.env.DEV) {
+  require('preact/debug')
+}
 import { render } from 'preact'
 import { App } from './App'
 import './index.css'

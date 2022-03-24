@@ -1,7 +1,6 @@
 import css from './AboutView.module.css'
-import avatar from '../assets/avatar.jpg'
+import avatar from '../assets/avatar.webp'
 import { FunctionalComponent, JSX } from 'preact'
-import { TransitionGroup } from '../components/TransitionGroup'
 import classNames from 'classnames'
 import transition from '../components/TransitionGroup.module.css'
 import { useInView } from '../hooks/useInView'

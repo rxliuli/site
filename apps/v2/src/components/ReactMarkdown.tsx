@@ -1,7 +1,12 @@
 import { marked } from 'marked'
 
+let render: marked.Renderer
+
 export function ReactMarkdown(props: { children: string; linkTarget: string }) {
-  return <div dangerouslySetInnerHTML={{ __html: marked(props.children, { renderer: linkRenderer() }) }}></div>
+  if (!render) {
+    render = linkRenderer()
+  }
+  return <div dangerouslySetInnerHTML={{ __html: marked.parse(props.children, { renderer: render }) }}></div>
 }
 
 function linkRenderer() {
