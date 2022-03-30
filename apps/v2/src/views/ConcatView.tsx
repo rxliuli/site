@@ -27,7 +27,7 @@ export const ConcatView = () => {
       <footer>
         虽然吾辈目前没有寻找任何新的机会，但吾辈的邮箱始终是打开的。无论您有任何问题或只是想打个招呼，不管是二次元还是开发者，吾辈都会尽力回复您！
       </footer>
-      <LinkButton href={'mailto:rxliuli@gmail.com'}>打个招呼</LinkButton>
+      <LinkButton href={'mailto:i@rxliuli.com'}>打个招呼</LinkButton>
     </div>
   )
 }
