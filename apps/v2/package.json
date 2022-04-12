@@ -10,7 +10,7 @@
   "deploy": {
     "type": "gh-pages",
     "dist": "dist",
-    "dest": "/"
+    "add": true
   },
   "dependencies": {
     "classnames": "^2.3.1",
