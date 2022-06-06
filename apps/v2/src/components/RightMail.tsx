@@ -16,8 +16,8 @@ export const RightMail = () => {
         css.RightMail,
       )}
     >
-      <a target={'_blank'} href={'mailto:i@rxliuli.com'}>
-        i@rxliuli.com
+      <a target={'_blank'} href={'mailto:rxliuli@gmail.com'}>
+        rxliuli@gmail.com
       </a>
     </div>
   )
