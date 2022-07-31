@@ -49,5 +49,8 @@
   ],
   "scripts": {
     "postinstall": "npx simple-git-hooks"
+  },
+  "resolutions": {
+    "esbuild": "0.14.36"
   }
 }

@@ -137,15 +137,20 @@ const otherWorks: Omit<Work, 'image'>[] = [
     ],
   },
   {
-    title: 'webos',
-    link: 'https://webos.rxliuli.com/',
-    description: '一个基于 web 的可扩展系统原型，主要用于实践在 web 上运行第三方应用。',
-    topic: ['webos', '插件系统'],
+    title: 'magia',
+    link: 'https://magia.rxliuli.com/',
+    description: '一个复刻的可爱的动画网站（魔法少女小圆），源项目是 https://magia.cyris.moe/。',
+    topic: ['可愛い', 'css', '动画'],
     links: [
+      {
+        title: 'github',
+        icon: github,
+        link: 'https://github.com/rxliuli/magia',
+      },
       {
         title: 'open',
         icon: open,
-        link: 'https://webos.rxliuli.com/',
+        link: 'https://magia.rxliuli.com/',
       },
     ],
   },
@@ -153,7 +158,7 @@ const otherWorks: Omit<Work, 'image'>[] = [
     title: 'saki',
     link: 'https://github.com/rxliuli/saki',
     description: '想知道基于 golang 编写 cli 能够提高多少性能，所以尝试使用 golang 编写了这个 cli 应用。',
-    topic: ['webos', '插件系统'],
+    topic: ['golang'],
     links: [
       {
         title: 'open',
