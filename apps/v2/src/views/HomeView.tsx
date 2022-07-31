@@ -31,7 +31,7 @@ export const HomeView = () => {
             </a>{' '}
             。
           </p>
-          <LinkButton href={'https://webos.rxliuli.com'}>看看 webos</LinkButton>
+          <LinkButton href={'https://joplin-utils.rxliuli.com'}>看看 joplin-utils</LinkButton>
         </TransitionGroup>
       </section>
     </div>
