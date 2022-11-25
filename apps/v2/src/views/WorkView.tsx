@@ -2,8 +2,8 @@ import { Header } from './AboutView'
 import css from './WorkView.module.css'
 import github from '../assets/github.svg?raw'
 import open from '../assets/open.svg?raw'
-import joplin from '../assets/joplin-vscode-plugin-cover.webp'
-import liuliCli from '../assets/liuli-cli-cover.webp'
+import joplinUtilsCover from '../assets/joplin-vscode-plugin-cover.webp'
+import mamiCover from '../assets/mami.drawio.svg'
 import folder from '../assets/folder.svg?raw'
 import { FunctionalComponent, JSX } from 'preact'
 import { LinkIcon, LinkIconItem } from '../components/LinkIcon'
@@ -11,8 +11,8 @@ import { useInView } from '../hooks/useInView'
 import { TransitionGroup } from '../components/TransitionGroup'
 import classNames from 'classnames'
 import transition from '../components/TransitionGroup.module.css'
-import { html as mdJoplinUtils } from './works/joplin-utils.md'
-import { html as mdLiuliCli } from './works/liuli-cli.md'
+import { html as joplinUtilsMD } from './works/joplin-utils.md'
+import { html as mamiMD } from './works/mami.md'
 
 interface Work {
   title: string
@@ -26,8 +26,8 @@ interface Work {
 const primaryWorks: Work[] = [
   {
     title: 'Joplin Utils',
-    description: mdJoplinUtils,
-    image: joplin,
+    description: joplinUtilsMD,
+    image: joplinUtilsCover,
     link: 'https://joplin-utils.rxliuli.com/',
     topic: ['vscode', 'joplin', 'hexo', 'vuepress', 'chrome'],
     links: [
@@ -44,27 +44,83 @@ const primaryWorks: Work[] = [
     ],
   },
   {
-    title: '@liuli-util/cli',
-    description: mdLiuliCli,
-    image: liuliCli,
-    link: 'https://www.npmjs.com/package/@liuli-util/cli',
-    topic: ['cli', 'esbuild', 'deploy', 'generate', 'sync'],
+    title: 'mami',
+    description: mamiMD,
+    image: mamiCover,
+    link: 'https://mami.rxliuli.com/',
+    topic: ['cli', 'markdown', 'convert'],
     links: [
       {
         title: 'github',
         icon: github,
-        link: 'https://github.com/rxliuli/liuli-tools/tree/master/apps/liuli-cli',
+        link: 'https://github.com/rxliuli/mami',
       },
       {
         title: 'open',
         icon: open,
-        link: 'https://www.npmjs.com/package/@liuli-util/cli',
+        link: 'https://mami.rxliuli.com/',
       },
     ],
   },
 ]
 
 const otherWorks: Omit<Work, 'image'>[] = [
+  {
+    title: 'liuli-tools',
+    link: 'https://www.npmjs.com/settings/liuli-util/packages',
+    description:
+      '一系列与开发者相关的模块，包括通用函数库、cli 以及 esbuild/vite 的插件，旨在解决开发中遇到的各种通用问题。',
+    topic: ['lib', 'typescript', 'esbuild', 'vite'],
+    links: [
+      {
+        title: 'github',
+        icon: github,
+        link: 'https://github.com/rxliuli/liuli-tools',
+      },
+      {
+        title: 'open',
+        icon: open,
+        link: 'https://www.npmjs.com/settings/liuli-util/packages',
+      },
+    ],
+  },
+  {
+    title: 'new-project',
+    link: 'https://marketplace.visualstudio.com/items?itemName=rxliuli.new-project',
+    description:
+      '这是一个 vscode 可视化创建项目的插件，尝试在 vscode 中提供类似于 jetbrains ide 的创建项目的面板。目前仅支持使用 vite/create-react-app/angular/svelte 创建项目，但支持自定义生成器。',
+    topic: ['vscode', 'project-template'],
+    links: [
+      {
+        title: 'github',
+        icon: github,
+        link: 'https://github.com/rxliuli/new-project',
+      },
+      {
+        title: 'open',
+        icon: open,
+        link: 'https://marketplace.visualstudio.com/items?itemName=rxliuli.new-project',
+      },
+    ],
+  },
+  {
+    title: 'tsx',
+    link: 'https://marketplace.visualstudio.com/items?itemName=rxliuli.tsx',
+    description: 'esbuild-kit/tsx 的 vscode 集成，可以运行任何 js/ts/jsx/tsx 代码，支持 esm/cjs 模块。',
+    topic: ['vscode', 'typescript', 'esbuild'],
+    links: [
+      {
+        title: 'github',
+        icon: github,
+        link: 'https://github.com/rxliuli/tsx-vscode',
+      },
+      {
+        title: 'open',
+        icon: open,
+        link: 'https://marketplace.visualstudio.com/items?itemName=rxliuli.tsx',
+      },
+    ],
+  },
   {
     title: 'vite-integrated',
     link: 'https://plugins.jetbrains.com/plugin/16897',
@@ -80,45 +136,6 @@ const otherWorks: Omit<Work, 'image'>[] = [
         title: 'open',
         icon: open,
         link: 'https://plugins.jetbrains.com/plugin/16897',
-      },
-    ],
-  },
-  {
-    title: 'rollup-plugin-i18next-dts-gen',
-    link: 'https://www.npmjs.com/package/@liuli-util/rollup-plugin-i18next-dts-gen',
-    description: '从 i18n JSON 文件生成类型定义用于代码提示和验证',
-    topic: ['rollup', 'i18n', 'typescript'],
-    links: [
-      {
-        title: 'open',
-        icon: open,
-        link: 'https://www.npmjs.com/package/@liuli-util/rollup-plugin-i18next-dts-gen',
-      },
-    ],
-  },
-  {
-    title: 'rollup-plugin-graphql-codegen',
-    link: 'https://www.npmjs.com/package/@liuli-util/rollup-plugin-graphql-codegen',
-    description: '在 worker_threads 中为 GraphQL 文件生成类型定义',
-    topic: ['rollup', 'graphql', 'typescript'],
-    links: [
-      {
-        title: 'open',
-        icon: open,
-        link: 'https://www.npmjs.com/package/@liuli-util/rollup-plugin-graphql-codegen',
-      },
-    ],
-  },
-  {
-    title: 'vite-plugin-env-dts-gen',
-    link: 'https://www.npmjs.com/package/@liuli-util/vite-plugin-env-dts-gen',
-    description: '扫描环境变量生成 dts 类型定义，避免手动维护环境变量的 dts 类型定义。',
-    topic: ['vite', 'env', 'typescript'],
-    links: [
-      {
-        title: 'open',
-        icon: open,
-        link: 'https://www.npmjs.com/package/@liuli-util/vite-plugin-env-dts-gen',
       },
     ],
   },
@@ -187,10 +204,10 @@ const otherWorks: Omit<Work, 'image'>[] = [
     ],
   },
   {
-    title: '魔法少女小圆 飞向星空（整理搬运）',
+    title: '魔法少女小圆 飞向星空',
     link: 'https://tts.liuli.moe/',
     description:
-      '在经历了几个世纪的动荡之后，一个乌托邦式的 AI— 人类政府治理着地球，预示着后稀缺社会的来临和太空殖民的新时代。一次意外的接触却让科技更先进的敌对外星种族打破了和平，这迫使魔法少女们走出幕后，拯救人类文明。在这一切之中，志筑良子，一个普通的女孩，仰望着星空，好奇着她在宇宙中的归所。',
+      '“丘比承诺说人类总有一天也能到达那遥远的星空。但它们很明智地没有说出来，人类将会在那里遇到什么。”—— 引言',
     topic: ['二次元', '同人', '硬科幻'],
     links: [
       {
@@ -334,3 +351,4 @@ export const WorkView = () => {
     </div>
   )
 }
+

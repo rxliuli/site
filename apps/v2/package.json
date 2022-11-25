@@ -5,22 +5,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "liuli-cli deploy"
-  },
-  "deploy": {
-    "type": "gh-pages",
-    "dist": "dist",
-    "add": true
+    "deploy": "gh-pages -d dist --dotfiles"
   },
   "dependencies": {
     "classnames": "^2.3.1",
     "preact": "^10.5.15"
   },
   "devDependencies": {
-    "@liuli-util/cli": "^3.19.0",
     "@preact/preset-vite": "^2.3.0",
     "@types/markdown-it": "^12.2.3",
     "@types/marked": "^4.0.2",
+    "gh-pages": "^3.2.3",
     "markdown-it": "^12.3.2",
     "rollup-plugin-visualizer": "^5.6.0",
     "typescript": "^4.5.4",

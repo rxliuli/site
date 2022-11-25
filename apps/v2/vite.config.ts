@@ -40,6 +40,6 @@ export default defineConfig({
       mode: [Mode.HTML],
       markdownIt: md,
     }),
-    visualizer(),
+    visualizer() as any,
   ],
 })
