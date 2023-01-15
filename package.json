@@ -22,8 +22,8 @@
     ]
   },
   "simple-git-hooks": {
-    "commit-msg": "yarn commitlint --edit $1",
-    "pre-commit": "yarn lint-staged"
+    "commit-msg": "commitlint --edit $1",
+    "pre-commit": "lint-staged"
   },
   "commitlint": {
     "extends": [
@@ -54,3 +54,4 @@
     "esbuild": "0.14.36"
   }
 }
+
