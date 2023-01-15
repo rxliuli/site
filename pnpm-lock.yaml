@@ -11,7 +11,7 @@ importers:
       '@commitlint/config-conventional': ^16.2.1
       '@liuli-util/commitlint-standard-config': ^0.1.6
       '@liuli-util/eslint-config-ts': ^0.4.0
-      '@liuli-util/prettier-standard-config': ^0.3.0
+      '@liuli-util/prettier-standard-config': ^0.2.0
       lint-staged: ^12.3.4
       prettier: ^2.3.2
       simple-git-hooks: ^2.5.1
@@ -20,7 +20,7 @@ importers:
       '@commitlint/config-conventional': 16.2.1
       '@liuli-util/commitlint-standard-config': 0.1.6_@commitlint+cli@16.2.3
       '@liuli-util/eslint-config-ts': 0.4.0
-      '@liuli-util/prettier-standard-config': 0.3.0_prettier@2.6.2
+      '@liuli-util/prettier-standard-config': 0.2.0
       lint-staged: 12.3.7
       prettier: 2.6.2
       simple-git-hooks: 2.7.0
@@ -2562,14 +2562,6 @@ packages:
 
   /@liuli-util/prettier-standard-config/0.2.0:
     resolution: {integrity: sha512-0p1uMAj7WLx3HxiH3dy44NwQbyqezI6KZzlM1ldqZ+WlnJWFsqAD4eGhAnGWuZa64hN/S+eH6XpwcbAZPRqCtQ==}
-    dev: true
-
-  /@liuli-util/prettier-standard-config/0.3.0_prettier@2.6.2:
-    resolution: {integrity: sha512-3cwp9oCh8jy9jbmqdOKHfSkfUbIwNW+7Sr5bX/ziGg5XxtdkUB5tkaqcx+P9/xpQL+oiJUVkZD22gRTVD/K4fg==}
-    peerDependencies:
-      prettier: ^2
-    dependencies:
-      prettier: 2.6.2
     dev: true
 
   /@liuli-util/react-router/0.3.1_sfoxds7t5ydpegc3knd667wn6m:

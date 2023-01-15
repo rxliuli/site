@@ -3,6 +3,7 @@ import blog from '../assets/blog.svg?raw'
 import telegram from '../assets/telegram.svg?raw'
 import github from '../assets/github.svg?raw'
 import twitter from '../assets/twitter.svg?raw'
+import pixiv from '../assets/pixiv.svg?raw'
 import { LinkIcon, LinkIconItem } from './LinkIcon'
 import { useInView } from '../hooks/useInView'
 import transition from '../components/TransitionGroup.module.css'
@@ -13,6 +14,7 @@ const links: LinkIconItem[] = [
   { title: 'twitter', link: 'https://twitter.com/rxliuli', icon: twitter },
   { title: 'telegram', link: 'https://t.me/rxliuli', icon: telegram },
   { title: 'blog', link: 'https://blog.rxliuli.com/', icon: blog },
+  { title: 'pixiv', link: 'https://www.pixiv.net/users/16247572', icon: pixiv },
 ]
 
 export const LeftLinks = () => {
@@ -38,3 +40,4 @@ export const LeftLinks = () => {
     </div>
   )
 }
+

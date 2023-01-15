@@ -1,7 +1,6 @@
 import css from './LayoutNavbar.module.css'
 import logo from '../assets/logo.svg'
 import classNames from 'classnames'
-import { useEffect, useState } from 'preact/hooks'
 import { FunctionalComponent } from 'preact'
 import { TransitionGroup } from './TransitionGroup'
 import transition from '../components/TransitionGroup.module.css'
@@ -103,3 +102,4 @@ export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): v
     </header>
   )
 }
+
