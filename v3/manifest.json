@@ -1,0 +1,90 @@
+{
+  "pages/index/assets/avatar.webp": {
+    "file": "assets/static/avatar.fe07ee36.webp",
+    "src": "pages/index/assets/avatar.webp"
+  },
+  "pages/index/assets/logo.svg": {
+    "file": "assets/static/logo.c5bf3d50.svg",
+    "src": "pages/index/assets/logo.svg"
+  },
+  "pages/index/assets/joplin-vscode-plugin-cover.webp": {
+    "file": "assets/static/joplin-vscode-plugin-cover.e3b3c259.webp",
+    "src": "pages/index/assets/joplin-vscode-plugin-cover.webp"
+  },
+  "pages/index/assets/mami.drawio.svg": {
+    "file": "assets/static/mami.drawio.af03036e.svg",
+    "src": "pages/index/assets/mami.drawio.svg"
+  },
+  "pages/index/index.page.css": {
+    "file": "assets/static/index.page.fde4118a.css",
+    "src": "pages/index/index.page.css"
+  },
+  "renderer/_error.page.tsx": {
+    "file": "assets/entries/renderer_error.page.a3eb4c4b.js",
+    "src": "renderer/_error.page.tsx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-0e184ced.js"
+    ]
+  },
+  "../../node_modules/.pnpm/vite-plugin-ssr@0.4.131_vite@4.0.3/node_modules/vite-plugin-ssr/dist/esm/client/entry.js": {
+    "file": "assets/entries/entry-server-routing.9d2333f8.js",
+    "src": "../../node_modules/.pnpm/vite-plugin-ssr@0.4.131_vite@4.0.3/node_modules/vite-plugin-ssr/dist/esm/client/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_chunk-078aa1fb.js"
+    ],
+    "dynamicImports": [
+      "pages/index/index.page.tsx",
+      "renderer/_error.page.tsx",
+      "renderer/_default.page.client.tsx"
+    ]
+  },
+  "_chunk-0e184ced.js": {
+    "file": "assets/chunks/chunk-0e184ced.js"
+  },
+  "pages/index/index.page.tsx": {
+    "file": "assets/entries/pages_index_index.page.2ac3a5b7.js",
+    "src": "pages/index/index.page.tsx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-0e184ced.js"
+    ],
+    "css": [
+      "assets/static/index.page.fde4118a.css"
+    ],
+    "assets": [
+      "assets/static/avatar.fe07ee36.webp",
+      "assets/static/joplin-vscode-plugin-cover.e3b3c259.webp",
+      "assets/static/mami.drawio.af03036e.svg",
+      "assets/static/logo.c5bf3d50.svg"
+    ]
+  },
+  "_chunk-078aa1fb.js": {
+    "file": "assets/chunks/chunk-078aa1fb.js"
+  },
+  "../../node_modules/.pnpm/vite-plugin-ssr@0.4.131_vite@4.0.3/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js": {
+    "file": "assets/entries/entry-client-routing.16ac3934.js",
+    "src": "../../node_modules/.pnpm/vite-plugin-ssr@0.4.131_vite@4.0.3/node_modules/vite-plugin-ssr/dist/esm/client/router/entry.js",
+    "isEntry": true,
+    "imports": [
+      "_chunk-078aa1fb.js"
+    ],
+    "dynamicImports": [
+      "pages/index/index.page.tsx",
+      "renderer/_error.page.tsx",
+      "renderer/_default.page.client.tsx"
+    ]
+  },
+  "renderer/_default.page.client.tsx": {
+    "file": "assets/entries/renderer_default.page.client.05f2f802.js",
+    "src": "renderer/_default.page.client.tsx",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_chunk-0e184ced.js"
+    ]
+  }
+}
