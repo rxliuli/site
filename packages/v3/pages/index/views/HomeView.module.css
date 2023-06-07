@@ -1,0 +1,31 @@
+.HomeView {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  max-width: 1000px;
+  margin: auto;
+  transition-delay: 500ms;
+}
+
+.content > h1 {
+  font-size: 16px;
+  color: var(--green);
+}
+
+.content > h2 {
+  color: #ccd6f6;
+  font-size: clamp(40px, 8vw, 80px);
+  margin: 0;
+}
+
+.content > h2:nth-of-type(2) {
+  color: var(--light-slate);
+}
+
+.content a {
+  color: var(--green);
+  text-decoration: none;
+}

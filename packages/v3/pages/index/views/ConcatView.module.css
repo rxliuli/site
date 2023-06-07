@@ -1,0 +1,18 @@
+.ConcatView {
+  max-width: 600px;
+  padding: 100px 0;
+  margin: auto auto 100px;
+  text-align: center;
+}
+
+.ConcatView > header > h2:first-child {
+  font-size: 16px;
+  margin: 10px 0 20px;
+  color: var(--green);
+}
+
+.ConcatView > header > h2:last-child {
+  font-size: 60px;
+  color: var(--lightest-slate);
+  margin: 0 auto 10px;
+}

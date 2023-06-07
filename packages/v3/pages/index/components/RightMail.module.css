@@ -1,0 +1,33 @@
+.RightMail {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin-right: 40px;
+}
+
+.RightMail:after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 30px auto 0;
+  background-color: var(--light-slate);
+}
+
+.RightMail a {
+  text-decoration: none;
+  transition: all 0.3s;
+  color: var(--light-slate);
+  writing-mode: vertical-lr;
+}
+
+.RightMail a:hover {
+  color: var(--green);
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .RightMail {
+    display: none;
+  }
+}
