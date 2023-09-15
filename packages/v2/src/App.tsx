@@ -10,6 +10,7 @@ import { LayoutNavbar } from './components/LayoutNavbar'
 import css from './App.module.css'
 import { useState } from 'preact/hooks'
 import classNames from 'classnames'
+import { LocaleProvider } from './constants/useI18n'
 
 export const App = () => {
   const [sidebar, setSidebar] = useState(false)
@@ -20,29 +21,31 @@ export const App = () => {
   }
 
   return (
-    <div>
-      <LayoutNavbar sidebar={sidebar} onToggle={onToggle} />
-      <LeftLinks />
-      <RightMail />
-      <main
-        className={classNames(css.main, {
-          [css.filter]: sidebar,
-        })}
-      >
-        <HomeView />
-        <AboutView />
-        <ExperienceView />
-        <WorkView />
-        <ConcatView />
-      </main>
-      <div
-        className={classNames(css.mask, { [css.show]: sidebar })}
-        onClick={() => {
-          console.log('sidebar && onToggle(): ', sidebar)
-          sidebar && onToggle()
-        }}
-      />
-      <FooterView />
-    </div>
+    <LocaleProvider>
+      <div>
+        <LayoutNavbar sidebar={sidebar} onToggle={onToggle} />
+        <LeftLinks />
+        <RightMail />
+        <main
+          className={classNames(css.main, {
+            [css.filter]: sidebar,
+          })}
+        >
+          <HomeView />
+          <AboutView />
+          <ExperienceView />
+          <WorkView />
+          <ConcatView />
+        </main>
+        <div
+          className={classNames(css.mask, { [css.show]: sidebar })}
+          onClick={() => {
+            console.log('sidebar && onToggle(): ', sidebar)
+            sidebar && onToggle()
+          }}
+        />
+        <FooterView />
+      </div>
+    </LocaleProvider>
   )
 }

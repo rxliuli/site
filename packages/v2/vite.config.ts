@@ -3,6 +3,7 @@ import preact from '@preact/preset-vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { Mode, plugin } from 'vite-plugin-markdown'
 import MarkdownIt from 'markdown-it'
+import { i18nextDtsGen } from '@liuli-util/rollup-plugin-i18next-dts-gen'
 
 /**
  * @link https://github.com/markdown-it/markdown-it/blob/master/docs/architecture.md#renderer
@@ -41,5 +42,9 @@ export default defineConfig({
       markdownIt: md,
     }),
     visualizer() as any,
+    i18nextDtsGen({
+      dirs: ['./src/i18n'],
+    }),
   ],
 })
+

@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { ComponentChildren, FunctionComponent, JSX, Key, VNode } from 'preact'
-import { useEffect, useMemo, useRef, useState } from 'preact/hooks'
+import { useEffect, useRef, useState } from 'preact/hooks'
 import css from './Tabs.module.css'
 
 interface TabItemProps {
@@ -19,30 +19,38 @@ export interface TabsProps<K extends Key> {
 }
 
 export function _Tabs<K extends Key>(props: TabsProps<K>) {
-  const children = Array.isArray(props.children) ? props.children : [props.children]
+  const children = Array.isArray(props.children)
+    ? props.children
+    : [props.children]
   const $list = useRef<HTMLUListElement>(null)
   const [barStyle, setBarStyle] = useState<JSX.CSSProperties>()
-  const aligh = useRef<'horizontal' | 'portrait'>(window.innerWidth > 768 ? 'portrait' : 'horizontal')
+  const aligh = useRef<'horizontal' | 'portrait'>(
+    window.innerWidth > 768 ? 'portrait' : 'horizontal',
+  )
 
   function calcStyle() {
-    if ($list.current) {
-      const i = children.findIndex((item) => item.key === props.active)
-      const $el = [...$list.current.children][i] as HTMLLIElement
-      if (aligh.current === 'portrait') {
-        console.log('$el.portrait: ', $el.offsetTop, $el.offsetHeight)
-        setBarStyle({
-          top: $el.offsetTop,
-          width: 2,
-          height: $el.offsetHeight,
-        })
-      } else if (aligh.current === 'horizontal') {
-        console.log('$el.horizontal: ', $el.offsetLeft, $el.offsetWidth)
-        setBarStyle({
-          left: $el.offsetLeft,
-          width: $el.offsetWidth,
-          height: 2,
-        })
-      }
+    if (!$list.current) {
+      return
+    }
+    const i = children.findIndex((item) => item.key === props.active)
+    if (i === -1) {
+      return
+    }
+    const $el = [...$list.current.children][i] as HTMLLIElement
+    if (aligh.current === 'portrait') {
+      console.log('$el.portrait: ', $el.offsetTop, $el.offsetHeight)
+      setBarStyle({
+        top: $el.offsetTop,
+        width: 2,
+        height: $el.offsetHeight,
+      })
+    } else if (aligh.current === 'horizontal') {
+      console.log('$el.horizontal: ', $el.offsetLeft, $el.offsetWidth)
+      setBarStyle({
+        left: $el.offsetLeft,
+        width: $el.offsetWidth,
+        height: 2,
+      })
     }
   }
 
@@ -62,7 +70,13 @@ export function _Tabs<K extends Key>(props: TabsProps<K>) {
         <ul ref={$list}>
           {children.map((item) => (
             <li key={item.key} onClick={() => props.onChange(item.key)}>
-              <button className={classNames({ [css.active]: item.key === props.active })}>{item.props.title}</button>
+              <button
+                className={classNames({
+                  [css.active]: item.key === props.active,
+                })}
+              >
+                {item.props.title}
+              </button>
             </li>
           ))}
         </ul>

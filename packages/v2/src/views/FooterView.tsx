@@ -2,9 +2,11 @@ import classNames from 'classnames'
 import { useInView } from '../hooks/useInView'
 import css from './FooterView.module.css'
 import transition from '../components/TransitionGroup.module.css'
+import { useLocale } from '../constants/useI18n'
 
 export const FooterView = () => {
   const { ref, inView } = useInView()
+  const { t } = useLocale()
   return (
     <footer
       ref={ref}
@@ -15,12 +17,7 @@ export const FooterView = () => {
         },
         css.FooterView,
       )}
-    >
-      由{' '}
-      <a target={'_blank'} href={'https://github.com/bchiang7/v4'}>
-        bchiang7
-      </a>{' '}
-      设计，但吾辈重新实现了它。
-    </footer>
+      dangerouslySetInnerHTML={{ __html: t('concat.footer') }}
+    ></footer>
   )
 }

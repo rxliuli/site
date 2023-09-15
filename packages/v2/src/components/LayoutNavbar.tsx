@@ -6,18 +6,26 @@ import { TransitionGroup } from './TransitionGroup'
 import transition from '../components/TransitionGroup.module.css'
 import { useInView } from '../hooks/useInView'
 import { useWindowScroll } from '../hooks/useWindowScroll'
-
-const links = [
-  { label: '关于', href: '#about' },
-  { label: '经历', href: '#experience' },
-  { label: '作品', href: '#work' },
-  { label: '联系', href: '#concat' },
-]
+import { useLocale } from '../constants/useI18n'
+import { useMemo } from 'preact/hooks'
 
 /**
  * 顶部导航栏
  */
-export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): void }> = (props) => {
+export const LayoutNavbar: FunctionalComponent<{
+  sidebar: boolean
+  onToggle(): void
+}> = (props) => {
+  const { t } = useLocale()
+  const links = useMemo(
+    () => [
+      { label: t('about.title'), href: '#about' },
+      { label: t('experience.title'), href: '#experience' },
+      { label: t('work.title'), href: '#work' },
+      { label: t('concat.title'), href: '#concat' },
+    ],
+    [t],
+  )
   const { dir, scrollY } = useWindowScroll()
   const { ref, inView } = useInView()
   return (
@@ -65,8 +73,12 @@ export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): v
                 transitionDelay: '400ms',
               }}
             >
-              <a className={css.source} target={'_blank'} href={'https://github.com/rxliuli/rxliuli'}>
-                源代码
+              <a
+                className={css.source}
+                target={'_blank'}
+                href={'https://github.com/rxliuli/rxliuli'}
+              >
+                {t('navbar.source')}
               </a>
             </div>
           </TransitionGroup>
@@ -94,7 +106,7 @@ export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): v
               ))}
             </ol>
             <a target={'_blank'} href={'https://github.com/rxliuli/rxliuli'}>
-              源代码
+              {t('navbar.source')}
             </a>
           </aside>
         </div>
@@ -102,4 +114,3 @@ export const LayoutNavbar: FunctionalComponent<{ sidebar: boolean; onToggle(): v
     </header>
   )
 }
-

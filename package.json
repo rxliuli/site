@@ -11,7 +11,6 @@
     "@liuli-util/commitlint-standard-config": "^0.1.6",
     "@liuli-util/eslint-config-ts": "^0.4.0"
   },
-  "prettier": "@liuli-util/prettier-standard-config",
   "eslintConfig": {
     "extends": [
       "@liuli-util/eslint-config-ts"
@@ -37,6 +36,6 @@
     ]
   },
   "scripts": {
-    "postinstall": "pnpx simple-git-hooks"
+    "postinstall": "pnpm simple-git-hooks"
   }
 }

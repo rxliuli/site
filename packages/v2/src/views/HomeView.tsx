@@ -5,10 +5,12 @@ import { useInView } from '../hooks/useInView'
 import css from './HomeView.module.css'
 import transition from '../components/TransitionGroup.module.css'
 import { useWindowScroll } from '../hooks/useWindowScroll'
+import { useLocale } from '../constants/useI18n'
 
 export const HomeView = () => {
   const { ref, inView } = useInView({ threshold: 0.1 })
   const { dir } = useWindowScroll()
+  const { t } = useLocale()
   return (
     <div className={css.HomeView} ref={ref}>
       <section
@@ -21,17 +23,22 @@ export const HomeView = () => {
         )}
       >
         <TransitionGroup timeout={dir ? 0 : 500}>
-          <h1>你好，吾辈名为</h1>
-          <h2>琉璃</h2>
-          <h2>吾辈基于 web 技术创造各种东西</h2>
+          <h1>{t('home.hello')}</h1>
+          <h2>{t('home.name')}</h2>
+          <h2>{t('home.title')}</h2>
           <p>
-            现在是一个前端开发工程师，喜欢折腾有趣的技术、二次元、开源和分享，目前专注于{' '}
-            <a target={'_blank'} href={'https://github.com/rxliuli/liuli-tools'}>
-              前端工程化
+            {t('home.desc')}{' '}
+            <a
+              target={'_blank'}
+              href={'https://github.com/rxliuli/liuli-tools'}
+            >
+              {t('home.point')}
             </a>{' '}
             。
           </p>
-          <LinkButton href={'https://joplin-utils.rxliuli.com'}>看看 joplin-utils</LinkButton>
+          <LinkButton href={'https://joplin-utils.rxliuli.com'}>
+            {t('home.example')}
+          </LinkButton>
         </TransitionGroup>
       </section>
     </div>
