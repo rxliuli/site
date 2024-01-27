@@ -1,7 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-pixiv">
-  <title>Pixiv</title>
-  <path
-    d="M 12.778552,1.9303827 C 9.5104924,1.9941018 5.5641796,3.565902 1.1950288,7.5384324 L 2.3586595,10.177958 2.9920584,9.7937072 V 8.4325057 C 3.3679075,7.6425741 3.8929518,6.9160489 4.9234454,6.4082836 V 21.630139 H 4.3884152 l 0.0048,0.542472 H 8.0208624 V 21.645208 H 7.4762351 v -3.83749 C 27.724865,22.557082 25.003516,1.6920256 12.778552,1.9303827 Z M 12.6274,3.3970648 C 22.417574,3.4689378 22.644267,21.513223 7.4762351,16.102449 V 4.7783578 C 9.403266,3.7974264 11.128004,3.386057 12.6274,3.3970648 Z"
-    id="path4" style="stroke-width:1.00544;stroke-dasharray:none" />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns:v="https://vecta.io/nano"><path d="M12.779 1.93C9.51 1.994 5.564 3.566 1.195 7.538l1.164 2.64.633-.384V8.433c.376-.79.901-1.516 1.931-2.024V21.63h-.535l.005.542h3.628v-.527h-.545v-3.837C27.725 22.557 25.004 1.692 12.779 1.93zm-.151 1.467c9.79.072 10.017 18.116-5.151 12.705V4.778c1.927-.981 3.652-1.392 5.151-1.381z" stroke-width="1.005"/></svg>
