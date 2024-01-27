@@ -82,6 +82,7 @@ export function App() {
                   __html: it.icon,
                 }}
                 class={'icon'}
+                aria-label={it.title}
               ></a>
             ))}
           </div>
