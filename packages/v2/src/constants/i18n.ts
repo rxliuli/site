@@ -11,6 +11,7 @@ export const locales = {
 
 const DefaultLang = 'en-US'
 export function getLanguage(): keyof typeof locales {
+  return 'zh-CN'
   const lang = localStorage.getItem('language') ?? navigator.language
   if (lang in locales) {
     return lang as keyof typeof locales

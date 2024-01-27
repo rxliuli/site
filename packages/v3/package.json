@@ -1,0 +1,24 @@
+{
+  "name": "v3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist --dotfiles -a"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
+    "autoprefixer": "^10.4.17",
+    "clsx": "^2.1.0",
+    "gh-pages": "^3.2.3",
+    "postcss": "^8.4.33",
+    "preact": "^10.19.3",
+    "preact-iso": "^2.3.2",
+    "preact-render-to-string": "^6.3.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^4.3.2"
+  }
+}

@@ -35,6 +35,7 @@ const md = new MarkdownIt()
 linkTarget(md)
 
 export default defineConfig({
+  base: '/v2/',
   plugins: [
     preact(),
     plugin({
@@ -47,4 +48,3 @@ export default defineConfig({
     }),
   ],
 })
-

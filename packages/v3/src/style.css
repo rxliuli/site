@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icon {
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  color: var(--green);
+  transform: translateY(-4px);
+}
+
+.icon svg {
+  @apply w-6 h-6;
+}
