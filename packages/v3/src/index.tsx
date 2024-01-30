@@ -45,7 +45,7 @@ export function App() {
         <div className={'grow flex flex-col justify-center gap-6'}>
           <h1 className={'text-4xl font-bold text-center'}>吾辈是琉璃</h1>
           <p className={'text-center text-2xl text-gray-300'}>
-            使用技术创造有趣的东西，有时也会写博客。
+            喜欢创造有趣的东西，使用编程和写作作为工具。
           </p>
           <div class={'flex items-center justify-center gap-4'}>
             {[
