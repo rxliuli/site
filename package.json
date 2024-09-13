@@ -28,12 +28,10 @@
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,js,jsx,css,vue}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "src/**/*.{ts,tsx,js,jsx}": [
-      "eslint --fix --quiet",
-      "git add"
+      "eslint --fix --quiet"
     ]
   },
   "scripts": {
