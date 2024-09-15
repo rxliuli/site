@@ -1,8 +1,18 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-
-	export let data: PageData;
+  import { fade } from 'svelte/transition'
+  import Hero from './components/hero.svelte'
+  import Navbar from './components/navbar.svelte'
+  import About from './components/about.svelte'
+  import Works from './components/works.svelte'
+  import Life from './components/life.svelte'
+  import Footer from './components/footer.svelte'
 </script>
 
-<h1>{data.title}</h1>
-<p>{data.content}</p>
+<main in:fade={{ duration: 300 }}>
+  <Navbar />
+  <Hero />
+  <About />
+  <Works />
+  <Life />
+  <Footer />
+</main>
