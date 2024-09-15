@@ -41,6 +41,7 @@
 		"clsx": "^2.1.0",
 		"mode-watcher": "^0.4.1",
 		"svelte-radix": "^1.1.1",
+		"sveltekit-i18n": "^2.4.2",
 		"tailwind-merge": "^2.5.2",
 		"tailwind-variants": "^0.2.1"
 	}

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { t } from '$lib/i18n/store'
   import Sun from 'svelte-radix/Sun.svelte'
   import Moon from 'svelte-radix/Moon.svelte'
   import { toggleMode } from 'mode-watcher'
@@ -11,15 +12,15 @@
       <img src="/favicon.jpg" alt="logo" class="h-8 w-8 rounded-full" />
     </a>
     <div class="flex items-center gap-4">
-      <a href="#about">关于</a>
-      <a href="#work">作品</a>
-      <a href="#life">生活</a>
-      <a href="#contact">联系</a>
+      <a href="#about">{$t('home.navbar.about')}</a>
+      <a href="#work">{$t('home.navbar.work')}</a>
+      <a href="#life">{$t('home.navbar.life')}</a>
+      <a href="#contact">{$t('home.navbar.contact')}</a>
     </div>
     <Button on:click={toggleMode} variant="outline" size="icon">
       <Sun class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
       <Moon class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-      <span class="sr-only">Toggle theme</span>
+      <span class="sr-only">{$t('home.navbar.toggleTheme')}</span>
     </Button>
   </div>
 </header>
