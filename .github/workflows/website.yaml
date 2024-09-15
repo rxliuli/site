@@ -45,7 +45,7 @@ jobs:
       - name: Install dependencies
         run: pnpm i # or pnpm install / yarn install / bun install
       - name: Build
-        run: pnpm -F v3 build
+        run: pnpm -F v4 build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
