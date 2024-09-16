@@ -65,7 +65,10 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "LXGW WenKai";
+    font-family: 'LXGW WenKai';
     font-weight: normal;
+  }
+  .dark .prose {
+    @apply prose-dark;
   }
 }
