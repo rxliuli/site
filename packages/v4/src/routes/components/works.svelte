@@ -37,7 +37,9 @@
 
 <section class="dark:bg-gray-900 py-20" id={'work'}>
   <div class={'container mx-auto'}>
-    <h2 id={'work'} class={'text-4xl font-bold text-center mb-16'}>作品</h2>
+    <h2 id={'work'} class={'text-4xl font-bold text-center mb-16'}>
+      {$t('home.footer.works.title')}
+    </h2>
     <div
       class={'grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-4 md:grid-cols-3 md:gap-8 lg:grid-cols-3 lg:gap-16 px-4 md:px-0'}
     >
