@@ -33,12 +33,10 @@ jobs:
       # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 9.6.0
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: pnpm
       - name: Setup Pages
         uses: actions/configure-pages@v3
@@ -47,7 +45,7 @@ jobs:
       - name: Build
         run: pnpm -F v4 build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: packages/v4/build
 
