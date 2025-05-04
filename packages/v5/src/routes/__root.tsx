@@ -3,6 +3,7 @@ import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { RootLayout } from '../components/layout/root-layout'
 
 import appCss from '../styles.css?url'
+import { ga } from '@/lib/ga'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -28,6 +29,7 @@ export const Route = createRootRoute({
         href: appCss,
       },
     ],
+    scripts: [...ga('G-G82PFVRCEF')],
   }),
 
   component: () => (
