@@ -1,0 +1,172 @@
+import type { Project } from '@/types/project'
+
+// 项目元数据
+export const projects: Omit<Project, 'content'>[] = [
+  {
+    id: 'mass-block-twitter',
+    title: 'Mass Block Twitter',
+    description: 'One-Click Solution to Clean Up Twitter/X Spam.',
+    previewImage: '/images/projects/mass-block-twitter.png',
+    type: 'Browser Extension',
+    tags: ['Svelte', 'TypeScript', 'Chrome API', 'Firefox', 'Edge'],
+    projectUrl: 'https://chromewebstore.google.com/detail/mass-block-twitter/eaghpebepefbcadjdppjjopoagckdhej',
+    sourceCodeUrl: 'https://github.com/rxliuli/mass-block-twitter',
+    slug: 'mass-block-twitter',
+    featured: true,
+    created: '2025-01-01',
+    updated: '2025-05-02',
+  },
+  {
+    id: 'ping',
+    title: 'Ping',
+    description: 'Quick and simple ping tool for testing network connectivity on Android devices.',
+    previewImage: '/images/projects/ping.png',
+    type: 'App',
+    tags: ['Android', 'Kotlin', 'Jetpack Compose'],
+    sourceCodeUrl: 'https://github.com/rxliuli/ping',
+    slug: 'ping',
+    featured: false,
+    created: '2025-05-01',
+    updated: '2025-05-01',
+  },
+  {
+    id: 'window-resizer',
+    title: 'Window Resizer',
+    description: 'A simple macOS menu bar utility to quickly resize the active window to your predefined dimensions.',
+    previewImage: '/images/projects/window-resizer.png',
+    type: 'App',
+    tags: ['Mac', 'Wails', 'Golang', 'AppleScript'],
+    sourceCodeUrl: 'https://github.com/rxliuli/window-resizer',
+    slug: 'window-resizer',
+    featured: true,
+    created: '2025-04-27',
+    updated: '2025-05-01',
+  },
+  {
+    id: 'cors-unblock',
+    title: 'CORS Unblock',
+    description: 'CORS Unblock is a browser extension that allows you to bypass CORS restrictions on websites.',
+    previewImage: '/images/projects/cors-unblock.png',
+    type: 'Browser Extension',
+    tags: ['Browser Extension', 'CORS', 'Chrome', 'Firefox', 'Safari'],
+    projectUrl: 'https://chromewebstore.google.com/detail/cors-unblock/odkadbffomicljkjfepnggiibcjmkogc',
+    sourceCodeUrl: 'https://github.com/rxliuli/cors-unblock',
+    slug: 'cors-unblock',
+    featured: false,
+    created: '2025-04-18',
+    updated: '2025-04-29',
+  },
+  {
+    id: 'redirector',
+    title: 'Redirector',
+    description: 'Dynamic URL Redirector',
+    previewImage: '/images/projects/redirector.png',
+    type: 'Browser Extension',
+    tags: ['Chrome', 'Safari', 'Svelte', 'TypeScript'],
+    sourceCodeUrl: 'https://github.com/rxliuli/redirector',
+    projectUrl: 'https://chromewebstore.google.com/detail/redirector/lioaeidejmlpffbndjhaameocfldlhin',
+    slug: 'redirector',
+    featured: false,
+    created: '2024-09-12',
+    updated: '2025-04-29',
+  },
+  {
+    id: 'myunzip',
+    title: 'MyUnzip',
+    description: 'No-Limit Zip Tool: Preserves Folders, Any File Size',
+    previewImage: '/images/projects/myunzip.png',
+    type: 'Website',
+    tags: ['React', 'Tanstack Router', 'Vibe Coding'],
+    projectUrl: 'https://myunzip.com/',
+    slug: 'myunzip',
+    featured: false,
+    created: '2025-04-18',
+    updated: '2025-04-22',
+  },
+  {
+    id: 'joplin-vscode-plugin',
+    title: 'Joplin VSCode Plugin',
+    description: 'Provides the functionality to manage Joplin notes within VSCode',
+    previewImage: '/images/projects/joplin-vscode-plugin.png',
+    type: 'VSCode Extension',
+    tags: ['VSCode', 'Joplin API'],
+    projectUrl: 'https://joplin-utils.rxliuli.com/en-US/joplin-vscode-plugin/',
+    sourceCodeUrl: 'https://github.com/rxliuli/joplin-utils',
+    slug: 'joplin-vscode-plugin',
+    featured: false,
+    created: '2020-06-01',
+    updated: '2020-04-16',
+  },
+  {
+    id: 'clean-twitter',
+    title: 'Clean Twitter',
+    description: 'Clean up some annoying elements on Twitter and make your Twitter experience cleaner',
+    previewImage: '/images/projects/clean-twitter.png',
+    type: 'Browser Extension',
+    tags: ['Chrome', 'React', 'Twitter'],
+    projectUrl: 'https://chromewebstore.google.com/detail/clean-twitter/lbbfmkbgembfbohdadeggdcgdkmfdmpb',
+    sourceCodeUrl: 'https://github.com/rxliuli/clean-twitter',
+    slug: 'clean-twitter',
+    featured: false,
+    created: '2023-06-27',
+    updated: '2023-03-28',
+  },
+  {
+    id: 'bilibili-markdown',
+    title: 'Bilibili Markdown',
+    description: 'Add a feature to paste markdown content into the new version of the bilibili column editor.',
+    previewImage: '/images/projects/bilibili-markdown.png',
+    type: 'Browser Extension',
+    tags: ['Chrome', 'Web Editor', 'Bilibili'],
+    projectUrl: 'https://chromewebstore.google.com/detail/bilibili-markdown/bilibili-markdown',
+    sourceCodeUrl: 'https://github.com/rxliuli/bilibili-markdown',
+    slug: 'bilibili-markdown',
+    featured: false,
+    created: '2024-01-26',
+    updated: '2025-01-01',
+  },
+]
+
+// 获取所有项目
+export function getAllProjects(): Omit<Project, 'content'>[] {
+  return projects
+}
+
+// 通过slug获取单个项目
+export async function getProjectBySlug(slug: string): Promise<Project | undefined> {
+  const projectHtmls = import.meta.glob<string>('./projects/*.md', { query: '?html', import: 'default' })
+  const project = projects.find((project) => project.slug === slug)
+  if (!project) {
+    return undefined
+  }
+
+  try {
+    const html = await projectHtmls[`./projects/${slug}.md`]()
+    return {
+      ...project,
+      content: html,
+    }
+  } catch (error) {
+    console.error(`Failed to load markdown content for project ${slug}:`, error)
+    return project
+  }
+}
+
+// 获取所有项目类型
+export function getAllProjectTypes(): string[] {
+  return Array.from(new Set(projects.map((project) => project.type)))
+}
+
+// 获取特定类型的项目
+export function getProjectsByType(type: string): Omit<Project, 'content'>[] {
+  return projects.filter((project) => project.type === type)
+}
+
+// 获取精选项目
+export function getFeaturedProjects(limit: number = 3): Omit<Project, 'content'>[] {
+  return projects
+    .filter((project) => project.featured)
+    .sort((a, b) => new Date(b.updated).getTime() - new Date(a.updated).getTime())
+    .slice(0, limit)
+}
+

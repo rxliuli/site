@@ -1,0 +1,16 @@
+{
+  "framework": "react",
+  "typescript": true,
+  "projectName": "v5",
+  "mode": "file-router",
+  "tailwind": true,
+  "packageManager": "pnpm",
+  "toolchain": "none",
+  "variableValues": {},
+  "git": true,
+  "version": 1,
+  "existingAddOns": [
+    "shadcn",
+    "start"
+  ]
+}

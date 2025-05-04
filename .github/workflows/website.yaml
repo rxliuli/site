@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'packages/v4/**'
+      - 'packages/v5/**'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -47,7 +47,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: packages/v4/build
+          path: packages/v5/.output/public
 
   # Deployment job
   deploy:

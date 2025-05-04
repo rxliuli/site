@@ -1,0 +1,29 @@
+.code-block {
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.code-block pre {
+  margin: 0;
+  padding: 1.5rem;
+  overflow: auto;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-radius: 0.5rem;
+  background-color: #1e1e1e;
+}
+
+/* Horizontal scrollbar styles */
+.code-block pre::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.code-block pre::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+
+.code-block pre::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+} 
