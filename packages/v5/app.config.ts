@@ -24,7 +24,7 @@ const config = defineConfig({
   },
   server: {
     prerender: {
-      routes: ['/'],
+      routes: ['/', '/ping/privacy', '/webstore/privacy'],
       crawlLinks: true,
     },
   },
