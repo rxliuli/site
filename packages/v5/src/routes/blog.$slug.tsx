@@ -92,7 +92,7 @@ export function BlogPostPage() {
             <div
               className="prose prose-lg dark:prose-invert mx-auto lg:mx-0"
               dangerouslySetInnerHTML={{
-                __html: post.content,
+                __html: post.content!,
               }}
             ></div>
           </article>
@@ -100,7 +100,7 @@ export function BlogPostPage() {
           {/* Sidebar: Table of contents */}
           <aside className="hidden xl:block space-y-6">
             <div className="sticky top-20 space-y-6">
-              <Outline outline={post.toc} />
+              <Outline outline={post.toc ?? []} />
             </div>
           </aside>
         </div>

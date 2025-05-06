@@ -1,28 +1,26 @@
 # Privacy Policy
 
-> Last updated: 2025-05-01
+> Last updated: 2024-09-16
 
 ## Introduction
 
-Welcome to our Android Ping Tool application. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and protect your information when you use our Android application.
+Welcome to our Chrome extension. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and protect your information when you use our Chrome extension.
 
 ## Information We Collect
 
-- We do not collect any user data.
-- We do not track the use of the application.
-- We do not store any ping results or history.
-- We do not require any special permissions beyond basic network access for ping functionality.
+- We do not track the use of the extension at all.
+- We never send information or extension settings outside of your browser.
 
 ## Information Sharing and Disclosure
 
-We do not share, sell, or distribute any personal information to third parties. The application operates entirely locally on your device.
+We do not share, sell, or distribute your personal information to third parties. Your data is used solely within the context of the extension to provide the features and functionalities described above.
 
 ## User Choices
 
-You have complete control over the application:
+You have control over the information we collect and how it is used. You can:
 
-- **Uninstall the App**: You can uninstall the application at any time through your device's settings.
-- **Network Access**: You can control the app's network access through your device's settings.
+- **Disable the Extension**: You can disable or uninstall the extension at any time through your browser's settings.
+- **Manage Permissions**: Adjust the permissions granted to the extension through your browser's extensions settings.
 
 ## Changes to This Privacy Policy
 
@@ -36,6 +34,6 @@ If you have any questions or concerns about this Privacy Policy or our data prac
 
 ---
 
-By using our Android Ping Tool application, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.
+By using our Chrome extension, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.
 
 Thank you for trusting us with your information.
