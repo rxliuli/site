@@ -1,7 +1,7 @@
-import type { Project } from '@/types/project'
+import type { Project, ProjectMeta } from '@/types/project'
 
 // 项目元数据
-export const projects: Omit<Project, 'content'>[] = [
+export const projects: ProjectMeta[] = [
   {
     id: 'mass-block-twitter',
     title: 'Mass Block Twitter',
@@ -128,27 +128,34 @@ export const projects: Omit<Project, 'content'>[] = [
 ]
 
 // 获取所有项目
-export function getAllProjects(): Omit<Project, 'content'>[] {
+export function getAllProjects(): ProjectMeta[] {
   return projects
 }
 
 // 通过slug获取单个项目
 export async function getProjectBySlug(slug: string): Promise<Project | undefined> {
   const projectHtmls = import.meta.glob<string>('./projects/*.md', { query: '?html', import: 'default' })
-  const project = projects.find((project) => project.slug === slug)
-  if (!project) {
-    return undefined
+  const meta = projects.find((project) => project.slug === slug)
+  if (!meta) {
+    return
   }
 
   try {
+    if (!projectHtmls[`./projects/${slug}.md`]) {
+      return {
+        meta: meta,
+      }
+    }
     const html = await projectHtmls[`./projects/${slug}.md`]()
     return {
-      ...project,
-      content: html,
+      meta: meta,
+      html: html,
     }
   } catch (error) {
     console.error(`Failed to load markdown content for project ${slug}:`, error)
-    return project
+    return {
+      meta: meta,
+    }
   }
 }
 
@@ -158,12 +165,12 @@ export function getAllProjectTypes(): string[] {
 }
 
 // 获取特定类型的项目
-export function getProjectsByType(type: string): Omit<Project, 'content'>[] {
+export function getProjectsByType(type: string): ProjectMeta[] {
   return projects.filter((project) => project.type === type)
 }
 
 // 获取精选项目
-export function getFeaturedProjects(limit: number = 3): Omit<Project, 'content'>[] {
+export function getFeaturedProjects(limit: number = 3): ProjectMeta[] {
   return projects
     .filter((project) => project.featured)
     .sort((a, b) => new Date(b.updated).getTime() - new Date(a.updated).getTime())

@@ -16,11 +16,11 @@ export const Route = createFileRoute('/project/$slug')({
     }
     return {
       meta: meta({
-        title: loaderData.title,
-        description: loaderData.description,
-        image: loaderData.previewImage,
+        title: loaderData.meta.title,
+        description: loaderData.meta.description,
+        image: loaderData.meta.previewImage,
         type: 'website',
-        tags: loaderData.tags,
+        tags: loaderData.meta.tags,
       }),
     }
   },
@@ -46,30 +46,30 @@ export function ProjectDetailPage() {
       <article className="max-w-4xl mx-auto py-8 space-y-8">
         {/* Header */}
         <div className="space-y-2">
-          <h1 className="text-4xl font-extrabold tracking-tight">{project.title}</h1>
+          <h1 className="text-4xl font-extrabold tracking-tight">{project.meta.title}</h1>
           <div className="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
-            <Badge variant="outline">{project.type}</Badge>
+            <Badge variant="outline">{project.meta.type}</Badge>
             <span className="inline-flex items-center">
               <CalendarIcon className="mr-1 h-3 w-3" />
-              {dayjs(project.updated).format('YYYY-MM-DD')}
+              {dayjs(project.meta.updated).format('YYYY-MM-DD')}
             </span>
           </div>
         </div>
 
         {/* Image */}
         <div className="aspect-video overflow-hidden rounded-lg border">
-          <img src={project.previewImage} alt={project.title} className="h-full w-full object-cover" />
+          <img src={project.meta.previewImage} alt={project.meta.title} className="h-full w-full object-cover" />
         </div>
 
         {/* Description */}
-        <p className="text-xl text-muted-foreground">{project.description}</p>
+        <p className="text-xl text-muted-foreground">{project.meta.description}</p>
 
         {/* Links */}
         <div className="flex gap-4">
-          {project.projectUrl && (
+          {project.meta.projectUrl && (
             <Button asChild>
               <a
-                href={project.projectUrl}
+                href={project.meta.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center"
@@ -79,10 +79,10 @@ export function ProjectDetailPage() {
               </a>
             </Button>
           )}
-          {project.sourceCodeUrl && (
+          {project.meta.sourceCodeUrl && (
             <Button variant="outline" asChild>
               <a
-                href={project.sourceCodeUrl}
+                href={project.meta.sourceCodeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center"
@@ -95,9 +95,9 @@ export function ProjectDetailPage() {
         </div>
 
         {/* Tags */}
-        {project.tags && (
+        {project.meta.tags && (
           <div className="flex flex-wrap gap-2">
-            {project.tags.map((tag) => (
+            {project.meta.tags.map((tag) => (
               <Badge key={tag} variant="secondary">
                 {tag}
               </Badge>
@@ -106,11 +106,11 @@ export function ProjectDetailPage() {
         )}
 
         {/* Content */}
-        {project.content && (
+        {project.html && (
           <div className="pt-4 border-t">
             <div
               className={'prose prose-lg dark:prose-invert max-w-none'}
-              dangerouslySetInnerHTML={{ __html: project.content }}
+              dangerouslySetInnerHTML={{ __html: project.html }}
             ></div>
           </div>
         )}

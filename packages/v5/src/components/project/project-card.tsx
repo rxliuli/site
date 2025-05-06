@@ -1,12 +1,12 @@
 import { Link } from '@tanstack/react-router'
-import type { Project } from '@/types/project'
+import type { ProjectMeta } from '@/types/project'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { ExternalLinkIcon } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 
 interface ProjectCardProps {
-  project: Project
+  project: ProjectMeta
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {

@@ -1,10 +1,9 @@
 export type ProjectType = 'Browser Extension' | 'Website' | 'App' | 'CLI Tool' | 'VSCode Extension'
 
-export interface Project {
+export interface ProjectMeta {
   id: string
   title: string
   description: string
-  content?: string // 详细描述，用于详情页
   previewImage: string
   type: ProjectType
   tags?: string[] // 可选，用于进一步分类
@@ -14,5 +13,10 @@ export interface Project {
   featured?: boolean // 是否在首页展示
   updated: string // 项目创建日期
   created?: string // 项目最后更新日期
+}
+
+export interface Project {
+  meta: ProjectMeta
+  html?: string
 }
 

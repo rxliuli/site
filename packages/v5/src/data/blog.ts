@@ -41,9 +41,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
   }
 
   try {
-    const html = await blogHtmls[`./blog/${slug}.md`]()
-    const toc = await blogTocs[`./blog/${slug}.md`]()
-    // const content = await import(`./blog/${slug}.md`)
+    const [html, toc] = await Promise.all([blogHtmls[`./blog/${slug}.md`](), blogTocs[`./blog/${slug}.md`]()])
     const wordCount = html.trim().split(/\s+/).length
     const readingTime = `${Math.ceil(wordCount / 200)} min read`
 
