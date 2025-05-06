@@ -1,11 +1,13 @@
 import { Outlet, HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { RootLayout } from '../components/layout/root-layout'
+import { NotFound } from '../components/NotFound'
 
 import appCss from '../styles.css?url'
 import { ga } from '@/lib/ga'
 
 export const Route = createRootRoute({
+  notFoundComponent: NotFound,
   head: () => ({
     meta: [
       {

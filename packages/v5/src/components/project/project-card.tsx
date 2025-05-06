@@ -16,6 +16,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <img
           src={project.previewImage}
           alt={`Preview of ${project.title}`}
+          loading="lazy"
           className="h-full w-full object-cover transition-transform hover:scale-105"
         />
       </div>
