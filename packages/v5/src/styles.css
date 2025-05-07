@@ -11,6 +11,10 @@
   @apply text-primary/90;
 }
 
+.prose {
+  @apply bg-background;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 body {
