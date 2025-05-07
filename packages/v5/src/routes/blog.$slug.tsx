@@ -5,7 +5,7 @@ import { CalendarIcon, ClockIcon, ArrowLeftIcon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { meta } from '@/components/seo'
-
+import { MarkdownView } from '@/components/MarkdownView'
 export const Route = createFileRoute('/blog/$slug')({
   component: BlogPostPage,
   loader: async ({ params }) => getBlogPostBySlug(params.slug),
@@ -89,12 +89,12 @@ export function BlogPostPage() {
             </header>
 
             {/* Article content */}
-            <div
-              className="prose prose-lg dark:prose-invert mx-auto lg:mx-0"
+            <MarkdownView
+              className="mx-auto lg:mx-0"
               dangerouslySetInnerHTML={{
                 __html: post.content!,
               }}
-            ></div>
+            />
           </article>
 
           {/* Sidebar: Table of contents */}

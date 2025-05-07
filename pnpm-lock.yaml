@@ -89,6 +89,9 @@ importers:
       front-matter:
         specifier: ^4.0.2
         version: 4.0.2
+      github-markdown-css:
+        specifier: ^5.8.1
+        version: 5.8.1
       lucide-react:
         specifier: ^0.476.0
         version: 0.476.0(react@19.1.0)
@@ -180,6 +183,9 @@ importers:
       shiki:
         specifier: ^3.3.0
         version: 3.3.0
+      tailwindcss-github-markdown:
+        specifier: ^0.1.0
+        version: 0.1.0(tailwindcss@4.1.5)
       tsx:
         specifier: ^4.19.4
         version: 4.19.4
@@ -3791,6 +3797,10 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  github-markdown-css@5.8.1:
+    resolution: {integrity: sha512-8G+PFvqigBQSWLQjyzgpa2ThD9bo7+kDsriUIidGcRhXgmcaAWUIpCZf8DavJgc+xifjbCG+GvMyWr0XMXmc7g==}
+    engines: {node: '>=10'}
+
   github-slugger@2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
 
@@ -5726,6 +5736,11 @@ packages:
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
+
+  tailwindcss-github-markdown@0.1.0:
+    resolution: {integrity: sha512-dA7lYXPEbNdaZyp3qNYmXqOZU+9Wj1ca/vn4iiBrg5osyU7H18P+y/RT3ml6VaaH1a6G7yLjmQqE3SczGE2hoQ==}
+    peerDependencies:
+      tailwindcss: ^4
 
   tailwindcss@4.1.5:
     resolution: {integrity: sha512-nYtSPfWGDiWgCkwQG/m+aX83XCwf62sBgg3bIlNiiOcggnS1x3uVRDAuyelBFL+vJdOPPCGElxv9DjHJjRHiVA==}
@@ -10482,6 +10497,8 @@ snapshots:
       split2: 3.2.2
       through2: 4.0.2
 
+  github-markdown-css@5.8.1: {}
+
   github-slugger@2.0.0: {}
 
   glob-parent@5.1.2:
@@ -12792,6 +12809,10 @@ snapshots:
   tailwind-merge@3.2.0: {}
 
   tailwindcss-animate@1.0.7(tailwindcss@4.1.5):
+    dependencies:
+      tailwindcss: 4.1.5
+
+  tailwindcss-github-markdown@0.1.0(tailwindcss@4.1.5):
     dependencies:
       tailwindcss: 4.1.5
 

@@ -6,6 +6,7 @@ import { CalendarIcon, ExternalLinkIcon } from 'lucide-react'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import dayjs from 'dayjs'
 import { meta } from '@/components/seo'
+import { MarkdownView } from '@/components/MarkdownView'
 
 export const Route = createFileRoute('/project/$slug')({
   component: ProjectDetailPage,
@@ -108,10 +109,7 @@ export function ProjectDetailPage() {
         {/* Content */}
         {project.html && (
           <div className="pt-4 border-t">
-            <div
-              className={'prose prose-lg dark:prose-invert max-w-none'}
-              dangerouslySetInnerHTML={{ __html: project.html }}
-            ></div>
+            <MarkdownView dangerouslySetInnerHTML={{ __html: project.html }} />
           </div>
         )}
       </article>
