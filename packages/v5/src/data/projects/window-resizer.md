@@ -2,10 +2,10 @@
 
 A simple macOS menu bar utility to quickly resize the active window to your predefined dimensions.
 
-![WindowResizer Tray Menu](/images/projects/window-resizer-tray-menu.png)
+![WindowResizer Tray Menu](/images/projects/window-resizer-tray-menu.jpg)
 _The menu bar interface for quick resizing._
 
-![WindowResizer Preferences](/images/projects/window-resizer-preferences.png)
+![WindowResizer Preferences](/images/projects/window-resizer-preferences.jpg)
 _Manage your custom window size presets easily._
 
 ## ✨ Features

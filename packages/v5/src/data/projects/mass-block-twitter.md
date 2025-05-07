@@ -6,7 +6,7 @@
 
 One-Click Solution to Clean Up Twitter/X Spam.
 
-![cover](/images/projects/mass-block-twitter.png)
+![cover](/images/projects/mass-block-twitter.jpg)
 
 Tired of spam accounts cluttering your Twitter feed? I built this simple yet powerful tool that lets you detect and block multiple spam accounts with just one click.
 
