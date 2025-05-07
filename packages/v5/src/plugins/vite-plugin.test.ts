@@ -16,6 +16,9 @@ import rehypeRaw from 'rehype-raw'
 import rehypeSlug from 'rehype-slug'
 import rehypeStringify from 'rehype-stringify'
 import remarkRehype from 'remark-rehype'
+import { fromMarkdown } from 'mdast-util-from-markdown'
+import { remove } from 'unist-util-remove'
+import type { Heading } from 'mdast'
 
 const tempPath = initTempPath(__filename)
 
@@ -153,6 +156,12 @@ describe('vite-plugin', () => {
     )
     const code = await buildScript()
     expect(code).includes('<h1 id="test">')
+  })
+  it('clean title', async () => {
+    const tree = fromMarkdown(trimMarkdown('# title\n\ncontent'))
+    expect(tree.children).length(2)
+    remove(tree, (it) => it.type === 'heading' && (it as Heading).depth === 1)
+    expect(tree.children).length(1)
   })
 })
 

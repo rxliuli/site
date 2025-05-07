@@ -11,6 +11,9 @@ import matter from 'front-matter'
 import rehypeShiki from '@shikijs/rehype'
 import { markdownToc } from './markdownToc'
 import { readFile } from 'node:fs/promises'
+import type { Plugin as UnifiedPlugin } from 'unified'
+import { remove } from 'unist-util-remove'
+import type { Heading } from 'mdast'
 
 function frontmatter(): Plugin {
   return {
@@ -57,6 +60,10 @@ function toc(): Plugin {
   }
 }
 
+const cleanTitle: UnifiedPlugin = () => (tree) => {
+  remove(tree, (it) => it.type === 'heading' && (it as Heading).depth === 1)
+}
+
 function html(): Plugin {
   return {
     name: 'vite-plugin-markdown-html',
@@ -72,6 +79,7 @@ function html(): Plugin {
       const result = await unified()
         .use(remarkParse)
         .use(remarkGfm)
+        .use(cleanTitle)
         .use(remarkRehype, { allowDangerousHtml: true })
         .use(rehypeShiki, {
           themes: {
