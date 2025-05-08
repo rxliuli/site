@@ -10,6 +10,7 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/ponytab.jpg',
     type: 'Browser Extension',
     tags: ['Chrome', 'Firefox', 'Safari', 'My Little Pony', 'Artwork'],
+    projectUrl: 'https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih',
     sourceCodeUrl: 'https://github.com/rxliuli/ponytab',
     slug: 'ponytab',
     featured: false,

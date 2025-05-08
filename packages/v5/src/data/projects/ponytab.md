@@ -1,5 +1,7 @@
 # PonyTab
 
+[Chrome Web Store](https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih)
+
 A beautiful Browser extension that replaces your new tab page with stunning My Little Pony artwork by Sam Baneko.
 
 ## 🌟 Features
@@ -15,7 +17,7 @@ All artwork featured in this extension is created by [Sam Baneko](https://spacec
 
 ## 🚀 Installation
 
-1. Visit the Chrome Web Store (coming soon)
+1. Visit the Chrome Web Store
 2. Click "Add to Chrome"
 3. Open a new tab to see the beautiful MLP artwork!
 
@@ -25,5 +27,5 @@ This project is open source and available under the MIT License.
 
 ## 🌐 Links
 
-- [Chrome Web Store](https://chrome.google.com/webstore) (coming soon)
+- [GitHub](https://github.com/rxliuli/ponytab)
 - [Artist's Website](https://spacecatsamba.com/)
