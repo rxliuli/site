@@ -13,19 +13,19 @@ interface SEOProps {
 export function meta(props: SEOProps): AnyRouteMatch['meta'] {
   const fullTitle = `${props.title} | rxliuli`
 
+  const image = props.image ?? 'https://rxliuli.com/logo.png'
   const r: AnyRouteMatch['meta'] = [
     { name: 'title', content: fullTitle },
     { name: 'description', content: props.description },
     { name: 'og:type', content: props.type },
     { name: 'og:title', content: fullTitle },
     { name: 'og:description', content: props.description },
+    { name: 'og:image', content: image },
     { name: 'twitter:card', content: props.image ? 'summary_large_image' : 'summary' },
     { name: 'twitter:title', content: fullTitle },
     { name: 'twitter:description', content: props.description },
+    { name: 'twitter:image', content: image },
   ]
-  if (props.image) {
-    r.push({ name: 'og:image', content: props.image }, { name: 'twitter:image', content: props.image })
-  }
   if (props.tags) {
     r.push({ name: 'article:tag', content: props.tags?.join(',') })
   }
