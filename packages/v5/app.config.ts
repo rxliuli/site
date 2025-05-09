@@ -1,8 +1,8 @@
 import { defineConfig } from '@tanstack/react-start/config'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import tailwindcss from '@tailwindcss/vite'
-import { markdownPlugin } from './src/plugins/markdown'
-import { analyzer } from 'vite-bundle-analyzer'
+import markdownPlugin from 'unplugin-markdown/vite'
+import type { Plugin } from 'vite'
 
 const config = defineConfig({
   tsr: {
@@ -15,7 +15,7 @@ const config = defineConfig({
         projects: ['./tsconfig.json'],
       }),
       tailwindcss(),
-      markdownPlugin(),
+      markdownPlugin() as Plugin,
       // analyzer({
       //   analyzerMode: 'static',
       //   fileName: 'stats.html',
