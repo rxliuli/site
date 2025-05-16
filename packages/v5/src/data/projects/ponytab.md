@@ -1,6 +1,6 @@
 # PonyTab
 
-[Chrome Web Store](https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih)
+[Chrome Web Store](https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih) [Firefox Add-ons](https://addons.mozilla.org/zh-CN/firefox/addon/ponytab/) [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/jilgmjcmkianchonfkadmomoieiglogo)
 
 A beautiful Browser extension that replaces your new tab page with stunning My Little Pony artwork by Sam Baneko.
 
