@@ -3,13 +3,27 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'idbport',
+    title: 'IDBPort',
+    description: 'A modern browser extension designed for effortless export and import of IndexedDB data.',
+    previewImage: '/images/projects/idbport.jpg',
+    type: 'Browser Extension',
+    tags: ['Chrome', 'Firefox', 'Edge', 'Safari', 'IndexedDB', 'Data Migration'],
+    projectUrl: 'https://chromewebstore.google.com/detail/kmpakemocjdhfcpfggpodkjhmjibhhhm',
+    sourceCodeUrl: 'https://github.com/rxliuli/idbport',
+    slug: 'idbport',
+    featured: false,
+    created: '2025-05-22',
+    updated: '2025-05-25',
+  },
+  {
     id: 'ponytab',
     title: 'PonyTab',
     description:
       'A beautiful Browser extension that replaces your new tab page with stunning My Little Pony artwork by Sam Baneko.',
     previewImage: '/images/projects/ponytab.jpg',
     type: 'Browser Extension',
-    tags: ['Chrome', 'Firefox', 'Safari', 'My Little Pony', 'Artwork'],
+    tags: ['Chrome', 'Firefox', 'My Little Pony', 'Artwork'],
     projectUrl: 'https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih',
     sourceCodeUrl: 'https://github.com/rxliuli/ponytab',
     slug: 'ponytab',
@@ -67,7 +81,7 @@ export const projects: ProjectMeta[] = [
     tags: ['Mac', 'Wails', 'Golang', 'AppleScript'],
     sourceCodeUrl: 'https://github.com/rxliuli/window-resizer',
     slug: 'window-resizer',
-    featured: true,
+    featured: false,
     created: '2025-04-27',
     updated: '2025-05-01',
   },
