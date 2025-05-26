@@ -111,7 +111,7 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'social',
-        name: 'Discord',
+        name: 'Discord Community',
         url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
