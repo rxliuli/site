@@ -17,11 +17,13 @@ export const Route = createFileRoute('/project/$slug')({
     if (!loaderData) {
       return {}
     }
+    const isFullImage = loaderData.meta.previewImage.startsWith('https://')
+    const fullImage = isFullImage ? 'https://rxliuli.com' + loaderData.meta.previewImage : loaderData.meta.previewImage
     return {
       meta: meta({
         title: loaderData.meta.title,
         description: loaderData.meta.description,
-        image: loaderData.meta.previewImage,
+        image: fullImage,
         type: 'website',
         tags: loaderData.meta.tags,
       }),
