@@ -13,15 +13,14 @@ export const Route = createFileRoute('/')({
     return {
       meta: meta({
         title: 'Personal website',
-        description:
-          'I like to create interesting things, using programming and writing as tools.',
+        description: 'I like to create interesting things, using programming and writing as tools.',
         type: 'website',
       }),
     }
   },
 })
 
-const featuredProjects = projects.filter((project) => project.featured)
+const featuredProjects = projects.sort((a, b) => (b.featured ? 1 : -1) - (a.featured ? 1 : -1)).slice(0, 2)
 
 const recentPosts = sortBy(getAllBlogPosts(), [(it) => -new Date(it.date)])
   .slice(0, 3)
@@ -38,7 +37,7 @@ export function HomePage() {
       <div className="flex flex-col items-center gap-8 text-center">
         <h1 className="text-4xl font-extrabold tracking-tight lg:text-5xl">Hi, I'm rxliuli</h1>
         <p className="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
-        I like to create interesting things, using programming and writing as tools.
+          I like to create interesting things, using programming and writing as tools.
         </p>
 
         {/* Social links */}
