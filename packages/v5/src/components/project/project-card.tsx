@@ -2,8 +2,11 @@ import { Link } from '@tanstack/react-router'
 import type { ProjectMeta } from '@/types/project'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { ExternalLinkIcon } from 'lucide-react'
-import { SiGithub } from '@icons-pack/react-simple-icons'
+import { ExternalLinkIcon, MoreHorizontal } from 'lucide-react'
+import { SiGithub } from 'react-icons/si'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
+import { ProjectIcon } from './project-icon'
 
 interface ProjectCardProps {
   project: ProjectMeta
@@ -12,7 +15,7 @@ interface ProjectCardProps {
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden flex flex-col h-full">
-      <div className="aspect-video w-full overflow-hidden">
+      <div className="aspect-[16/10] w-full overflow-hidden">
         <img
           src={project.previewImage}
           alt={`Preview of ${project.title}`}
@@ -70,6 +73,26 @@ export function ProjectCard({ project }: ProjectCardProps) {
               <SiGithub className="h-4 w-4" />
               <span className="sr-only">View Source Code</span>
             </a>
+          )}
+          {project.links && project.links.length > 0 && (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon" className="h-8 w-8">
+                  <MoreHorizontal className="h-4 w-4" />
+                  <span className="sr-only">More links</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {project.links.map((link) => (
+                  <DropdownMenuItem key={link.url} asChild>
+                    <a href={link.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <ProjectIcon icon={link.icon} />
+                      {link.name}
+                    </a>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           )}
         </div>
       </CardFooter>

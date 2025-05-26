@@ -3,10 +3,12 @@ import { getProjectBySlug } from '@/data/projects'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { CalendarIcon, ExternalLinkIcon } from 'lucide-react'
-import { SiGithub } from '@icons-pack/react-simple-icons'
 import dayjs from 'dayjs'
 import { meta } from '@/components/seo'
 import { MarkdownView } from '@/components/MarkdownView'
+import { Separator } from '@/components/ui/separator'
+import { ProjectIcon } from '@/components/project/project-icon'
+import { SiGithub } from 'react-icons/si'
 
 export const Route = createFileRoute('/project/$slug')({
   component: ProjectDetailPage,
@@ -58,7 +60,7 @@ export function ProjectDetailPage() {
         </div>
 
         {/* Image */}
-        <div className="aspect-video overflow-hidden rounded-lg border">
+        <div className="aspect-[16/10] overflow-hidden rounded-lg border">
           <img src={project.meta.previewImage} alt={project.meta.title} className="h-full w-full object-cover" />
         </div>
 
@@ -66,32 +68,67 @@ export function ProjectDetailPage() {
         <p className="text-xl text-muted-foreground">{project.meta.description}</p>
 
         {/* Links */}
-        <div className="flex gap-4">
-          {project.meta.projectUrl && (
-            <Button asChild>
-              <a
-                href={project.meta.projectUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center"
-              >
-                <ExternalLinkIcon className="mr-2 h-4 w-4" />
-                Visit Project
-              </a>
-            </Button>
-          )}
-          {project.meta.sourceCodeUrl && (
-            <Button variant="outline" asChild>
-              <a
-                href={project.meta.sourceCodeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center"
-              >
-                <SiGithub className="mr-2 h-4 w-4" />
-                View Source Code
-              </a>
-            </Button>
+        <div className="space-y-4">
+          <div className="flex gap-4">
+            {project.meta.projectUrl && (
+              <Button asChild>
+                <a
+                  href={project.meta.projectUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center"
+                >
+                  <ExternalLinkIcon className="h-4 w-4" />
+                  Visit Project
+                </a>
+              </Button>
+            )}
+            {project.meta.sourceCodeUrl && (
+              <Button variant="outline" asChild>
+                <a
+                  href={project.meta.sourceCodeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center"
+                >
+                  <SiGithub className="h-4 w-4" />
+                  Source Code
+                </a>
+              </Button>
+            )}
+          </div>
+
+          {project.meta.links && project.meta.links.length > 0 && (
+            <>
+              <Separator />
+              <div className="space-y-4">
+                {['store', 'social', 'community', 'other'].map((type) => {
+                  const typeLinks = project.meta.links?.filter((link) => link.type === type)
+                  if (!typeLinks?.length) return null
+
+                  return (
+                    <div key={type} className="space-y-2">
+                      <h3 className="text-sm font-medium capitalize">{type} Links</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {typeLinks.map((link) => (
+                          <Button key={link.url} variant="outline" size="sm" asChild>
+                            <a
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center"
+                            >
+                              <ProjectIcon icon={link.icon} />
+                              {link.name}
+                            </a>
+                          </Button>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </>
           )}
         </div>
 

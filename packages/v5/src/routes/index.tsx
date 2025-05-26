@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowRight } from 'lucide-react'
-import { SiGithub, SiTelegram, SiX } from '@icons-pack/react-simple-icons'
+import { SiGithub, SiTelegram, SiX } from 'react-icons/si'
 import { projects } from '../data/projects'
 import { getAllBlogPosts } from '@/data/blog'
 import { sortBy } from 'es-toolkit'

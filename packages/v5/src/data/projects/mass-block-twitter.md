@@ -1,7 +1,5 @@
 # Mass Block Twitter
 
-[Chrome Web Store](https://chromewebstore.google.com/detail/mass-block-twitter/eaghpebepefbcadjdppjjopoagckdhej) [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/mass-block-twitter/) [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/jfmhejlgepjmbgeceljmdeimmdolfadf)
-
 ## Introduction
 
 One-Click Solution to Clean Up Twitter/X Spam.
