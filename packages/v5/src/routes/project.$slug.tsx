@@ -18,7 +18,7 @@ export const Route = createFileRoute('/project/$slug')({
       return {}
     }
     const isFullImage = loaderData.meta.previewImage.startsWith('https://')
-    const fullImage = isFullImage ? 'https://rxliuli.com' + loaderData.meta.previewImage : loaderData.meta.previewImage
+    const fullImage = isFullImage ? loaderData.meta.previewImage : 'https://rxliuli.com' + loaderData.meta.previewImage
     return {
       meta: meta({
         title: loaderData.meta.title,
