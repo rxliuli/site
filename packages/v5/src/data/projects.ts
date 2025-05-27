@@ -197,12 +197,26 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/clean-twitter.jpg',
     type: 'Browser Extension',
     tags: ['Chrome', 'React', 'Twitter'],
-    projectUrl: 'https://chromewebstore.google.com/detail/clean-twitter/lbbfmkbgembfbohdadeggdcgdkmfdmpb',
+    projectUrl: 'https://chromewebstore.google.com/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb',
     sourceCodeUrl: 'https://github.com/rxliuli/clean-twitter',
     slug: 'clean-twitter',
     featured: false,
     created: '2023-06-27',
     updated: '2023-03-28',
+    links: [
+      {
+        type: 'store',
+        name: 'Firefox Add-ons',
+        url: 'https://addons.mozilla.org/en-US/firefox/addon/clean-twitter/',
+        icon: 'firefox',
+      },
+      {
+        type: 'social',
+        name: 'ProductHunt',
+        url: 'https://www.producthunt.com/products/clean-twitter',
+        icon: 'producthunt',
+      },
+    ],
   },
   {
     id: 'bilibili-markdown',
