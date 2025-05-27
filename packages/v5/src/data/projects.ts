@@ -207,7 +207,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Firefox Add-ons',
-        url: 'https://addons.mozilla.org/en-US/firefox/addon/clean-twitter/',
+        url: 'https://addons.mozilla.org/firefox/addon/clean-twitter-2333/',
         icon: 'firefox',
       },
       {
