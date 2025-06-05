@@ -62,6 +62,32 @@ export const projects: ProjectMeta[] = [
     featured: false,
     created: '2025-05-06',
     updated: '2025-05-08',
+    links: [
+      {
+        type: 'store',
+        name: 'Firefox Add-ons',
+        url: 'https://addons.mozilla.org/zh-CN/firefox/addon/ponytab/',
+        icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Edge Add-ons',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/jilgmjcmkianchonfkadmomoieiglogo',
+        icon: 'edge',
+      },
+      {
+        type: 'social',
+        name: 'ProductHunt',
+        url: 'https://www.producthunt.com/posts/ponytab',
+        icon: 'producthunt',
+      },
+      {
+        type: 'social',
+        name: 'Discord Community',
+        url: 'https://discord.gg/uGjdZRddwa',
+        icon: 'discord',
+      },
+    ],
   },
   {
     id: 'redirector',
@@ -76,6 +102,32 @@ export const projects: ProjectMeta[] = [
     featured: false,
     created: '2024-09-12',
     updated: '2025-05-08',
+    links: [
+      {
+        type: 'store',
+        name: 'Edge Add-ons',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/redirector/jhdjcofnjfeljeekjklhgfmfocfgibmm',
+        icon: 'edge',
+      },
+      {
+        type: 'store',
+        name: 'Safari Extension',
+        url: 'https://apps.apple.com/cn/app/url-redirector/id6743197230',
+        icon: 'safari',
+      },
+      {
+        type: 'social',
+        name: 'ProductHunt',
+        url: 'https://www.producthunt.com/posts/redirector-2',
+        icon: 'producthunt',
+      },
+      {
+        type: 'social',
+        name: 'Discord Community',
+        url: 'https://discord.gg/jwhvMBTM6G',
+        icon: 'discord',
+      },
+    ],
   },
   {
     id: 'mass-block-twitter',
@@ -89,7 +141,7 @@ export const projects: ProjectMeta[] = [
     slug: 'mass-block-twitter',
     featured: true,
     created: '2025-01-01',
-    updated: '2025-05-02',
+    updated: '2025-06-05',
     links: [
       {
         type: 'store',
@@ -162,6 +214,32 @@ export const projects: ProjectMeta[] = [
     featured: false,
     created: '2025-04-18',
     updated: '2025-04-29',
+    links: [
+      {
+        type: 'store',
+        name: 'Firefox Add-ons',
+        url: 'https://addons.mozilla.org/zh-CN/firefox/addon/cors-unblock2/',
+        icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Safari Extension',
+        url: 'https://apps.apple.com/cn/app/cors-unblock/id6744779652',
+        icon: 'safari',
+      },
+      {
+        type: 'social',
+        name: 'ProductHunt',
+        url: 'https://www.producthunt.com/products/cors-unblock',
+        icon: 'producthunt',
+      },
+      {
+        type: 'social',
+        name: 'Discord Community',
+        url: 'https://discord.gg/re3cFtxAjT',
+        icon: 'discord',
+      },
+    ],
   },
   {
     id: 'myunzip',
