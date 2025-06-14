@@ -3,6 +3,20 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'fetch-beautifier',
+    title: 'Fetch Beautifier',
+    description: 'A modern browser extension designed for effortless export and import of IndexedDB data.',
+    previewImage: '/images/projects/fetch-beautifier.jpg',
+    type: 'Website',
+    tags: ['Fetch', 'Beautifier', 'Devtools'],
+    projectUrl: 'https://rxliuli.com/fetch-beautifier/',
+    sourceCodeUrl: 'https://github.com/rxliuli/fetch-beautifier',
+    slug: 'fetch-beautifier',
+    featured: false,
+    created: '2025-06-14',
+    updated: '2025-06-14',
+  },
+  {
     id: 'idbport',
     title: 'IDBPort',
     description: 'A modern browser extension designed for effortless export and import of IndexedDB data.',
