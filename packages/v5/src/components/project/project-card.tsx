@@ -23,14 +23,14 @@ export function ProjectCard({ project }: ProjectCardProps) {
           className="h-full w-full object-cover transition-transform hover:scale-105"
         />
       </div>
-      <CardHeader>
+      <CardHeader className="flex-1 mb-auto flex flex-col">
         <div className="flex items-center justify-between">
           <CardTitle className="line-clamp-1">{project.title}</CardTitle>
           <Badge variant="outline">{project.type}</Badge>
         </div>
         <CardDescription className="line-clamp-2">{project.description}</CardDescription>
       </CardHeader>
-      <CardContent className="flex-grow">
+      <CardContent>
         {project.tags && (
           <div className="flex flex-wrap gap-2">
             {project.tags.map((tag) => (
