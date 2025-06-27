@@ -58,7 +58,7 @@ Contributions are welcome! If you have any suggestions for improvements or have 
 
 ## License
 
-[MIT License](./LICENSE)
+[MIT License](https://github.com/rxliuli/redirector/blob/main/LICENSE)
 
 ## Contact
 
