@@ -115,7 +115,7 @@ export const projects: ProjectMeta[] = [
     slug: 'redirector',
     featured: false,
     created: '2024-09-12',
-    updated: '2025-05-08',
+    updated: '2025-07-24',
     links: [
       {
         type: 'store',
@@ -128,6 +128,12 @@ export const projects: ProjectMeta[] = [
         name: 'Safari Extension',
         url: 'https://apps.apple.com/cn/app/url-redirector/id6743197230',
         icon: 'safari',
+      },
+      {
+        type: 'store',
+        name: 'Firefox Add-ons',
+        url: 'https://addons.mozilla.org/en-US/firefox/addon/redirector-url/',
+        icon: 'firefox',
       },
       {
         type: 'social',
