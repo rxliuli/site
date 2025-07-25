@@ -3,6 +3,28 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'fast-bookmark',
+    title: 'Fast Bookmark',
+    description: 'Quick Save with Smart Folders',
+    previewImage: '/images/projects/fast-bookmark.jpg',
+    type: 'Browser Extension',
+    tags: ['Bookmark', 'Chrome', 'Firefox'],
+    projectUrl: 'https://chromewebstore.google.com/detail/mhdmiffahinpfnfegihlfmpappeemibk',
+    sourceCodeUrl: 'https://github.com/rxliuli/fast-bookmark',
+    links: [
+      {
+        type: 'social',
+        name: 'Discord Community',
+        url: 'https://discord.gg/9NphH4rkkd',
+        icon: 'discord',
+      },
+    ],
+    slug: 'fast-bookmark',
+    featured: false,
+    created: '2025-07-26',
+    updated: '2025-07-26',
+  },
+  {
     id: 'fetch-beautifier',
     title: 'Fetch Beautifier',
     description: 'Clean up messy fetch code instantly from DevTools',
