@@ -13,6 +13,12 @@ export const projects: ProjectMeta[] = [
     sourceCodeUrl: 'https://github.com/rxliuli/fast-bookmark',
     links: [
       {
+        type: 'store',
+        name: 'Firefox Add-ons',
+        url: 'https://addons.mozilla.org/firefox/addon/fast-bookmark/',
+        icon: 'firefox',
+      },
+      {
         type: 'social',
         name: 'Discord Community',
         url: 'https://discord.gg/9NphH4rkkd',
@@ -51,7 +57,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Firefox Add-ons',
-        url: 'https://addons.mozilla.org/en-US/firefox/addon/idbport/',
+        url: 'https://addons.mozilla.org/firefox/addon/idbport/',
         icon: 'firefox',
       },
       {
@@ -102,7 +108,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Firefox Add-ons',
-        url: 'https://addons.mozilla.org/zh-CN/firefox/addon/ponytab/',
+        url: 'https://addons.mozilla.org/firefox/addon/ponytab/',
         icon: 'firefox',
       },
       {
@@ -154,7 +160,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Firefox Add-ons',
-        url: 'https://addons.mozilla.org/en-US/firefox/addon/redirector-url/',
+        url: 'https://addons.mozilla.org/firefox/addon/redirector-url/',
         icon: 'firefox',
       },
       {
@@ -194,7 +200,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Firefox Add-ons',
-        url: 'https://addons.mozilla.org/en-US/firefox/addon/mass-block-twitter/',
+        url: 'https://addons.mozilla.org/firefox/addon/mass-block-twitter/',
         icon: 'firefox',
       },
       {
@@ -260,7 +266,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Firefox Add-ons',
-        url: 'https://addons.mozilla.org/zh-CN/firefox/addon/cors-unblock2/',
+        url: 'https://addons.mozilla.org/firefox/addon/cors-unblock2/',
         icon: 'firefox',
       },
       {
