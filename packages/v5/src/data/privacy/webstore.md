@@ -4,7 +4,7 @@
 
 ## Introduction
 
-Welcome to our Chrome extension. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and protect your information when you use our Chrome extension.
+Welcome to our browser extension. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and protect your information when you use our browser extension.
 
 ## Information We Collect
 
@@ -34,6 +34,6 @@ If you have any questions or concerns about this Privacy Policy or our data prac
 
 ---
 
-By using our Chrome extension, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.
+By using our browser extension, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.
 
 Thank you for trusting us with your information.
