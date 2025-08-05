@@ -11,7 +11,6 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
 import { Route as ProjectIndexImport } from './routes/project.index'
 import { Route as BlogIndexImport } from './routes/blog.index'
@@ -19,16 +18,8 @@ import { Route as WebstorePrivacyImport } from './routes/webstore.privacy'
 import { Route as ProjectSlugImport } from './routes/project.$slug'
 import { Route as PingPrivacyImport } from './routes/ping.privacy'
 import { Route as BlogSlugImport } from './routes/blog.$slug'
-import { Route as DemoStartServerFuncsImport } from './routes/demo.start.server-funcs'
-import { Route as DemoStartApiRequestImport } from './routes/demo.start.api-request'
 
 // Create/Update Routes
-
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
@@ -72,18 +63,6 @@ const BlogSlugRoute = BlogSlugImport.update({
   getParentRoute: () => rootRoute,
 } as any)
 
-const DemoStartServerFuncsRoute = DemoStartServerFuncsImport.update({
-  id: '/demo/start/server-funcs',
-  path: '/demo/start/server-funcs',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const DemoStartApiRequestRoute = DemoStartApiRequestImport.update({
-  id: '/demo/start/api-request',
-  path: '/demo/start/api-request',
-  getParentRoute: () => rootRoute,
-} as any)
-
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
@@ -93,13 +72,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
       parentRoute: typeof rootRoute
     }
     '/blog/$slug': {
@@ -144,20 +116,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectIndexImport
       parentRoute: typeof rootRoute
     }
-    '/demo/start/api-request': {
-      id: '/demo/start/api-request'
-      path: '/demo/start/api-request'
-      fullPath: '/demo/start/api-request'
-      preLoaderRoute: typeof DemoStartApiRequestImport
-      parentRoute: typeof rootRoute
-    }
-    '/demo/start/server-funcs': {
-      id: '/demo/start/server-funcs'
-      path: '/demo/start/server-funcs'
-      fullPath: '/demo/start/server-funcs'
-      preLoaderRoute: typeof DemoStartServerFuncsImport
-      parentRoute: typeof rootRoute
-    }
   }
 }
 
@@ -165,108 +123,84 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/ping/privacy': typeof PingPrivacyRoute
   '/project/$slug': typeof ProjectSlugRoute
   '/webstore/privacy': typeof WebstorePrivacyRoute
   '/blog': typeof BlogIndexRoute
   '/project': typeof ProjectIndexRoute
-  '/demo/start/api-request': typeof DemoStartApiRequestRoute
-  '/demo/start/server-funcs': typeof DemoStartServerFuncsRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/ping/privacy': typeof PingPrivacyRoute
   '/project/$slug': typeof ProjectSlugRoute
   '/webstore/privacy': typeof WebstorePrivacyRoute
   '/blog': typeof BlogIndexRoute
   '/project': typeof ProjectIndexRoute
-  '/demo/start/api-request': typeof DemoStartApiRequestRoute
-  '/demo/start/server-funcs': typeof DemoStartServerFuncsRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/ping/privacy': typeof PingPrivacyRoute
   '/project/$slug': typeof ProjectSlugRoute
   '/webstore/privacy': typeof WebstorePrivacyRoute
   '/blog/': typeof BlogIndexRoute
   '/project/': typeof ProjectIndexRoute
-  '/demo/start/api-request': typeof DemoStartApiRequestRoute
-  '/demo/start/server-funcs': typeof DemoStartServerFuncsRoute
 }
 
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
     | '/blog/$slug'
     | '/ping/privacy'
     | '/project/$slug'
     | '/webstore/privacy'
     | '/blog'
     | '/project'
-    | '/demo/start/api-request'
-    | '/demo/start/server-funcs'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
     | '/blog/$slug'
     | '/ping/privacy'
     | '/project/$slug'
     | '/webstore/privacy'
     | '/blog'
     | '/project'
-    | '/demo/start/api-request'
-    | '/demo/start/server-funcs'
   id:
     | '__root__'
     | '/'
-    | '/about'
     | '/blog/$slug'
     | '/ping/privacy'
     | '/project/$slug'
     | '/webstore/privacy'
     | '/blog/'
     | '/project/'
-    | '/demo/start/api-request'
-    | '/demo/start/server-funcs'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   BlogSlugRoute: typeof BlogSlugRoute
   PingPrivacyRoute: typeof PingPrivacyRoute
   ProjectSlugRoute: typeof ProjectSlugRoute
   WebstorePrivacyRoute: typeof WebstorePrivacyRoute
   BlogIndexRoute: typeof BlogIndexRoute
   ProjectIndexRoute: typeof ProjectIndexRoute
-  DemoStartApiRequestRoute: typeof DemoStartApiRequestRoute
-  DemoStartServerFuncsRoute: typeof DemoStartServerFuncsRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   BlogSlugRoute: BlogSlugRoute,
   PingPrivacyRoute: PingPrivacyRoute,
   ProjectSlugRoute: ProjectSlugRoute,
   WebstorePrivacyRoute: WebstorePrivacyRoute,
   BlogIndexRoute: BlogIndexRoute,
   ProjectIndexRoute: ProjectIndexRoute,
-  DemoStartApiRequestRoute: DemoStartApiRequestRoute,
-  DemoStartServerFuncsRoute: DemoStartServerFuncsRoute,
 }
 
 export const routeTree = rootRoute
@@ -280,22 +214,16 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about",
         "/blog/$slug",
         "/ping/privacy",
         "/project/$slug",
         "/webstore/privacy",
         "/blog/",
-        "/project/",
-        "/demo/start/api-request",
-        "/demo/start/server-funcs"
+        "/project/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
-    },
-    "/about": {
-      "filePath": "about.tsx"
     },
     "/blog/$slug": {
       "filePath": "blog.$slug.tsx"
@@ -314,12 +242,6 @@ export const routeTree = rootRoute
     },
     "/project/": {
       "filePath": "project.index.tsx"
-    },
-    "/demo/start/api-request": {
-      "filePath": "demo.start.api-request.tsx"
-    },
-    "/demo/start/server-funcs": {
-      "filePath": "demo.start.server-funcs.tsx"
     }
   }
 }

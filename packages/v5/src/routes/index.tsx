@@ -61,7 +61,7 @@ export function HomePage() {
             <span className="sr-only">GitHub</span>
           </a>
           <a
-            href="https://discord.gg/VxbAqE7gj2"
+            href="https://discord.gg/fErBc3wYrC"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground"
