@@ -48,7 +48,7 @@ export function ProjectDetailPage() {
 
   return (
     <>
-      <article className="max-w-4xl mx-auto py-8 space-y-8">
+      <article className="max-w-4xl mx-auto py-8 space-y-4">
         {/* Header */}
         <div className="space-y-2">
           <h1 className="text-4xl font-extrabold tracking-tight">{project.meta.title}</h1>
@@ -71,35 +71,6 @@ export function ProjectDetailPage() {
 
         {/* Links */}
         <div className="space-y-4">
-          <div className="flex gap-4">
-            {project.meta.projectUrl && (
-              <Button asChild>
-                <a
-                  href={project.meta.projectUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center"
-                >
-                  <ExternalLinkIcon className="h-4 w-4" />
-                  Visit Project
-                </a>
-              </Button>
-            )}
-            {project.meta.sourceCodeUrl && (
-              <Button variant="outline" asChild>
-                <a
-                  href={project.meta.sourceCodeUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center"
-                >
-                  <SiGithub className="h-4 w-4" />
-                  Source Code
-                </a>
-              </Button>
-            )}
-          </div>
-
           {project.meta.links && project.meta.links.length > 0 && (
             <>
               <Separator />

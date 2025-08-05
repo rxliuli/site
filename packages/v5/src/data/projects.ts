@@ -9,9 +9,19 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/fast-bookmark.jpg',
     type: 'Browser Extension',
     tags: ['Bookmark', 'Chrome', 'Firefox'],
-    projectUrl: 'https://chromewebstore.google.com/detail/mhdmiffahinpfnfegihlfmpappeemibk',
-    sourceCodeUrl: 'https://github.com/rxliuli/fast-bookmark',
     links: [
+      {
+        type: 'store',
+        name: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/mhdmiffahinpfnfegihlfmpappeemibk',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/fast-bookmark',
+        icon: 'github',
+      },
       {
         type: 'store',
         name: 'Firefox Add-ons',
@@ -37,12 +47,24 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/fetch-beautifier.jpg',
     type: 'Website',
     tags: ['Fetch', 'Beautifier', 'Devtools'],
-    projectUrl: 'https://rxliuli.com/fetch-beautifier/',
-    sourceCodeUrl: 'https://github.com/rxliuli/fetch-beautifier',
     slug: 'fetch-beautifier',
     featured: false,
     created: '2025-06-14',
     updated: '2025-06-14',
+    links: [
+      {
+        type: 'other',
+        name: 'Chrome Web Store',
+        url: 'https://rxliuli.com/fetch-beautifier/',
+        icon: 'website',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/fetch-beautifier',
+        icon: 'github',
+      },
+    ],
   },
   {
     id: 'idbport',
@@ -51,9 +73,19 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/idbport.jpg',
     type: 'Browser Extension',
     tags: ['IndexedDB', 'Data Migration', 'Chrome', 'Safari'],
-    projectUrl: 'https://chromewebstore.google.com/detail/kmpakemocjdhfcpfggpodkjhmjibhhhm',
-    sourceCodeUrl: 'https://github.com/rxliuli/idbport',
     links: [
+      {
+        type: 'store',
+        name: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/kmpakemocjdhfcpfggpodkjhmjibhhhm',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/idbport',
+        icon: 'github',
+      },
       {
         type: 'store',
         name: 'Firefox Add-ons',
@@ -98,13 +130,23 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/ponytab.jpg',
     type: 'Browser Extension',
     tags: ['My Little Pony', 'Artwork', 'Chrome'],
-    projectUrl: 'https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih',
-    sourceCodeUrl: 'https://github.com/rxliuli/ponytab',
     slug: 'ponytab',
     featured: false,
     created: '2025-05-06',
     updated: '2025-05-08',
     links: [
+      {
+        type: 'store',
+        name: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/ponytab',
+        icon: 'github',
+      },
       {
         type: 'store',
         name: 'Firefox Add-ons',
@@ -138,13 +180,23 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/redirector.jpg',
     type: 'Browser Extension',
     tags: ['Chrome', 'Safari', 'Svelte'],
-    sourceCodeUrl: 'https://github.com/rxliuli/redirector',
-    projectUrl: 'https://chromewebstore.google.com/detail/redirector/lioaeidejmlpffbndjhaameocfldlhin',
     slug: 'redirector',
     featured: false,
     created: '2024-09-12',
     updated: '2025-07-24',
     links: [
+      {
+        type: 'store',
+        name: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/redirector/lioaeidejmlpffbndjhaameocfldlhin',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/redirector',
+        icon: 'github',
+      },
       {
         type: 'store',
         name: 'Edge Add-ons',
@@ -184,13 +236,23 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/mass-block-twitter.jpg',
     type: 'Browser Extension',
     tags: ['Twitter', 'Batch Block', 'Chrome'],
-    projectUrl: 'https://mass-block-twitter.rxliuli.com',
-    sourceCodeUrl: 'https://github.com/rxliuli/mass-block-twitter',
     slug: 'mass-block-twitter',
     featured: true,
     created: '2025-01-01',
     updated: '2025-06-05',
     links: [
+      {
+        type: 'other',
+        name: 'Website',
+        url: 'https://mass-block-twitter.rxliuli.com',
+        icon: 'website',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/mass-block-twitter',
+        icon: 'github',
+      },
       {
         type: 'store',
         name: 'Chrome Web Store',
@@ -230,11 +292,18 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/ping.jpg',
     type: 'App',
     tags: ['Android', 'Kotlin', 'Jetpack Compose'],
-    sourceCodeUrl: 'https://github.com/rxliuli/ping',
     slug: 'ping',
     featured: false,
     created: '2025-05-01',
     updated: '2025-05-01',
+    links: [
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/ping',
+        icon: 'github',
+      },
+    ],
   },
   {
     id: 'window-resizer',
@@ -243,11 +312,18 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/window-resizer.jpg',
     type: 'App',
     tags: ['Mac', 'Wails', 'Golang', 'AppleScript'],
-    sourceCodeUrl: 'https://github.com/rxliuli/window-resizer',
     slug: 'window-resizer',
     featured: false,
     created: '2025-04-27',
     updated: '2025-05-01',
+    links: [
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/window-resizer',
+        icon: 'github',
+      },
+    ],
   },
   {
     id: 'cors-unblock',
@@ -256,13 +332,23 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/cors-unblock.jpg',
     type: 'Browser Extension',
     tags: ['CORS', 'Chrome', 'Firefox', 'Safari'],
-    projectUrl: 'https://chromewebstore.google.com/detail/cors-unblock/odkadbffomicljkjfepnggiibcjmkogc',
-    sourceCodeUrl: 'https://github.com/rxliuli/cors-unblock',
     slug: 'cors-unblock',
     featured: false,
     created: '2025-04-18',
     updated: '2025-04-29',
     links: [
+      {
+        type: 'store',
+        name: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/cors-unblock/odkadbffomicljkjfepnggiibcjmkogc',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/cors-unblock',
+        icon: 'github',
+      },
       {
         type: 'store',
         name: 'Firefox Add-ons',
@@ -296,11 +382,18 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/myunzip.jpg',
     type: 'Website',
     tags: ['React', 'Tanstack Router', 'Vibe Coding'],
-    projectUrl: 'https://myunzip.com/',
     slug: 'myunzip',
     featured: false,
     created: '2025-04-18',
     updated: '2025-04-22',
+    links: [
+      {
+        type: 'other',
+        name: 'Website',
+        url: 'https://myunzip.com/',
+        icon: 'website',
+      },
+    ],
   },
   {
     id: 'joplin-vscode-plugin',
@@ -309,12 +402,24 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/joplin-vscode-plugin.jpg',
     type: 'VSCode Extension',
     tags: ['VSCode', 'Joplin API'],
-    projectUrl: 'https://joplin-utils.rxliuli.com/en-US/joplin-vscode-plugin/',
-    sourceCodeUrl: 'https://github.com/rxliuli/joplin-utils',
     slug: 'joplin-vscode-plugin',
     featured: false,
     created: '2020-06-01',
     updated: '2020-04-16',
+    links: [
+      {
+        type: 'other',
+        name: 'Documentation',
+        url: 'https://joplin-utils.rxliuli.com/en-US/joplin-vscode-plugin/',
+        icon: 'website',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/joplin-utils',
+        icon: 'github',
+      },
+    ],
   },
   {
     id: 'clean-twitter',
@@ -323,13 +428,23 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/clean-twitter.jpg',
     type: 'Browser Extension',
     tags: ['Chrome', 'React', 'Twitter'],
-    projectUrl: 'https://chromewebstore.google.com/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb',
-    sourceCodeUrl: 'https://github.com/rxliuli/clean-twitter',
     slug: 'clean-twitter',
     featured: false,
     created: '2023-06-27',
     updated: '2023-03-28',
     links: [
+      {
+        type: 'store',
+        name: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/clean-twitter',
+        icon: 'github',
+      },
       {
         type: 'store',
         name: 'Firefox Add-ons',
@@ -351,12 +466,24 @@ export const projects: ProjectMeta[] = [
     previewImage: '/images/projects/bilibili-markdown.jpg',
     type: 'Browser Extension',
     tags: ['Chrome', 'Web Editor', 'Bilibili'],
-    projectUrl: 'https://chromewebstore.google.com/detail/bilibili-markdown/bilibili-markdown',
-    sourceCodeUrl: 'https://github.com/rxliuli/bilibili-markdown',
     slug: 'bilibili-markdown',
     featured: false,
     created: '2024-01-26',
     updated: '2025-01-01',
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/gnhfnomkebeabllbfnodhhhebnieehoe',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/bilibili-markdown',
+        icon: 'github',
+      },
+    ],
   },
 ]
 

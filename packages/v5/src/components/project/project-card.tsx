@@ -50,30 +50,18 @@ export function ProjectCard({ project }: ProjectCardProps) {
           View Details
         </Link>
         <div className="flex items-center space-x-2">
-          {project.projectUrl && (
+          {project.links?.slice(0, 2).map((it) => (
             <a
-              href={project.projectUrl}
+              href={it.url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground"
-              title="Visit Project"
+              title={it.name}
             >
-              <ExternalLinkIcon className="h-4 w-4" />
-              <span className="sr-only">Visit Project</span>
+              <ProjectIcon icon={it.icon} />
+              <span className="sr-only">{it.name}</span>
             </a>
-          )}
-          {project.sourceCodeUrl && (
-            <a
-              href={project.sourceCodeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-8 w-8 items-center justify-center rounded-md border border-input bg-background hover:bg-accent hover:text-accent-foreground"
-              title="View Source Code"
-            >
-              <SiGithub className="h-4 w-4" />
-              <span className="sr-only">View Source Code</span>
-            </a>
-          )}
+          ))}
           {project.links && project.links.length > 0 && (
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

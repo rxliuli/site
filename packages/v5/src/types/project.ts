@@ -4,7 +4,7 @@ export interface ProjectLink {
   type: 'store' | 'social' | 'community' | 'other'
   name: string
   url: string
-  icon: 'chrome' | 'firefox' | 'edge' | 'safari' | 'discord' | 'producthunt'
+  icon: 'chrome' | 'firefox' | 'edge' | 'safari' | 'discord' | 'producthunt' | 'github' | 'website'
 }
 
 export interface ProjectMeta {
@@ -14,8 +14,6 @@ export interface ProjectMeta {
   previewImage: string
   type: ProjectType
   tags?: string[] // 可选，用于进一步分类
-  projectUrl?: string // 站外链接，可选
-  sourceCodeUrl?: string // GitHub链接，可选
   links?: ProjectLink[]
   slug: string // 用于路由
   featured?: boolean // 是否在首页展示
