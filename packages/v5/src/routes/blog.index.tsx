@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
-import { getAllBlogPosts, getAllTags } from '@/data/blog'
+import { getAllBlogPosts, getAllTags } from '@/data/blogs'
 import { BlogPostCard } from '@/components/blog/BlogPostCard'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'

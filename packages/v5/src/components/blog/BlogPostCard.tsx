@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import type { BlogPost } from "@/types/blog";
 import { CalendarIcon, ClockIcon } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import { formatDate } from "@/data/blog";
+import { formatDate } from "@/data/blogs";
 
 interface BlogPostCardProps {
   post: BlogPost;

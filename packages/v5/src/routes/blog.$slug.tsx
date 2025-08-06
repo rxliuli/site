@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useLoaderData } from '@tanstack/react-router'
-import { getBlogPostBySlug, formatDate } from '@/data/blog'
+import { getBlogPostBySlug, formatDate } from '@/data/blogs'
 import { Outline } from '@/components/blog/Outline'
 import { CalendarIcon, ClockIcon, ArrowLeftIcon } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
