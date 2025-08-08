@@ -3,6 +3,44 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'gmail-notifier',
+    title: 'Gmail Notifier',
+    description: 'Never Miss an Important Email Again',
+    previewImage: '/images/projects/gmail-notifier.jpg',
+    type: 'Browser Extension',
+    tags: ['Gmail', 'Chrome', 'Firefox'],
+    links: [
+      {
+        type: 'other',
+        name: 'Website',
+        url: 'https://gmail-notifier.rxliuli.com',
+        icon: 'website',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/5jkx5G6dUJ',
+        icon: 'discord',
+      },
+      {
+        type: 'store',
+        name: 'Chrome Web Store',
+        url: 'https://chromewebstore.google.com/detail/liabcmaifgemdglcbialogmljhekgnle',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/gmail-notifier',
+        icon: 'github',
+      },
+    ],
+    slug: 'gmail-notifier',
+    featured: false,
+    created: '2025-08-08',
+    updated: '2025-08-08',
+  },
+  {
     id: 'fast-bookmark',
     title: 'Fast Bookmark',
     description: 'Quick Save with Smart Folders',
@@ -18,6 +56,12 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/9NphH4rkkd',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/fast-bookmark',
         icon: 'github',
@@ -27,12 +71,6 @@ export const projects: ProjectMeta[] = [
         name: 'Firefox Add-ons',
         url: 'https://addons.mozilla.org/firefox/addon/fast-bookmark/',
         icon: 'firefox',
-      },
-      {
-        type: 'social',
-        name: 'Discord Community',
-        url: 'https://discord.gg/9NphH4rkkd',
-        icon: 'discord',
       },
     ],
     slug: 'fast-bookmark',
@@ -82,6 +120,12 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/idbport',
         icon: 'github',
@@ -103,12 +147,6 @@ export const projects: ProjectMeta[] = [
         name: 'Microsoft Edge Add-ons',
         url: 'https://microsoftedge.microsoft.com/addons/detail/hbkndbebjhoeolinhoebndnkgnghfkmb',
         icon: 'edge',
-      },
-      {
-        type: 'social',
-        name: 'Discord Community',
-        url: 'https://discord.gg/fErBc3wYrC',
-        icon: 'discord',
       },
       {
         type: 'social',
@@ -143,6 +181,12 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/uGjdZRddwa',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/ponytab',
         icon: 'github',
@@ -165,12 +209,6 @@ export const projects: ProjectMeta[] = [
         url: 'https://www.producthunt.com/posts/ponytab',
         icon: 'producthunt',
       },
-      {
-        type: 'social',
-        name: 'Discord Community',
-        url: 'https://discord.gg/uGjdZRddwa',
-        icon: 'discord',
-      },
     ],
   },
   {
@@ -190,6 +228,12 @@ export const projects: ProjectMeta[] = [
         name: 'Chrome Web Store',
         url: 'https://chromewebstore.google.com/detail/redirector/lioaeidejmlpffbndjhaameocfldlhin',
         icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/jwhvMBTM6G',
+        icon: 'discord',
       },
       {
         type: 'social',
@@ -221,12 +265,6 @@ export const projects: ProjectMeta[] = [
         url: 'https://www.producthunt.com/posts/redirector-2',
         icon: 'producthunt',
       },
-      {
-        type: 'social',
-        name: 'Discord Community',
-        url: 'https://discord.gg/jwhvMBTM6G',
-        icon: 'discord',
-      },
     ],
   },
   {
@@ -246,6 +284,12 @@ export const projects: ProjectMeta[] = [
         name: 'Website',
         url: 'https://mass-block-twitter.rxliuli.com',
         icon: 'website',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
       },
       {
         type: 'social',
@@ -270,12 +314,6 @@ export const projects: ProjectMeta[] = [
         name: 'Microsoft Edge Add-ons',
         url: 'https://microsoftedge.microsoft.com/addons/detail/mass-block-twitter/jfmhejlgepjmbgeceljmdeimmdolfadf',
         icon: 'edge',
-      },
-      {
-        type: 'social',
-        name: 'Discord Community',
-        url: 'https://discord.gg/gFhKUthc88',
-        icon: 'discord',
       },
       {
         type: 'social',
@@ -345,6 +383,12 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/re3cFtxAjT',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/cors-unblock',
         icon: 'github',
@@ -366,12 +410,6 @@ export const projects: ProjectMeta[] = [
         name: 'ProductHunt',
         url: 'https://www.producthunt.com/products/cors-unblock',
         icon: 'producthunt',
-      },
-      {
-        type: 'social',
-        name: 'Discord Community',
-        url: 'https://discord.gg/re3cFtxAjT',
-        icon: 'discord',
       },
     ],
   },
