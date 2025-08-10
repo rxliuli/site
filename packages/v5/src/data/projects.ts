@@ -237,7 +237,7 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Edge Add-ons',
+        name: 'Edge',
         url: 'https://microsoftedge.microsoft.com/addons/detail/jilgmjcmkianchonfkadmomoieiglogo',
         icon: 'edge',
       },
@@ -281,14 +281,14 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Edge Add-ons',
+        name: 'Edge',
         url: 'https://microsoftedge.microsoft.com/addons/detail/redirector/jhdjcofnjfeljeekjklhgfmfocfgibmm',
         icon: 'edge',
       },
       {
         type: 'store',
         name: 'Safari',
-        url: 'https://apps.apple.com/cn/app/url-redirector/id6743197230',
+        url: 'https://apps.apple.com/app/url-redirector/id6743197230',
         icon: 'safari',
       },
       {
@@ -440,7 +440,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Safari',
-        url: 'https://apps.apple.com/cn/app/cors-unblock/id6744779652',
+        url: 'https://apps.apple.com/app/cors-unblock/id6744779652',
         icon: 'safari',
       },
       {
