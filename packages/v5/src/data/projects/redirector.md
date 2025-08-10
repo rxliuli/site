@@ -12,10 +12,6 @@ Redirector is a powerful and flexible browser extension that allows users to cus
 - Intuitive user interface for easy addition, editing, and deletion of rules
 - Support for wildcards and complex URL patterns
 
-## Installation
-
-Install from the Chrome Web Store.
-
 ## How to Use
 
 1. Click on the Redirector icon in the browser toolbar to open the options page
