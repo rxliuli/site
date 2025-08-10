@@ -3,6 +3,38 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'input-translator',
+    title: 'Input Translator',
+    description: 'Translate your input text with AI.',
+    previewImage: '/images/projects/input-translator.jpg',
+    type: 'Browser Extension',
+    tags: ['Chrome', 'Firefox', 'AI'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/namibphobdcighbjjojlhcflpnhobjeo',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/input-translator',
+        icon: 'github',
+      },
+    ],
+    slug: 'input-translator',
+    featured: false,
+    created: '2025-08-11',
+    updated: '2025-08-11',
+  },
+  {
     id: 'gmail-notifier',
     title: 'Gmail Notifier',
     description: 'Never Miss an Important Email Again',
@@ -24,9 +56,15 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/liabcmaifgemdglcbialogmljhekgnle',
         icon: 'chrome',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/gmail-notifier233/',
+        icon: 'firefox',
       },
       {
         type: 'social',
@@ -50,7 +88,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/mhdmiffahinpfnfegihlfmpappeemibk',
         icon: 'chrome',
       },
@@ -68,7 +106,7 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Firefox Add-ons',
+        name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/fast-bookmark/',
         icon: 'firefox',
       },
@@ -92,7 +130,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'other',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://rxliuli.com/fetch-beautifier/',
         icon: 'website',
       },
@@ -114,7 +152,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/kmpakemocjdhfcpfggpodkjhmjibhhhm',
         icon: 'chrome',
       },
@@ -132,19 +170,19 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Firefox Add-ons',
+        name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/idbport/',
         icon: 'firefox',
       },
       {
         type: 'store',
-        name: 'Safari Extension',
+        name: 'Safari',
         url: 'https://apps.apple.com/us/app/idbport/id6746375879',
         icon: 'safari',
       },
       {
         type: 'store',
-        name: 'Microsoft Edge Add-ons',
+        name: 'Edge',
         url: 'https://microsoftedge.microsoft.com/addons/detail/hbkndbebjhoeolinhoebndnkgnghfkmb',
         icon: 'edge',
       },
@@ -175,7 +213,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih',
         icon: 'chrome',
       },
@@ -193,7 +231,7 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Firefox Add-ons',
+        name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/ponytab/',
         icon: 'firefox',
       },
@@ -225,7 +263,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/redirector/lioaeidejmlpffbndjhaameocfldlhin',
         icon: 'chrome',
       },
@@ -249,13 +287,13 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Safari Extension',
+        name: 'Safari',
         url: 'https://apps.apple.com/cn/app/url-redirector/id6743197230',
         icon: 'safari',
       },
       {
         type: 'store',
-        name: 'Firefox Add-ons',
+        name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/redirector-url/',
         icon: 'firefox',
       },
@@ -299,19 +337,19 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/mass-block-twitter/eaghpebepefbcadjdppjjopoagckdhej',
         icon: 'chrome',
       },
       {
         type: 'store',
-        name: 'Firefox Add-ons',
+        name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/mass-block-twitter/',
         icon: 'firefox',
       },
       {
         type: 'store',
-        name: 'Microsoft Edge Add-ons',
+        name: 'Edge',
         url: 'https://microsoftedge.microsoft.com/addons/detail/mass-block-twitter/jfmhejlgepjmbgeceljmdeimmdolfadf',
         icon: 'edge',
       },
@@ -377,7 +415,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/cors-unblock/odkadbffomicljkjfepnggiibcjmkogc',
         icon: 'chrome',
       },
@@ -395,13 +433,13 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Firefox Add-ons',
+        name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/cors-unblock2/',
         icon: 'firefox',
       },
       {
         type: 'store',
-        name: 'Safari Extension',
+        name: 'Safari',
         url: 'https://apps.apple.com/cn/app/cors-unblock/id6744779652',
         icon: 'safari',
       },
@@ -473,7 +511,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb',
         icon: 'chrome',
       },
@@ -485,7 +523,7 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
-        name: 'Firefox Add-ons',
+        name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/clean-twitter-2333/',
         icon: 'firefox',
       },
@@ -511,7 +549,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'Chrome Web Store',
+        name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/gnhfnomkebeabllbfnodhhhebnieehoe',
         icon: 'chrome',
       },

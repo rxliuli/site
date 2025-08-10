@@ -2,8 +2,7 @@ import { Link } from '@tanstack/react-router'
 import type { ProjectMeta } from '@/types/project'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
-import { ExternalLinkIcon, MoreHorizontal } from 'lucide-react'
-import { SiGithub } from 'react-icons/si'
+import { MoreHorizontal } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
 import { ProjectIcon } from './project-icon'
@@ -52,6 +51,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="flex items-center space-x-2">
           {project.links?.slice(0, 2).map((it) => (
             <a
+              key={it.url}
               href={it.url}
               target="_blank"
               rel="noopener noreferrer"
