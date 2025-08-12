@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { ArrowRight } from 'lucide-react'
-import { SiDiscord, SiGithub, SiTelegram, SiX } from 'react-icons/si'
+import { SiDiscord, SiGithub, SiKofi, SiX } from 'react-icons/si'
 import { projects } from '../data/projects'
 import { getAllBlogPosts } from '@/data/blogs'
 import { sortBy } from 'es-toolkit'
@@ -70,13 +70,13 @@ export function HomePage() {
             <span className="sr-only">Discord</span>
           </a>
           <a
-            href="https://t.me/rxliuli"
+            href="https://ko-fi.com/rxliuli"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground"
           >
-            <SiTelegram className="h-5 w-5" />
-            <span className="sr-only">Telegram</span>
+            <SiKofi className="h-5 w-5" />
+            <span className="sr-only">Ko-fi</span>
           </a>
         </div>
       </div>
