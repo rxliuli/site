@@ -28,6 +28,18 @@ export const projects: ProjectMeta[] = [
         url: 'https://github.com/rxliuli/input-translator',
         icon: 'github',
       },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/input-translator/id6749811908',
+        icon: 'safari',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/input-translator/',
+        icon: 'firefox',
+      },
     ],
     slug: 'input-translator',
     featured: false,
