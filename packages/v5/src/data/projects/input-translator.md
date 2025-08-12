@@ -55,8 +55,6 @@ Model: openai/gpt-4.1-mini
 - API keys stored locally in browser
 - Text only sent to configured translation service
 
-## Installation
-
 ### Chrome/Edge
 
 Download from [Chrome Web Store](https://chromewebstore.google.com/detail/namibphobdcighbjjojlhcflpnhobjeo)
