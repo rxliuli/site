@@ -23,7 +23,12 @@ export function ProjectPage() {
 
   const filteredProjects = (
     activeType === 'All' ? projects : projects.filter((project) => project.type === activeType)
-  ).sort((a, b) => (b.featured ? 1 : -1) - (a.featured ? 1 : -1))
+  ).sort((a, b) => {
+    if (a.featured === b.featured) {
+      return b.updated.localeCompare(a.updated)
+    }
+    return (b.featured ? 1 : -1) - (a.featured ? 1 : -1)
+  })
 
   return (
     <div className="space-y-8 py-8">

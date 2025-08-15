@@ -44,7 +44,7 @@ export const projects: ProjectMeta[] = [
     slug: 'input-translator',
     featured: false,
     created: '2025-08-11',
-    updated: '2025-08-11',
+    updated: '2025-08-12',
   },
   {
     id: 'gmail-notifier',
@@ -88,7 +88,7 @@ export const projects: ProjectMeta[] = [
     slug: 'gmail-notifier',
     featured: false,
     created: '2025-08-08',
-    updated: '2025-08-08',
+    updated: '2025-08-14',
   },
   {
     id: 'fast-bookmark',
@@ -271,7 +271,7 @@ export const projects: ProjectMeta[] = [
     slug: 'redirector',
     featured: false,
     created: '2024-09-12',
-    updated: '2025-07-24',
+    updated: '2025-08-14',
     links: [
       {
         type: 'store',
@@ -610,11 +610,6 @@ export async function getProjectBySlug(slug: string): Promise<Project | undefine
 // 获取所有项目类型
 export function getAllProjectTypes(): string[] {
   return Array.from(new Set(projects.map((project) => project.type)))
-}
-
-// 获取特定类型的项目
-export function getProjectsByType(type: string): ProjectMeta[] {
-  return projects.filter((project) => project.type === type)
 }
 
 // 获取精选项目
