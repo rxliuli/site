@@ -3,6 +3,38 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'reddit-ctrl-enter-sender',
+    title: 'Reddit Ctrl+Enter Sender',
+    description: 'Send messages on Reddit with Ctrl+Enter',
+    previewImage: '/images/projects/reddit-ctrl-enter-sender.jpg',
+    type: 'Browser Extension',
+    tags: ['Reddit', 'Shortcuts', 'Chrome'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/fcehnhacdhcomeahldnecolememgfafk',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/reddit-ctrl-enter-sender',
+        icon: 'github',
+      },
+    ],
+    slug: 'reddit-ctrl-enter-sender',
+    featured: false,
+    created: '2025-08-20',
+    updated: '2025-08-20',
+  },
+  {
     id: 'input-translator',
     title: 'Input Translator',
     description: 'Translate your input text with AI.',
