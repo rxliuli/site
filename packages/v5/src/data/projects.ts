@@ -76,7 +76,7 @@ export const projects: ProjectMeta[] = [
     slug: 'input-translator',
     featured: false,
     created: '2025-08-11',
-    updated: '2025-08-12',
+    updated: '2025-08-22',
   },
   {
     id: 'gmail-notifier',
@@ -253,7 +253,7 @@ export const projects: ProjectMeta[] = [
     slug: 'ponytab',
     featured: false,
     created: '2025-05-06',
-    updated: '2025-05-08',
+    updated: '2025-08-22',
     links: [
       {
         type: 'store',
@@ -303,7 +303,7 @@ export const projects: ProjectMeta[] = [
     slug: 'redirector',
     featured: false,
     created: '2024-09-12',
-    updated: '2025-08-14',
+    updated: '2025-08-21',
     links: [
       {
         type: 'store',
