@@ -58,5 +58,5 @@ If you find this extension helpful, please consider:
 
 - ⭐ Starring the project on GitHub
 - 📝 Leaving a review on the extension store
-- Report Issues: [GitHub Issues](https://github.com/rxliuli/clean-twitter/issues)
+- 💬 Report Issues: [GitHub Issues](https://github.com/rxliuli/clean-twitter/issues)
 - 💬 Joining our [Discord community](https://discord.gg/gFhKUthc88)
