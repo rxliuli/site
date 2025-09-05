@@ -551,13 +551,19 @@ export const projects: ProjectMeta[] = [
     slug: 'clean-twitter',
     featured: false,
     created: '2023-06-27',
-    updated: '2023-03-28',
+    updated: '2025-09-05',
     links: [
       {
         type: 'store',
         name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb',
         icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
       },
       {
         type: 'social',

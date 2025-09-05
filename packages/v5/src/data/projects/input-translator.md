@@ -65,7 +65,7 @@ Download from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/i
 
 ### Safari
 
-Coming soon
+Download from [App Store](https://apps.apple.com/us/app/input-translator/id6749811908)
 
 ## Support
 
