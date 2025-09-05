@@ -43,7 +43,7 @@ export function HomePage() {
         {/* Social links */}
         <div className="flex items-center gap-4">
           <a
-            href="https://twitter.com/rxliuli"
+            href="https://x.com/moeruri"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground"
