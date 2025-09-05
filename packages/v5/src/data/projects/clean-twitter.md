@@ -56,7 +56,6 @@ Contributions are welcome! Feel free to submit issues or pull requests on our Gi
 
 If you find this extension helpful, please consider:
 
-- ⭐ Starring the project on GitHub
-- 📝 Leaving a review on the extension store
-- 💬 Report Issues: [GitHub Issues](https://github.com/rxliuli/clean-twitter/issues)
-- 💬 Joining our [Discord community](https://discord.gg/gFhKUthc88)
+- **Report Issues**: [GitHub Issues](https://github.com/rxliuli/clean-twitter/issues)
+- **Contact Email**: [rxliuli@gmail.com](mailto:rxliuli@gmail.com)
+- **Discord Community**: [Discord community](https://discord.gg/gFhKUthc88)
