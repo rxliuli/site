@@ -566,16 +566,28 @@ export const projects: ProjectMeta[] = [
         icon: 'discord',
       },
       {
-        type: 'social',
-        name: 'GitHub',
-        url: 'https://github.com/rxliuli/clean-twitter',
-        icon: 'github',
-      },
-      {
         type: 'store',
         name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/clean-twitter-2333/',
         icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/akhbfdeilcclmfbmbkndjabkgfhgdede',
+        icon: 'edge',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/cn/app/id6752027292',
+        icon: 'safari',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/clean-twitter',
+        icon: 'github',
       },
       {
         type: 'social',
