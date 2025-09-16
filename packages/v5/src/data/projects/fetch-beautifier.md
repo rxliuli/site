@@ -12,7 +12,8 @@ I've created a free online tool that transforms messy fetch requests into clean,
 
 ## Try it now! 👇
 
-Visit <https://rxliuli.com/fetch-beautifier/>
+Online: <https://rxliuli.com/fetch-beautifier/>
+VSCode: <https://marketplace.visualstudio.com/items?itemName=rxliuli.fetch-beautifier>
 
 ## Why Fetch Beautifier?
 
