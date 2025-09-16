@@ -534,10 +534,10 @@ export const projects: ProjectMeta[] = [
     updated: '2020-04-16',
     links: [
       {
-        type: 'other',
+        type: 'store',
         name: 'Documentation',
         url: 'https://joplin-utils.rxliuli.com/en-US/joplin-vscode-plugin/',
-        icon: 'website',
+        icon: 'vscode',
       },
       {
         type: 'social',
