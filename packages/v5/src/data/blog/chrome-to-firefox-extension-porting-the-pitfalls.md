@@ -1,5 +1,5 @@
 ---
-title: "Chrome to Firefox Extension Porting: The Pitfalls"
+title: 'Chrome to Firefox Extension Porting: The Pitfalls'
 slug: chrome-to-firefox-extension-porting-the-pitfalls
 date: 2025-09-23
 summary: After developing an extension for Chrome, the natural next step is porting it to other browsers. Firefox is generally considered the first choice since both browsers use similar Browser Extension APIs. This should be straightforward, right?
@@ -73,6 +73,15 @@ This occurs even after setting CSP in the manifest:
 ```
 
 This is related to a 9-year-old bug. Even though developers have closed it, using WASM via blob URI still doesn't work[^5].
+For esbuild-wasm, it provides an option to disable webworker, which can solve this issue.
+
+```ts
+await initialize({
+  wasmURL: wasmUrl,
+  // Firefox Extension Page CSP disable blob worker
+  worker: false,
+})
+```
 
 [^5]: <https://bugzilla.mozilla.org/show_bug.cgi?id=1294996>
 
@@ -100,3 +109,4 @@ Once your extension reaches a certain user threshold, AMO reviews become excepti
 ## Conclusion
 
 Firefox was once an excellent browser, but in recent years, aside from riding on Chrome's coattails (similar to Vue's reputation), there hasn't been much to write home about. Recently, they've started cramming AI features into the browser, seemingly always chasing shiny new things rather than genuinely addressing existing problems.
+
