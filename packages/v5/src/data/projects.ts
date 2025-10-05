@@ -3,6 +3,26 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'linkpure',
+    title: 'LinkPure',
+    description: 'Monitor clipboard URL changes and rewrite them based on user-defined rules.',
+    previewImage: '/images/projects/linkpure.jpg',
+    type: 'App',
+    tags: ['Mac', 'Clipboard'],
+    links: [
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/LinkPure',
+        icon: 'github',
+      },
+    ],
+    slug: 'linkpure',
+    featured: false,
+    created: '2025-10-05',
+    updated: '2025-10-05',
+  },
+  {
     id: 'reddit-ctrl-enter-sender',
     title: 'Reddit Ctrl+Enter Sender',
     description: 'Send messages on Reddit with Ctrl+Enter',
