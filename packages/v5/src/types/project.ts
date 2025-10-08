@@ -4,7 +4,7 @@ export interface ProjectLink {
   type: 'store' | 'social' | 'community' | 'other'
   name: string
   url: string
-  icon: 'chrome' | 'firefox' | 'edge' | 'safari' | 'discord' | 'producthunt' | 'github' | 'website' | 'vscode'
+  icon: 'chrome' | 'firefox' | 'edge' | 'safari' | 'discord' | 'producthunt' | 'github' | 'website' | 'vscode' | 'appstore'
 }
 
 export interface ProjectMeta {

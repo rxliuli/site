@@ -11,6 +11,12 @@ export const projects: ProjectMeta[] = [
     tags: ['Mac', 'Clipboard'],
     links: [
       {
+        type: 'store',
+        name: 'App Store',
+        url: 'https://apps.apple.com/app/id6753670551',
+        icon: 'appstore',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/LinkPure',
