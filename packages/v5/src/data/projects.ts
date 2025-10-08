@@ -69,6 +69,12 @@ export const projects: ProjectMeta[] = [
     tags: ['Chrome', 'Firefox', 'AI'],
     links: [
       {
+        type: 'other',
+        name: 'Website',
+        url: 'https://store.rxliuli.com/extensions/input-translator/',
+        icon: 'website',
+      },
+      {
         type: 'store',
         name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/namibphobdcighbjjojlhcflpnhobjeo',
@@ -344,6 +350,12 @@ export const projects: ProjectMeta[] = [
         icon: 'chrome',
       },
       {
+        type: 'other',
+        name: 'Website',
+        url: 'https://store.rxliuli.com/extensions/redirector/',
+        icon: 'website',
+      },
+      {
         type: 'social',
         name: 'Discord',
         url: 'https://discord.gg/jwhvMBTM6G',
@@ -590,6 +602,12 @@ export const projects: ProjectMeta[] = [
         name: 'Chrome',
         url: 'https://chromewebstore.google.com/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb',
         icon: 'chrome',
+      },
+      {
+        type: 'other',
+        name: 'Website',
+        url: 'https://store.rxliuli.com/extensions/clean-twitter/',
+        icon: 'website',
       },
       {
         type: 'social',
