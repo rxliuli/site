@@ -3,7 +3,7 @@ import { ThemeToggle } from "../ThemeToggle";
 
 export function Header() {
   const navigation = [
-    { name: "Home", href: "/" },
+    { name: "Store", href: "https://store.rxliuli.com/", external: true },
     { name: "Projects", href: "/project" },
     { name: "Blog", href: "/blog" },
     // { name: "About", href: "/about" }
@@ -15,22 +15,34 @@ export function Header() {
         <div className="flex flex-1 items-center justify-between">
           {/* Logo/Site Name */}
           <Link to="/" className="font-bold text-xl">
-            <img src="/logo96.jpg" alt="logo" className="h-10 w-10 rounded-full" />
+            <img src="/logo96.jpg" alt="logo" className="h-8 w-8 rounded-full" />
           </Link>
           
           {/* Navigation Links */}
           <nav className="flex items-center space-x-6">
             {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-sm font-medium transition-colors hover:text-primary"
-                activeProps={{
-                  className: "text-primary font-semibold"
-                }}
-              >
-                {item.name}
-              </Link>
+              item.external ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium transition-colors hover:text-primary"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className="text-sm font-medium transition-colors hover:text-primary"
+                  activeProps={{
+                    className: "text-primary font-semibold"
+                  }}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
             <ThemeToggle />
           </nav>

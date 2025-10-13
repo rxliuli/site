@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Store } from 'lucide-react'
 import { SiDiscord, SiGithub, SiKofi, SiX } from 'react-icons/si'
 import { projects } from '../data/projects'
 import { getAllBlogPosts } from '@/data/blogs'
@@ -42,6 +42,15 @@ export function HomePage() {
 
         {/* Social links */}
         <div className="flex items-center gap-4">
+          <a
+            href="https://store.rxliuli.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground"
+          >
+            <Store className="h-5 w-5" />
+            <span className="sr-only">Store</span>
+          </a>
           <a
             href="https://x.com/moeruri"
             target="_blank"
