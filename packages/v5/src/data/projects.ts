@@ -323,7 +323,7 @@ export const projects: ProjectMeta[] = [
     slug: 'ponytab',
     featured: false,
     created: '2025-05-06',
-    updated: '2025-08-22',
+    updated: '2025-10-14',
     links: [
       {
         type: 'store',
@@ -360,6 +360,12 @@ export const projects: ProjectMeta[] = [
         name: 'ProductHunt',
         url: 'https://www.producthunt.com/posts/ponytab',
         icon: 'producthunt',
+      },
+      {
+        type: 'other',
+        name: 'Website',
+        url: 'https://ponytab.rxliuli.com',
+        icon: 'website',
       },
     ],
   },
