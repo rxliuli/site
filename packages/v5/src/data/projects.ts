@@ -3,6 +3,38 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'typescript-console',
+    title: 'TypeScript Console',
+    description: 'A TypeScript REPL for the browser console.',
+    previewImage: '/images/projects/typescript-console.jpg',
+    type: 'Browser Extension',
+    tags: ['TypeScript', 'REPL', 'DevTools'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/typescript-console/jkanoakidjoklcefakbdnnhgdenddppg',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/typescript-console',
+        icon: 'github',
+      },
+      {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/typescript-console/ecadiffnmjlefcbkgkdllneldockkehe',
+        icon: 'edge',
+      },
+    ],
+    slug: 'typescript-console',
+    featured: false,
+    created: '2025-10-02',
+    updated: '2025-10-05',
+  },
+  {
     id: 'linkpure',
     title: 'LinkPure',
     description: 'Monitor clipboard URL changes and rewrite them based on user-defined rules.',
