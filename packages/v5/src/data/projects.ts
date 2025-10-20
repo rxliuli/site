@@ -54,6 +54,12 @@ export const projects: ProjectMeta[] = [
         url: 'https://github.com/rxliuli/LinkPure',
         icon: 'github',
       },
+      {
+        type: 'store',
+        name: 'Windows',
+        url: 'https://github.com/rxliuli/LinkPure/releases/latest',
+        icon: 'windows',
+      },
     ],
     slug: 'linkpure',
     featured: false,

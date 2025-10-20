@@ -4,7 +4,20 @@ export interface ProjectLink {
   type: 'store' | 'social' | 'community' | 'other'
   name: string
   url: string
-  icon: 'chrome' | 'firefox' | 'edge' | 'safari' | 'discord' | 'producthunt' | 'github' | 'website' | 'vscode' | 'appstore'
+  icon:
+    | 'chrome'
+    | 'firefox'
+    | 'edge'
+    | 'safari'
+    | 'discord'
+    | 'producthunt'
+    | 'github'
+    | 'website'
+    | 'vscode'
+    | 'appstore'
+    | 'windows'
+    | 'linux'
+    | 'macos'
 }
 
 export interface ProjectMeta {
