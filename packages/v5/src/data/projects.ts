@@ -28,6 +28,12 @@ export const projects: ProjectMeta[] = [
         url: 'https://microsoftedge.microsoft.com/addons/detail/typescript-console/ecadiffnmjlefcbkgkdllneldockkehe',
         icon: 'edge',
       },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/id6754164761',
+        icon: 'safari',
+      },
     ],
     slug: 'typescript-console',
     featured: false,
