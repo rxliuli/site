@@ -3,6 +3,26 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'sticky-reddit-search',
+    title: 'Sticky Reddit Search',
+    description: 'Keep your Reddit search filters (sort, time range, type) when searching with new keywords',
+    previewImage: '/images/projects/sticky-reddit-search.jpg',
+    type: 'Browser Extension',
+    tags: ['Reddit', 'Search', 'Chrome', 'Firefox'],
+    links: [
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/sticky-reddit-search',
+        icon: 'github',
+      },
+    ],
+    slug: 'sticky-reddit-search',
+    featured: false,
+    created: '2025-11-03',
+    updated: '2025-11-03',
+  },
+  {
     id: 'typescript-console',
     title: 'TypeScript Console',
     description: 'A TypeScript REPL for the browser console.',
