@@ -11,6 +11,18 @@ export const projects: ProjectMeta[] = [
     tags: ['Reddit', 'Search', 'Chrome', 'Firefox'],
     links: [
       {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/sticky-reddit-search/onpejjljjpabiobobaihncgijgllbifa',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/sticky-reddit-search',

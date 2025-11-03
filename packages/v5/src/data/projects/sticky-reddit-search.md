@@ -20,10 +20,7 @@ Reddit resets all search options every time you enter a new search term. This ex
 
 ### Chrome/Edge
 
-1. Download or clone the repository
-2. Open `chrome://extensions/`
-3. Enable "Developer mode"
-4. Click "Load unpacked" and select the extension folder
+1. Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/sticky-reddit-search/onpejjljjpabiobobaihncgijgllbifa)
 
 ### Firefox
 
@@ -39,3 +36,4 @@ Just search on Reddit normally. Your filter settings will automatically persist 
 ## How It Works
 
 The extension monitors Reddit search URLs and preserves your selected filters when you enter a new search term. It works seamlessly in the background without requiring any configuration.
+
