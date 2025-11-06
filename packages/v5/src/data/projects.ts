@@ -23,6 +23,18 @@ export const projects: ProjectMeta[] = [
         icon: 'discord',
       },
       {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/goaadeepmpbcfkgnfckeophoplompkog',
+        icon: 'edge',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/zh-CN/firefox/addon/sticky-reddit-search/',
+        icon: 'firefox',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/sticky-reddit-search',
