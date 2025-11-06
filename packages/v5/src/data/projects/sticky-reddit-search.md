@@ -24,10 +24,7 @@ Reddit resets all search options every time you enter a new search term. This ex
 
 ### Firefox
 
-1. Download or clone the repository
-2. Open `about:debugging#/runtime/this-firefox`
-3. Click "Load Temporary Add-on"
-4. Select the `manifest.json` file
+1. Install from the [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/sticky-reddit-search/)
 
 ## Usage
 

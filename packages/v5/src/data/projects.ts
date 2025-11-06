@@ -31,7 +31,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Firefox',
-        url: 'https://addons.mozilla.org/zh-CN/firefox/addon/sticky-reddit-search/',
+        url: 'https://addons.mozilla.org/firefox/addon/sticky-reddit-search/',
         icon: 'firefox',
       },
       {

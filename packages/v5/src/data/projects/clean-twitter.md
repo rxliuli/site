@@ -26,7 +26,7 @@ Clean up unnecessary elements on X (Twitter) and enjoy a cleaner, more focused e
 
 ## 🚀 Getting Started
 
-1. **Install the extension** from [Chrome Web Store](https://chrome.google.com/webstore/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb) or [Firefox Add-ons](https://addons.mozilla.org/zh-CN/firefox/addon/clean-twitter-2333/)
+1. **Install the extension** from [Chrome Web Store](https://chrome.google.com/webstore/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb) or [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/clean-twitter-2333/)
 2. **Visit X (Twitter)** - The extension will automatically activate
 3. **Customize your experience** - Click the extension icon in your toolbar to enable/disable specific features
 
