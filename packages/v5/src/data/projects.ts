@@ -3,6 +3,32 @@ import type { Project, ProjectMeta } from '@/types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'selecttext',
+    title: 'SelectText',
+    description: 'Effortlessly extract text from any webpage using OCR technology.',
+    previewImage: '/images/projects/selecttext.jpg',
+    type: 'Browser Extension',
+    tags: ['OCR', 'Text Recognition', 'Productivity'],
+    links: [
+      // {
+      //   type: 'store',
+      //   name: 'Chrome',
+      //   url: 'https://chromewebstore.google.com/detail/sticky-reddit-search/onpejjljjpabiobobaihncgijgllbifa',
+      //   icon: 'chrome',
+      // },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+    ],
+    slug: 'selecttext',
+    featured: false,
+    created: '2025-11-08',
+    updated: '2025-11-08',
+  },
+  {
     id: 'sticky-reddit-search',
     title: 'Sticky Reddit Search',
     description: 'Keep your Reddit search filters (sort, time range, type) when searching with new keywords',
