@@ -10,12 +10,12 @@ export const projects: ProjectMeta[] = [
     type: 'Browser Extension',
     tags: ['OCR', 'Text Recognition', 'Productivity'],
     links: [
-      // {
-      //   type: 'store',
-      //   name: 'Chrome',
-      //   url: 'https://chromewebstore.google.com/detail/sticky-reddit-search/onpejjljjpabiobobaihncgijgllbifa',
-      //   icon: 'chrome',
-      // },
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/selecttext/mlipaajjeaknlghlninkbgjilmdcknni',
+        icon: 'chrome',
+      },
       {
         type: 'social',
         name: 'Discord',
