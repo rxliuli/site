@@ -1,14 +1,14 @@
-## rxliuli（琉璃） 👨‍💻
+## rxliuli (Liuli) 👨‍💻
 
-吾辈是 rxliuli（中文名是 **琉璃**），喜欢现代前端的开发者（曾经的后端开发）。
+I am rxliuli (Chinese name is **Liuli**), a developer who loves modern front-end development (formerly a back-end developer).
 
-### 关于
+### About
 
-- **工作 :** Web 前端开发
-- **学习 :** Full-Stack :zap: | Open-Source :fire:
-- **兴趣 :** Books :books: Kiger 😄
-- **帮助 :** 如果遇到任何 `TypeScript/Jetbrains IDE/Windows 工具` 的问题可以问吾辈！:v:
-- **昵称 :** rxliuli/琉璃 :innocent:
+- **Work:** Web Front-end Development
+- **Learning:** Full-Stack :zap: | Open-Source :fire:
+- **Interests:** Books :books: Kiger 😄
+- **Help:** If you encounter any issues with `TypeScript/Jetbrains IDE/Windows tools`, feel free to ask me! :v:
+- **Nickname:** rxliuli/Liuli :innocent:
 
 ---
 
