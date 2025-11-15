@@ -22,6 +22,18 @@ export const projects: ProjectMeta[] = [
         url: 'https://discord.gg/fErBc3wYrC',
         icon: 'discord',
       },
+      {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/liciopmmjhgcnblbmokkahmnciahoefp',
+        icon: 'edge',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/id6755066218',
+        icon: 'safari',
+      },
     ],
     slug: 'selecttext',
     featured: false,
