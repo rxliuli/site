@@ -1,6 +1,6 @@
-## rxliuli (Liuli) 👨‍💻
+## rxliuli 👨‍💻
 
-I am rxliuli (Chinese name is **Liuli**), a developer who loves modern front-end development (formerly a back-end developer).
+I am rxliuli, a developer who loves modern front-end development (formerly a back-end developer).
 
 ### About
 
@@ -8,7 +8,7 @@ I am rxliuli (Chinese name is **Liuli**), a developer who loves modern front-end
 - **Learning:** Full-Stack :zap: | Open-Source :fire:
 - **Interests:** Books :books: Kiger 😄
 - **Help:** If you encounter any issues with `TypeScript/Jetbrains IDE/Windows tools`, feel free to ask me! :v:
-- **Nickname:** rxliuli/Liuli :innocent:
+- **Nickname:** rxliuli/ruri :innocent:
 
 ---
 
