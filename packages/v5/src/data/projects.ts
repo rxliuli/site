@@ -120,7 +120,7 @@ export const projects: ProjectMeta[] = [
     slug: 'typescript-console',
     featured: false,
     created: '2025-10-02',
-    updated: '2025-10-05',
+    updated: '2025-11-16',
   },
   {
     id: 'linkpure',
@@ -316,7 +316,7 @@ export const projects: ProjectMeta[] = [
     slug: 'fast-bookmark',
     featured: false,
     created: '2025-07-26',
-    updated: '2025-07-26',
+    updated: '2025-11-16',
   },
   {
     id: 'fetch-beautifier',
