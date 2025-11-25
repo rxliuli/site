@@ -1,16 +1,20 @@
 {
-	"main": "./worker/index.ts",
-	"name": "v6",
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "main": "./worker/index.ts",
+  "name": "homepage",
   "compatibility_date": "2025-11-25",
-  "compatibility_flags": [
-    "nodejs_compat",
-    "global_fetch_strictly_public"
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist",
+  },
+  "routes": [
+    {
+      "custom_domain": true,
+      "pattern": "rxliuli.com"
+    },
   ],
-	"assets": {
-		"binding": "ASSETS",
-		"directory": "./dist"
-	},
-	"observability": {
-    "enabled": true
-  }
+  "observability": {
+    "enabled": true,
+  },
 }
+
