@@ -7,6 +7,7 @@
     "binding": "ASSETS",
     "directory": "./dist",
   },
+  "workers_dev": false,
   "routes": [
     {
       "custom_domain": true,
