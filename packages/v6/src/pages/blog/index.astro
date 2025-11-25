@@ -1,9 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getAllBlogPosts } from '../../data/blogs';
+import { getAllBlogPosts, getAllTags } from '../../data/blogs';
 import dayjs from 'dayjs';
 
 const posts = await getAllBlogPosts();
+const allTags = await getAllTags();
 ---
 
 <Layout title="Blog">
@@ -11,47 +12,168 @@ const posts = await getAllBlogPosts();
     <div class="max-w-3xl mx-auto">
       <div class="mb-8">
         <h1 class="text-4xl font-extrabold tracking-tight">Blog</h1>
-        <p class="mt-2 text-muted-foreground">Thoughts, tutorials, and musings on software development.</p>
+        <p class="mt-2 text-muted-foreground">Thoughts, ideas, and tutorials on web development, design, and technology.</p>
       </div>
 
-      <div class="space-y-8">
-      {posts.map((post) => (
-        <article class="group">
-          <a href={`/blog/${post.slug}`} class="block space-y-3">
-            {post.coverImage && (
-              <img
-                src={post.coverImage}
-                alt={post.title}
-                class="aspect-video w-full rounded-lg border border-border object-cover transition-opacity group-hover:opacity-80"
-              />
-            )}
-            <div class="space-y-2">
-              <h2 class="text-2xl font-bold tracking-tight group-hover:text-primary transition-colors">
-                {post.title}
-              </h2>
-              <div class="flex items-center gap-2 text-sm text-muted-foreground">
-                <time datetime={post.date}>
-                  {dayjs(post.date).format('YYYY-MM-DD')}
-                </time>
-                {post.tags && post.tags.length > 0 && (
-                  <>
-                    <span>•</span>
-                    <div class="flex flex-wrap gap-2">
-                      {post.tags.slice(0, 3).map((tag) => (
-                        <span class="text-xs">#{tag}</span>
-                      ))}
-                    </div>
-                  </>
+      <!-- Search and Filter Section -->
+      <div class="mb-8 space-y-4">
+        <!-- Search Input -->
+        <div class="relative">
+          <svg class="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search posts..."
+            class="w-full pl-10 pr-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
+          />
+        </div>
+
+        <!-- Tags Filter -->
+        <div class="flex flex-wrap gap-2">
+          {allTags.sort().map((tag) => (
+            <button
+              class="tag-filter px-3 py-1 text-sm rounded-full border transition-colors"
+              data-tag={tag}
+            >
+              {tag}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Posts List -->
+      <div id="posts-container" class="space-y-8">
+        {posts.map((post) => (
+          <article class="post-item group" data-tags={JSON.stringify(post.tags || [])}>
+            <a href={`/blog/${post.slug}`} class="block space-y-3">
+              {post.coverImage && (
+                <img
+                  src={post.coverImage}
+                  alt={post.title}
+                  class="aspect-video w-full rounded-lg border border-border object-cover transition-opacity group-hover:opacity-80"
+                />
+              )}
+              <div class="space-y-2">
+                <h2 class="post-title text-2xl font-bold tracking-tight group-hover:text-primary transition-colors">
+                  {post.title}
+                </h2>
+                <div class="flex items-center gap-2 text-sm text-muted-foreground">
+                  <time datetime={post.date}>
+                    {dayjs(post.date).format('YYYY-MM-DD')}
+                  </time>
+                  {post.tags && post.tags.length > 0 && (
+                    <>
+                      <span>•</span>
+                      <div class="flex flex-wrap gap-2">
+                        {post.tags.slice(0, 3).map((tag) => (
+                          <span class="text-xs">#{tag}</span>
+                        ))}
+                      </div>
+                    </>
+                  )}
+                </div>
+                {post.summary && (
+                  <p class="post-summary text-muted-foreground">{post.summary}</p>
                 )}
               </div>
-              {post.summary && (
-                <p class="text-muted-foreground">{post.summary}</p>
-              )}
-            </div>
-          </a>
-        </article>
-      ))}
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <!-- No Results Message -->
+      <div id="no-results" class="hidden text-center py-12 text-muted-foreground">
+        <p class="text-lg">No posts found matching your search.</p>
       </div>
     </div>
   </div>
+
+  <script>
+    // Search and filter functionality
+    const searchInput = document.getElementById('search-input') as HTMLInputElement;
+    const tagFilters = document.querySelectorAll('.tag-filter');
+    const postItems = document.querySelectorAll('.post-item');
+    const postsContainer = document.getElementById('posts-container');
+    const noResults = document.getElementById('no-results');
+
+    let currentTag: string | null = null;
+    let currentSearch = '';
+
+    function filterPosts() {
+      let visibleCount = 0;
+
+      postItems.forEach((item) => {
+        const article = item as HTMLElement;
+        const tags = JSON.parse(article.dataset.tags || '[]');
+        const title = article.querySelector('.post-title')?.textContent?.toLowerCase() || '';
+        const summary = article.querySelector('.post-summary')?.textContent?.toLowerCase() || '';
+
+        const matchesTag = currentTag === null || tags.includes(currentTag);
+        const matchesSearch = currentSearch === '' ||
+          title.includes(currentSearch) ||
+          summary.includes(currentSearch);
+
+        if (matchesTag && matchesSearch) {
+          article.style.display = '';
+          visibleCount++;
+        } else {
+          article.style.display = 'none';
+        }
+      });
+
+      // Show/hide no results message
+      if (visibleCount === 0) {
+        postsContainer?.classList.add('hidden');
+        noResults?.classList.remove('hidden');
+      } else {
+        postsContainer?.classList.remove('hidden');
+        noResults?.classList.add('hidden');
+      }
+    }
+
+    // Search input handler
+    searchInput?.addEventListener('input', (e) => {
+      currentSearch = (e.target as HTMLInputElement).value.toLowerCase();
+      filterPosts();
+    });
+
+    // Tag filter handlers - toggle on/off
+    tagFilters.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const tag = (btn as HTMLElement).dataset.tag || '';
+        const isActive = btn.classList.contains('active');
+
+        if (isActive) {
+          // Deactivate - remove filter
+          currentTag = null;
+          btn.classList.remove('active', 'bg-primary', 'text-primary-foreground', 'border-primary');
+        } else {
+          // Activate - set filter and deactivate all other tags
+          tagFilters.forEach((b) => b.classList.remove('active', 'bg-primary', 'text-primary-foreground', 'border-primary'));
+          currentTag = tag;
+          btn.classList.add('active', 'bg-primary', 'text-primary-foreground', 'border-primary');
+        }
+
+        filterPosts();
+      });
+    });
+  </script>
+
+  <style>
+    .tag-filter {
+      cursor: pointer;
+    }
+
+    .tag-filter:hover {
+      border-color: hsl(var(--primary));
+    }
+
+    .tag-filter.active {
+      background-color: hsl(var(--primary));
+      color: hsl(var(--primary-foreground));
+      border-color: hsl(var(--primary));
+    }
+  </style>
 </Layout>
