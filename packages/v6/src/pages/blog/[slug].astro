@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro'
 import { getAllBlogPosts, formatDate } from '../../data/blogs'
 import type { BlogPost } from '../../types/blog'
+import Giscus from '../../components/Giscus.astro'
 
 export async function getStaticPaths() {
   const posts = await getAllBlogPosts()
@@ -127,6 +128,9 @@ if (!post) {
       <div class="prose prose-sm md:prose-base max-w-none dark:prose-invert">
         <BlogContent />
       </div>
+
+      <!-- Comments section -->
+      <Giscus />
     </article>
   </div>
 </Layout>

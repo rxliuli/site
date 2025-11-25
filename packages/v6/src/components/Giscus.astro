@@ -1,0 +1,127 @@
+---
+// Giscus 评论组件
+// 需要在 GitHub 上启用 Discussions 功能
+// 配置信息可以在 https://giscus.app/ 获取
+---
+
+<div class="giscus-container mt-12 pt-8 border-t border-border">
+  <div id="giscus-comments"></div>
+</div>
+
+<script>
+  const config = {
+    repo: 'rxliuli/site',
+    repoId: 'MDEwOlJlcG9zaXRvcnkyNzgzNDMyNDM=',
+    category: 'Announcements',
+    categoryId: 'DIC_kwDOEJcuS84CzAU1',
+    mapping: 'pathname',
+    strict: '0',
+    reactionsEnabled: '1',
+    emitMetadata: '0',
+    inputPosition: 'bottom',
+    lang: 'en',
+    loading: 'lazy',
+  }
+
+  // 动态加载 giscus 脚本
+  function loadGiscus() {
+    // 使用 IntersectionObserver 实现懒加载
+    const container = document.getElementById('giscus-comments')
+    if (!container) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // 当评论区进入视口时加载 giscus
+            const script = document.createElement('script')
+            script.src = 'https://giscus.app/client.js'
+            script.setAttribute('data-repo', config.repo)
+            script.setAttribute('data-repo-id', config.repoId)
+            script.setAttribute('data-category', config.category)
+            script.setAttribute('data-category-id', config.categoryId)
+            script.setAttribute('data-mapping', config.mapping)
+            script.setAttribute('data-strict', config.strict)
+            script.setAttribute('data-reactions-enabled', config.reactionsEnabled)
+            script.setAttribute('data-emit-metadata', config.emitMetadata)
+            script.setAttribute('data-input-position', config.inputPosition)
+            script.setAttribute('data-theme', getGiscusTheme())
+            script.setAttribute('data-lang', config.lang)
+            script.crossOrigin = 'anonymous'
+            script.async = true
+
+            container.appendChild(script)
+            observer.disconnect()
+          }
+        })
+      },
+      { rootMargin: '200px' }
+    )
+
+    observer.observe(container)
+  }
+
+  // 根据当前主题返回对应的 giscus 主题
+  function getGiscusTheme() {
+    const isDark = document.documentElement.classList.contains('dark')
+    return isDark ? 'dark' : 'light'
+  }
+
+  // 更新 giscus 主题
+  function updateGiscusTheme() {
+    const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame')
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage(
+        {
+          giscus: {
+            setConfig: {
+              theme: getGiscusTheme(),
+            },
+          },
+        },
+        'https://giscus.app'
+      )
+    }
+  }
+
+  // 监听主题变化
+  function observeThemeChanges() {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          updateGiscusTheme()
+        }
+      })
+    })
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    })
+  }
+
+  // 初始化
+  // 使用 requestAnimationFrame 确保主题已经应用
+  function init() {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        loadGiscus()
+        observeThemeChanges()
+      })
+    })
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init)
+  } else {
+    init()
+  }
+</script>
+
+<style>
+  .giscus-container {
+    max-width: 48rem; /* max-w-3xl */
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
