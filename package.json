@@ -2,41 +2,29 @@
   "name": "@rxliuli/website",
   "version": "0.0.0",
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
-    "@commitlint/config-conventional": "^16.2.1",
-    "@liuli-util/commitlint-standard-config": "^0.1.6",
-    "@liuli-util/eslint-config-ts": "^0.4.0",
-    "@liuli-util/prettier-standard-config": "^0.2.0",
-    "create-preact": "link:/Users/rxliuli/code/web/create-preact/",
-    "lint-staged": "^12.3.4",
-    "prettier": "^2.3.2",
-    "prettier-plugin-svelte": "^3.1.2",
-    "simple-git-hooks": "^2.5.1"
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.6.2",
+    "simple-git-hooks": "^2.13.1"
   },
-  "eslintConfig": {
-    "extends": [
-      "@liuli-util/eslint-config-ts"
-    ]
+  "prettier": {
+    "tabWidth": 2,
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "always",
+    "endOfLine": "crlf"
   },
   "simple-git-hooks": {
-    "commit-msg": "pnpm commitlint --edit $1",
     "pre-commit": "pnpm lint-staged"
   },
-  "commitlint": {
-    "extends": [
-      "@liuli-util/commitlint-standard-config"
-    ]
-  },
   "lint-staged": {
-    "src/**/*.{ts,tsx,js,jsx,css,vue}": [
+    "src/**/*.{ts,tsx,js,jsx,css,vue,astro}": [
       "prettier --write"
-    ],
-    "src/**/*.{ts,tsx,js,jsx}": [
-      "eslint --fix --quiet"
     ]
   },
   "scripts": {
-    "postinstall": "pnpm simple-git-hooks"
+    "postinstall": "npx simple-git-hooks"
   },
   "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }

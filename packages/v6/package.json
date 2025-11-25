@@ -3,20 +3,24 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "dev": "astro dev & wrangler dev",
+    "build": "astro build && wrangler build",
+    "preview": "pnpm build && wrangler dev",
+    "astro": "astro",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^12.6.11",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.0",
+    "hono": "^4.10.6",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-github-markdown": "^0.1.0"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.15.2",
     "@tailwindcss/typography": "^0.5.16",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
@@ -27,6 +31,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.0.2",
-    "tailwindcss": "^4.1.17"
+    "tailwindcss": "^4.1.17",
+    "vite": "^6.1.0",
+    "wrangler": "^4.50.0"
   }
 }

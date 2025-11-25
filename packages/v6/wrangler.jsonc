@@ -1,0 +1,16 @@
+{
+	"main": "./worker/index.ts",
+	"name": "v6",
+  "compatibility_date": "2025-11-25",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist"
+	},
+	"observability": {
+    "enabled": true
+  }
+}
