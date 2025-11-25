@@ -1,0 +1,42 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { projects } from '../../data/projects'
+---
+
+<Layout title="Projects">
+  <div class="py-12">
+    <div class="mb-8">
+      <h1 class="text-4xl font-extrabold tracking-tight">Projects</h1>
+      <p class="mt-2 text-muted-foreground">A collection of my work and side projects.</p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {
+        projects.map((project) => (
+          <a
+            href={`/project/${project.slug}`}
+            class="group flex flex-col overflow-hidden rounded-lg border border-border transition-colors hover:bg-muted"
+          >
+            {project.previewImage && (
+              <img src={project.previewImage} alt={project.title} class="aspect-video w-full object-cover" />
+            )}
+            <div class="flex flex-1 flex-col p-6">
+              <div class="flex items-start justify-between gap-2">
+                <h2 class="font-semibold text-lg">{project.title}</h2>
+                {project.featured && (
+                  <span class="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">Featured</span>
+                )}
+              </div>
+              <p class="mt-2 flex-1 text-sm text-muted-foreground">{project.description}</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {project.tags?.slice(0, 3).map((tag) => (
+                  <span class="rounded-md bg-secondary px-2 py-1 text-xs text-secondary-foreground">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</Layout>

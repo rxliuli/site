@@ -1,0 +1,134 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { projects, getProjectBySlug } from '../../data/projects'
+import dayjs from 'dayjs'
+
+export async function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+  }))
+}
+
+const { slug } = Astro.params
+const project = await getProjectBySlug(slug!)
+
+if (!project) {
+  return Astro.redirect('/404')
+}
+
+// html 是一个 Astro 组件，不是字符串
+const Content = project.html
+
+// 预处理链接分组
+const linkGroups = ['store', 'social', 'community', 'other']
+  .map((type) => {
+    const typeLinks = project.meta.links?.filter((link: any) => link.type === type)
+    if (!typeLinks?.length) return null
+    return { type, links: typeLinks }
+  })
+  .filter((group): group is { type: string; links: any[] } => group !== null)
+---
+
+<Layout title={project.meta.title} description={project.meta.description}>
+  <article class="max-w-4xl mx-auto py-8 space-y-4">
+    <!-- Header -->
+    <div class="space-y-2">
+      <h1 class="text-4xl font-extrabold tracking-tight">{project.meta.title}</h1>
+      <div class="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+        <span class="rounded-md border border-border px-2 py-1">{project.meta.type}</span>
+        <span class="inline-flex items-center">
+          <svg
+            class="mr-1 h-3 w-3"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"
+            ></rect><path d="M3 10h18"></path></svg
+          >
+          {dayjs(project.meta.updated).format('YYYY-MM-DD')}
+        </span>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="aspect-[16/10] overflow-hidden rounded-lg border">
+      <img src={project.meta.previewImage} alt={project.meta.title} class="h-full w-full object-cover" />
+    </div>
+
+    <!-- Description -->
+    <p class="text-xl text-muted-foreground">{project.meta.description}</p>
+
+    <!-- Links -->
+    {
+      linkGroups.length > 0 && (
+        <div class="space-y-4">
+          <hr class="border-t border-border" />
+          <div class="space-y-4">
+            {linkGroups.map((group) => (
+              <div class="space-y-2">
+                <h3 class="text-sm font-medium capitalize">{group.type} Links</h3>
+                <div class="flex flex-wrap gap-2">
+                  {group.links.map((link) => (
+                    <a
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex items-center gap-2 rounded-md border border-border px-3 py-1.5 text-sm transition-colors hover:bg-muted"
+                    >
+                      {link.name}
+                      <svg
+                        class="h-3 w-3"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M7 7h10v10" />
+                        <path d="M7 17 17 7" />
+                      </svg>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )
+    }
+
+    <!-- Tags -->
+    {
+      project.meta.tags && project.meta.tags.length > 0 && (
+        <div class="space-y-2">
+          <hr class="border-t border-border" />
+          <div class="flex flex-wrap gap-2">
+            {project.meta.tags.map((tag) => (
+              <span class="rounded-md bg-secondary px-2 py-1 text-xs text-secondary-foreground">#{tag}</span>
+            ))}
+          </div>
+        </div>
+      )
+    }
+
+    <!-- Content -->
+    {
+      Content && (
+        <div class="prose prose-sm max-w-none dark:prose-invert">
+          <hr class="border-t border-border" />
+          <Content />
+        </div>
+      )
+    }
+  </article>
+</Layout>

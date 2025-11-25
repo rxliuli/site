@@ -1,6 +1,29 @@
 {
-  "i18n-ally.localesPaths": [
-    "packages/v2/src/i18n",
-    "packages/v4/src/lib/i18n"
-  ]
+  "search.exclude": {
+    "packages/v1/": true,
+    "packages/v2/": true,
+    "packages/v3/": true,
+    "packages/v4/": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    "**/.output": true,
+    "**/.wrangler": true,
+    "**/.tanstack": true,
+    "**/.wxt": true,
+    "**/*.mjs": true,
+    "**/*.js": true,
+    "**/*.d.ts": true
+  },
+  "files.exclude": {
+    "packages/v1/": true,
+    "packages/v2/": true,
+    "packages/v3/": true,
+    "packages/v4/": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  }
 }

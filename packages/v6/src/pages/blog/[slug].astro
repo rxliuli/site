@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import { getAllBlogPosts, formatDate } from '../../data/blogs'
+import type { BlogPost } from '../../types/blog'
+
+export async function getStaticPaths() {
+  const posts = await getAllBlogPosts()
+  const blogFiles = import.meta.glob<{
+    Content: any
+    getHeadings: () => Array<{ depth: number; text: string; slug: string }>
+  }>('../../data/blog/*.md')
+
+  return await Promise.all(
+    posts.map(async (post) => {
+      const blogFile = await blogFiles[`../../data/blog/${post.slug}.md`]()
+      return {
+        params: { slug: post.slug },
+        props: { post, BlogContent: blogFile.Content, getHeadings: blogFile.getHeadings },
+      }
+    })
+  )
+}
+
+interface Props {
+  post: Omit<BlogPost, 'content' | 'toc'>
+  BlogContent: any
+  getHeadings: () => Array<{ depth: number; text: string; slug: string }>
+}
+
+const { post, BlogContent } = Astro.props
+
+if (!post) {
+  return Astro.redirect('/404')
+}
+---
+
+<Layout title={post.title} description={post.summary}>
+  <div class="py-8">
+    <!-- Back link -->
+    <div class="mb-4 md:mb-6">
+      <a href="/blog" class="inline-flex items-center text-sm hover:text-primary">
+        <svg
+          class="mr-1 h-4 w-4"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg
+        >
+        Back to Blog
+      </a>
+    </div>
+
+    <article class="w-full overflow-x-auto max-w-3xl mx-auto">
+      <!-- Article header -->
+      <header class="mb-8 space-y-6">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">{post.title}</h1>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+          <span class="inline-flex items-center">
+            <svg
+              class="mr-1 h-3.5 w-3.5"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"
+              ></rect><path d="M3 10h18"></path></svg
+            >
+            {formatDate(post.date)}
+          </span>
+          {
+            post.readingTime && (
+              <span class="inline-flex items-center">
+                <svg
+                  class="mr-1 h-3.5 w-3.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <>
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </>
+                </svg>
+                {post.readingTime}
+              </span>
+            )
+          }
+        </div>
+
+        {
+          post.coverImage && (
+            <div class="overflow-hidden rounded-lg border">
+              <img src={post.coverImage} alt={post.title} class="h-auto w-full object-cover" />
+            </div>
+          )
+        }
+
+        {
+          post.tags && post.tags.length > 0 && (
+            <div class="flex flex-wrap gap-2">
+              {post.tags.map((tag) => (
+                <span class="rounded-md bg-secondary px-2 py-1 text-xs text-secondary-foreground">#{tag}</span>
+              ))}
+            </div>
+          )
+        }
+      </header>
+
+      <!-- Article content -->
+      <div class="prose prose-sm md:prose-base max-w-none dark:prose-invert">
+        <BlogContent />
+      </div>
+    </article>
+  </div>
+</Layout>

@@ -1,0 +1,32 @@
+{
+  "name": "v6",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.16.0",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-github-markdown": "^0.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
+    "es-toolkit": "^1.37.0",
+    "lucide-react": "^0.476.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.1.17"
+  }
+}

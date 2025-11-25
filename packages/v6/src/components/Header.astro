@@ -1,0 +1,50 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+const navigation = [
+  { name: "Store", href: "https://store.rxliuli.com/", external: true },
+  { name: "Projects", href: "/project" },
+  { name: "Blog", href: "/blog" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+  <div class="container mx-auto px-4 flex h-14 max-w-screen-2xl items-center">
+    <div class="flex flex-1 items-center justify-between">
+      <a href="/" class="font-bold text-xl">
+        <img src="/logo96.jpg" alt="logo" class="h-8 w-8 rounded-full" />
+      </a>
+
+      <nav class="flex items-center space-x-6">
+        {navigation.map((item) => {
+          if (item.external) {
+            return (
+              <a
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-medium transition-colors hover:text-primary"
+              >
+                {item.name}
+              </a>
+            );
+          }
+          return (
+            <a
+              href={item.href}
+              class:list={[
+                "text-sm font-medium transition-colors hover:text-primary",
+                currentPath.startsWith(item.href) && "text-primary font-semibold"
+              ]}
+            >
+              {item.name}
+            </a>
+          );
+        })}
+        <ThemeToggle />
+      </nav>
+    </div>
+  </div>
+</header>
