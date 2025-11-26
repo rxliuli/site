@@ -4,14 +4,13 @@
 
 ## Introduction
 
-Welcome to our Android Ping Tool application. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and protect your information when you use our Android application.
+Welcome to our Android Tool application. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and protect your information when you use our Android application.
 
 ## Information We Collect
 
 - We do not collect any user data.
 - We do not track the use of the application.
-- We do not store any ping results or history.
-- We do not require any special permissions beyond basic network access for ping functionality.
+- We do not store any results or history.
 
 ## Information Sharing and Disclosure
 
@@ -36,6 +35,6 @@ If you have any questions or concerns about this Privacy Policy or our data prac
 
 ---
 
-By using our Android Ping Tool application, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.
+By using our Android Tool application, you acknowledge that you have read and understood this Privacy Policy and agree to its terms.
 
 Thank you for trusting us with your information.
