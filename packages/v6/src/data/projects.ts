@@ -138,7 +138,7 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'App Store',
+        name: 'Mac',
         url: 'https://apps.apple.com/app/id6753670551',
         icon: 'appstore',
       },
@@ -149,16 +149,46 @@ export const projects: ProjectMeta[] = [
         icon: 'github',
       },
       {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+      {
         type: 'store',
         name: 'Windows',
         url: 'https://github.com/rxliuli/LinkPure/releases/latest',
         icon: 'windows',
       },
+      {
+        type: 'store',
+        name: 'Linux',
+        url: 'https://github.com/rxliuli/LinkPure/releases/latest',
+        icon: 'linux',
+      },
+      {
+        type: 'store',
+        name: 'iOS',
+        url: 'https://apps.apple.com/app/id6753670551',
+        icon: 'appstore',
+      },
+      {
+        type: 'store',
+        name: 'Android',
+        url: 'https://github.com/rxliuli/LinkPure/releases/latest',
+        icon: 'android',
+      },
+      {
+        type: 'other',
+        name: 'Web',
+        url: 'https://linkpure.rxliuli.com',
+        icon: 'website',
+      },
     ],
     slug: 'linkpure',
     featured: false,
     created: '2025-10-05',
-    updated: '2025-10-05',
+    updated: '2025-11-27',
   },
   {
     id: 'reddit-ctrl-enter-sender',
@@ -815,7 +845,12 @@ export const projects: ProjectMeta[] = [
 
 // 获取所有项目
 export function getAllProjects(): ProjectMeta[] {
-  return projects
+  return projects.sort((a, b) => {
+    if (a.featured === b.featured) {
+      return b.updated.localeCompare(a.updated)
+    }
+    return (b.featured ? 1 : -1) - (a.featured ? 1 : -1)
+  })
 }
 
 // 通过slug获取单个项目

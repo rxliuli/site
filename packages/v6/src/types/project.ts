@@ -15,6 +15,7 @@ export interface ProjectLink {
     | 'website'
     | 'vscode'
     | 'appstore'
+    | 'android'
     | 'windows'
     | 'linux'
     | 'macos'

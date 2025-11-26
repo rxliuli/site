@@ -1,6 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import { projects } from '../../data/projects'
+import { getAllProjects } from '../../data/projects'
+
+const projects = getAllProjects()
 ---
 
 <Layout title="Projects">
