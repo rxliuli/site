@@ -21,7 +21,7 @@
     "packages/v2/": true,
     "packages/v3/": true,
     "packages/v4/": true,
-    // "packages/v5/": true,
+    "packages/v5/": true,
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,

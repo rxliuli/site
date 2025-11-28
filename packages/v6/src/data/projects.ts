@@ -314,7 +314,7 @@ export const projects: ProjectMeta[] = [
     slug: 'gmail-notifier',
     featured: false,
     created: '2025-08-08',
-    updated: '2025-08-14',
+    updated: '2025-11-19',
   },
   {
     id: 'fast-bookmark',
