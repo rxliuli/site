@@ -1,10 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import { projects, getProjectBySlug } from '../../data/projects'
+import { getProjectBySlug, getAllProjects } from '../../data/projects'
 import dayjs from 'dayjs'
 
 export async function getStaticPaths() {
-  return projects.map((project) => ({
+  return getAllProjects().map((project) => ({
     params: { slug: project.slug },
   }))
 }
