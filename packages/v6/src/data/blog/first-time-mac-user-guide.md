@@ -1,6 +1,6 @@
 ---
-title: macOS Initial User Questions and Confusion
-slug: macos-initial-user-questions-and-confusion
+title: First-Time Mac User Guide
+slug: first-time-mac-user-guide
 date: 2025-08-06
 summary: I switched to an M2 MacBook, and as a long-term Windows user, I have encountered many problems and confusion up to this point. Some have been resolved, while others currently remain unsolved. I'm recording and sharing them here.
 tags: [Mac, macOS]

@@ -34,6 +34,10 @@ export default defineConfig({
     ],
   },
 
+  redirects: {
+    '/blog/macos-initial-user-questions-and-confusion/': '/blog/first-time-mac-user-guide/',
+  },
+
   vite: {
     // @ts-ignore
     plugins: [tailwindcss()],
