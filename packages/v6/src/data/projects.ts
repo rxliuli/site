@@ -688,6 +688,18 @@ export const projects: ProjectMeta[] = [
     updated: '2025-05-01',
     links: [
       {
+        type: 'store',
+        name: 'Mac',
+        url: 'https://github.com/rxliuli/window-resizer/releases/latest',
+        icon: 'macos',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/window-resizer',
