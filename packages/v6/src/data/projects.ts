@@ -3,6 +3,44 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'art-to-gif',
+    title: 'Art to GIF',
+    description: 'Protect your artwork on Twitter/X by automatically converting images to GIF or Video format.',
+    previewImage: '/images/projects/art-to-gif.jpg',
+    type: 'Browser Extension',
+    tags: ['Twitter', 'Image Protection', 'AI Protection'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/art-to-gif/ieaaafobhbfkdamlidcookclikabngok',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
+      },
+      {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/art-to-gif/mhkdchgbgfefbcgajfihdonajafhckan',
+        icon: 'edge',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/art-to-gif',
+        icon: 'github',
+      },
+    ],
+    slug: 'art-to-gif',
+    featured: false,
+    created: '2025-12-27',
+    updated: '2025-12-27',
+  },
+  {
     id: 'selecttext',
     title: 'SelectText',
     description: 'Effortlessly extract text from any webpage using OCR technology.',
