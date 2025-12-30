@@ -29,6 +29,18 @@ export const projects: ProjectMeta[] = [
         icon: 'edge',
       },
       {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/zh-CN/firefox/addon/art-to-gif/',
+        icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/us/app/art-to-gif/id6756991514',
+        icon: 'safari',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/art-to-gif',
