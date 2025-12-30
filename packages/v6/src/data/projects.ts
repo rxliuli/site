@@ -31,13 +31,13 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Firefox',
-        url: 'https://addons.mozilla.org/zh-CN/firefox/addon/art-to-gif/',
+        url: 'https://addons.mozilla.org/firefox/addon/art-to-gif/',
         icon: 'firefox',
       },
       {
         type: 'store',
         name: 'Safari',
-        url: 'https://apps.apple.com/us/app/art-to-gif/id6756991514',
+        url: 'https://apps.apple.com/app/id6756991514',
         icon: 'safari',
       },
       {
