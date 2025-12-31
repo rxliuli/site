@@ -13,6 +13,7 @@
     "@astrojs/cloudflare": "^12.6.11",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.16.0",
+    "astro-seo": "^0.8.4",
     "hono": "^4.10.6",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",

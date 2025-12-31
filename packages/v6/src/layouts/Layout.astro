@@ -2,28 +2,69 @@
 import Header from '../components/Header.astro'
 import Footer from '../components/Footer.astro'
 import stylesUrl from '../styles/global.css?url'
+import { SEO } from 'astro-seo'
 
 interface Props {
   title: string
   description?: string
+  image?: string
+  type?: 'website' | 'article'
+  canonical?: string
 }
 
-const { title, description = 'I like to create interesting things, using programming and writing as tools.' } =
-  Astro.props
+const {
+  title,
+  description = 'I like to create interesting things, using programming and writing as tools.',
+  image,
+  type = 'website',
+  canonical,
+} = Astro.props
+
+const siteUrl = 'https://rxliuli.com'
+const defaultImage = `${siteUrl}/logo.png`
+const ogImage = image ? `${siteUrl}${image}` : defaultImage
+const pageUrl = canonical || `${siteUrl}${Astro.url.pathname}`
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/logo192.jpg" />
     <link rel="preload" href={stylesUrl} as="style" />
     <link rel="stylesheet" href={stylesUrl} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO
+      title={title}
+      description={description}
+      canonical={pageUrl}
+      openGraph={{
+        basic: {
+          title: title,
+          type: type,
+          image: ogImage,
+          url: pageUrl,
+        },
+        optional: {
+          description: description,
+          siteName: 'rxliuli',
+        },
+        image: {
+          alt: title,
+        },
+      }}
+      twitter={{
+        card: 'summary_large_image',
+        site: '@moeruri',
+        creator: '@moeruri',
+        title: title,
+        description: description,
+        image: ogImage,
+        imageAlt: title,
+      }}
+    />
   </head>
   <body class="min-h-screen bg-background text-foreground">
     <div class="flex min-h-screen flex-col">
