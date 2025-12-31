@@ -21,8 +21,8 @@ The extension is available for multiple browsers:
 
 - **Chrome Web Store** - <https://chromewebstore.google.com/detail/art-to-gif/ieaaafobhbfkdamlidcookclikabngok>
 - **Microsoft Edge Add-ons** - <https://microsoftedge.microsoft.com/addons/detail/art-to-gif/mhkdchgbgfefbcgajfihdonajafhckan>
-- **Firefox Add-ons** - Coming soon
-- **Safari Extensions** - Coming soon
+- **Firefox Add-ons** - <https://addons.mozilla.org/firefox/addon/art-to-gif/>
+- **Safari Extensions** - <https://apps.apple.com/app/id6756991514>
 
 ## How to Use
 
