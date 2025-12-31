@@ -5,9 +5,10 @@ import dayjs from 'dayjs';
 
 const posts = await getAllBlogPosts();
 const allTags = await getAllTags();
+const description = 'Thoughts, ideas, and tutorials on web development, design, and technology.'
 ---
 
-<Layout title="Blog">
+<Layout title="Blog - rxliuli" description={description}>
   <div class="py-12">
     <div class="max-w-3xl mx-auto">
       <div class="mb-8">

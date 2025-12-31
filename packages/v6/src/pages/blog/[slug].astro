@@ -35,7 +35,12 @@ if (!post) {
 }
 ---
 
-<Layout title={post.title} description={post.summary}>
+<Layout
+  title={`${post.title} - rxliuli`}
+  description={post.summary}
+  image={post.coverImage}
+  type="article"
+>
   <div class="py-8">
     <!-- Back link -->
     <div class="mb-4 md:mb-6">

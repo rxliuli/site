@@ -3,9 +3,10 @@ import Layout from '../../layouts/Layout.astro'
 import { getAllProjects } from '../../data/projects'
 
 const projects = getAllProjects()
+const description = 'A collection of my work and side projects, including browser extensions, apps, and websites.'
 ---
 
-<Layout title="Projects">
+<Layout title="Projects - rxliuli" description={description}>
   <div class="py-12">
     <div class="mb-8">
       <h1 class="text-4xl font-extrabold tracking-tight">Projects</h1>

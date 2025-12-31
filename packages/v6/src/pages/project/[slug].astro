@@ -29,7 +29,12 @@ const linkGroups = ['store', 'social', 'community', 'other']
   .filter((group): group is { type: string; links: any[] } => group !== null)
 ---
 
-<Layout title={project.meta.title} description={project.meta.description}>
+<Layout
+  title={`${project.meta.title} - rxliuli`}
+  description={project.meta.description}
+  image={project.meta.previewImage}
+  type="website"
+>
   <article class="max-w-4xl mx-auto py-8 space-y-4">
     <!-- Header -->
     <div class="space-y-2">
