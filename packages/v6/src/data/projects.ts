@@ -3,6 +3,32 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'jsonpath-finder',
+    title: 'JSONPath Finder',
+    description: 'A VSCode extension for navigating complex JSON files with search and JSONPath expressions.',
+    previewImage: '/images/projects/jsonpath-finder.jpg',
+    type: 'VSCode Extension',
+    tags: ['VSCode', 'JSON', 'JSONPath'],
+    links: [
+      {
+        type: 'store',
+        name: 'VSCode',
+        url: 'https://marketplace.visualstudio.com/items?itemName=rxliuli.jsonpath-finder',
+        icon: 'vscode',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/jsonpath-finder',
+        icon: 'github',
+      },
+    ],
+    slug: 'jsonpath-finder',
+    featured: false,
+    created: '2026-01-10',
+    updated: '2026-01-10',
+  },
+  {
     id: 'art-to-gif',
     title: 'Art to GIF',
     description: 'Protect your artwork on Twitter/X by automatically converting images to GIF or Video format.',
