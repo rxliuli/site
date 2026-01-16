@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import { cloudflare } from '@cloudflare/vite-plugin'
+import remarkBreaks from 'remark-breaks'
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,6 +21,7 @@ export default defineConfig({
       wrap: true,
       transformers: [],
     },
+    remarkPlugins: [remarkBreaks],
     rehypePlugins: [
       rehypeSlug, // 先生成 slug
       [
