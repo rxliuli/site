@@ -202,7 +202,7 @@ magick logo.png -resize 96x96 ./icon/96.png
 magick logo.png -resize 128x128 ./icon/128.png
 ```
 
-> If you prefer a visual tool, you can also use <https://squoosh.app/> to resize images.
+> If you prefer a visual tool, you can also use <https://squoosh.app/> to resize images. Alternatively, you can use WXT's official icon module <https://wxt.dev/auto-icons> for automatic generation.
 
 Go back to the browser extension management page, and you can see the icon has been correctly recognized.
 
