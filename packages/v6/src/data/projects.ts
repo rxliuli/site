@@ -3,6 +3,38 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'background',
+    title: 'Background',
+    description: 'A browser extension that sets a custom background image for all websites.',
+    previewImage: '/images/projects/background.jpg',
+    type: 'Browser Extension',
+    tags: ['Customization', 'Background', 'Productivity'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/background/caafjbfceobnfkhliadckecbocecaaki',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/background',
+        icon: 'github',
+      },
+    ],
+    slug: 'background',
+    featured: false,
+    created: '2026-01-19',
+    updated: '2026-01-19',
+  },
+  {
     id: 'jsonpath-finder',
     title: 'JSONPath Finder',
     description: 'A VSCode extension for navigating complex JSON files with search and JSONPath expressions.',
