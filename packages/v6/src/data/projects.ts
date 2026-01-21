@@ -3,6 +3,50 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'bilingualtube',
+    title: 'BilingualTube',
+    description: 'A browser extension that adds bilingual subtitles to YouTube videos.',
+    previewImage: '/images/projects/bilingualtube.jpg',
+    type: 'Browser Extension',
+    tags: ['YouTube', 'Subtitles', 'Translation'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/bilingualtube/ombapcolopdeailifakdgaijhoncgpgn',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/bilingualtube/',
+        icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/us/app/bilingualtube/id6757694666',
+        icon: 'safari',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/bilingual-tube',
+        icon: 'github',
+      },
+    ],
+    slug: 'bilingualtube',
+    featured: false,
+    created: '2026-01-21',
+    updated: '2026-01-21',
+  },
+  {
     id: 'background',
     title: 'Background',
     description: 'A browser extension that sets a custom background image for all websites.',
@@ -19,7 +63,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/gFhKUthc88',
+        url: 'https://discord.gg/fErBc3wYrC',
         icon: 'discord',
       },
       {
