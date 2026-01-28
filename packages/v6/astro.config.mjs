@@ -3,13 +3,15 @@ import { defineConfig } from 'astro/config'
 import tailwindcss from '@tailwindcss/vite'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import { cloudflare } from '@cloudflare/vite-plugin'
 import remarkBreaks from 'remark-breaks'
+
+import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [],
+  integrations: [sitemap()],
   output: 'static',
+  site: 'https://rxliuli.com',
 
   markdown: {
     // syntaxHighlight: 'shiki',
