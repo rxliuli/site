@@ -38,6 +38,7 @@ const pageUrl = canonical || `${siteUrl}${Astro.url.pathname}`
     <link rel="preload" href={stylesUrl} as="style" />
     <link rel="stylesheet" href={stylesUrl} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <SEO
       title={title}
       description={description}
