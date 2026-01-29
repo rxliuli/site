@@ -67,6 +67,18 @@ export const projects: ProjectMeta[] = [
         icon: 'discord',
       },
       {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/webpage-background/',
+        icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/us/app/webpage-background/id6757917802',
+        icon: 'safari',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/background',
