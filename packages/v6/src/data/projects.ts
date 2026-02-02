@@ -3,6 +3,38 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'clean-reddit',
+    title: 'Clean Reddit',
+    description: 'A browser extension that removes clutter and distractions from Reddit, giving you a cleaner browsing experience.',
+    previewImage: '/images/projects/clean-reddit.jpg',
+    type: 'Browser Extension',
+    tags: ['Reddit', 'Cleanup', 'Productivity'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/clean-reddit/lchnofghcmjcpcglhklofjpfddkcenof',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/Cwre8EwkNX',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/clean-reddit',
+        icon: 'github',
+      },
+    ],
+    slug: 'clean-reddit',
+    featured: false,
+    created: '2026-02-02',
+    updated: '2026-02-02',
+  },
+  {
     id: 'bilingualtube',
     title: 'BilingualTube',
     description: 'A browser extension that adds bilingual subtitles to YouTube videos.',
