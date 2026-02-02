@@ -19,9 +19,8 @@ Give your browsing experience a personal touch by adding a custom background ima
 The extension is available for multiple browsers:
 
 - **Chrome Web Store** - <https://chromewebstore.google.com/detail/background/caafjbfceobnfkhliadckecbocecaaki>
-- **Microsoft Edge Add-ons** - Coming soon!
-- **Firefox Add-ons** - Coming soon!
-- **Safari Extensions** - Coming soon!
+- **Firefox Add-ons** - <https://addons.mozilla.org/firefox/addon/webpage-background/>
+- **Safari Extensions** - <https://apps.apple.com/app/id6757917802>
 
 ## How to Use
 
@@ -64,3 +63,4 @@ This extension is built with modern web technologies:
 ## License
 
 This project is open source and available under the GPL-3.0 License © 2026 rxliuli
+
