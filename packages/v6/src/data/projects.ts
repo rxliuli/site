@@ -5,7 +5,8 @@ export const projects: ProjectMeta[] = [
   {
     id: 'clean-reddit',
     title: 'Clean Reddit',
-    description: 'A browser extension that removes clutter and distractions from Reddit, giving you a cleaner browsing experience.',
+    description:
+      'A browser extension that removes clutter and distractions from Reddit, giving you a cleaner browsing experience.',
     previewImage: '/images/projects/clean-reddit.jpg',
     type: 'Browser Extension',
     tags: ['Reddit', 'Cleanup', 'Productivity'],
@@ -21,6 +22,12 @@ export const projects: ProjectMeta[] = [
         name: 'Discord',
         url: 'https://discord.gg/Cwre8EwkNX',
         icon: 'discord',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/clean-reddit/',
+        icon: 'firefox',
       },
       {
         type: 'social',
