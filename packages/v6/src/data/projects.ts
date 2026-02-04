@@ -1030,32 +1030,6 @@ export const projects: ProjectMeta[] = [
       },
     ],
   },
-  {
-    id: 'bilibili-markdown',
-    title: 'Bilibili Markdown',
-    description: 'Add a feature to paste markdown content into the new version of the bilibili column editor.',
-    previewImage: '/images/projects/bilibili-markdown.jpg',
-    type: 'Browser Extension',
-    tags: ['Chrome', 'Web Editor', 'Bilibili'],
-    slug: 'bilibili-markdown',
-    featured: false,
-    created: '2024-01-26',
-    updated: '2025-01-01',
-    links: [
-      {
-        type: 'store',
-        name: 'Chrome',
-        url: 'https://chromewebstore.google.com/detail/gnhfnomkebeabllbfnodhhhebnieehoe',
-        icon: 'chrome',
-      },
-      {
-        type: 'social',
-        name: 'GitHub',
-        url: 'https://github.com/rxliuli/bilibili-markdown',
-        icon: 'github',
-      },
-    ],
-  },
 ]
 
 // 获取所有项目
