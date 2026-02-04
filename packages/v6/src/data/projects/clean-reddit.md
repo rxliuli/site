@@ -50,6 +50,10 @@ Clean Reddit allows you to hide various UI elements across different sections of
 
 ### Firefox
 
+1. Install from the [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/clean-reddit/)
+
+### Safari
+
 Coming soon
 
 ## Usage
