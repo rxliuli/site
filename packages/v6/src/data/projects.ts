@@ -3,6 +3,44 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'recall-for-youtube',
+    title: 'Recall for YouTube',
+    description: 'A browser extension that enables full-text search across your YouTube watch history.',
+    previewImage: '/images/projects/recall-for-youtube.jpg',
+    type: 'Browser Extension',
+    tags: ['YouTube', 'Search', 'Watch History'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/recall-for-youtube/mbmackjdncccmoapkafiolhckhefihed',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/fErBc3wYrC',
+        icon: 'discord',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/recall-for-youtube/',
+        icon: 'firefox',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/recall-for-youtube',
+        icon: 'github',
+      },
+    ],
+    slug: 'recall-for-youtube',
+    featured: false,
+    created: '2026-02-05',
+    updated: '2026-02-05',
+  },
+  {
     id: 'clean-reddit',
     title: 'Clean Reddit',
     description:
