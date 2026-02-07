@@ -46,15 +46,15 @@ Clean Reddit allows you to hide various UI elements across different sections of
 
 ### Chrome / Edge
 
-1. Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/clean-reddit/lchnofghcmjcpcglhklofjpfddkcenof)
+Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/clean-reddit/lchnofghcmjcpcglhklofjpfddkcenof).
 
 ### Firefox
 
-1. Install from the [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/clean-reddit/)
+Install from [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/clean-reddit/).
 
 ### Safari
 
-Coming soon
+Install from the [Mac App Store](https://apps.apple.com/app/id6758573459).
 
 ## Usage
 
@@ -69,3 +69,4 @@ Coming soon
 ## License
 
 GPL-3.0 License © 2026 rxliuli
+
