@@ -19,7 +19,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/C2baQRZUCW',
         icon: 'discord',
       },
       {
@@ -102,7 +102,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/C2baQRZUCW',
         icon: 'discord',
       },
       {
