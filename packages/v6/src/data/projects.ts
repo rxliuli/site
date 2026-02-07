@@ -68,6 +68,12 @@ export const projects: ProjectMeta[] = [
         icon: 'firefox',
       },
       {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/us/app/bilingualtube/6758573459',
+        icon: 'safari',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/clean-reddit',
