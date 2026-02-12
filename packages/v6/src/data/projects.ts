@@ -3,6 +3,45 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'recall-for-reddit',
+    title: 'Recall for Reddit',
+    description:
+      "A browser extension that saves the Reddit posts you've visited and lets you search through them later.",
+    previewImage: '/images/projects/recall-for-reddit.jpg',
+    type: 'Browser Extension',
+    tags: ['Reddit', 'Search', 'Browse History'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/recall-for-reddit/gjipneegilpeackeijjdcembmnhiekkp',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/Cwre8EwkNX',
+        icon: 'discord',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/id6758924691',
+        icon: 'safari',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/recall-for-reddit',
+        icon: 'github',
+      },
+    ],
+    slug: 'recall-for-reddit',
+    featured: false,
+    created: '2026-02-12',
+    updated: '2026-02-12',
+  },
+  {
     id: 'recall-for-youtube',
     title: 'Recall for YouTube',
     description: 'A browser extension that enables full-text search across your YouTube watch history.',
@@ -29,6 +68,12 @@ export const projects: ProjectMeta[] = [
         icon: 'firefox',
       },
       {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/us/app/recall-for-youtube/id6758705467',
+        icon: 'safari',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/recall-for-youtube',
@@ -38,7 +83,7 @@ export const projects: ProjectMeta[] = [
     slug: 'recall-for-youtube',
     featured: false,
     created: '2026-02-05',
-    updated: '2026-02-05',
+    updated: '2026-02-12',
   },
   {
     id: 'clean-reddit',

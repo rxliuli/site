@@ -22,7 +22,7 @@ A browser extension that enables full-text search across your YouTube watch hist
 
 ### Safari
 
-Coming soon
+1. Install from the [Mac App Store](https://apps.apple.com/us/app/recall-for-youtube/id6758705467)
 
 ## Usage
 
