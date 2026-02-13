@@ -3,6 +3,38 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'pixra',
+    title: 'Pixra',
+    description: 'An open-source, extensible web-based image editor with plugin system support.',
+    previewImage: '/images/projects/pixra.jpg',
+    type: 'Website',
+    tags: ['Image Editor', 'React', 'Plugin System'],
+    links: [
+      {
+        type: 'other',
+        name: 'Website',
+        url: 'https://pixra.rxliuli.com/',
+        icon: 'website',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/u97Sn38vs2',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/pixra',
+        icon: 'github',
+      },
+    ],
+    slug: 'pixra',
+    featured: false,
+    created: '2026-01-17',
+    updated: '2026-02-13',
+  },
+  {
     id: 'recall-for-reddit',
     title: 'Recall for Reddit',
     description:
