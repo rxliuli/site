@@ -106,7 +106,20 @@ Once your extension reaches a certain user threshold, AMO reviews become excepti
 [^11]: <https://github.com/uBlockOrigin/uBOL-home/issues/197#issuecomment-2329365796>
 [^12]: <https://www.mrfdev.com/contact>
 
+## AMO Limits JavaScript Code Size
+
+For example, when using monaco-editor, the TypeScript LSP code is very large, which directly causes the extension to be automatically rejected. This never happens on Chrome.
+
+![1758660585954.jpg](https://blog.rxliuli.com/resources/462832499eb241d7a0a6356e0b724be9.jpg)
+
+## AMO Censorship
+
+Yes, I know this sounds absurd. Firefox proudly proclaims "We are committed to an internet that includes all the peoples of the earth — where a person's demographic characteristics do not determine their online access, opportunities, or quality of experience." But this is meaningless, because they do block specific extensions in certain regions[^13]. For example, in Japan, users cannot access the uBlock Origin extension, which makes Firefox pointless—even Chrome doesn't do this.
+
+![1771225725730.jpg](https://blog.rxliuli.com/resources/071ef4ad707b4f2aac449aed3c85777b.jpg)
+
+[^13]: <https://discourse.mozilla.org/t/the-censorship-circumvention-extension-has-disappeared-from-the-russian-version-of-mozilla-addons/130914/9>
+
 ## Conclusion
 
 Firefox was once an excellent browser, but in recent years, aside from riding on Chrome's coattails (similar to Vue's reputation), there hasn't been much to write home about. Recently, they've started cramming AI features into the browser, seemingly always chasing shiny new things rather than genuinely addressing existing problems.
-
