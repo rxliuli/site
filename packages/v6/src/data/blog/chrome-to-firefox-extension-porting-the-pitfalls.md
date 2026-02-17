@@ -114,7 +114,7 @@ For example, when using monaco-editor, the TypeScript LSP code is very large, wh
 
 ## AMO Censorship
 
-Yes, I know this sounds absurd. Firefox proudly proclaims "We are committed to an internet that includes all the peoples of the earth — where a person's demographic characteristics do not determine their online access, opportunities, or quality of experience." But this is meaningless, because they do block specific extensions in certain regions[^13]. For example, in Japan, users cannot access the uBlock Origin extension, which makes Firefox pointless—even Chrome doesn't do this.
+Yes, I know this sounds absurd. Firefox proudly proclaims "We are committed to an internet that includes all the peoples of the earth — where a person's demographic characteristics do not determine their online access, opportunities, or quality of experience." But this is meaningless, because they do block specific extensions in certain regions[^13]. For example, in China, users cannot access the uBlock Origin extension, which makes Firefox pointless—even Chrome doesn't do this.
 
 ![1771225725730.jpg](https://blog.rxliuli.com/resources/071ef4ad707b4f2aac449aed3c85777b.jpg)
 
