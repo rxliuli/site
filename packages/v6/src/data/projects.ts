@@ -3,6 +3,33 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'appdowngrader',
+    title: 'AppDowngrader',
+    description:
+      'A macOS app for downgrading iOS apps to older versions. Browse installed apps, view historical versions, and install any previous version with one click.',
+    previewImage: '/images/projects/appdowngrader.jpg',
+    type: 'App',
+    tags: ['macOS', 'iOS', 'Swift', 'SwiftUI'],
+    links: [
+      {
+        type: 'store',
+        name: 'macOS',
+        url: 'https://github.com/rxliuli/AppDowngrader/releases',
+        icon: 'macos',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/AppDowngrader',
+        icon: 'github',
+      },
+    ],
+    slug: 'appdowngrader',
+    featured: false,
+    created: '2026-03-30',
+    updated: '2026-03-30',
+  },
+  {
     id: 'pixra',
     title: 'Pixra',
     description: 'An open-source, extensible web-based image editor with plugin system support.',
