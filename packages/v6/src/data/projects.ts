@@ -913,6 +913,27 @@ export const projects: ProjectMeta[] = [
     ],
   },
   {
+    id: 'json-viewer',
+    title: 'JSON Viewer',
+    description:
+      'A browser extension that highlights and formats JSON/JSONP content. Fork of tulios/json-viewer, modernized with Manifest V3 and multi-browser support.',
+    previewImage: '/images/projects/json-viewer.jpg',
+    type: 'Browser Extension',
+    tags: ['Chrome', 'Firefox', 'Safari', 'JSON'],
+    slug: 'json-viewer',
+    featured: false,
+    created: '2026-04-03',
+    updated: '2026-04-03',
+    links: [
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/json-viewer',
+        icon: 'github',
+      },
+    ],
+  },
+  {
     id: 'mass-block-twitter',
     title: 'Mass Block Twitter',
     description: 'One-Click Solution to Clean Up Twitter/X Spam.',
