@@ -926,6 +926,18 @@ export const projects: ProjectMeta[] = [
     updated: '2026-04-03',
     links: [
       {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/json-viewer/haeoijepjlgjkoefofnebcniaioihdae',
+        icon: 'chrome',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/json-viewer-plus/',
+        icon: 'firefox',
+      },
+      {
         type: 'social',
         name: 'GitHub',
         url: 'https://github.com/rxliuli/json-viewer',
