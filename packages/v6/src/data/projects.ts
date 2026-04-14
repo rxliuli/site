@@ -632,22 +632,16 @@ export const projects: ProjectMeta[] = [
     tags: ['Gmail', 'Chrome', 'Firefox'],
     links: [
       {
-        type: 'other',
-        name: 'Website',
-        url: 'https://gmail-notifier.rxliuli.com',
-        icon: 'website',
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/liabcmaifgemdglcbialogmljhekgnle',
+        icon: 'chrome',
       },
       {
         type: 'social',
         name: 'Discord',
         url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
-      },
-      {
-        type: 'store',
-        name: 'Chrome',
-        url: 'https://chromewebstore.google.com/detail/liabcmaifgemdglcbialogmljhekgnle',
-        icon: 'chrome',
       },
       {
         type: 'store',
