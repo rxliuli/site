@@ -919,7 +919,7 @@ export const projects: ProjectMeta[] = [
       'A browser extension that highlights and formats JSON/JSONP content. Fork of tulios/json-viewer, modernized with Manifest V3 and multi-browser support.',
     previewImage: '/images/projects/json-viewer.jpg',
     type: 'Browser Extension',
-    tags: ['Chrome', 'Firefox', 'Safari', 'JSON'],
+    tags: ['Chrome', 'Edge', 'Firefox', 'Safari', 'JSON'],
     slug: 'json-viewer',
     featured: false,
     created: '2026-04-03',
@@ -933,9 +933,21 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/dalblpaenmgchebkelccjajndnbanaop',
+        icon: 'edge',
+      },
+      {
+        type: 'store',
         name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/json-viewer-plus/',
         icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/id6761603853',
+        icon: 'safari',
       },
       {
         type: 'social',
