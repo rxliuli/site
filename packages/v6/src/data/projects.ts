@@ -46,7 +46,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/u97Sn38vs2',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -79,7 +79,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/Cwre8EwkNX',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -117,7 +117,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/C2baQRZUCW',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -162,7 +162,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/Cwre8EwkNX',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -206,7 +206,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/C2baQRZUCW',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -250,7 +250,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -370,7 +370,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -414,7 +414,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -502,7 +502,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -558,7 +558,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -596,7 +596,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -640,7 +640,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/5jkx5G6dUJ',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -684,7 +684,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/9NphH4rkkd',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -754,7 +754,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -815,7 +815,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/uGjdZRddwa',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -877,7 +877,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/jwhvMBTM6G',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -1042,7 +1042,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/fErBc3wYrC',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {
@@ -1074,7 +1074,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'social',
         name: 'Discord',
-        url: 'https://discord.gg/re3cFtxAjT',
+        url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
       },
       {

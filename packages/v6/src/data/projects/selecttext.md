@@ -38,7 +38,7 @@ Built with modern web technologies:
 
 If you encounter any issues or have feature requests, please:
 
-- Report bugs on [GitHub Issues](https://discord.gg/fErBc3wYrC)
+- Report bugs on [GitHub Issues](https://discord.gg/gFhKUthc88)
 - Contact: [rxliuli@gmail.com](mailto:rxliuli@gmail.com)
 
 ## Privacy

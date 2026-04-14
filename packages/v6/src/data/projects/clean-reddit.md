@@ -64,7 +64,7 @@ Install from the [Mac App Store](https://apps.apple.com/app/id6758573459).
 
 ## Support
 
-- **Report Issues & Discord Community**: [Discord](https://discord.gg/Cwre8EwkNX)
+- **Report Issues & Discord Community**: [Discord](https://discord.gg/gFhKUthc88)
 
 ## License
 

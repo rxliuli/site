@@ -34,7 +34,7 @@ A browser extension that enables full-text search across your YouTube watch hist
 
 ## Support
 
-- **Report Issues & Discord Community**: [Discord](https://discord.gg/fErBc3wYrC)
+- **Report Issues & Discord Community**: [Discord](https://discord.gg/gFhKUthc88)
 
 ## License
 

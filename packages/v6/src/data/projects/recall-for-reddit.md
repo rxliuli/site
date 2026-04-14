@@ -34,7 +34,7 @@ Coming soon
 
 ## Support
 
-- **Report Issues & Discord Community**: [Discord](https://discord.gg/Cwre8EwkNX)
+- **Report Issues & Discord Community**: [Discord](https://discord.gg/gFhKUthc88)
 
 ## License
 
