@@ -3,6 +3,44 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'imp-translate',
+    title: 'Imp Translate',
+    description: 'A cross-platform browser extension that translates web pages with bilingual display.',
+    previewImage: '/images/projects/imp-translate.jpg',
+    type: 'Browser Extension',
+    tags: ['Translation', 'Chrome', 'Safari'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/imp-translate/nmbcckfgobecechfdamananmfnnjbbbd',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/imp-translate/id6764317525',
+        icon: 'safari',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/imp-translate',
+        icon: 'github',
+      },
+    ],
+    slug: 'imp-translate',
+    featured: false,
+    created: '2026-04-30',
+    updated: '2026-04-30',
+  },
+  {
     id: 'appdowngrader',
     title: 'AppDowngrader',
     description:
