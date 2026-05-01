@@ -8,7 +8,7 @@ export const projects: ProjectMeta[] = [
     description: 'A cross-platform browser extension that translates web pages with bilingual display.',
     previewImage: '/images/projects/imp-translate.jpg',
     type: 'Browser Extension',
-    tags: ['Translation', 'Chrome', 'Safari'],
+    tags: ['Translation', 'Chrome', 'Firefox', 'Edge', 'Safari'],
     links: [
       {
         type: 'store',
@@ -21,6 +21,18 @@ export const projects: ProjectMeta[] = [
         name: 'Discord',
         url: 'https://discord.gg/gFhKUthc88',
         icon: 'discord',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/imp-translate/',
+        icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/imp-translate/fdmigggpfhlaimjhbjfdohbbbcdnepbo',
+        icon: 'edge',
       },
       {
         type: 'store',
@@ -38,7 +50,7 @@ export const projects: ProjectMeta[] = [
     slug: 'imp-translate',
     featured: false,
     created: '2026-04-30',
-    updated: '2026-04-30',
+    updated: '2026-05-01',
   },
   {
     id: 'appdowngrader',
