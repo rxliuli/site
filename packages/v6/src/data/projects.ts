@@ -254,6 +254,12 @@ export const projects: ProjectMeta[] = [
         icon: 'chrome',
       },
       {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/ibfnbmffddbncjgfdionhngihdaajhfn',
+        icon: 'edge',
+      },
+      {
         type: 'social',
         name: 'Discord',
         url: 'https://discord.gg/gFhKUthc88',

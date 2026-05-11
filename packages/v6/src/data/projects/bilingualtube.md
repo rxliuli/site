@@ -19,6 +19,7 @@ Learning a new language or trying to understand content in a foreign language? B
 The extension is available for multiple browsers:
 
 - **Chrome Web Store** - <https://chromewebstore.google.com/detail/bilingualtube/ombapcolopdeailifakdgaijhoncgpgn>
+- **Microsoft Edge Add-ons** - <https://microsoftedge.microsoft.com/addons/detail/ibfnbmffddbncjgfdionhngihdaajhfn>
 - **Firefox Add-ons** - <https://addons.mozilla.org/firefox/addon/bilingualtube/>
 - **Safari Extensions** - <https://apps.apple.com/us/app/bilingualtube/id6757694666>
 
