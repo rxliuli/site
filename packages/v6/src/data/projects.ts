@@ -3,6 +3,50 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'scrub',
+    title: 'Scrub',
+    description: 'One-click clear all site data (cookies, storage, cache) for the current website.',
+    previewImage: '/images/projects/scrub.jpg',
+    type: 'Browser Extension',
+    tags: ['Privacy', 'Chrome', 'Firefox', 'Safari'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/scrub-clear-site-data/jmaeelmmfcjjbgehpkoknomjnimcjmfc',
+        icon: 'chrome',
+      },
+      {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/scrub-clear-site-data/',
+        icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/scrub-clear-site-data/id6775834119',
+        icon: 'safari',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/scrub',
+        icon: 'github',
+      },
+    ],
+    slug: 'scrub',
+    featured: false,
+    created: '2026-06-07',
+    updated: '2026-06-07',
+  },
+  {
     id: 'imp-translate',
     title: 'Imp Translate',
     description: 'A cross-platform browser extension that translates web pages with bilingual display.',
