@@ -3,6 +3,33 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'imp-rec',
+    title: 'ImpRec',
+    description:
+      'A lightweight, open-source screen recorder for macOS. Menu bar only, zero config, good compression.',
+    previewImage: '/images/projects/imp-rec.jpg',
+    type: 'App',
+    tags: ['macOS', 'Swift', 'SwiftUI', 'ScreenCaptureKit'],
+    links: [
+      {
+        type: 'store',
+        name: 'macOS',
+        url: 'https://github.com/rxliuli/imp-rec/releases',
+        icon: 'macos',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/imp-rec',
+        icon: 'github',
+      },
+    ],
+    slug: 'imp-rec',
+    featured: false,
+    created: '2026-06-13',
+    updated: '2026-06-14',
+  },
+  {
     id: 'scrub',
     title: 'Scrub',
     description: 'One-click clear all site data (cookies, storage, cache) for the current website.',
