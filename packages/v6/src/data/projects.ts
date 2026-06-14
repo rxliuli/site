@@ -35,7 +35,7 @@ export const projects: ProjectMeta[] = [
     description: 'One-click clear all site data (cookies, storage, cache) for the current website.',
     previewImage: '/images/projects/scrub.jpg',
     type: 'Browser Extension',
-    tags: ['Privacy', 'Chrome', 'Firefox', 'Safari'],
+    tags: ['Privacy', 'Chrome', 'Firefox', 'Edge', 'Safari'],
     links: [
       {
         type: 'store',
@@ -48,6 +48,12 @@ export const projects: ProjectMeta[] = [
         name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/scrub-clear-site-data/',
         icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/flnakifokcbfogdggeieaonemaikfpid',
+        icon: 'edge',
       },
       {
         type: 'store',
