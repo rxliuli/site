@@ -13,9 +13,15 @@ export const projects: ProjectMeta[] = [
     links: [
       {
         type: 'store',
-        name: 'macOS',
-        url: 'https://github.com/rxliuli/imp-rec/releases',
+        name: 'App Store',
+        url: 'https://apps.apple.com/app/imprec/id6780140406',
         icon: 'macos',
+      },
+      {
+        type: 'store',
+        name: 'GitHub Releases',
+        url: 'https://github.com/rxliuli/imp-rec/releases',
+        icon: 'github',
       },
       {
         type: 'social',

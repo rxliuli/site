@@ -13,4 +13,5 @@
 
 ## Install
 
-Download the latest `.dmg` from [Releases](https://github.com/rxliuli/imp-rec/releases), open it, and drag ImpRec to Applications.
+- [App Store](https://apps.apple.com/app/imprec/id6780140406)
+- [GitHub Releases](https://github.com/rxliuli/imp-rec/releases)
