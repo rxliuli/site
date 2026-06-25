@@ -3,6 +3,39 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'httap',
+    title: 'httap',
+    description:
+      'Passively capture HTTP traffic matching your rules. Query like Cloudflare Logs.',
+    previewImage: '/images/projects/httap.jpg',
+    type: 'Browser Extension',
+    tags: ['HTTP', 'Traffic Capture', 'Chrome', 'Firefox', 'Edge', 'Safari'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/httap/embminmhmfhgcomcnbeahoidnhokchek',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/httap',
+        icon: 'github',
+      },
+    ],
+    slug: 'httap',
+    featured: false,
+    created: '2026-06-17',
+    updated: '2026-06-21',
+  },
+  {
     id: 'imp-rec',
     title: 'ImpRec',
     description:
