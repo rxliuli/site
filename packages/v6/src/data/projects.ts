@@ -18,6 +18,18 @@ export const projects: ProjectMeta[] = [
         icon: 'chrome',
       },
       {
+        type: 'store',
+        name: 'Firefox',
+        url: 'https://addons.mozilla.org/firefox/addon/httap/',
+        icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/id6784219055',
+        icon: 'safari',
+      },
+      {
         type: 'social',
         name: 'Discord',
         url: 'https://discord.gg/gFhKUthc88',
