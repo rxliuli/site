@@ -25,6 +25,12 @@ export const projects: ProjectMeta[] = [
       },
       {
         type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/dfbbogcmjpojdbhkdefilkgjkhkmckbk',
+        icon: 'edge',
+      },
+      {
+        type: 'store',
         name: 'Safari',
         url: 'https://apps.apple.com/app/id6784219055',
         icon: 'safari',
