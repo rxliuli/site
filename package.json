@@ -1,12 +1,53 @@
 {
   "name": "@rxliuli/website",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "postinstall": "npx simple-git-hooks",
+    "dev": "astro dev & wrangler dev",
+    "build": "astro build && wrangler build",
+    "preview": "pnpm build && wrangler dev",
+    "astro": "astro",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.11",
+    "@astrojs/sitemap": "^3.7.0",
+    "@tailwindcss/vite": "^4.1.17",
+    "astro": "^5.16.0",
+    "astro-seo": "^0.8.4",
+    "hono": "^4.10.6",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "remark-breaks": "^4.0.0",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-github-markdown": "^0.1.0"
+  },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.15.2",
+    "@tailwindcss/typography": "^0.5.16",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
+    "es-toolkit": "^1.37.0",
     "lint-staged": "^16.2.7",
     "prettier": "^3.6.2",
-    "simple-git-hooks": "^2.13.1"
+    "prettier-plugin-astro": "^0.14.1",
+    "simple-git-hooks": "^2.13.1",
+    "tailwind-merge": "^3.0.2",
+    "tailwindcss": "^4.1.17",
+    "vite": "^6.1.0",
+    "wrangler": "^4.50.0"
   },
   "prettier": {
+    "plugins": ["prettier-plugin-astro"],
+    "overrides": [
+      {
+        "files": "*.astro",
+        "options": {
+          "parser": "astro"
+        }
+      }
+    ],
     "tabWidth": 2,
     "printWidth": 120,
     "semi": false,
@@ -23,11 +64,5 @@
       "prettier --write"
     ]
   },
-  "scripts": {
-    "postinstall": "npx simple-git-hooks"
-  },
-  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
-  "dependencies": {
-    "remark-breaks": "^4.0.0"
-  }
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }

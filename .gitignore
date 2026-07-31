@@ -1,6 +1,8 @@
 # ----------------------------- Directories --------------------------
 node_modules
 dist
+.astro
+.wrangler
 tests/server/static
 tests/server/static/upload
 .idea
@@ -17,7 +19,9 @@ tests/server/static/upload
 # ----------------------------- Files -------------------------------
 .DS_Store
 # local env files
+.env
 .env.local
+.env.production
 .env.*.local
 # log files
 npm-debug.log*

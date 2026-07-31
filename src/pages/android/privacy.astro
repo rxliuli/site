@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro'
+const { Content } = await import('../../data/privacy/android.md')
+---
+
+<Layout title="Privacy Policy - Android Tool" description="Privacy policy for our Android applications">
+  <article class="max-w-3xl mx-auto py-8">
+    <div class="prose prose-sm md:prose-base max-w-none dark:prose-invert">
+      <Content />
+    </div>
+  </article>
+</Layout>
