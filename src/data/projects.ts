@@ -3,6 +3,45 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'extport',
+    title: 'extport',
+    description:
+      'Publish a browser extension to Chrome, Firefox, Edge, and Safari from one push, plus Stripe-powered licensing. Open source, self-hostable, currently in closed beta.',
+    previewImage: '/images/projects/extport.jpg',
+    type: 'Website',
+    tags: ['Browser Extension Publishing', 'Licensing', 'Cloudflare Workers', 'Open Source'],
+    links: [
+      {
+        type: 'other',
+        name: 'Website',
+        url: 'https://extport.dev',
+        icon: 'website',
+      },
+      {
+        type: 'other',
+        name: 'Docs',
+        url: 'https://docs.extport.dev',
+        icon: 'website',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/extport',
+        icon: 'github',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/Va9kcSqu3f',
+        icon: 'discord',
+      },
+    ],
+    slug: 'extport',
+    featured: false,
+    created: '2026-07-20',
+    updated: '2026-07-30',
+  },
+  {
     id: 'httap',
     title: 'httap',
     description: 'Passively capture HTTP traffic matching your rules. Query like Cloudflare Logs.',
