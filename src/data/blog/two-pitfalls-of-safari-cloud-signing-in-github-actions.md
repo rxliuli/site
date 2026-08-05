@@ -4,7 +4,7 @@ slug: two-pitfalls-of-safari-cloud-signing-in-github-actions
 date: 2026-08-05
 summary: After automating Safari extension publishing with GitHub Actions, I hit two signing failures that cost me real debugging time. Both produce error messages with almost no useful search results, so I'm documenting the symptoms, causes, and fixes here.
 tags: [Safari, Apple, Xcode, GitHub Actions]
-status: draft
+status: published
 ---
 
 ## Background
