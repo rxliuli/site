@@ -856,7 +856,7 @@ export const projects: ProjectMeta[] = [
     description: 'Never Miss an Important Email Again',
     previewImage: '/images/projects/gmail-notifier.jpg',
     type: 'Browser Extension',
-    tags: ['Gmail', 'Chrome', 'Firefox'],
+    tags: ['Gmail', 'Chrome', 'Firefox', 'Edge', 'Safari'],
     links: [
       {
         type: 'store',
@@ -865,16 +865,28 @@ export const projects: ProjectMeta[] = [
         icon: 'chrome',
       },
       {
-        type: 'social',
-        name: 'Discord',
-        url: 'https://discord.gg/gFhKUthc88',
-        icon: 'discord',
-      },
-      {
         type: 'store',
         name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/gmail-notifier233/',
         icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/fldngbjbpgajkhfhhbedmdphgplgnibb',
+        icon: 'edge',
+      },
+      {
+        type: 'store',
+        name: 'Safari',
+        url: 'https://apps.apple.com/app/id6799037802',
+        icon: 'safari',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
       },
       {
         type: 'social',
@@ -886,7 +898,7 @@ export const projects: ProjectMeta[] = [
     slug: 'gmail-notifier',
     featured: false,
     created: '2025-08-08',
-    updated: '2025-11-19',
+    updated: '2026-08-14',
   },
   {
     id: 'fast-bookmark',
