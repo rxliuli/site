@@ -38,9 +38,9 @@ if (!post) {
 <Layout
   title={`${post.title} - rxliuli`}
   description={post.summary}
-  image={post.coverImage}
+  image={post.coverImage || `/og/${post.slug}.png`}
   type="article"
-  twitterCard="summary"
+  twitterCard="summary_large_image"
 >
   <div class="py-8">
     <!-- Back link -->

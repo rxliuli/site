@@ -1,5 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config'
+import { fileURLToPath } from 'node:url'
+import { join } from 'node:path'
 import tailwindcss from '@tailwindcss/vite'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -7,9 +9,22 @@ import remarkBreaks from 'remark-breaks'
 
 import sitemap from '@astrojs/sitemap'
 
+import { generateOgImages } from './scripts/generate-og.mjs'
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [sitemap()],
+  integrations: [
+    sitemap(),
+    {
+      name: 'og-images',
+      hooks: {
+        async 'astro:build:done'({ dir }) {
+          const base = typeof dir === 'string' ? dir : fileURLToPath(dir)
+          await generateOgImages({ outDir: join(base, 'og') })
+        },
+      },
+    },
+  ],
   output: 'static',
   site: 'https://rxliuli.com',
 

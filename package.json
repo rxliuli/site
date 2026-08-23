@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.15.2",
+    "@resvg/resvg-js": "^2.6.2",
     "@tailwindcss/typography": "^0.5.16",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
@@ -32,6 +33,7 @@
     "lint-staged": "^16.2.7",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
+    "satori": "^0.33.3",
     "simple-git-hooks": "^2.13.1",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.1.17",
@@ -39,7 +41,9 @@
     "wrangler": "^4.50.0"
   },
   "prettier": {
-    "plugins": ["prettier-plugin-astro"],
+    "plugins": [
+      "prettier-plugin-astro"
+    ],
     "overrides": [
       {
         "files": "*.astro",
