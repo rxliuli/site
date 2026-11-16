@@ -3,6 +3,33 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'single-instance',
+    title: 'Single Instance',
+    description:
+      'Keep each site you choose in a single tab. Links to that site open in the tab you already have and the new tab is closed.',
+    previewImage: '/images/projects/single-instance.jpg',
+    type: 'Browser Extension',
+    tags: ['Chrome', 'Tab Management', 'Productivity'],
+    links: [
+      {
+        type: 'store',
+        name: 'Chrome',
+        url: 'https://chromewebstore.google.com/detail/ikcpdeolnlecjcdbfgaplemlpdnglpje',
+        icon: 'chrome',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/single-instance',
+        icon: 'github',
+      },
+    ],
+    slug: 'single-instance',
+    featured: false,
+    created: '2026-11-15',
+    updated: '2026-11-15',
+  },
+  {
     id: 'extport',
     title: 'extport',
     description:
