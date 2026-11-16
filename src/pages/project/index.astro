@@ -1,45 +1,101 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import { getAllProjects } from '../../data/projects'
+import { countByKind, getPlatforms, getProjectKind } from '../../data/project-kinds'
 
 const projects = getAllProjects()
+const kinds = countByKind(projects)
 const description = 'A collection of my work and side projects, including browser extensions, apps, and websites.'
+
+const filterClass =
+  'project-filter inline-flex h-10 items-center gap-2 rounded-xl border border-border px-4 text-sm font-medium transition-colors hover:border-border-strong aria-pressed:border-primary aria-pressed:bg-primary aria-pressed:text-primary-foreground'
 ---
 
 <Layout title="Projects - rxliuli" description={description}>
-  <div class="py-12">
-    <div class="mb-8">
-      <h1 class="text-4xl font-extrabold tracking-tight">Projects</h1>
-      <p class="mt-2 text-muted-foreground">A collection of my work and side projects.</p>
+  <div class="py-10">
+    <div class="mb-8 flex flex-col gap-2">
+      <h1 class="font-display text-4xl font-bold tracking-tight sm:text-5xl">Projects</h1>
+      <p class="text-subtle-foreground">A collection of my work and side projects.</p>
     </div>
 
-    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <div class="mb-8 flex flex-wrap gap-2" role="group" aria-label="Filter by type">
+      <button type="button" class={filterClass} data-kind="" aria-pressed="true">
+        All <span class="font-mono text-xs opacity-70">{projects.length}</span>
+      </button>
       {
-        projects.map((project) => (
-          <a
-            href={`/project/${project.slug}`}
-            class="group flex flex-col overflow-hidden rounded-lg border border-border transition-colors hover:bg-muted"
-          >
-            {project.previewImage && (
-              <img src={project.previewImage} alt={project.title} class="aspect-video w-full object-cover" />
-            )}
-            <div class="flex flex-1 flex-col p-6">
-              <div class="flex items-start justify-between gap-2">
-                <h2 class="font-semibold text-lg">{project.title}</h2>
-                {project.featured && (
-                  <span class="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">Featured</span>
-                )}
-              </div>
-              <p class="mt-2 flex-1 text-sm text-muted-foreground">{project.description}</p>
-              <div class="mt-4 flex flex-wrap gap-2">
-                {project.tags?.slice(0, 3).map((tag) => (
-                  <span class="rounded-md bg-secondary px-2 py-1 text-xs text-secondary-foreground">{tag}</span>
-                ))}
-              </div>
-            </div>
-          </a>
+        kinds.map((kind) => (
+          <button type="button" class={filterClass} data-kind={kind.slug} aria-pressed="false">
+            {kind.label} <span class="font-mono text-xs opacity-70">{kind.count}</span>
+          </button>
         ))
       }
     </div>
+
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        projects.map((project) => {
+          const kind = getProjectKind(project.type)
+          return (
+            <a
+              href={`/project/${project.slug}`}
+              data-kind={kind.slug}
+              class="project-card group flex flex-col overflow-hidden rounded-[20px] border border-border bg-card transition-colors hover:border-border-strong"
+            >
+              {project.previewImage && (
+                <img
+                  src={project.previewImage}
+                  alt={project.title}
+                  loading="lazy"
+                  class="aspect-video w-full border-b border-border object-cover"
+                />
+              )}
+              <div class="flex flex-1 flex-col gap-3 p-6">
+                <div class="flex items-start justify-between gap-2">
+                  <h2 class="font-display text-xl font-semibold transition-colors group-hover:text-primary">
+                    {project.title}
+                  </h2>
+                  <span class="shrink-0 rounded-md bg-secondary px-2 py-1 font-mono text-[11px] text-subtle-foreground">
+                    {kind.short}
+                  </span>
+                </div>
+                <p class="flex-1 text-sm leading-relaxed text-subtle-foreground">{project.description}</p>
+                <span class="font-mono text-xs text-muted-foreground">{getPlatforms(project).join(' · ')}</span>
+              </div>
+            </a>
+          )
+        })
+      }
+    </div>
   </div>
+
+  <script>
+    // 按类型筛选，状态同步到 ?type=，以便首页直接链接到某个分类
+    const buttons = document.querySelectorAll<HTMLButtonElement>('.project-filter')
+    const cards = document.querySelectorAll<HTMLElement>('.project-card')
+    const validKinds = new Set([...buttons].map((it) => it.dataset.kind))
+
+    function apply(kind: string) {
+      buttons.forEach((btn) => btn.setAttribute('aria-pressed', String(btn.dataset.kind === kind)))
+      cards.forEach((card) => {
+        card.hidden = kind !== '' && card.dataset.kind !== kind
+      })
+    }
+
+    const initial = new URLSearchParams(location.search).get('type') ?? ''
+    apply(validKinds.has(initial) ? initial : '')
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const kind = btn.dataset.kind ?? ''
+        apply(kind)
+        const url = new URL(location.href)
+        if (kind) {
+          url.searchParams.set('type', kind)
+        } else {
+          url.searchParams.delete('type')
+        }
+        history.replaceState(null, '', url)
+      })
+    })
+  </script>
 </Layout>

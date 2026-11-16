@@ -2,162 +2,199 @@
 import Layout from '../layouts/Layout.astro'
 import { getAllProjects } from '../data/projects'
 import { getAllBlogPosts } from '../data/blogs'
+import { countByKind, getMonogram, getPlatforms, getProjectKind } from '../data/project-kinds'
+import type { ProjectMeta } from '../types/project'
 import { sortBy } from 'es-toolkit'
 import dayjs from 'dayjs'
 
-const featuredProjects = getAllProjects().slice(0, 2)
+const allProjects = getAllProjects()
+const kinds = countByKind(allProjects)
 
-const recentPosts = sortBy(await getAllBlogPosts(), [(it) => -new Date(it.date)])
-  .slice(0, 3)
-  .map((it) => ({
-    title: it.title,
-    date: it.date,
-    slug: it.slug,
-  }))
+// 按发布时间倒序，用于挑选“最近的作品”
+const byNewest = sortBy(allProjects, [(it) => -new Date(it.created ?? it.updated).getTime()])
+const newestOf = (type: ProjectMeta['type'], exclude: ProjectMeta[] = []) =>
+  byNewest.find((it) => it.type === type && !exclude.includes(it))
+
+// 大卡片：最新的一个浏览器扩展 + 最新的一个 App
+const featured = [newestOf('Browser Extension'), newestOf('App')].filter((it): it is ProjectMeta => !!it)
+// 小卡片：每种类型各取一个最新的（排除已在大卡片中出现的）
+const more = kinds
+  .map((kind) => newestOf(kind.type, featured))
+  .filter((it): it is ProjectMeta => !!it)
+  .slice(0, 4)
+
+// 所有项目覆盖到的运行平台
+const platformOrder = ['chrome', 'firefox', 'edge', 'safari', 'macos', 'app store', 'vscode', 'android', 'windows', 'linux', 'web']
+const platformLabels: Record<string, string> = {
+  chrome: 'Chrome',
+  firefox: 'Firefox',
+  edge: 'Edge',
+  safari: 'Safari',
+  macos: 'macOS',
+  'app store': 'App Store',
+  vscode: 'VSCode',
+  android: 'Android',
+  windows: 'Windows',
+  linux: 'Linux',
+  web: 'Web',
+}
+const usedPlatforms = new Set(allProjects.flatMap(getPlatforms))
+const platforms = platformOrder.filter((it) => usedPlatforms.has(it)).map((it) => platformLabels[it])
+
+const posts = sortBy(await getAllBlogPosts(), [(it) => -new Date(it.date).getTime()])
+const [latestPost, ...restPosts] = posts
+const recentPosts = restPosts.slice(0, 4)
+
+const socials = [
+  { name: 'GitHub', href: 'https://github.com/rxliuli' },
+  { name: 'Discord', href: 'https://discord.gg/gFhKUthc88' },
+  { name: 'Sponsor ♥', href: 'https://github.com/sponsors/rxliuli' },
+]
+
+const tile = 'rounded-3xl border border-border bg-card'
 ---
 
-<Layout title="Personal website">
-  <div class="flex flex-col gap-16 py-12">
-    <!-- Hero section -->
-    <div class="flex flex-col items-center gap-8 text-center">
-      <h1 class="text-4xl font-extrabold tracking-tight lg:text-5xl">Hi, I'm rxliuli</h1>
-      <p class="mx-auto max-w-[700px] text-lg text-muted-foreground md:text-xl">
-        I like to create interesting things, using programming and writing as tools.
-      </p>
-
-      <!-- Social links -->
-      <div class="flex items-center gap-4">
-        <a
-          href="https://store.rxliuli.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground"
-        >
-          <svg
-            class="h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path><path d="M3 6h18"></path><path
-              d="M16 10a4 4 0 0 1-8 0"></path></svg
-          >
-          <span class="sr-only">Store</span>
-        </a>
-        <a
-          href="https://discord.gg/gFhKUthc88"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground"
-        >
-          <svg class="h-5 w-5" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            ><title>Discord</title><path
-              d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"
-            ></path></svg
-          >
-          <span class="sr-only">Discord</span>
-        </a>
-        <a
-          href="https://github.com/rxliuli"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground"
-        >
-          <svg class="h-5 w-5" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            ><title>GitHub</title><path
-              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
-            ></path></svg
-          >
-          <span class="sr-only">GitHub</span>
-        </a>
-        <a
-          href="https://github.com/sponsors/rxliuli"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex h-10 w-10 items-center justify-center rounded-full border border-input bg-background hover:bg-accent hover:text-accent-foreground"
-        >
-          <svg class="h-5 w-5" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
-            ><path
-              d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z"
-            ></path></svg
-          >
-          <span class="sr-only">GitHub Sponsors</span>
-        </a>
+<Layout title="rxliuli">
+  <div class="flex flex-wrap gap-4 pt-6">
+    <!-- 自我介绍 -->
+    <section class:list={[tile, 'flex min-h-[340px] flex-[2_1_560px] flex-col justify-between gap-8 p-7 sm:p-9']}>
+      <span class="font-mono text-sm text-muted-foreground">$ whoami</span>
+      <div class="flex flex-col gap-4">
+        <h1 class="font-display text-[clamp(2.25rem,5.4vw,4rem)] leading-[1.02] font-bold tracking-tight">
+          rxliuli. I build small tools for the browser, the Mac, and the web.
+        </h1>
+        <p class="max-w-xl text-[17px] leading-relaxed text-subtle-foreground">
+          I like to create interesting things, using programming and writing as tools.
+        </p>
       </div>
-    </div>
-
-    <!-- Featured Projects section -->
-    <section class="space-y-6">
-      <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-bold tracking-tight">Featured Projects</h2>
-        <a href="/project" class="inline-flex items-center text-sm font-medium text-primary">
-          View all projects
-          <svg
-            class="ml-1 h-4 w-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
-          >
-        </a>
-      </div>
-
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="flex flex-wrap gap-2.5">
         {
-          featuredProjects.map((project) => (
+          socials.map((it) => (
             <a
-              href={`/project/${project.slug}`}
-              class="group rounded-lg border border-border p-6 transition-colors hover:bg-muted"
+              href={it.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex h-11 items-center rounded-xl border border-border-strong px-4 text-sm font-medium transition-colors hover:border-primary hover:text-primary"
             >
-              <h3 class="font-semibold text-lg">{project.title}</h3>
-              <p class="text-muted-foreground mt-2">{project.description}</p>
+              {it.name}
             </a>
           ))
         }
       </div>
     </section>
 
-    <!-- Recent Blog Posts section -->
-    <section class="space-y-6">
-      <div class="flex items-center justify-between">
-        <h2 class="text-2xl font-bold tracking-tight">Recent Posts</h2>
-        <a href="/blog" class="inline-flex items-center text-sm font-medium text-primary">
-          View all posts
-          <svg
-            class="ml-1 h-4 w-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
-          >
-        </a>
+    <div class="flex flex-[1_1_300px] flex-col gap-4">
+      <!-- 按类型统计 -->
+      <div class="flex flex-1 flex-col gap-4 rounded-3xl bg-primary p-7 text-primary-foreground">
+        <div class="flex items-baseline gap-3">
+          <span class="font-display text-7xl leading-[0.9] font-bold tracking-tighter">{allProjects.length}</span>
+          <span class="font-mono text-sm">tools shipped</span>
+        </div>
+        <div class="flex flex-col">
+          {
+            kinds.map((kind) => (
+              <a
+                href={`/project?type=${kind.slug}`}
+                class="flex items-center justify-between gap-3 border-t border-primary-foreground/20 py-2.5 text-[15px] font-medium hover:underline"
+              >
+                <span>{kind.label}</span>
+                <span class="font-mono text-sm">{kind.count} →</span>
+              </a>
+            ))
+          }
+        </div>
       </div>
 
-      <div class="space-y-4">
-        {
-          recentPosts.map((post) => (
-            <a href={`/blog/${post.slug}`} class="block space-y-1 rounded-md p-3 transition-colors hover:bg-muted">
-              <h3 class="font-medium">{post.title}</h3>
-              <p class="text-sm text-muted-foreground">{dayjs(post.date).format('YYYY-MM-DD')}</p>
-            </a>
-          ))
-        }
+      <!-- 运行平台 -->
+      <div class:list={[tile, 'flex flex-col gap-3.5 px-7 py-6']}>
+        <span class="font-mono text-sm text-muted-foreground">runs on</span>
+        <div class="flex flex-wrap gap-2">
+          {platforms.map((it) => <span class="rounded-full bg-secondary px-3 py-1.5 text-[13px] font-medium">{it}</span>)}
+        </div>
       </div>
+    </div>
+
+    <!-- 重点项目 -->
+    {
+      featured.map((project) => (
+        <a
+          href={`/project/${project.slug}`}
+          class:list={[tile, 'group flex flex-[1.4_1_340px] flex-col gap-5 p-7 transition-colors hover:border-border-strong sm:p-8']}
+        >
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <span class="rounded-lg border border-primary px-2.5 py-1 font-mono text-xs text-primary">
+              {getProjectKind(project.type).label.replace(/s$/, '').toLowerCase()}
+            </span>
+            <span class="font-mono text-sm text-muted-foreground">latest</span>
+          </div>
+          <div class="flex flex-col gap-2.5">
+            <h2 class="font-display text-4xl font-bold tracking-tight transition-colors group-hover:text-primary">
+              {project.title}
+            </h2>
+            <p class="leading-relaxed text-subtle-foreground">{project.description}</p>
+          </div>
+          <span class="mt-auto font-mono text-xs text-muted-foreground">{getPlatforms(project).join(' · ')}</span>
+        </a>
+      ))
+    }
+
+    <!-- 最新文章 -->
+    {
+      latestPost && (
+        <a
+          href={`/blog/${latestPost.slug}`}
+          class:list={[tile, 'group flex flex-[1_1_280px] flex-col justify-between gap-6 p-7 transition-colors hover:border-border-strong']}
+        >
+          <span class="font-mono text-sm text-muted-foreground">
+            latest post · {dayjs(latestPost.date).format('MMM D')}
+          </span>
+          <span class="font-display text-2xl leading-tight font-semibold">{latestPost.title}</span>
+          <span class="text-sm font-medium text-primary">Read →</span>
+        </a>
+      )
+    }
+
+    <!-- 各类型的最新项目 -->
+    {
+      more.map((project) => (
+        <a
+          href={`/project/${project.slug}`}
+          class="group flex flex-[1_1_240px] flex-col gap-3.5 rounded-[20px] border border-border bg-card p-6 transition-colors hover:border-border-strong"
+        >
+          <div class="flex items-center justify-between gap-2">
+            <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary font-mono text-sm font-medium text-primary">
+              {getMonogram(project.title)}
+            </span>
+            <span class="rounded-md bg-secondary px-2 py-1 font-mono text-[11px] text-subtle-foreground">
+              {getProjectKind(project.type).short}
+            </span>
+          </div>
+          <span class="font-display text-xl font-semibold transition-colors group-hover:text-primary">{project.title}</span>
+          <span class="line-clamp-3 text-sm leading-relaxed text-subtle-foreground">{project.description}</span>
+          <span class="mt-auto font-mono text-xs text-muted-foreground">{getPlatforms(project).join(' · ')}</span>
+        </a>
+      ))
+    }
+
+    <!-- 文章列表 -->
+    <section class:list={[tile, 'flex flex-[1_1_100%] flex-col gap-2 p-7 sm:p-8']}>
+      <div class="flex flex-wrap items-center justify-between gap-3 pb-2">
+        <h2 class="font-display text-2xl font-semibold">Writing</h2>
+        <a href="/blog" class="text-sm font-medium text-primary hover:underline">All {posts.length} posts →</a>
+      </div>
+      {
+        recentPosts.map((post) => (
+          <a
+            href={`/blog/${post.slug}`}
+            class="flex items-baseline justify-between gap-6 border-t border-border py-3.5 transition-colors hover:text-primary"
+          >
+            <span class="leading-snug">{post.title}</span>
+            <span class="font-mono text-xs whitespace-nowrap text-muted-foreground">
+              {dayjs(post.date).format('YYYY-MM-DD')}
+            </span>
+          </a>
+        ))
+      }
     </section>
   </div>
 </Layout>

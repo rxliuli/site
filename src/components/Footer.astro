@@ -1,11 +1,24 @@
-<footer class="border-t border-border bg-background py-6">
-  <div class="container mx-auto px-4 flex flex-col items-center justify-between gap-4 md:flex-row">
-    <p class="text-center text-sm text-muted-foreground">
-      © {new Date().getFullYear()} rxliuli. All rights reserved.
-    </p>
+---
+const links = [
+  { name: 'GitHub', href: 'https://github.com/rxliuli' },
+  { name: 'Discord', href: 'https://discord.gg/gFhKUthc88' },
+  { name: 'Sponsor', href: 'https://github.com/sponsors/rxliuli' },
+]
+---
 
-    <div class="flex items-center gap-4">
-      <!-- Social Links - placeholder -->
+<footer class="mx-auto mt-16 w-full max-w-6xl px-4 sm:px-6">
+  <div
+    class="flex flex-col items-start justify-between gap-4 border-t border-border py-8 font-mono text-xs text-muted-foreground sm:flex-row sm:items-center"
+  >
+    <p>© {new Date().getFullYear()} rxliuli</p>
+    <div class="flex gap-5">
+      {
+        links.map((link) => (
+          <a href={link.href} target="_blank" rel="noopener noreferrer" class="transition-colors hover:text-primary">
+            {link.name}
+          </a>
+        ))
+      }
     </div>
   </div>
 </footer>

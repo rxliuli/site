@@ -45,7 +45,7 @@
             script.setAttribute('data-reactions-enabled', config.reactionsEnabled)
             script.setAttribute('data-emit-metadata', config.emitMetadata)
             script.setAttribute('data-input-position', config.inputPosition)
-            script.setAttribute('data-theme', getGiscusTheme())
+            script.setAttribute('data-theme', 'transparent_dark')
             script.setAttribute('data-lang', config.lang)
             script.crossOrigin = 'anonymous'
             script.async = true
@@ -61,52 +61,12 @@
     observer.observe(container)
   }
 
-  // 根据当前主题返回对应的 giscus 主题
-  function getGiscusTheme() {
-    const isDark = document.documentElement.classList.contains('dark')
-    return isDark ? 'dark' : 'light'
-  }
-
-  // 更新 giscus 主题
-  function updateGiscusTheme() {
-    const iframe = document.querySelector<HTMLIFrameElement>('iframe.giscus-frame')
-    if (iframe && iframe.contentWindow) {
-      iframe.contentWindow.postMessage(
-        {
-          giscus: {
-            setConfig: {
-              theme: getGiscusTheme(),
-            },
-          },
-        },
-        'https://giscus.app',
-      )
-    }
-  }
-
-  // 监听主题变化
-  function observeThemeChanges() {
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-          updateGiscusTheme()
-        }
-      })
-    })
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['class'],
-    })
-  }
-
   // 初始化
   // 使用 requestAnimationFrame 确保主题已经应用
   function init() {
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         loadGiscus()
-        observeThemeChanges()
       })
     })
   }

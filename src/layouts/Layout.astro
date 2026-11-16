@@ -29,10 +29,18 @@ const pageUrl = canonical || `${siteUrl}${Astro.url.pathname}`
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#0d0e11" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap"
+    />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="192x192" href="/logo192.jpg" />
     <link rel="preload" href={stylesUrl} as="style" />
@@ -72,45 +80,12 @@ const pageUrl = canonical || `${siteUrl}${Astro.url.pathname}`
   <body class="min-h-screen bg-background text-foreground">
     <div class="flex min-h-screen flex-col">
       <Header />
-      <main class="container mx-auto flex-1 px-4 max-w-screen-2xl">
+      <main class="mx-auto w-full max-w-6xl flex-1 px-4 sm:px-6">
         <slot />
       </main>
       <Footer />
     </div>
     <script>
-      // Theme initialization and system theme tracking
-      const applyTheme = () => {
-        const savedTheme = typeof localStorage !== 'undefined' && localStorage.getItem('theme')
-
-        if (savedTheme) {
-          // User has manually set a theme preference
-          if (savedTheme === 'dark') {
-            document.documentElement.classList.add('dark')
-          } else {
-            document.documentElement.classList.remove('dark')
-          }
-        } else {
-          // Follow system theme
-          const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-          if (isDark) {
-            document.documentElement.classList.add('dark')
-          } else {
-            document.documentElement.classList.remove('dark')
-          }
-        }
-      }
-
-      // Apply theme on load
-      applyTheme()
-
-      // Listen for system theme changes only if user hasn't set a preference
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-      mediaQuery.addEventListener('change', () => {
-        if (!localStorage.getItem('theme')) {
-          applyTheme()
-        }
-      })
-
       // Add copy buttons to code blocks
       const addCopyButtons = () => {
         const codeBlocks = document.querySelectorAll('pre')

@@ -65,7 +65,7 @@ if (!post) {
     <article class="w-full overflow-x-auto max-w-3xl mx-auto">
       <!-- Article header -->
       <header class="mb-8 space-y-6">
-        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">{post.title}</h1>
+        <h1 class="font-display text-3xl md:text-4xl font-bold tracking-tight">{post.title}</h1>
 
         <div class="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
           <span class="inline-flex items-center">
@@ -113,7 +113,7 @@ if (!post) {
 
         {
           post.coverImage && (
-            <div class="overflow-hidden rounded-lg border">
+            <div class="overflow-hidden rounded-2xl border border-border">
               <img src={post.coverImage} alt={post.title} class="h-auto w-full object-cover" />
             </div>
           )

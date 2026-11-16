@@ -38,7 +38,7 @@ const linkGroups = ['store', 'social', 'community', 'other']
   <article class="max-w-4xl mx-auto py-8 space-y-4">
     <!-- Header -->
     <div class="space-y-2">
-      <h1 class="text-4xl font-extrabold tracking-tight">{project.meta.title}</h1>
+      <h1 class="font-display text-4xl font-bold tracking-tight">{project.meta.title}</h1>
       <div class="flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
         <span class="rounded-md border border-border px-2 py-1">{project.meta.type}</span>
         <span class="inline-flex items-center">
@@ -62,12 +62,12 @@ const linkGroups = ['store', 'social', 'community', 'other']
     </div>
 
     <!-- Image -->
-    <div class="aspect-[16/10] overflow-hidden rounded-lg border">
+    <div class="aspect-[16/10] overflow-hidden rounded-2xl border border-border">
       <img src={project.meta.previewImage} alt={project.meta.title} class="h-full w-full object-cover" />
     </div>
 
     <!-- Description -->
-    <p class="text-xl text-muted-foreground">{project.meta.description}</p>
+    <p class="text-xl text-subtle-foreground">{project.meta.description}</p>
 
     <!-- Links -->
     {
@@ -84,7 +84,7 @@ const linkGroups = ['store', 'social', 'community', 'other']
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex items-center gap-2 rounded-md border border-border px-3 py-1.5 text-sm transition-colors hover:bg-muted"
+                      class="inline-flex items-center gap-2 rounded-md border border-border px-3 py-1.5 text-sm transition-colors hover:border-primary hover:text-primary"
                     >
                       {link.name}
                       <svg
