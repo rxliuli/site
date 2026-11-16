@@ -1,6 +1,5 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "main": "./worker/index.ts",
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
   "name": "homepage",
   "compatibility_date": "2025-11-25",
   "assets": {
@@ -11,11 +10,10 @@
   "routes": [
     {
       "custom_domain": true,
-      "pattern": "rxliuli.com"
+      "pattern": "rxliuli.com",
     },
   ],
   "observability": {
     "enabled": true,
   },
 }
-
