@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "postinstall": "npx simple-git-hooks",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -22,46 +21,10 @@
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2",
-    "@tailwindcss/typography": "^0.5.16",
-    "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "es-toolkit": "^1.37.0",
-    "lint-staged": "^16.2.7",
-    "prettier": "^3.6.2",
-    "prettier-plugin-astro": "^0.14.1",
     "satori": "^0.33.3",
-    "simple-git-hooks": "^2.13.1",
-    "tailwind-merge": "^3.0.2",
-    "tailwindcss": "^4.1.17",
-    "vite": "^6.1.0"
-  },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-astro"
-    ],
-    "overrides": [
-      {
-        "files": "*.astro",
-        "options": {
-          "parser": "astro"
-        }
-      }
-    ],
-    "tabWidth": 2,
-    "printWidth": 120,
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "arrowParens": "always",
-    "endOfLine": "crlf"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx,js,jsx,css,vue,astro}": [
-      "prettier --write"
-    ]
+    "tailwindcss": "^4.1.17"
   },
   "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }
