@@ -3,7 +3,6 @@
   "name": "homepage",
   "compatibility_date": "2025-11-25",
   "assets": {
-    "binding": "ASSETS",
     "directory": "./dist",
   },
   "workers_dev": false,
