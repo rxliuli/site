@@ -17,9 +17,21 @@ const newestOf = (type: ProjectMeta['type'], exclude: ProjectMeta[] = []) =>
 
 // 大卡片：最新的一个浏览器扩展 + 最新的一个 App
 const featured = [newestOf('Browser Extension'), newestOf('App')].filter((it): it is ProjectMeta => !!it)
-// 小卡片：每种类型各取一个最新的（排除已在大卡片中出现的）
+
+// 小卡片里手动指定要展示的项目，覆盖“取最新”的默认规则；未指定的类型仍按发布时间取最新
+const pinnedMore: Partial<Record<ProjectMeta['type'], string>> = {
+  'Browser Extension': 'twitter-filter',
+}
+
+// 小卡片：每种类型各取一个（排除已在大卡片中出现的）
 const more = kinds
-  .map((kind) => newestOf(kind.type, featured))
+  .map((kind) => {
+    const pinnedSlug = pinnedMore[kind.type]
+    if (pinnedSlug) {
+      return allProjects.find((it) => it.slug === pinnedSlug)
+    }
+    return newestOf(kind.type, featured)
+  })
   .filter((it): it is ProjectMeta => !!it)
   .slice(0, 4)
 
