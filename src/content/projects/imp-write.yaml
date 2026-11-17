@@ -1,0 +1,74 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Imp Write"
+description: "Fix and rewrite text in any textbox with AI. Type a command like /fix at the end, pause, and the result replaces your text in place."
+type: Browser Extension
+tags: ["AI", "Writing", "Chrome", "Firefox", "Edge", "Safari"]
+previewImage: /images/projects/imp-write.jpg
+created: "2026-08-23"
+updated: "2026-10-05"
+links:
+  - { type: other, icon: website, name: "Website", url: "https://store.rxliuli.com/extensions/imp-write/" }
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/imp-write/eiejoijhoafceblgipplbhihjinmhhma" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/imp-write/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/hbgeoppkpjplnobhlnbgmnjiijbofbdl" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6804666336" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/imp-write" }
+
+# 详情页内容
+icon: /images/projects/icons/imp-write.png
+tagline: Fix and rewrite text in any textbox, without leaving the page.
+intro: >-
+  Polishing a comment or an email usually means copying it into a chat window and pasting the answer back. With Imp
+  Write you end your text with a command like `/fix`, pause, and the rewritten text replaces it right where you typed.
+screenshot:
+  src: /images/projects/imp-write.jpg
+  alt: The Imp Write settings page with the provider connection and the /fix, /improve and /formal commands
+install:
+  note: Chrome, Edge, Firefox and Safari, including mobile · Free with your own API key
+
+blocks:
+  - type: features
+    title: Run a command, get the text back in place
+    items:
+      - title: Type a command
+        body: >-
+          End your text with `/fix`, `/improve`, `/shorten`, `/tl` to translate into English, or your own command,
+          then pause. It runs on its own.
+      - title: Shortcuts and right-click
+        body: >-
+          Bind a shortcut to any command, VS Code-style, or right-click in a textbox to pick one. With text selected,
+          only the selection is rewritten.
+      - title: Your own commands
+        body: >-
+          Give a command a name and a prompt, with `{{text}}` where your text goes. Export and import command sets as
+          JSON.
+      - title: Undo with Esc
+        body: Press `Esc` right after a rewrite to put your original text back, or use the usual undo.
+
+  - type: list
+    title: The details
+    items:
+      - title: Bring your own key, for free.
+        body: Any OpenAI-compatible provider works, such as OpenAI, DeepSeek or Gemini. You only pay your provider.
+      - title: Or skip the key.
+        body: Connect an Imp account and pay as you go with prepaid credits. Not available on Safari.
+      - title: On mobile too.
+        body: On Firefox for Android and Safari on iOS, tap space three times to bring up the command menu.
+      - title: Plain text fields.
+        body: >-
+          Inputs, text areas and most editable regions work. Canvas-based editors such as Google Docs and Notion
+          don't.
+    note: >-
+      Translating as you type in another language? See [Input Translator](/project/input-translator), which does that
+      one job with a triple space.
+
+privacy:
+  - >-
+    Only the text you run a command on is sent, and only to the provider you choose: your own OpenAI-compatible
+    endpoint, or Imp Credits, which keeps billing records but not your text. Your settings and API key stay in your
+    browser.
+  - >-
+    The only other request is an anonymous usage ping, at most once a day: a random install ID, the extension version
+    and your browser language.
+license: GPL-3.0

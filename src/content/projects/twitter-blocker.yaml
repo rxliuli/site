@@ -1,0 +1,72 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Twitter Blocker"
+description: "Block Twitter/X accounts in bulk from CSV lists or search, or with one click on any tweet. Runs in the background and waits out rate limits."
+type: Browser Extension
+tags: ["Twitter", "Block", "Chrome", "Firefox", "Edge", "Safari"]
+previewImage: /images/projects/twitter-blocker.jpg
+created: "2026-02-08"
+updated: "2026-10-27"
+links:
+  - { type: other, icon: website, name: "Website", url: "https://store.rxliuli.com/extensions/twitter-blocker/" }
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/mbjkhjgpomohfcodieeokjniidffmcga" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/twitter-blocker1/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/jcehlllpelphhilmbjmjfdinmgkdpclc" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/us/app/blocker-for-twitter/id6759302742" }
+
+# 详情页内容
+icon: /images/projects/icons/twitter-blocker.png
+tagline: Block one account in a click, or thousands in the background.
+intro: >-
+  Blocking on X is one account at a time, behind a menu and a confirmation. Twitter Blocker puts a block button on
+  every tweet, and works through long block lists in the background, waiting out X's rate limits so you don't have to.
+screenshot:
+  src: /images/projects/twitter-blocker.jpg
+  alt: The X timeline with Twitter Blocker's Quick Block button on each tweet
+install:
+  note: Chrome, Edge, Firefox and Safari, including mobile · Free up to 150 accounts per run, $19.99 lifetime for unlimited
+
+blocks:
+  - type: features
+    title: Two ways to block
+    items:
+      - title: Quick Block
+        body: >-
+          A block button on every tweet. One click starts a 3-second countdown with an **Undo** button, then the
+          account is blocked. No menus, no confirmation dialog.
+      - title: Batch blocking
+        body: >-
+          Build a list from a CSV file, X's official data export (`block.js`) or a user search, then run it. Each
+          account shows whether it succeeded, failed or was skipped.
+
+  - type: list
+    title: The details
+    items:
+      - title: Keeps going without you.
+        body: Blocking runs in the background. Close the tab and come back later, even days later for very long lists.
+      - title: Rate limits handled.
+        body: >-
+          It counts requests itself, pauses before X's limit is hit, and resumes where it stopped. Nothing in the list
+          is dropped, and it leaves headroom for blocks you do by hand.
+      - title: Move your block list.
+        body: Import the `block.js` from X's data export to carry your block list over to a new account.
+      - title: No API key.
+        body: It works through your logged-in X session. There is no developer account or token to set up.
+
+  - type: list
+    title: Free or licensed
+    items:
+      - title: Free.
+        body: Quick Block, CSV import, search and background blocking, up to 150 accounts per run.
+      - title: Licensed, $19.99 once.
+        body: Unlimited accounts per run, priority email support and lifetime updates.
+    note: >-
+      Need to filter tweets rather than block accounts? See [Twitter Filter](/project/twitter-filter), which can mark,
+      hide or block by rule.
+
+privacy:
+  - >-
+    Your block lists stay in your browser, and blocking requests go only to X, through your own session. Nothing about
+    the accounts you block is sent anywhere else.
+  - >-
+    The extension sends an anonymous usage ping, at most once a day: a random install ID, the extension version and
+    your browser language. Activating a license checks the code with the license server.
