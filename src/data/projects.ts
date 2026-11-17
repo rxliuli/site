@@ -3,6 +3,39 @@ import type { Project, ProjectMeta } from '../types/project'
 // 项目元数据
 export const projects: ProjectMeta[] = [
   {
+    id: 'sim-drop',
+    title: 'SimDrop',
+    description:
+      'Booted iOS simulators show up in the Finder sidebar, so you can drag files into their Photos library or Downloads folder and drag them back out without leaving Finder.',
+    previewImage: '/images/projects/sim-drop.jpg',
+    type: 'App',
+    tags: ['macOS', 'iOS Simulator', 'Swift', 'Finder'],
+    links: [
+      {
+        type: 'store',
+        name: 'Homebrew',
+        url: 'https://github.com/rxliuli/homebrew-tap/blob/main/Casks/sim-drop.rb',
+        icon: 'macos',
+      },
+      {
+        type: 'store',
+        name: 'macOS',
+        url: 'https://github.com/rxliuli/sim-drop/releases/latest',
+        icon: 'macos',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/sim-drop',
+        icon: 'github',
+      },
+    ],
+    slug: 'sim-drop',
+    featured: false,
+    created: '2026-11-16',
+    updated: '2026-11-17',
+  },
+  {
     id: 'single-instance',
     title: 'Single Instance',
     description:
@@ -67,6 +100,39 @@ export const projects: ProjectMeta[] = [
     featured: false,
     created: '2026-07-20',
     updated: '2026-07-30',
+  },
+  {
+    id: 'safari-f12',
+    title: 'SafariF12',
+    description:
+      'Press F12 in Safari to toggle the Web Inspector, the same muscle memory as Chrome and Firefox. A tiny background app that only listens while Safari is frontmost.',
+    previewImage: '/images/projects/safari-f12.jpg',
+    type: 'App',
+    tags: ['macOS', 'Safari', 'Swift', 'Web Inspector'],
+    links: [
+      {
+        type: 'store',
+        name: 'Homebrew',
+        url: 'https://github.com/rxliuli/homebrew-tap/blob/main/Casks/safari-f12.rb',
+        icon: 'macos',
+      },
+      {
+        type: 'store',
+        name: 'macOS',
+        url: 'https://github.com/rxliuli/safari-f12/releases/latest',
+        icon: 'macos',
+      },
+      {
+        type: 'social',
+        name: 'GitHub',
+        url: 'https://github.com/rxliuli/safari-f12',
+        icon: 'github',
+      },
+    ],
+    slug: 'safari-f12',
+    featured: false,
+    created: '2026-07-19',
+    updated: '2026-10-05',
   },
   {
     id: 'httap',
@@ -1259,26 +1325,6 @@ export const projects: ProjectMeta[] = [
         name: 'Safari',
         url: 'https://apps.apple.com/app/id6759207345',
         icon: 'safari',
-      },
-    ],
-  },
-  {
-    id: 'ping',
-    title: 'Ping',
-    description: 'Quick and simple ping tool for testing network connectivity on Android devices.',
-    previewImage: '/images/projects/ping.jpg',
-    type: 'App',
-    tags: ['Android', 'Kotlin', 'Jetpack Compose'],
-    slug: 'ping',
-    featured: false,
-    created: '2025-05-01',
-    updated: '2025-05-01',
-    links: [
-      {
-        type: 'social',
-        name: 'GitHub',
-        url: 'https://github.com/rxliuli/ping',
-        icon: 'github',
       },
     ],
   },
