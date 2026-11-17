@@ -19,6 +19,9 @@ tagline: Copy a link, get a clean one.
 intro: >-
   Links you copy are full of `utm_` tags, `fbclid`, affiliate IDs, redirect wrappers and short links. LinkPure strips
   them out, so what you paste is just the link. Native on each platform, with the same rules everywhere.
+screenshot:
+  src: /images/projects/linkpure.jpg
+  alt: The LinkPure rules window on macOS, listing custom regex rules next to the built-in rules
 install:
   command: brew install --cask rxliuli/tap/linkpure
   note: macOS 15 or later · iOS 17 or later · Android · Free and open source
