@@ -51,4 +51,4 @@ privacy:
     Your Apple ID is used only to sign in to Apple and download apps from the App Store. The credentials are kept in
     your Mac's Keychain.
   - AppDowngrader talks only to Apple's servers and your connected iPhone. There is no analytics.
-license: MIT
+license: GPL-3.0
