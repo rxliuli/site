@@ -96,4 +96,4 @@ blocks:
 privacy:
   - SimDrop makes no network requests. There is no account, no analytics and no crash reporting.
   - Files you drop go from your Mac to simulators on the same Mac, through Apple's own `simctl`, and nowhere else.
-license: MIT
+license: GPL-3.0
