@@ -494,7 +494,7 @@ export const projects: ProjectMeta[] = [
       {
         type: 'store',
         name: 'Safari',
-        url: 'https://apps.apple.com/us/app/bilingualtube/6758573459',
+        url: 'https://apps.apple.com/app/id6758573459',
         icon: 'safari',
       },
       {
