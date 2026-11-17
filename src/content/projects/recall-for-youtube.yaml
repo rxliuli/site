@@ -1,0 +1,51 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Recall for YouTube"
+description: "A browser extension that enables full-text search across your YouTube watch history."
+type: Browser Extension
+tags: ["YouTube", "Search", "Watch History"]
+previewImage: /images/projects/recall-for-youtube.jpg
+created: "2026-02-05"
+updated: "2026-02-12"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/recall-for-youtube/mbmackjdncccmoapkafiolhckhefihed" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/recall-for-youtube/" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/us/app/recall-for-youtube/id6758705467" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/recall-for-youtube" }
+
+# 详情页内容
+icon: /images/projects/icons/recall-for-youtube.png
+tagline: Search everything you've watched on YouTube.
+intro: >-
+  YouTube's watch history only searches titles, and only loosely. Recall for YouTube keeps your history in your
+  browser and searches it in full, by title, channel or description.
+screenshot:
+  src: /images/projects/recall-for-youtube.jpg
+  alt: The Recall for YouTube search dialog open over YouTube, listing previously watched videos
+install:
+  note: Chrome, Firefox and Safari · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Install the extension and open YouTube. Your watch history is imported on first use.
+      - Watch as usual. New videos are recorded as you watch them.
+      - Press `Ctrl+K` (`⌘K` on macOS) and start typing.
+      - Click a result to go back to the video.
+
+  - type: list
+    title: The details
+    items:
+      - title: Full-text search.
+        body: Matches video titles, channel names and descriptions.
+      - title: Starts with your past.
+        body: The first run imports the watch history YouTube already keeps for you.
+      - title: Stays on your device.
+        body: Everything is stored in your browser's IndexedDB. There is no account and no cloud sync.
+
+privacy:
+  - >-
+    Recall for YouTube talks only to YouTube, to import your existing watch history. Your history is stored in your
+    browser and never leaves your device. There is no analytics.
+license: GPL-3.0

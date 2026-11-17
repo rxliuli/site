@@ -1,0 +1,53 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "SelectText"
+description: "Effortlessly extract text from any webpage using OCR technology."
+type: Browser Extension
+tags: ["OCR", "Text Recognition", "Productivity"]
+previewImage: /images/projects/selecttext.jpg
+created: "2025-11-08"
+updated: "2025-11-08"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/selecttext/mlipaajjeaknlghlninkbgjilmdcknni" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/liciopmmjhgcnblbmokkahmnciahoefp" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6755066218" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/en-US/firefox/addon/selecttext/" }
+
+# 详情页内容
+icon: /images/projects/icons/selecttext.png
+tagline: Copy text you can't select.
+intro: >-
+  Text inside images, videos, canvas apps and pages that block selection can't be copied. SelectText lets you drag a
+  box around it instead, recognizes the text, and copies the part you click.
+screenshot:
+  src: /images/projects/selecttext.jpg
+  alt: SelectText recognizing a headline on GitHub's home page, with a menu to copy or translate it
+install:
+  note: Chrome, Edge, Firefox and Safari on macOS and iOS · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Click the SelectText icon in the toolbar.
+      - Drag to select the area with the text.
+      - Wait a moment while the text is recognized.
+      - Click a text block to copy it. Press `Esc` to exit.
+
+  - type: list
+    title: Good for
+    items:
+      - title: Images and screenshots.
+        body: Text baked into a picture.
+      - title: Paused videos.
+        body: Slides, code or captions on screen.
+      - title: Locked-down pages.
+        body: Sites that disable selection, or text drawn on a canvas.
+
+privacy:
+  - >-
+    To recognize text, the image of the area you select is sent to Google Lens. Nothing else on the page is captured.
+  - >-
+    The only other request is an anonymous usage ping, at most once a day: a random install ID, the extension version
+    and your browser language.
+license: GPL-3.0

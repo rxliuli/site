@@ -1,0 +1,99 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "SimDrop"
+description: "Booted iOS simulators show up in the Finder sidebar, so you can drag files into their Photos library or Downloads folder and drag them back out without leaving Finder."
+type: App
+tags: ["macOS", "iOS Simulator", "Swift", "Finder"]
+previewImage: /images/projects/sim-drop.jpg
+created: "2026-11-16"
+updated: "2026-11-17"
+links:
+  - { type: store, icon: macos, name: "Homebrew", url: "https://github.com/rxliuli/homebrew-tap/blob/main/Casks/sim-drop.rb" }
+  - { type: store, icon: macos, name: "macOS", url: "https://github.com/rxliuli/sim-drop/releases/latest" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/sim-drop" }
+
+# 详情页内容
+icon: /images/projects/icons/sim-drop.png
+tagline: Your running iOS simulators, right in the Finder sidebar.
+intro: >-
+  Moving a file between your Mac and an iOS simulator usually means `xcrun simctl` or digging through
+  `~/Library/Developer/CoreSimulator`. SimDrop puts every booted simulator under Locations in Finder, so you
+  drag files in and out like any other folder.
+screenshot:
+  src: /images/projects/sim-drop/photos.png
+  alt: Finder showing an iPhone Duo simulator's Photos and Videos folder under SimDrop in the sidebar
+install:
+  command: brew install --cask rxliuli/tap/sim-drop
+  note: macOS 15 or later · Developer ID signed and notarized · Free and open source
+
+blocks:
+  - type: code
+    title: What shows up in Finder
+    image:
+      src: /images/projects/sim-drop/simulators.png
+      alt: The SimDrop location in Finder listing two booted simulators, iPhone 18 Pro and iPhone Duo
+    intro: One folder per booted simulator. It appears when the simulator boots and disappears when it shuts down.
+    code: |
+      SimDrop                      ← Finder sidebar › Locations
+      └── iPhone Duo/              ← one folder per booted simulator
+          ├── Photos and Videos/   ← the simulator's Photos library
+          └── Downloads/           ← Files › On My iPhone › Downloads
+    note: >-
+      Every folder is also a real path, so scripts work too:
+      `cp config.json ~/Library/CloudStorage/SimDrop-SimDrop/iPhone\ Duo/Downloads/`
+
+  - type: features
+    title: Drag in, drag out
+    items:
+      - title: Photos and videos
+        body: >-
+          Dropped images and videos are imported with `simctl addmedia` and show up in the Photos app. Icon view
+          shows real previews without downloading anything first.
+      - title: Downloads
+        body: >-
+          Add, open, replace and delete files and folders. Changes made inside the simulator show up in Finder
+          within a few seconds.
+      - title: Dropped in the wrong place
+        body: >-
+          Finder can't reject a drop by file type, so anything that isn't a photo or video dropped on Photos goes
+          to Downloads instead, and SimDrop sends a notification saying where it went.
+      - title: Deletes you can undo
+        body: >-
+          Deleting a photo moves it to the simulator's Recently Deleted. Deleting from Downloads sends the file to
+          your Mac's Trash, and **Put Back** restores it into the simulator.
+
+  - type: steps
+    title: Set up once
+    intro: The SimDrop window is only a settings page. It shows the state of each one-time approval and which simulators are running.
+    image:
+      src: /images/projects/sim-drop/settings.png
+      alt: The SimDrop settings window with Background Service running, Finder Extension enabled and Notifications allowed
+    items:
+      - Open SimDrop.
+      - Allow the **Background Service** in System Settings › General › Login Items.
+      - Turn on the **Finder Extension** by clicking **Enable** in the Finder banner.
+      - Allow **Notifications**, so SimDrop can tell you where a file went when it lands somewhere other than where you dropped it.
+    note: >-
+      After that it runs in the background, including after a restart, and the window can be closed. After
+      installing or upgrading, open SimDrop once so macOS registers the new Finder extension.
+
+  - type: list
+    title: Good to know
+    items:
+      - title: Dragging moves by default.
+        body: >-
+          SimDrop lives on your startup disk like iCloud Drive, so Finder moves files instead of copying them.
+          Hold **⌥ Option** while dragging to copy.
+      - title: Photos are read-only.
+        body: Dragging a photo out of a simulator always copies it.
+      - title: No renaming inside Downloads yet.
+        body: Renaming and moving items within Downloads isn't supported, because item identifiers are path-based.
+      - title: Simulators only.
+        body: Real devices don't expose Files app storage over USB, so they aren't supported.
+    note: >-
+      SimDrop isn't on the Mac App Store and can't be: the app and its helper must run unsandboxed to drive
+      `simctl` and the simulators' folders.
+
+privacy:
+  - SimDrop makes no network requests. There is no account, no analytics and no crash reporting.
+  - Files you drop go from your Mac to simulators on the same Mac, through Apple's own `simctl`, and nowhere else.
+license: MIT

@@ -1,0 +1,57 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Art to GIF"
+description: "Protect your artwork on Twitter/X by automatically converting images to GIF or Video format."
+type: Browser Extension
+tags: ["Twitter", "Image Protection", "AI Protection"]
+previewImage: /images/projects/art-to-gif.jpg
+created: "2025-12-27"
+updated: "2025-12-27"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/art-to-gif/ieaaafobhbfkdamlidcookclikabngok" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/art-to-gif/mhkdchgbgfefbcgajfihdonajafhckan" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/art-to-gif/" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6756991514" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/art-to-gif" }
+
+# 详情页内容
+icon: /images/projects/icons/art-to-gif.png
+tagline: Post your art on X as a GIF or video, so AI tools can't edit it in one click.
+intro: >-
+  X lets anyone run its AI image editing on the pictures you post. It can't edit GIFs or videos. Art to GIF adds a
+  button to the post composer that turns your artwork into one before it's posted.
+screenshot:
+  src: /images/projects/art-to-gif.jpg
+  alt: The X post composer with an artwork converted to a GIF by Art to GIF
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: features
+    title: Three modes
+    intro: Pick one in the extension's settings. The button's icon in the composer shows which one is active.
+    items:
+      - title: GIF
+        body: The default. Up to 15 MB and 2048×2048, with 256 colors. Works everywhere.
+      - title: Video
+        body: >-
+          A short looping MP4, up to 512 MB with millions of colors. Higher quality and smaller files, and AI tools
+          can't edit it either.
+      - title: Strips
+        body: >-
+          Splits one picture into up to 20 images that X shows side by side as vertical bars. It's a style, not a
+          protection. Tall pictures work best.
+
+  - type: steps
+    title: How it works
+    items:
+      - Open the post composer on x.com.
+      - Click the extra button next to the image upload button and pick your artwork.
+      - The converted file is added to your post. Post as usual.
+
+privacy:
+  - Conversion happens in your browser. Your artwork is only uploaded to X, when you post it.
+  - >-
+    The only other request is an anonymous usage ping, at most once a day: a random install ID, the extension version
+    and your browser language.
+license: GPL-3.0

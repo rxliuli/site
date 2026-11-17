@@ -91,6 +91,10 @@ const pageUrl = canonical || `${siteUrl}${Astro.url.pathname}`
         const codeBlocks = document.querySelectorAll('pre')
 
         codeBlocks.forEach((pre) => {
+          // 目录树等展示用的代码块不需要复制按钮
+          if (pre.hasAttribute('data-no-copy')) {
+            return
+          }
           // Skip if button already exists
           if (pre.querySelector('.copy-button')) {
             return

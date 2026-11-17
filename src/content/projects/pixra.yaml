@@ -1,0 +1,59 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Pixra"
+description: "An open-source, extensible web-based image editor with plugin system support."
+type: Website
+tags: ["Image Editor", "React", "Plugin System"]
+previewImage: /images/projects/pixra.jpg
+created: "2026-01-17"
+updated: "2026-02-13"
+links:
+  - { type: other, icon: website, name: "Website", url: "https://pixra.rxliuli.com/" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/pixra" }
+
+# 详情页内容
+icon: /images/projects/icons/pixra.png
+tagline: An image editor in the browser that you can extend with plugins.
+intro: >-
+  For quick edits, a full desktop image editor is overkill and most web editors are closed. Pixra is an open-source
+  image editor that runs in the browser, with a plugin system for anything the built-in tools don't cover.
+screenshot:
+  src: /images/projects/pixra.jpg
+  alt: Pixra running the Remove Background plugin on an app icon
+install:
+  note: Runs in any modern browser · Free and open source
+
+blocks:
+  - type: features
+    title: The basics
+    items:
+      - title: Edit
+        body: Crop, resize, brush and marquee selection.
+      - title: Tabs and history
+        body: Work on several images in tabs, with undo and redo.
+      - title: Export
+        body: Save as PNG, JPEG or WebP.
+      - title: Plugins
+        body: Anything else is a plugin, built with an MIT-licensed SDK and CLI.
+
+  - type: list
+    title: Plugins available today
+    items:
+      - title: Remove Background.
+        body: AI background removal that runs on your device through WebGPU or WASM.
+      - title: Remove Object.
+        body: AI inpainting with the LaMa model to erase things from a photo.
+      - title: Icon tools.
+        body: Crop transparent edges, export Chrome extension icon sets, or export a multi-size Windows `.ico`.
+      - title: macOS Screenshot Crop.
+        body: Detects the rounded corners of macOS window screenshots and makes them transparent.
+      - title: Gemini Watermark Remover.
+        body: Removes the visible watermark from Gemini-generated images by reversing the alpha blend.
+      - title: Grok Image Edit.
+        body: Edit images with the Grok AI API.
+
+privacy:
+  - >-
+    Images are edited in your browser and aren't uploaded. AI plugins download their models once and run them
+    locally, except Grok Image Edit, which sends the image to the Grok API you configure.
+license: AGPL-3.0 (plugin SDK and CLI are MIT)

@@ -3,7 +3,7 @@ import Layout from '../../layouts/Layout.astro'
 import { getAllProjects } from '../../data/projects'
 import { countByKind, getPlatforms, getProjectKind } from '../../data/project-kinds'
 
-const projects = getAllProjects()
+const projects = await getAllProjects()
 const kinds = countByKind(projects)
 const description = 'A collection of my work and side projects, including browser extensions, apps, and websites.'
 

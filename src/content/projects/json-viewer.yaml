@@ -1,0 +1,59 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "JSON Viewer"
+description: "A browser extension that highlights and formats JSON/JSONP content. Fork of tulios/json-viewer, modernized with Manifest V3 and multi-browser support."
+type: Browser Extension
+tags: ["Chrome", "Edge", "Firefox", "Safari", "JSON"]
+previewImage: /images/projects/json-viewer.jpg
+created: "2026-04-03"
+updated: "2026-04-03"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/json-viewer/haeoijepjlgjkoefofnebcniaioihdae" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/dalblpaenmgchebkelccjajndnbanaop" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/json-viewer-plus/" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6761603853" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/json-viewer" }
+
+# 详情页内容
+icon: /images/projects/icons/json-viewer.png
+tagline: The classic JSON Viewer, working again in today's browsers.
+intro: >-
+  tulios/json-viewer was one of the most loved JSON highlighters, until it went unmaintained and stopped working in
+  current Chrome. This fork moves it to Manifest V3 and brings it to Chrome, Firefox and Safari, with the same
+  features and a few more themes.
+screenshot:
+  src: /images/projects/json-viewer.jpg
+  alt: A package.json file highlighted by JSON Viewer with line numbers and a dark theme
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: features
+    title: Read JSON comfortably
+    items:
+      - title: Highlighting and folding
+        body: Syntax highlighting with 27 built-in themes, collapsible nodes and optional line numbers.
+      - title: Detects JSON anywhere
+        body: The URL doesn't matter. The content decides, so JSON and JSONP are highlighted wherever they are.
+      - title: Clickable URLs
+        body: Links inside values can be opened directly.
+      - title: Big numbers stay exact
+        body: Numbers larger than `Number.MAX_VALUE` are shown as they are.
+
+  - type: list
+    title: The details
+    items:
+      - title: Raw or highlighted.
+        body: Toggle between the two with one button.
+      - title: Tweak everything.
+        body: Theme, tab size, max size to highlight, sorted keys, C-style braces, a header with timestamp and URL, and custom CSS.
+      - title: Scratch pad.
+        body: Type `json-viewer` in the address bar, press Tab, then `scratch pad` to paste and format any JSON.
+      - title: In the console.
+        body: Type `json` in the DevTools console to inspect the loaded document.
+    note: >-
+      Other JSON formatters can conflict with it, so disable them. To use it on local files or in incognito, allow
+      that on the extensions page.
+
+privacy:
+  - JSON Viewer processes everything locally. It doesn't collect or transmit any data, and has no analytics.
+license: MIT (originally by Tulio Ornelas)

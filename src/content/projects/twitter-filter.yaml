@@ -1,0 +1,79 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Twitter Filter"
+description: "Filter your Twitter/X timeline with customizable rules. Mark, hide, or auto-block tweets based on account properties and tweet content."
+type: Browser Extension
+tags: ["Twitter", "Filter", "Chrome", "Firefox", "Edge", "Safari"]
+previewImage: /images/projects/twitter-filter.jpg
+featured: true
+created: "2026-02-24"
+updated: "2026-05-29"
+links:
+  - { type: other, icon: website, name: "Website", url: "https://store.rxliuli.com/extensions/twitter-filter/" }
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/feed-filter-for-twitter/ejhilomfbamkbfehkjbhemkpaghpcglj" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/twitter-filter/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/bidmffpjhlmfnfmnbfhhakpnbikcbehj" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6759207345" }
+
+# 详情页内容
+icon: /images/projects/icons/twitter-filter.png
+tagline: Write the rules for your X timeline.
+intro: >-
+  Muting keywords doesn't stop spam bots, crypto promotion and engagement farming. Twitter Filter lets you describe
+  what you don't want to see with expressions over the account and the tweet, then mark, hide or block what matches.
+screenshot:
+  src: /images/projects/twitter-filter.jpg
+  alt: The Twitter Filter rules panel over the X timeline, with crypto and spam rules enabled
+install:
+  note: Chrome, Edge, Firefox and Safari, including mobile
+
+blocks:
+  - type: code
+    title: Rules are expressions
+    intro: >-
+      Combine account stats, bio and tweet text with `&&`, `||`, comparisons, `contains`, regex `matches` and helpers
+      like `days_since`. This one hides replies from brand-new accounts with no followers and no bio.
+    code: |
+      tweet.is_reply
+        && user.followers < 2
+        && len(user.description) == 0
+        && days_since(user.created_at) < 90
+
+  - type: features
+    title: Three actions
+    items:
+      - title: Mark
+        body: A yellow border, lower opacity and a label naming the rule that matched. Good for trying a rule out.
+      - title: Hide
+        body: The tweet disappears from your timeline.
+      - title: Block
+        body: >-
+          The tweet is hidden at once and the account is blocked after a short delay, with an **Undo** button in
+          case the rule was wrong.
+
+  - type: list
+    title: The details
+    items:
+      - title: Community rules.
+        body: Subscribe to rules others publish, and they stay up to date on their own. Publishing your own needs an email sign-in.
+      - title: Huge lists.
+        body: Screen name lists of up to 100,000 accounts per rule, importable from CSV.
+      - title: Safe by default.
+        body: Your own tweets and the accounts you follow are never filtered.
+      - title: Location signals.
+        body: >-
+          Rules can use X's own "About this account" data, such as the country an account is based in. It can be
+          wrong or spoofed, so these fields work with mark and hide but never with block.
+      - title: Let Claude write rules.
+        body: >-
+          The [Twitter Filter Skills](https://github.com/rxliuli/twitter-filter-skills) for Claude Code turn a few
+          example spam tweets into import-ready rules.
+
+privacy:
+  - Rules are evaluated in your browser. The tweets and accounts you see are never uploaded.
+  - >-
+    Subscribed rules are downloaded from twitter-filter.rxliuli.com. If a rule uses location signals, accounts already
+    resolved by other users are looked up there, and new results are shared back as the account ID and its location
+    fields only, never who was looking. A dialog explains this the first time.
+  - >-
+    The extension also sends an anonymous usage ping, at most once a day: a random install ID, the extension version
+    and your browser language.

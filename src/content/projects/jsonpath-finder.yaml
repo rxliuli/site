@@ -1,0 +1,43 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "JSONPath Finder"
+description: "A VSCode extension for navigating complex JSON files with search and JSONPath expressions."
+type: VSCode Extension
+tags: ["VSCode", "JSON", "JSONPath"]
+previewImage: /images/projects/jsonpath-finder.jpg
+created: "2026-01-10"
+updated: "2026-01-10"
+links:
+  - { type: store, icon: vscode, name: "VSCode", url: "https://marketplace.visualstudio.com/items?itemName=rxliuli.jsonpath-finder" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/jsonpath-finder" }
+
+# 详情页内容
+icon: /images/projects/icons/jsonpath-finder.png
+tagline: Jump to any key or value in a big JSON file.
+intro: >-
+  Scrolling through a large JSON file looking for one field is slow, and VS Code's search doesn't understand the
+  structure. JSONPath Finder searches keys and values, or takes a JSONPath expression, and jumps to the node.
+screenshot:
+  src: /images/projects/jsonpath-finder.jpg
+  alt: JSONPath Finder searching package.json in VS Code and highlighting the matching node
+install:
+  note: VS Code 1.105 or later · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Open a JSON or JSONC file.
+      - 'Run **JSONPath Finder: Quick Navigate** from the Command Palette.'
+      - Type to search, use the arrow keys to move through results, and press Enter to jump.
+
+  - type: features
+    title: Two ways to search
+    items:
+      - title: Fuzzy search
+        body: Type any part of a key or value and matches show up as you type.
+      - title: JSONPath
+        body: Precise queries like `$.store.book[*].author` or `users[0].name`.
+
+privacy:
+  - JSONPath Finder works entirely inside VS Code. Nothing is sent anywhere.
+license: MIT

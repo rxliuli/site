@@ -1,0 +1,29 @@
+---
+import { getMonogram, getPlatforms, getProjectKind } from '../data/project-kinds'
+import type { ProjectMeta } from '../types/project'
+
+interface Props {
+  project: ProjectMeta
+}
+
+const { project } = Astro.props
+---
+
+<a
+  href={`/project/${project.slug}`}
+  class="group flex flex-[1_1_240px] flex-col gap-3.5 rounded-[20px] border border-border bg-card p-6 transition-colors hover:border-border-strong"
+>
+  <div class="flex items-center justify-between gap-2">
+    <span
+      class="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary font-mono text-sm font-medium text-primary"
+    >
+      {getMonogram(project.title)}
+    </span>
+    <span class="rounded-md bg-secondary px-2 py-1 font-mono text-[11px] text-subtle-foreground">
+      {getProjectKind(project.type).short}
+    </span>
+  </div>
+  <span class="font-display text-xl font-semibold transition-colors group-hover:text-primary">{project.title}</span>
+  <span class="line-clamp-3 text-sm leading-relaxed text-subtle-foreground">{project.description}</span>
+  <span class="mt-auto font-mono text-xs text-muted-foreground">{getPlatforms(project).join(' · ')}</span>
+</a>

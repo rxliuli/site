@@ -1,0 +1,59 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Input Translator"
+description: "Translate your input text with AI."
+type: Browser Extension
+tags: ["Chrome", "Firefox", "AI"]
+previewImage: /images/projects/input-translator.jpg
+created: "2025-08-11"
+updated: "2025-08-22"
+links:
+  - { type: other, icon: website, name: "Website", url: "https://store.rxliuli.com/extensions/input-translator/" }
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/namibphobdcighbjjojlhcflpnhobjeo" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/input-translator" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/input-translator/id6749811908" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/input-translator/" }
+
+# 详情页内容
+icon: /images/projects/icons/input-translator.png
+tagline: Type in your language, send in theirs.
+intro: >-
+  Writing in a foreign language usually means a round trip to a translation tab. Input Translator translates the text
+  in whatever box you're typing in, in place: press space three times and it's done.
+screenshot:
+  src: /images/projects/input-translator.jpg
+  alt: A Reddit post editor with Japanese text produced by Input Translator
+install:
+  note: Chrome, Firefox and Safari · Free and open source
+
+blocks:
+  - type: features
+    title: Three ways to trigger it
+    items:
+      - title: Triple space
+        body: Press space three times at the end of your text and it's replaced with the translation.
+      - title: Hotkey
+        body: '`Alt+T` by default, and you can change it.'
+      - title: Context menu
+        body: Right-click and choose **Translate Text**.
+      - title: Any input
+        body: Plain text fields and rich text editors on any site, from Discord to Reddit.
+
+  - type: list
+    title: The details
+    items:
+      - title: Free by default.
+        body: Google Translate needs no setup, and Microsoft Translator is a free alternative.
+      - title: Bring your own model.
+        body: Point it at OpenAI, or any OpenAI-compatible service such as OpenRouter, with your own key and model.
+      - title: Any language pair.
+        body: Auto-detect the source language or set it yourself, and pick your target language.
+
+privacy:
+  - >-
+    Only the text you translate is sent, and only to the provider you choose: Google, Microsoft or your
+    OpenAI-compatible endpoint.
+  - >-
+    The only other request is an anonymous usage ping, at most once a day: a random install ID, the extension version
+    and your browser language.
+license: GPL-3.0

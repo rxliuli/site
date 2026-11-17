@@ -1,0 +1,52 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Joplin VSCode Plugin"
+description: "Provides the functionality to manage Joplin notes within VSCode"
+type: VSCode Extension
+tags: ["VSCode", "Joplin API"]
+previewImage: /images/projects/joplin-vscode-plugin.jpg
+created: "2020-06-01"
+updated: "2020-04-16"
+links:
+  - { type: store, icon: vscode, name: "Documentation", url: "https://joplin-utils.rxliuli.com/en-US/joplin-vscode-plugin/" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/joplin-utils" }
+
+# 详情页内容
+icon: /images/projects/icons/joplin-vscode-plugin.png
+tagline: Edit and organize your Joplin notes from VS Code.
+intro: >-
+  Joplin is a great place to keep notes, but not always a great place to write them. The Joplin VS Code plugin
+  connects to your running Joplin and puts every notebook in the sidebar, so you write in VS Code and save straight
+  back to Joplin.
+screenshot:
+  src: /images/projects/joplin-vscode-plugin.jpg
+  alt: VS Code with the Joplin notebook tree in the sidebar and a note open in the editor
+install:
+  note: VS Code · Free and open source
+
+blocks:
+  - type: steps
+    title: Set up once
+    items:
+      - In Joplin, enable the **Web Clipper** service.
+      - Copy the **Authorization token** from Web Clipper › Advanced options into the plugin's settings.
+      - Restart VS Code, then press `Ctrl+J Ctrl+J` to open the Joplin sidebar.
+    note: >-
+      Using a remote Joplin instead of the desktop app? Set its address as the `baseUrl`. Requires Joplin 2.8 or later.
+
+  - type: features
+    title: Everything in the sidebar
+    items:
+      - title: Notes and notebooks
+        body: Create, rename, cut, paste and delete notes, to-dos and notebooks. Save a note to push it back to Joplin.
+      - title: Tags and search
+        body: Manage tags and search all your notes from the Command Palette.
+      - title: Attachments
+        body: Upload images from the clipboard or files from disk, and see a note's attached resources.
+      - title: Links between notes
+        body: Insert note links, and see which notes link to the current one and which it references.
+
+privacy:
+  - >-
+    The plugin talks only to the Joplin Web Clipper service you point it at, usually the Joplin app on your own
+    computer.
+license: MIT

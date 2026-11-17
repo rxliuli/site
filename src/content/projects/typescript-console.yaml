@@ -1,0 +1,51 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "TypeScript Console"
+description: "A TypeScript REPL for the browser console."
+type: Browser Extension
+tags: ["TypeScript", "REPL", "DevTools"]
+previewImage: /images/projects/typescript-console.jpg
+created: "2025-10-02"
+updated: "2025-11-16"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/typescript-console/jkanoakidjoklcefakbdnnhgdenddppg" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/typescript-console" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/typescript-console/ecadiffnmjlefcbkgkdllneldockkehe" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6754164761" }
+
+# 详情页内容
+icon: /images/projects/icons/typescript-console.png
+tagline: Run TypeScript right inside Chrome DevTools.
+intro: >-
+  The DevTools console only speaks JavaScript. TypeScript Console adds a panel where you write TypeScript, press
+  `Cmd/Ctrl+S`, and it runs against the page you're on, with output in the regular console.
+screenshot:
+  src: /images/projects/typescript-console.jpg
+  alt: The TypeScript Console panel in Chrome DevTools running a snippet, with the console drawer below
+install:
+  note: Chrome, Edge and Safari · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Open DevTools and switch to the **TypeScript Console** panel.
+      - Show the console drawer so you can see the output.
+      - Write TypeScript and press `Cmd/Ctrl+S`, or click **Run**.
+
+  - type: features
+    title: More than a REPL
+    items:
+      - title: Modern TypeScript
+        body: The latest TypeScript syntax, plus TSX.
+      - title: npm packages
+        body: Import packages directly. They're loaded from esm.sh.
+      - title: Works on the page
+        body: Code runs in the inspected page, so you can query and change the DOM like in the console.
+      - title: Real errors and breakpoints
+        body: Syntax and runtime errors are reported clearly, and `debugger` stops in DevTools as usual.
+
+privacy:
+  - >-
+    Your code runs in the page you're inspecting and isn't sent anywhere. The only requests TypeScript Console makes
+    are to esm.sh, when you import an npm package. There is no analytics.
+license: GPL-3.0

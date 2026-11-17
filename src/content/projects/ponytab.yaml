@@ -1,0 +1,44 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "PonyTab"
+description: "A beautiful Browser extension that replaces your new tab page with stunning My Little Pony artwork by Sam Baneko."
+type: Browser Extension
+tags: ["My Little Pony", "Artwork", "Chrome"]
+previewImage: /images/projects/ponytab.jpg
+created: "2025-05-06"
+updated: "2025-10-14"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/gcahckghmpoodflilkignobggjmlcaih" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/ponytab" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/ponytab/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/jilgmjcmkianchonfkadmomoieiglogo" }
+  - { type: social, icon: producthunt, name: "ProductHunt", url: "https://www.producthunt.com/posts/ponytab" }
+  - { type: other, icon: website, name: "Website", url: "https://ponytab.rxliuli.com" }
+
+# 详情页内容
+icon: /images/projects/icons/ponytab.png
+tagline: A new piece of pony art on every new tab, every day.
+intro: >-
+  PonyTab replaces the new tab page with My Little Pony artwork by Sam Baneko, a new piece each day, and nothing
+  else: no widgets, no feed, no ads.
+screenshot:
+  src: /images/projects/ponytab.jpg
+  alt: A PonyTab new tab page showing a full-screen pony illustration
+install:
+  note: Chrome, Edge and Firefox · Free and open source
+
+blocks:
+  - type: list
+    title: The details
+    items:
+      - title: A new artwork each day.
+        body: The picture changes daily, so every morning's first tab is a small surprise.
+      - title: Just the art.
+        body: A clean, minimal page with no ads and no tracking.
+      - title: Used with permission.
+        body: All artwork is by [Sam Baneko](https://spacecatsamba.com/) and is used with the artist's permission.
+
+privacy:
+  - >-
+    PonyTab only connects to ponytab.rxliuli.com to fetch the day's artwork. There is no analytics and no tracking.
+license: GPL-3.0

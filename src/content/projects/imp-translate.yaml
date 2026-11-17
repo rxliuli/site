@@ -1,0 +1,70 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Imp Translate"
+description: "A cross-platform browser extension that translates whole web pages, shown bilingually or replaced in place."
+type: Browser Extension
+tags: ["Translation", "Chrome", "Firefox", "Edge", "Safari"]
+previewImage: /images/projects/imp-translate.jpg
+created: "2026-04-30"
+updated: "2026-05-01"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/imp-translate/nmbcckfgobecechfdamananmfnnjbbbd" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/imp-translate/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/imp-translate/fdmigggpfhlaimjhbjfdohbbbcdnepbo" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/imp-translate/id6764317525" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/imp-translate" }
+
+# 详情页内容
+icon: /images/projects/icons/imp-translate.png
+tagline: Translate the whole page when you ask, and only then.
+intro: >-
+  Most translation extensions inject heavy UI on every page: floating buttons, hover popups, toolbars. Imp Translate
+  does one thing. Click the toolbar icon and the page is translated, either shown below the original or replaced in
+  place. Click again and it's back to the original.
+screenshot:
+  src: /images/projects/imp-translate.jpg
+  alt: Wikipedia's Japanese main page translated with Imp Translate, showing the translation below each paragraph
+install:
+  note: Chrome, Edge, Firefox and Safari, including mobile · Free and open source
+
+blocks:
+  - type: features
+    title: Two ways to read a page
+    items:
+      - title: Bilingual
+        body: The translation appears below each paragraph, so the original text is always there for context.
+      - title: Replace
+        body: >-
+          The original text is swapped in place, like Google Translate. Inline links, emphasis and citations keep
+          their original elements.
+      - title: Framework-safe
+        body: >-
+          Replace mode rewrites text nodes only, so React, Vue, Svelte and other framework-driven pages keep working
+          and keep updating after translation.
+      - title: Your choice of engine
+        body: Google and Microsoft work without an API key. Any OpenAI-compatible API works with yours.
+
+  - type: list
+    title: The details
+    items:
+      - title: Zero overhead by default.
+        body: No code is injected into any page until you ask for a translation.
+      - title: Follows the page.
+        body: Only visible content is translated, and it keeps up with SPAs, lazy-loaded content and text that changes.
+      - title: Site rules.
+        body: >-
+          Built-in rules in a uBlock Origin-inspired syntax skip or target parts of popular sites. Add your own in
+          Developer Mode, which also outlines blocks that didn't translate cleanly.
+      - title: Deliberately small.
+        body: >-
+          No selection lookup, no input box translation, no subtitles, no custom styling. For those, see
+          [Input Translator](/project/input-translator) and [BilingualTube](/project/bilingualtube).
+
+privacy:
+  - >-
+    Page text is sent only to the translation provider you choose: Google, Microsoft, or your own OpenAI-compatible
+    endpoint.
+  - >-
+    The only other request is an anonymous usage ping, at most once a day: a random install ID, the extension version
+    and your browser language.
+license: GPL-3.0

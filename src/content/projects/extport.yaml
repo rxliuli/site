@@ -1,0 +1,66 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "extport"
+description: "Publish a browser extension to Chrome, Firefox, Edge, and Safari from one push, plus Stripe-powered licensing. Open source, self-hostable, currently in closed beta."
+type: Website
+tags: ["Browser Extension Publishing", "Licensing", "Cloudflare Workers", "Open Source"]
+previewImage: /images/projects/extport.jpg
+created: "2026-07-20"
+updated: "2026-07-30"
+links:
+  - { type: other, icon: website, name: "Website", url: "https://extport.dev" }
+  - { type: other, icon: website, name: "Docs", url: "https://docs.extport.dev" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/extport" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/Va9kcSqu3f" }
+
+# 详情页内容
+icon: /images/projects/icons/extport.png
+tagline: Write one extension, ship it to every store.
+intro: >-
+  A browser extension is one of the few formats that reaches every desktop browser from a single codebase, but each
+  store has its own console, API, credentials and review queue. extport publishes to Chrome, Firefox, Edge and Safari
+  from one push, and adds licensing and install analytics on top. It runs every extension on this site.
+screenshot:
+  src: /images/projects/extport.jpg
+  alt: The extport home page showing one upload fanning out to Chrome, Firefox, Edge and Safari reviews
+install:
+  command: npx extport push dist.zip --extension ext_yourExtensionId --version 1.2.3
+  note: Closed beta · Open source and self-hostable
+
+blocks:
+  - type: features
+    title: Four modules, one dashboard
+    items:
+      - title: Publishing
+        body: >-
+          Upload once from CI and extport keeps pushing each store until it matches, with a status matrix and
+          notifications. Safari's Xcode build and signing run in your own CI with your own Apple credentials.
+      - title: Licensing
+        body: >-
+          Sell activation codes through your own Stripe Payment Links. Codes are verified online with cached local
+          state, and buyers manage their seats from a magic-link portal.
+      - title: Analytics
+        body: >-
+          One anonymous ping per install per day, rolled up into daily and monthly active users, installs and version
+          adoption across all four stores.
+      - title: Scaffold
+        body: >-
+          `extport init` creates a new extension already wired to ship to Chrome, Firefox, Edge and Safari, bound to
+          a real extension record from the first commit.
+
+  - type: list
+    title: The details
+    items:
+      - title: Immutable versions.
+        body: Re-uploading identical content is a no-op, and changed content for an existing version is rejected. Bump the version instead.
+      - title: Credentials stay locked.
+        body: >-
+          Store credentials are checked against the live store API before saving, then envelope-encrypted. Only the
+          last four characters are ever shown again.
+      - title: Self-hostable.
+        body: It runs on Cloudflare Workers, D1 and R2. The author is tenant zero and uses the same code paths as everyone else.
+
+privacy:
+  - >-
+    Store credentials are encrypted per tenant, and Apple signing never leaves your own CI. Extensions that turn on
+    analytics send one anonymous ping per day: a random install ID, the extension version and the browser language.
+license: Elastic License 2.0 (SDK, CLI and WXT module are MIT)

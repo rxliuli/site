@@ -1,0 +1,63 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "ImpRec"
+description: "A lightweight, open-source screen recorder for macOS. Menu bar only, zero config, good compression."
+type: App
+tags: ["macOS", "Swift", "SwiftUI", "ScreenCaptureKit"]
+previewImage: /images/projects/imp-rec.jpg
+created: "2026-06-13"
+updated: "2026-06-14"
+links:
+  - { type: store, icon: macos, name: "Homebrew", url: "https://github.com/rxliuli/homebrew-tap/blob/main/Casks/imp-rec.rb" }
+  - { type: store, icon: macos, name: "App Store", url: "https://apps.apple.com/app/imprec/id6780140406" }
+  - { type: store, icon: github, name: "GitHub Releases", url: "https://github.com/rxliuli/imp-rec/releases" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/imp-rec" }
+
+# 详情页内容
+icon: /images/projects/icons/imp-rec.png
+tagline: A screen recorder that lives in the menu bar and stays out of the way.
+intro: >-
+  Most screen recorders want a window, a Dock icon and a settings tour. ImpRec is one click in the menu bar to start,
+  one to stop, a quick trim, and a small MP4. No configuration.
+install:
+  command: brew install --cask rxliuli/tap/imp-rec
+  note: macOS 14 or later · Also on the Mac App Store · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    intro: ImpRec has no window of its own. Everything happens from the menu bar icon.
+    items:
+      - Click the ImpRec icon in the menu bar and pick a window or display in the system picker.
+      - Click the icon again to stop.
+      - A popover opens under the icon with a preview of the recording. Trim the start and end.
+      - Click **Save**. The MP4 lands in `~/Movies/imp-rec` and is shown in Finder.
+
+  - type: features
+    title: Record, trim, save
+    items:
+      - title: One click
+        body: Left-click the menu bar icon to start or stop recording. Right-click for the menu.
+      - title: Window or display
+        body: The system picker lets you choose exactly which window or display to record.
+      - title: Frame-precise trimming
+        body: >-
+          The preview popover has trim handles. Space plays and pauses, the arrow keys and `,` / `.` step one frame
+          at a time.
+      - title: Small files
+        body: >-
+          Records with ScreenCaptureKit and exports H.264 MP4 through VideoToolbox, or through ffmpeg x264 for better
+          compression when ffmpeg is installed.
+
+  - type: list
+    title: The details
+    items:
+      - title: Menu bar only.
+        body: No Dock icon, and a negligible footprint while idle.
+      - title: ffmpeg is optional.
+        body: Without it, ImpRec uses the Mac's built-in VideoToolbox encoder. Install it with `brew install ffmpeg` for smaller files.
+      - title: One permission.
+        body: Screen Recording, which macOS asks for on first launch.
+
+privacy:
+  - ImpRec makes no network requests. Recordings are saved to your Movies folder and never leave your Mac.
+license: GPL-3.0

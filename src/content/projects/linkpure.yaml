@@ -1,0 +1,61 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "LinkPure"
+description: "Monitor clipboard URL changes and rewrite them based on user-defined rules."
+type: App
+tags: ["Mac", "Clipboard"]
+previewImage: /images/projects/linkpure.jpg
+created: "2025-10-05"
+updated: "2025-11-27"
+links:
+  - { type: store, icon: appstore, name: "Mac", url: "https://apps.apple.com/app/id6753670551" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/LinkPure" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: windows, name: "Windows", url: "https://github.com/rxliuli/LinkPure/releases/latest" }
+  - { type: store, icon: linux, name: "Linux", url: "https://github.com/rxliuli/LinkPure/releases/latest" }
+  - { type: store, icon: appstore, name: "iOS", url: "https://apps.apple.com/app/id6753670551" }
+  - { type: store, icon: android, name: "Android", url: "https://github.com/rxliuli/LinkPure/releases/latest" }
+  - { type: other, icon: website, name: "Web", url: "https://linkpure.rxliuli.com" }
+
+# 详情页内容
+icon: /images/projects/icons/linkpure.png
+tagline: Copy a link, get a clean one.
+intro: >-
+  Links you copy are full of `utm_` tags, `fbclid`, affiliate IDs and redirect wrappers. LinkPure watches your
+  clipboard and rewrites every URL you copy, before you paste it anywhere.
+screenshot:
+  src: /images/projects/linkpure.jpg
+  alt: The LinkPure rules list with regular expression rules and their rewrite targets
+install:
+  note: macOS, Windows, Linux, iOS, Android and the web · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - LinkPure watches the clipboard in the background.
+      - When you copy a URL, it checks your enabled rules in order.
+      - The first match rewrites the clipboard, and a notification tells you what changed.
+
+  - type: features
+    title: Works out of the box
+    intro: Over 1,000 built-in rules, drawn from ClearURLs and Linkumori.
+    items:
+      - title: Strip tracking parameters
+        body: '`utm_*`, `fbclid`, `gclid`, Amazon affiliate tags, YouTube `si` and `feature`, and social media tracking codes.'
+      - title: Unwrap redirects
+        body: Google `/url?q=` links, Facebook's link shim, Reddit outbound links and email tracking links resolve to the real URL.
+
+  - type: list
+    title: Your own rules
+    intro: Write rules with regular expressions, then test them against any URL before turning them on.
+    items:
+      - title: Search elsewhere.
+        body: Rewrite `google.com/search?q=…` to DuckDuckGo.
+      - title: Shorts as videos.
+        body: Turn `youtube.com/shorts/ID` into `youtube.com/watch?v=ID`.
+      - title: Tidy notification links.
+        body: Drop the email tracking query from Reddit notification links.
+
+privacy:
+  - LinkPure checks and rewrites URLs entirely on your device. It makes no network requests and has no analytics.
+license: GPL-3.0 (built-in rules are LGPL-3.0)

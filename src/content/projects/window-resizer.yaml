@@ -1,0 +1,50 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Window Resizer"
+description: "A native macOS menu bar utility to quickly resize the active window to your predefined dimensions."
+type: App
+tags: ["Mac", "Wails", "Golang", "AppleScript"]
+previewImage: /images/projects/window-resizer.jpg
+created: "2025-04-27"
+updated: "2025-05-01"
+links:
+  - { type: store, icon: macos, name: "Homebrew", url: "https://github.com/rxliuli/homebrew-tap/blob/main/Casks/window-resizer.rb" }
+  - { type: store, icon: macos, name: "Mac", url: "https://github.com/rxliuli/window-resizer/releases/latest" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/window-resizer" }
+
+# 详情页内容
+icon: /images/projects/icons/window-resizer.png
+tagline: Snap the front window to an exact size from the menu bar.
+intro: >-
+  Taking screenshots at a consistent size, or testing a layout at a set width, means dragging window edges and
+  squinting at pixels. Window Resizer keeps a list of sizes in the menu bar and resizes the active window to one in a
+  click.
+screenshot:
+  src: /images/projects/window-resizer.jpg
+  alt: The Window Resizer settings window listing window size presets such as 1280 × 800
+install:
+  command: brew install --cask rxliuli/tap/window-resizer
+  note: macOS 13 or later · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Bring the window you want to resize to the front.
+      - Click the Window Resizer icon in the menu bar and pick a size, such as **Resize to 1280×800**.
+      - The window snaps to that size.
+    note: Grant Accessibility permission when asked. macOS requires it to resize other apps' windows.
+
+  - type: list
+    title: The details
+    items:
+      - title: Your own presets.
+        body: Add, edit and delete sizes in Settings. The menu updates right away.
+      - title: Native and light.
+        body: Built with Swift, AppKit and SwiftUI. No web runtime, tiny memory footprint.
+      - title: Looking for Windows?
+        body: The last cross-platform release is [v0.2.6](https://github.com/rxliuli/window-resizer/releases/tag/v0.2.6), built on the earlier Go codebase.
+
+privacy:
+  - Window Resizer makes no network requests and has no analytics.
+license: GPL-3.0

@@ -1,0 +1,52 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "IDBPort"
+description: "A modern browser extension designed for effortless export and import of IndexedDB data."
+type: Browser Extension
+tags: ["IndexedDB", "Data Migration", "Chrome", "Safari"]
+previewImage: /images/projects/idbport.jpg
+created: "2025-05-22"
+updated: "2025-05-25"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/kmpakemocjdhfcpfggpodkjhmjibhhhm" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/idbport" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/idbport/" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/us/app/idbport/id6746375879" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/hbkndbebjhoeolinhoebndnkgnghfkmb" }
+  - { type: social, icon: producthunt, name: "ProductHunt", url: "https://www.producthunt.com/posts/idbport" }
+
+# 详情页内容
+icon: /images/projects/icons/idbport.png
+tagline: Export a site's IndexedDB, and import it back.
+intro: >-
+  Most IndexedDB tools can export, but not import, so backups and migrations stop halfway. IDBPort does both: save a
+  site's database to a file, then load it back into the same site, another profile or another browser.
+screenshot:
+  src: /images/projects/idbport.jpg
+  alt: The IDBPort dialog over x.com, ready to export a selected IndexedDB database
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: features
+    title: Both directions
+    items:
+      - title: Export
+        body: Pick one of the current site's databases and save it as an `.idb` file.
+      - title: Import
+        body: Choose an `.idb` file and its data is written into the site's IndexedDB.
+
+  - type: list
+    title: Good to know
+    items:
+      - title: Firefox needs the database name.
+        body: Firefox can't list a site's databases, so you type the name in yourself.
+      - title: Back up first.
+        body: Importing writes into a live database. Export a copy before importing over data you care about.
+
+privacy:
+  - Your data goes from the site to a file on your computer and back. IDBPort doesn't upload it anywhere.
+  - >-
+    The only network request it makes is an anonymous usage ping, at most once a day: a random install ID, the
+    extension version and your browser language.
+license: GPL-3.0

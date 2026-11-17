@@ -1,0 +1,59 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Scrub"
+description: "One-click clear all site data (cookies, storage, cache) for the current website."
+type: Browser Extension
+tags: ["Privacy", "Chrome", "Firefox", "Edge", "Safari"]
+previewImage: /images/projects/scrub.jpg
+created: "2026-06-07"
+updated: "2026-06-07"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/scrub-clear-site-data/jmaeelmmfcjjbgehpkoknomjnimcjmfc" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/scrub-clear-site-data/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/flnakifokcbfogdggeieaonemaikfpid" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/scrub-clear-site-data/id6775834119" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/scrub" }
+
+# 详情页内容
+icon: /images/projects/icons/scrub.png
+tagline: Clear everything a site stored, in one click.
+intro: >-
+  Logging out isn't the same as starting fresh, and clearing one site's data usually means digging through browser
+  settings, or on iOS, through system settings. Scrub was built for iOS Safari first: click the toolbar icon and
+  everything the current site stored is gone.
+screenshot:
+  src: /images/projects/scrub.jpg
+  alt: Scrub's summary dialog after clearing cookies, local storage and session storage on google.com
+install:
+  note: Chrome, Edge, Firefox and Safari on macOS and iOS · Free and open source
+
+blocks:
+  - type: features
+    title: What gets cleared
+    intro: Everything a site can store in your browser, for the site in the current tab only.
+    items:
+      - title: Cookies
+        body: Every cookie for the site, removed through the browser's cookies API.
+      - title: Local and session storage
+        body: '`localStorage` and `sessionStorage` are emptied.'
+      - title: IndexedDB
+        body: Every database the site created is deleted.
+      - title: Cache Storage and OPFS
+        body: Service worker caches and the Origin Private File System are cleared too.
+
+  - type: list
+    title: The details
+    items:
+      - title: One click, no popup.
+        body: Clicking the toolbar icon clears the site right away. There is no confirmation dialog to get through.
+      - title: You see what was removed.
+        body: A short summary lists what was cleared, or tells you the site had nothing stored.
+      - title: Only the current site.
+        body: Other sites, your history and your other tabs are untouched.
+
+privacy:
+  - Site data is cleared locally in your browser. Scrub doesn't read or upload what it removes.
+  - >-
+    The only network request it makes is an anonymous usage ping, at most once a day: a random install ID, the
+    extension version and your browser language.
+license: GPL-3.0

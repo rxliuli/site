@@ -1,0 +1,54 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "SafariF12"
+description: "Press F12 in Safari to toggle the Web Inspector, the same muscle memory as Chrome and Firefox. A tiny background app that only listens while Safari is frontmost."
+type: App
+tags: ["macOS", "Safari", "Swift", "Web Inspector"]
+previewImage: /images/projects/safari-f12.jpg
+created: "2026-07-19"
+updated: "2026-10-05"
+links:
+  - { type: store, icon: macos, name: "Homebrew", url: "https://github.com/rxliuli/homebrew-tap/blob/main/Casks/safari-f12.rb" }
+  - { type: store, icon: macos, name: "macOS", url: "https://github.com/rxliuli/safari-f12/releases/latest" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/safari-f12" }
+
+# 详情页内容
+icon: /images/projects/icons/safari-f12.png
+tagline: F12 opens the Web Inspector in Safari, like everywhere else.
+intro: >-
+  Chrome and Firefox open developer tools with F12. Safari wants ⌥⌘I. SafariF12 is a tiny background app that, while
+  Safari is the frontmost app, turns F12 into ⌥⌘I, so the same muscle memory works in every browser.
+screenshot:
+  src: /images/projects/safari-f12.jpg
+  alt: The SafariF12 status window showing Accessibility granted and the app running
+install:
+  command: brew install --cask rxliuli/tap/safari-f12
+  note: macOS · Free and open source
+
+blocks:
+  - type: steps
+    title: Set up once
+    items:
+      - In Safari, open Settings › Advanced and check **Show features for web developers**.
+      - Launch SafariF12 and grant **Accessibility** when prompted. It covers both listening for F12 and sending ⌥⌘I.
+      - Close the status window. SafariF12 registers itself to launch at login and keeps working in the background.
+    note: >-
+      In rare cases macOS also asks for Input Monitoring, and the status window guides you. To see the status window
+      again, open SafariF12 from Launchpad or Finder while it's running.
+
+  - type: list
+    title: The details
+    items:
+      - title: Safari only.
+        body: It does nothing in any other app, so F12 keeps its usual meaning everywhere else.
+      - title: Can't get in your way.
+        body: It uses a listen-only event tap, so it can never block or delay your keyboard input.
+      - title: Invisible.
+        body: No menu bar icon and no Dock icon. Turn off launch at login anytime in System Settings › General › Login Items.
+      - title: Why not an App Shortcut?
+        body: >-
+          macOS can bind F12 to Safari's "Show Web Inspector" menu item, but that depends on the exact localized
+          menu title. SafariF12 works out of the box in any language.
+
+privacy:
+  - SafariF12 makes no network requests. It only watches for the F12 key while Safari is in front, and never records what you type.
+license: GPL-3.0

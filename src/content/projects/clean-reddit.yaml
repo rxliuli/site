@@ -1,0 +1,68 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Clean Reddit"
+description: "A browser extension that removes clutter and distractions from Reddit, giving you a cleaner browsing experience."
+type: Browser Extension
+tags: ["Reddit", "Cleanup", "Productivity"]
+previewImage: /images/projects/clean-reddit.jpg
+created: "2026-02-02"
+updated: "2026-02-02"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/clean-reddit/lchnofghcmjcpcglhklofjpfddkcenof" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/clean-reddit/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/hgmklalenpcpppfdodhafhgfbgioefpd" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6758573459" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/clean-reddit" }
+
+# 详情页内容
+icon: /images/projects/icons/clean-reddit.png
+tagline: Reddit, without everything around the posts.
+intro: >-
+  Reddit keeps adding things next to the posts you came for: recommended feeds, games, Ask AI, trending searches,
+  app banners. Clean Reddit hides them, with a switch for each one, so you keep what you use and lose the rest.
+screenshot:
+  src: /images/projects/clean-reddit.jpg
+  alt: Reddit with Clean Reddit enabled, leaving only the feed and your communities
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: features
+    title: 30 switches in five areas
+    intro: >-
+      Everything starts hidden except Communities. Open the popup from the toolbar to bring back anything you
+      miss.
+    items:
+      - title: Left sidebar
+        body: Home, Games on Reddit, Moderation, Feeds, Recent Communities, Communities, Resources and the Reddit Inc links.
+      - title: Right sidebar
+        body: Hide it separately on the home page, community pages, posts and user profiles, plus the legal links.
+      - title: Top navigation
+        body: The notification dot, the Ask AI banner, the Advertise button, and trending searches and communities in the search dropdown.
+      - title: Feed
+        body: >-
+          Recommended and promoted posts, Related Answers, Search Answers, community recommendations, the Open App
+          button, and the app promotion sheet, with scrolling restored.
+      - title: Avatar menu
+        body: Achievements, Earn, Premium, Advertise on Reddit and Try Reddit Pro.
+
+  - type: list
+    title: The details
+    items:
+      - title: No flash of clutter.
+        body: >-
+          Rules apply at `document_start`, before Reddit draws the page, and keep applying as the feed loads more
+          posts.
+      - title: Changes apply instantly.
+        body: Flip a switch and the open Reddit tab updates without a reload.
+      - title: Settings follow you.
+        body: Your choices are kept in the browser's sync storage, so they carry over to other computers signed in to the same browser.
+      - title: New Reddit only.
+        body: It runs on www.reddit.com. old.reddit.com is left alone.
+
+privacy:
+  - Clean Reddit runs only on reddit.com. It doesn't read or send your posts, messages or browsing history.
+  - >-
+    The only network request it makes is an anonymous usage ping, at most once a day: a random install ID, the
+    extension version and your browser language.
+license: GPL-3.0

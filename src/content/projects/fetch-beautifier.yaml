@@ -1,0 +1,66 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Fetch Beautifier"
+description: "Clean up messy fetch code instantly from DevTools"
+type: VSCode Extension
+tags: ["Fetch", "Beautifier"]
+previewImage: /images/projects/fetch-beautifier.jpg
+created: "2025-06-14"
+updated: "2025-06-14"
+links:
+  - { type: store, icon: vscode, name: "VSCode", url: "https://marketplace.visualstudio.com/items?itemName=rxliuli.fetch-beautifier" }
+  - { type: other, icon: website, name: "Website", url: "https://rxliuli.com/fetch-beautifier/" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/fetch-beautifier" }
+
+# 详情页内容
+icon: /images/projects/icons/fetch-beautifier.png
+tagline: Turn "Copy as fetch" into code you'd actually keep.
+intro: >-
+  DevTools' "Copy as fetch" gives you one long line with an encoded URL and a stringified body. Fetch Beautifier
+  rewrites it into readable code, as a web tool or right inside VS Code.
+screenshot:
+  src: /images/projects/fetch-beautifier.jpg
+  alt: The Fetch Beautifier web tool with messy fetch code in and formatted code out
+install:
+  note: VS Code extension and web tool · Free and open source
+
+blocks:
+  - type: code
+    title: Before
+    intro: What DevTools copies.
+    code: |
+      fetch("https://example.com/api/search?q=shoes&filters=%7B%22size%22%3A42%2C%22color%22%3A%22red%22%7D", {"headers":{"content-type":"application/json"},"body":"{\"page\":1,\"limit\":20}","method":"POST"});
+
+  - type: code
+    title: After
+    intro: The same request, with the query string unpacked, the embedded JSON parsed and the body formatted.
+    code: |
+      const url = new URL("https://example.com/api/search")
+      url.search = new URLSearchParams([
+        ["q", "shoes"],
+        ["filters", JSON.stringify({
+          "size": 42,
+          "color": "red"
+        })],
+      ]).toString()
+      fetch(url, {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify({
+          "page": 1,
+          "limit": 20
+        }),
+      })
+
+  - type: list
+    title: In VS Code
+    items:
+      - title: Paste and Format Fetch.
+        body: '`Cmd+Shift+V` (`Ctrl+Shift+V` on Windows and Linux) pastes the clipboard already formatted.'
+      - title: Format Fetch Code.
+        body: Select a fetch call and press `Alt+Shift+F`, or use the editor's context menu.
+
+privacy:
+  - Code is formatted locally, in your browser or in VS Code. Nothing is sent anywhere.
+license: GPL-3.0

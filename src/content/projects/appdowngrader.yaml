@@ -1,0 +1,54 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "AppDowngrader"
+description: "A macOS app for downgrading iOS apps to older versions. Browse installed apps, view historical versions, and install any previous version with one click."
+type: App
+tags: ["macOS", "iOS", "Swift", "SwiftUI"]
+previewImage: /images/projects/appdowngrader.jpg
+created: "2026-03-30"
+updated: "2026-03-30"
+links:
+  - { type: store, icon: macos, name: "Homebrew", url: "https://github.com/rxliuli/homebrew-tap/blob/main/Casks/app-downgrader.rb" }
+  - { type: store, icon: macos, name: "macOS", url: "https://github.com/rxliuli/AppDowngrader/releases" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/AppDowngrader" }
+
+# 详情页内容
+icon: /images/projects/icons/appdowngrader.png
+tagline: Put an older version of any iOS app back on your iPhone.
+intro: >-
+  An update broke a feature you rely on, or removed it. The App Store only offers the latest version. AppDowngrader
+  lists every historical version of the apps on your connected iPhone and installs the one you pick.
+screenshot:
+  src: /images/projects/appdowngrader.jpg
+  alt: AppDowngrader listing installed apps on the left and the historical versions of Discord on the right
+install:
+  command: brew install --cask rxliuli/tap/app-downgrader
+  note: macOS 14 or later · iPhone connected over USB · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Connect your iPhone with a USB cable and open AppDowngrader.
+      - Sign in with your Apple ID. Two-factor authentication is supported.
+      - Pick an app, then pick a version. Each one shows its release date.
+      - Click **Download & Install**.
+    note: >-
+      On first use, macOS may ask to let **ipatool** use your Keychain. The password it wants is your Mac login
+      password, not your Apple ID password. Choose **Always Allow** to see it only once.
+
+  - type: list
+    title: Good to know
+    items:
+      - title: Nothing else to install.
+        body: The tools it drives, ipatool and go-ios, are bundled with the app.
+      - title: Paid apps need a purchase.
+        body: The Apple ID you sign in with must have bought the app before.
+      - title: Not every app lists versions.
+        body: Apple restricts some apps, and Apple may change the APIs this tool depends on at any time.
+
+privacy:
+  - >-
+    Your Apple ID is used only to sign in to Apple and download apps from the App Store. The credentials are kept in
+    your Mac's Keychain.
+  - AppDowngrader talks only to Apple's servers and your connected iPhone. There is no analytics.
+license: MIT

@@ -1,0 +1,50 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Recall for Reddit"
+description: "A browser extension that saves the Reddit posts you've visited and lets you search through them later."
+type: Browser Extension
+tags: ["Reddit", "Search", "Browse History"]
+previewImage: /images/projects/recall-for-reddit.jpg
+created: "2026-02-12"
+updated: "2026-02-12"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/recall-for-reddit/gjipneegilpeackeijjdcembmnhiekkp" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6758924691" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/recall-for-reddit" }
+
+# 详情页内容
+icon: /images/projects/icons/recall-for-reddit.png
+tagline: Find that Reddit post you read last week.
+intro: >-
+  Reddit's own history is a short, unsearchable list. Recall for Reddit saves every post you open and lets you search
+  all of them by title, subreddit or author, right on Reddit.
+screenshot:
+  src: /images/projects/recall-for-reddit.jpg
+  alt: The Recall for Reddit search dialog open over Reddit, listing previously visited posts
+install:
+  note: Chrome and Safari on macOS · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Install the extension and open Reddit. Your existing Reddit history is imported on first use.
+      - Browse as usual. Every post you visit is recorded.
+      - Press `Ctrl+K` (`⌘K` on macOS), or click the extension icon, and start typing.
+      - Click a result to go back to the post.
+
+  - type: list
+    title: The details
+    items:
+      - title: Full-text search.
+        body: Matches titles, subreddits and authors.
+      - title: Starts with your past.
+        body: The first run imports the history Reddit already keeps for your account, so search works from day one.
+      - title: Stays on your device.
+        body: Everything is stored in your browser's IndexedDB. There is no account and no cloud sync.
+
+privacy:
+  - >-
+    Recall for Reddit only runs on reddit.com and talks only to Reddit, to import your existing history. Your history
+    is stored in your browser and never leaves your device. There is no analytics.
+license: GPL-3.0

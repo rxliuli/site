@@ -1,0 +1,41 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "MyUnzip"
+description: "No-Limit Zip Tool: Preserves Folders, Any File Size"
+type: Website
+tags: ["React", "Tanstack Router", "Vibe Coding"]
+previewImage: /images/projects/myunzip.jpg
+created: "2025-04-18"
+updated: "2025-04-22"
+links:
+  - { type: other, icon: website, name: "Website", url: "https://myunzip.com/" }
+
+# 详情页内容
+icon: /images/projects/icons/myunzip.png
+tagline: Zip and unzip in the browser, any size, folders intact.
+intro: >-
+  Online unzip tools upload your files, cap their size, or flatten the folders inside. MyUnzip extracts and creates
+  ZIP files right in your browser, with no size limit and the directory structure kept as it was.
+screenshot:
+  src: /images/projects/myunzip.jpg
+  alt: The MyUnzip page with a drop zone and a list of files extracted from a ZIP
+install:
+  note: Runs in any modern browser · Free
+
+blocks:
+  - type: features
+    title: Both ways
+    items:
+      - title: Extract
+        body: >-
+          Open a ZIP of any size and save its contents to a folder on your computer, with every subfolder where it
+          belongs.
+      - title: Compress
+        body: Pick files or a whole folder and get a ZIP back.
+      - title: Passwords
+        body: Open password-protected archives, or set a password when you create one.
+      - title: No uploads
+        body: Files are processed on your device, so size is limited only by your disk.
+privacy:
+  - Your files are processed in your browser and are never uploaded.
+  - The site itself uses Google Analytics and shows Google ads.
+license: GPL-3.0

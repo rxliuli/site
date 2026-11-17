@@ -1,0 +1,53 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "CORS Unblock"
+description: "CORS Unblock is a browser extension that allows you to bypass CORS restrictions on websites."
+type: Browser Extension
+tags: ["CORS", "Chrome", "Firefox", "Safari"]
+previewImage: /images/projects/cors-unblock.jpg
+created: "2025-04-18"
+updated: "2025-04-29"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/cors-unblock/odkadbffomicljkjfepnggiibcjmkogc" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/cors-unblock" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/cors-unblock2/" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/cors-unblock/id6744779652" }
+  - { type: social, icon: producthunt, name: "ProductHunt", url: "https://www.producthunt.com/products/cors-unblock" }
+
+# 详情页内容
+icon: /images/projects/icons/cors-unblock.png
+tagline: Let the web apps you trust make cross-origin requests.
+intro: >-
+  Native apps can call any API. Web apps can't, because of CORS. CORS Unblock gives that ability back to the web apps
+  you choose, one approved domain at a time, by rewriting response headers in your browser.
+screenshot:
+  src: /images/projects/cors-unblock.jpg
+  alt: CORS Unblock asking whether a web app may access github.com, with Reject and Accept buttons
+install:
+  note: Chrome, Firefox and Safari · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - A web app that needs cross-origin access asks you to install CORS Unblock.
+      - When it wants to reach another domain, CORS Unblock asks you first, naming the site and the domain.
+      - Accept, and only that site can reach only that domain. You can revoke it anytime.
+
+  - type: list
+    title: The details
+    items:
+      - title: Permission by permission.
+        body: There is no global "disable CORS" switch. Each website gets access only to the domains you approved for it.
+      - title: One place to manage it all.
+        body: See and revoke every approval from the extension's settings.
+      - title: Easy to integrate.
+        body: Web developers use a small API to check for the extension and request access.
+      - title: Inspired by Shizuku.
+        body: >-
+          Like Shizuku on Android, it's a central permission manager, so each web app doesn't need its own proxy
+          server.
+
+privacy:
+  - CORS Unblock doesn't collect any data. Everything happens in your browser, and every approval can be revoked.
+license: MIT

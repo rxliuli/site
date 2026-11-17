@@ -1,0 +1,47 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Fast Bookmark"
+description: "Quick Save with Smart Folders"
+type: Browser Extension
+tags: ["Bookmark", "Chrome", "Firefox"]
+previewImage: /images/projects/fast-bookmark.jpg
+created: "2025-07-26"
+updated: "2025-11-16"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/mhdmiffahinpfnfegihlfmpappeemibk" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/fast-bookmark" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/fast-bookmark/" }
+
+# 详情页内容
+icon: /images/projects/icons/fast-bookmark.png
+tagline: Bookmark into the right folder by typing its name.
+intro: >-
+  The built-in bookmark dialog makes you scroll a folder dropdown every time. Fast Bookmark asks for a folder name,
+  autocompletes it, and saves when you press Enter.
+screenshot:
+  src: /images/projects/fast-bookmark.jpg
+  alt: The Fast Bookmark popup autocompleting a bookmark folder name
+install:
+  note: Chrome and Firefox · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Open Fast Bookmark. Binding it to a shortcut like `Ctrl+D` makes it a drop-in replacement.
+      - Type part of a folder name and pick from the suggestions.
+      - Press **Enter** to save the page there.
+
+  - type: list
+    title: The details
+    items:
+      - title: Recent folders first.
+        body: Folders you used recently come first in the suggestions.
+      - title: Manifest V3.
+        body: A modern rewrite of the original Fast Bookmark, which stopped working in current Chrome.
+      - title: No Safari.
+        body: Safari doesn't offer the bookmarks API that extensions need.
+
+privacy:
+  - Fast Bookmark only talks to your browser's own bookmarks. It makes no network requests and has no analytics.
+license: GPL-3.0

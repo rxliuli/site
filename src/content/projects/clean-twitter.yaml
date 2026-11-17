@@ -1,0 +1,64 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Clean Twitter"
+description: "Clean up some annoying elements on Twitter and make your Twitter experience cleaner"
+type: Browser Extension
+tags: ["Chrome", "React", "Twitter"]
+previewImage: /images/projects/clean-twitter.jpg
+created: "2023-06-27"
+updated: "2025-09-05"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/lbbfmkbgembfbohdadeggdcgdkmfdmpb" }
+  - { type: other, icon: website, name: "Website", url: "https://store.rxliuli.com/extensions/clean-twitter/" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/clean-twitter-2333/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/akhbfdeilcclmfbmbkndjabkgfhgdede" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/cn/app/id6752027292" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/clean-twitter" }
+  - { type: social, icon: producthunt, name: "ProductHunt", url: "https://www.producthunt.com/products/clean-twitter" }
+
+# 详情页内容
+icon: /images/projects/icons/clean-twitter.png
+tagline: X, without everything around the tweets.
+intro: >-
+  X keeps adding things around the timeline: Grok, Premium upsells, trends, who to follow, promoted posts. Clean
+  Twitter hides them, with a switch for each, and can even bring back the bird logo.
+screenshot:
+  src: /images/projects/clean-twitter.jpg
+  alt: The X home timeline with the right sidebar and promotions hidden by Clean Twitter
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: features
+    title: Hide what you don't use
+    items:
+      - title: Branding and layout
+        body: Restore the classic Twitter bird logo and hide the right sidebar of trends and suggestions.
+      - title: Timeline and content
+        body: >-
+          Promoted posts, Who to follow, Discover more, Today's News, recommended notifications, Space bars and the
+          app download banner.
+      - title: Left navigation
+        body: >-
+          Any of Connect People, Articles, Messages, Calls, Grok, Lists, History, Communities, Premium, Profile,
+          Creator Studio, Ads, Create Space and More.
+      - title: Tweet buttons
+        body: The Grok, Analytics and Bookmark buttons under each tweet.
+
+  - type: list
+    title: Text Mode
+    intro: A text-only home timeline, for when you want to read rather than scroll pictures.
+    items:
+      - title: Media stripped at the source.
+        body: >-
+          Images, videos and media cards are removed from the For You and Following timelines before X renders them,
+          so scrolling still works normally.
+      - title: Off means off.
+        body: When Text Mode is switched off, nothing is intercepted.
+
+privacy:
+  - Clean Twitter only changes what X shows you. It doesn't read or send your tweets, messages or browsing history.
+  - >-
+    The only network request it makes is an anonymous usage ping, at most once a day: a random install ID, the
+    extension version and your browser language.
+license: GPL-3.0

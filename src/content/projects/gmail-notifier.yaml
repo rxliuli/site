@@ -1,0 +1,55 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Gmail Notifier"
+description: "Never Miss an Important Email Again"
+type: Browser Extension
+tags: ["Gmail", "Chrome", "Firefox", "Edge", "Safari"]
+previewImage: /images/projects/gmail-notifier.jpg
+created: "2025-08-08"
+updated: "2026-08-14"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/liabcmaifgemdglcbialogmljhekgnle" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/gmail-notifier233/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/fldngbjbpgajkhfhhbedmdphgplgnibb" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6799037802" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/gmail-notifier" }
+
+# 详情页内容
+icon: /images/projects/icons/gmail-notifier.png
+tagline: New Gmail, right in your toolbar.
+intro: >-
+  Keeping a Gmail tab open just to watch for new mail is a waste of a tab. Gmail Notifier checks your inbox in the
+  background, shows the unread count on its icon and sends a desktop notification when something arrives.
+screenshot:
+  src: /images/projects/gmail-notifier.jpg
+  alt: The Gmail Notifier popup listing an unread email with quick action buttons
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: features
+    title: Deal with mail without opening Gmail
+    items:
+      - title: Desktop notifications
+        body: New mail shows up as a notification within about half a minute.
+      - title: Quick actions
+        body: Mark as read, archive or delete a message straight from the popup.
+      - title: Mark all as read
+        body: Clear the unread count in one click.
+      - title: Light and dark
+        body: The popup follows your system theme.
+
+  - type: list
+    title: The details
+    items:
+      - title: No sign-in.
+        body: It uses the Gmail session already in your browser. There is no password to enter and no OAuth app to trust.
+      - title: Gmail only.
+        body: It only has access to mail.google.com.
+
+privacy:
+  - Your mail is read from Gmail by your own browser and never passes through any other server.
+  - >-
+    The only other request is an anonymous usage ping, at most once a day: a random install ID, the extension version
+    and your browser language.
+license: GPL-3.0

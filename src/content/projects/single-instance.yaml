@@ -1,0 +1,53 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Single Instance"
+description: "Keep each site you choose in a single tab. Links to that site open in the tab you already have and the new tab is closed."
+type: Browser Extension
+tags: ["Chrome", "Tab Management", "Productivity"]
+previewImage: /images/projects/single-instance.jpg
+created: "2026-11-15"
+updated: "2026-11-15"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/ikcpdeolnlecjcdbfgaplemlpdnglpje" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/single-instance" }
+
+# 详情页内容
+icon: /images/projects/icons/single-instance.png
+tagline: One tab per site, no matter where the link comes from.
+intro: >-
+  Some web apps misbehave with a second tab: Discord asks you to log in again, WhatsApp Web allows a single
+  session, Slack and Figma eat memory twice, a music site plays twice. Single Instance keeps each site you choose in
+  the tab you already have, and closes the new one.
+screenshot:
+  src: /images/projects/single-instance.jpg
+  alt: The Single Instance options page listing sites kept in a single tab
+install:
+  note: Chrome · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Open a site, click the toolbar button and turn on **Keep this site in one tab**. Or add sites on the options page.
+      - Click a link to that site from anywhere else. It opens in the tab you already have, and the new tab closes.
+    note: Each rule is a match pattern such as `https://discord.com/*`.
+
+  - type: list
+    title: The details
+    items:
+      - title: Only new tabs are caught.
+        body: >-
+          Only a new tab's first navigation is ever intercepted. Tabs you open from the site itself (Ctrl/Cmd+click,
+          middle click) and popup windows such as OAuth sign-in are left alone.
+      - title: No permission warning on install.
+        body: >-
+          It asks for `storage` and `activeTab` only, and requests access to a site when you add a rule for it. It
+          never asks for `tabs`, `webNavigation` or `scripting`.
+      - title: No content scripts.
+        body: It can't read page content, and it can't see tabs on sites you haven't added.
+
+privacy:
+  - Your rules stay on your device. Single Instance has no content scripts and can't read the pages you visit.
+  - >-
+    The only network request it makes is an anonymous usage ping, at most once a day: a random install ID, the
+    extension version and your browser language.
+license: GPL-3.0

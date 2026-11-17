@@ -1,0 +1,73 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Redirector"
+description: "Dynamic URL Redirector"
+type: Browser Extension
+tags: ["Chrome", "Safari", "Svelte"]
+previewImage: /images/projects/redirector.jpg
+created: "2024-09-12"
+updated: "2025-08-21"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/redirector/lioaeidejmlpffbndjhaameocfldlhin" }
+  - { type: other, icon: website, name: "Website", url: "https://store.rxliuli.com/extensions/redirector/" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/redirector" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/redirector/jhdjcofnjfeljeekjklhgfmfocfgibmm" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/url-redirector/id6743197230" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/redirector-url/" }
+  - { type: social, icon: producthunt, name: "ProductHunt", url: "https://www.producthunt.com/posts/redirector-2" }
+
+# 详情页内容
+icon: /images/projects/icons/redirector.png
+tagline: Send any URL somewhere else, automatically.
+intro: >-
+  Always want Old Reddit, DuckDuckGo instead of Google, or the real link instead of an email tracking redirect?
+  Redirector matches the URLs you visit against your rules and takes you straight to where you meant to go.
+screenshot:
+  src: /images/projects/redirector.jpg
+  alt: The Redirector options page with a list of regex redirect rules
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: code
+    title: Your first rule in 30 seconds
+    intro: Match a URL, capture the parts you need, and build a new URL with them. This one sends Reddit to Old Reddit.
+    code: |
+      Match URL     ^https://www.reddit.com/(.*)
+      Redirect To   https://old.reddit.com/$1
+
+      https://www.reddit.com/r/cats  →  https://old.reddit.com/r/cats
+    note: >-
+      Paste a test URL into the rule dialog to check the result before saving. Then every matching page you visit
+      redirects instantly.
+
+  - type: features
+    title: Managing rules
+    items:
+      - title: Enable, disable, reorder
+        body: Toggle rules without deleting them. Rules are checked top to bottom, and you set each one's position.
+      - title: Exclude patterns
+        body: >-
+          Redirect everything on a site except some pages. For example, send X to xcancel but keep `/home` on the
+          original.
+      - title: Test before saving
+        body: Paste any URL to see which rule matches and where it would go.
+      - title: Import and export
+        body: Back up your rules as JSON, or share them.
+
+  - type: list
+    title: For power users
+    items:
+      - title: URL Pattern mode.
+        body: Besides regular expressions, rules can use the more readable URLPattern syntax, such as `https://link.zhihu.com/?target=:url`.
+      - title: Pipelines.
+        body: >-
+          Transform captured values before redirecting: `{{$1|decodeURIComponent}}` unwraps an encoded link, and
+          `{{$1|atob|decodeURIComponent}}` decodes base64 first.
+
+privacy:
+  - Rules are matched entirely on your device. No URL or page content is ever sent anywhere.
+  - >-
+    The only network request it makes is an anonymous usage ping, at most once a day: a random install ID, the
+    extension version and your browser language.
+license: MIT

@@ -1,0 +1,53 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "httap"
+description: "Passively capture HTTP traffic matching your rules. Query like Cloudflare Logs."
+type: Browser Extension
+tags: ["HTTP", "Traffic Capture", "Chrome", "Firefox", "Edge", "Safari"]
+previewImage: /images/projects/httap.jpg
+created: "2026-06-17"
+updated: "2026-06-21"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/httap/embminmhmfhgcomcnbeahoidnhokchek" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/httap/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/dfbbogcmjpojdbhkdefilkgjkhkmckbk" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6784219055" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/httap" }
+
+# 详情页内容
+icon: /images/projects/icons/httap.png
+tagline: Record the HTTP traffic you care about, and search it like logs.
+intro: >-
+  DevTools forgets everything when you close it, and only sees requests made while it's open. httap quietly captures
+  Fetch, XHR and WebSocket traffic on the sites you choose, keeps it, and gives you a log viewer to search it later.
+screenshot:
+  src: /images/projects/httap.jpg
+  alt: The httap log viewer with a request histogram and a filtered list of captured API calls
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: code
+    title: Rules decide what's captured
+    intro: Each rule is a host followed by a URLPattern. Nothing outside your rules is recorded.
+    code: |
+      api.example.com##*://api.example.com/v1/*
+      x.com##https://x.com/i/api/graphql/*
+
+  - type: features
+    title: Query like Cloudflare Logs
+    items:
+      - title: Search
+        body: Filter requests by plain text or regular expression, as they arrive.
+      - title: Time range and histogram
+        body: Narrow down to a time window and see when traffic happened at a glance.
+      - title: Binary bodies
+        body: Binary responses are captured too, and you can download them.
+      - title: HAR export
+        body: Export to HAR 1.2, binary bodies included as base64, to open in any HAR viewer.
+
+privacy:
+  - >-
+    Captured traffic is stored in your browser's IndexedDB and never leaves your device. httap makes no network
+    requests of its own.
+license: GPL-3.0

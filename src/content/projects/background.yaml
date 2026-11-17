@@ -1,0 +1,48 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "Background"
+description: "A browser extension that sets a custom background image for all websites."
+type: Browser Extension
+tags: ["Customization", "Background", "Productivity"]
+previewImage: /images/projects/background.jpg
+created: "2026-01-19"
+updated: "2026-01-19"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/background/caafjbfceobnfkhliadckecbocecaaki" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/webpage-background/" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/us/app/webpage-background/id6757917802" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/background" }
+
+# 详情页内容
+icon: /images/projects/icons/background.png
+tagline: Your own picture behind every website.
+intro: >-
+  New tab pages get wallpapers. Websites don't. Background lays an image you choose softly over every page you visit,
+  faint enough that text stays readable, so the web feels a little more like yours.
+screenshot:
+  src: /images/projects/background.jpg
+  alt: Google's home page with a faint pony illustration behind it
+install:
+  note: Chrome, Firefox and Safari · Free and open source
+
+blocks:
+  - type: steps
+    title: How it works
+    items:
+      - Open the options page and upload an image.
+      - Visit any site. The image appears behind the page at low opacity.
+      - On a site where you'd rather not see it, open the popup and turn it off for that site.
+
+  - type: list
+    title: The details
+    items:
+      - title: Never in the way.
+        body: The image is drawn at 10% opacity and ignores the mouse, so links, buttons and text work as usual.
+      - title: Remembered.
+        body: Your image is kept in the browser's IndexedDB and stays across sessions.
+      - title: Per-site off switch.
+        body: Sites you turn it off for are remembered too.
+
+privacy:
+  - Your image is stored in your browser and is never uploaded. Background makes no network requests and has no analytics.
+license: GPL-3.0

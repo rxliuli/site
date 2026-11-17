@@ -1,0 +1,49 @@
+# 项目元数据：列表、首页卡片和详情页头部
+title: "BilingualTube"
+description: "A browser extension that adds bilingual subtitles to YouTube videos."
+type: Browser Extension
+tags: ["YouTube", "Subtitles", "Translation"]
+previewImage: /images/projects/bilingualtube.jpg
+created: "2026-01-21"
+updated: "2026-01-21"
+links:
+  - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/bilingualtube/ombapcolopdeailifakdgaijhoncgpgn" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/ibfnbmffddbncjgfdionhngihdaajhfn" }
+  - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/bilingualtube/" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/us/app/bilingualtube/id6757694666" }
+  - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/bilingual-tube" }
+
+# 详情页内容
+icon: /images/projects/icons/bilingualtube.png
+tagline: YouTube subtitles in two languages at once.
+intro: >-
+  Following a video in a language you're still learning means choosing between the original subtitles and a
+  translation. BilingualTube shows both, stacked, on any YouTube video with subtitles.
+screenshot:
+  src: /images/projects/bilingualtube.jpg
+  alt: A YouTube video with English subtitles and a Japanese translation shown together
+install:
+  note: Chrome, Edge, Firefox and Safari · Free and open source
+
+blocks:
+  - type: features
+    title: Better translations first
+    items:
+      - title: Official translations
+        body: When YouTube has an official translation for the video, BilingualTube uses it.
+      - title: Machine translation fallback
+        body: Otherwise it translates with Google by default, no API key needed, or with Microsoft Translator.
+      - title: Bring your own model
+        body: Use OpenAI or any compatible API with your key, model, base URL and your own prompt.
+      - title: Any target language
+        body: Pick the language you want the second line in on the options page.
+
+privacy:
+  - >-
+    Subtitle text goes straight from your browser to the translation provider you choose: Google, Microsoft or your
+    OpenAI-compatible endpoint.
+  - >-
+    The only other request is an anonymous usage ping, at most once a day: a random install ID, the extension version
+    and your browser language.
+license: GPL-3.0
