@@ -474,16 +474,22 @@ export const projects: ProjectMeta[] = [
         icon: 'chrome',
       },
       {
-        type: 'social',
-        name: 'Discord',
-        url: 'https://discord.gg/gFhKUthc88',
-        icon: 'discord',
-      },
-      {
         type: 'store',
         name: 'Firefox',
         url: 'https://addons.mozilla.org/firefox/addon/clean-reddit/',
         icon: 'firefox',
+      },
+      {
+        type: 'store',
+        name: 'Edge',
+        url: 'https://microsoftedge.microsoft.com/addons/detail/hgmklalenpcpppfdodhafhgfbgioefpd',
+        icon: 'edge',
+      },
+      {
+        type: 'social',
+        name: 'Discord',
+        url: 'https://discord.gg/gFhKUthc88',
+        icon: 'discord',
       },
       {
         type: 'store',

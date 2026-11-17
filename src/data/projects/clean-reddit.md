@@ -42,20 +42,6 @@ Clean Reddit allows you to hide various UI elements across different sections of
 - **Advertise on Reddit** - Hide advertise link
 - **Try Reddit Pro** - Hide Reddit Pro link
 
-## Installation
-
-### Chrome / Edge
-
-Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/clean-reddit/lchnofghcmjcpcglhklofjpfddkcenof).
-
-### Firefox
-
-Install from [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/clean-reddit/).
-
-### Safari
-
-Install from the [Mac App Store](https://apps.apple.com/app/id6758573459).
-
 ## Usage
 
 1. Click the extension icon in your browser toolbar
