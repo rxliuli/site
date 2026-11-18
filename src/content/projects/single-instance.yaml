@@ -9,6 +9,9 @@ updated: "2026-11-15"
 links:
   - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/ikcpdeolnlecjcdbfgaplemlpdnglpje" }
   - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/single-instance" }
+  - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/single-instance/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/edcebidhmkpgjlmeebeeinnjljffhoph" }
+  - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6835099460" }
 
 # 详情页内容
 icon: /images/projects/icons/single-instance.png
