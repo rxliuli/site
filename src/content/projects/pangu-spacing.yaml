@@ -2,12 +2,13 @@
 title: "Pangu Spacing (Unofficial)"
 description: "Automatically inserts whitespace between CJK characters and half-width letters, digits, and symbols on web pages. An unofficial cross-browser extension based on pangu.js."
 type: Browser Extension
-tags: ["Typography", "CJK", "Firefox", "Safari"]
+tags: ["Typography", "CJK", "Firefox", "Edge", "Safari"]
 previewImage: /images/projects/pangu-spacing.jpg
 created: "2026-11-24"
 updated: "2026-11-24"
 links:
   - { type: store, icon: firefox, name: "Firefox", url: "https://addons.mozilla.org/firefox/addon/pangu-spacing-unofficial/" }
+  - { type: store, icon: edge, name: "Edge", url: "https://microsoftedge.microsoft.com/addons/detail/jmfgggppkbkkdiemmcghcmkpicpeagkb" }
   - { type: store, icon: safari, name: "Safari", url: "https://apps.apple.com/app/id6838769745" }
   - { type: social, icon: github, name: "GitHub", url: "https://github.com/rxliuli/pangu-spacing" }
   - { type: social, icon: discord, name: "Discord", url: "https://discord.gg/gFhKUthc88" }
@@ -24,7 +25,7 @@ screenshot:
   src: /images/projects/pangu-spacing.jpg
   alt: A Chinese technical article spaced by Pangu Spacing with the toolbar popup open
 install:
-  note: Firefox (desktop and Android) and Safari (macOS and iOS) · Free and open source
+  note: Firefox (desktop and Android), Edge, and Safari (macOS and iOS) · Free and open source
 
 blocks:
   - type: features
@@ -61,7 +62,7 @@ blocks:
       - title: Unofficial build based on pangu.js.
         body: >-
           Built on top of Vinta's [pangu.js](https://github.com/vinta/pangu.js) (MIT License) with a modern
-          cross-browser setup for Firefox and Safari. Not affiliated with Vinta; licensed under `GPL-3.0`.
+          cross-browser setup for Firefox, Edge, and Safari. Not affiliated with Vinta; licensed under `GPL-3.0`.
 
 privacy:
   - >-
