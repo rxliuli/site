@@ -1,12 +1,12 @@
 # 项目元数据：列表、首页卡片和详情页头部
-title: "Twitter Filter"
-description: "Filter your Twitter/X timeline with customizable rules. Mark, hide, or auto-block tweets based on account properties and tweet content."
+title: "AI Feed Filter"
+description: "Formerly Twitter Filter. Clean up feeds across X, Reddit, Bluesky, LinkedIn, Threads, YouTube, Substack and Hacker News with AI semantic topics, Ask AI and custom rules."
 type: Browser Extension
-tags: ["Twitter", "Filter", "Chrome", "Firefox", "Edge", "Safari"]
+tags: ["AI", "Filter", "Twitter", "Reddit", "Chrome", "Firefox", "Edge", "Safari"]
 previewImage: /images/projects/twitter-filter.jpg
 featured: true
 created: "2026-02-24"
-updated: "2026-05-29"
+updated: "2026-11-22"
 links:
   - { type: other, icon: website, name: "Website", url: "https://store.rxliuli.com/extensions/twitter-filter/" }
   - { type: store, icon: chrome, name: "Chrome", url: "https://chromewebstore.google.com/detail/feed-filter-for-twitter/ejhilomfbamkbfehkjbhemkpaghpcglj" }
@@ -16,64 +16,98 @@ links:
 
 # 详情页内容
 icon: /images/projects/icons/twitter-filter.png
-tagline: Write the rules for your X timeline.
+tagline: Filter noise across eight feeds with AI topics and custom rules.
 intro: >-
-  Muting keywords doesn't stop spam bots, crypto promotion and engagement farming. Twitter Filter lets you describe
-  what you don't want to see with expressions over the account and the tweet, then mark, hide or block what matches.
+  Formerly Twitter Filter. Muting keywords doesn't stop ragebait, spam bots, crypto hype or engagement farming. AI Feed
+  Filter combines semantic AI topics, the Ask AI rule assistant and fast local expressions to collapse, hide or block
+  what you don't want to see across X, Reddit, Bluesky, LinkedIn, Threads, YouTube, Substack and Hacker News.
 screenshot:
   src: /images/projects/twitter-filter.jpg
-  alt: The Twitter Filter rules panel over the X timeline, with crypto and spam rules enabled
+  alt: The AI Feed Filter dashboard showing built-in semantic AI topics with Collapse and Hide controls
 install:
-  note: Chrome, Edge, Firefox and Safari, including mobile
+  note: Chrome, Edge, Firefox and Safari, including mobile · Free forever with local rules & starter AI, Pro $4.99/mo
 
 blocks:
+  - type: features
+    title: AI filtering and local rules
+    items:
+      - title: AI semantic topics
+        body: >-
+          Built-in topics like politics, ragebait, crypto, engagement bait, spoilers, AI slop and self-promo, plus
+          custom topics that understand meaning rather than brittle keywords.
+      - title: Ask AI assistant
+        body: >-
+          Open the Side Panel, describe what annoys you in plain language, preview matched posts live on the page and
+          save the rule in one click.
+      - title: Fast local expressions
+        body: >-
+          Write zero-cost local rules with regex, account age, follower ratios, engagement thresholds and screen name
+          lists of up to 100,000 accounts.
+      - title: Collapse, hide or block
+        body: >-
+          Fold matched posts into a compact banner with one-click expand, hide them completely, or auto-block accounts
+          on X after a short delay with an **Undo** button.
+
   - type: code
     title: Rules are expressions
     intro: >-
-      Combine account stats, bio and tweet text with `&&`, `||`, comparisons, `contains`, regex `matches` and helpers
-      like `days_since`. This one hides replies from brand-new accounts with no followers and no bio.
+      Combine account stats, bio and post content with `&&`, `||`, comparisons, `contains`, regex `matches` and helpers
+      like `days_since`. Expression rules run locally across each supported site.
     code: |
+      # X: hide replies from brand-new accounts with no followers and no bio
       tweet.is_reply
         && user.followers < 2
         && len(user.description) == 0
         && days_since(user.created_at) < 90
 
-  - type: features
-    title: Three actions
-    items:
-      - title: Mark
-        body: A yellow border, lower opacity and a label naming the rule that matched. Good for trying a rule out.
-      - title: Hide
-        body: The tweet disappears from your timeline.
-      - title: Block
-        body: >-
-          The tweet is hidden at once and the account is blocked after a short delay, with an **Undo** button in
-          case the rule was wrong.
+      # Hacker News / Reddit: hide low-score posts
+      item.kind == 'post' && post.score < 50
 
   - type: list
-    title: The details
+    title: Eight platforms, one extension
+    image:
+      src: /images/projects/twitter-filter/sites.webp
+      alt: The AI Feed Filter Sites page with all eight supported platforms enabled
     items:
+      - title: Per-site toggles.
+        body: >-
+          Enable or disable X (Twitter), Hacker News, Reddit, YouTube Comments, Bluesky, Threads, LinkedIn and Substack
+          Notes independently.
       - title: Community rules.
         body: Subscribe to rules others publish, and they stay up to date on their own. Publishing your own needs an email sign-in.
-      - title: Huge lists.
-        body: Screen name lists of up to 100,000 accounts per rule, importable from CSV.
       - title: Safe by default.
-        body: Your own tweets and the accounts you follow are never filtered.
-      - title: Location signals.
+        body: Your own posts and the accounts you follow on X are whitelisted and never filtered or sent to AI.
+      - title: Location signals on X.
         body: >-
-          Rules can use X's own "About this account" data, such as the country an account is based in. It can be
-          wrong or spoofed, so these fields work with mark and hide but never with block.
+          Rules can use X's own "About this account" data, such as the country an account is based in. Because it can be
+          wrong or spoofed, these fields work with collapse and hide but never with block.
       - title: Let Claude write rules.
         body: >-
           The [Twitter Filter Skills](https://github.com/rxliuli/twitter-filter-skills) for Claude Code turn a few
-          example spam tweets into import-ready rules.
+          example spam posts into import-ready rules.
+
+  - type: list
+    title: Free or Pro
+    items:
+      - title: Free.
+        body: >-
+          Unlimited expression rules across all 8 platforms, 1,000 AI-filtered posts/day (or unlimited with your own
+          TypeSafe API key), built-in AI topics + 1 custom topic, up to 10 community rule subscriptions and 100,000-name
+          screen name lists.
+      - title: Pro, $4.99/mo.
+        body: >-
+          Adds the **Ask AI** assistant with live page preview (50 requests/day), 10,000 AI-filtered posts/day, up to 10
+          custom AI topics and up to 100 community rule subscriptions.
 
 privacy:
-  - Rules are evaluated in your browser. The tweets and accounts you see are never uploaded.
   - >-
-    Subscribed rules are downloaded from twitter-filter.rxliuli.com. If a rule uses location signals, accounts already
-    resolved by other users are looked up there, and new results are shared back as the account ID and its location
-    fields only, never who was looking. A dialog explains this the first time.
+    Expression rules are evaluated locally in your browser. When you opt in to AI Filter or Ask AI, only the post text
+    or prompt needed for classification or rule generation is sent to the AI backend — your browsing history is never
+    stored, and followed or protected accounts on X are never sent.
+  - >-
+    Subscribed rules are downloaded from twitter-filter.rxliuli.com, and signing in for shared rules or Pro stores your
+    email address and optional display name. If an X rule uses location signals, resolved account IDs and location
+    fields are looked up and shared anonymously, never who was looking.
   - >-
     The extension also sends an anonymous usage ping, at most once a day: a random install ID, the extension version
     and your browser language.

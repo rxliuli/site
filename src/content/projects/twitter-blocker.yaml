@@ -60,8 +60,8 @@ blocks:
       - title: Licensed, $19.99 once.
         body: Unlimited accounts per run, priority email support and lifetime updates.
     note: >-
-      Need to filter tweets rather than block accounts? See [Twitter Filter](/project/twitter-filter), which can mark,
-      hide or block by rule.
+      Need to filter feeds rather than block accounts? See [AI Feed Filter](/project/twitter-filter) (formerly Twitter
+      Filter), which can collapse, hide or block by AI topics and rules.
 
 privacy:
   - >-
